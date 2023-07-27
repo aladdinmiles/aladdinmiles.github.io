@@ -1,113 +1,132 @@
-import Image from 'next/image'
+import { Button } from '@/components/buttons';
+import { Raleway } from 'next/font/google';
+import Image from 'next/image';
+import { fourCardHome } from './content';
+import { FourCardSection } from './shared';
+import {
+  AppDownload,
+  AppDownloadArea,
+  BigCircle,
+  BlueBackground,
+  ButtonContainer,
+  ColoredHalf,
+  ColoredText,
+  ContentView,
+  DownloadContent,
+  DownloadHeader,
+  HeroImage,
+  HeroSection,
+  Line,
+  ManText,
+  MultiStyleText,
+  Partners,
+  PinkBackground,
+  QRCodeBackground,
+  RaleText,
+  RaleTextWhite,
+  SB,
+  SmallMultiStyleText,
+  SmallboldText,
+  StartShoppingAreaLeft,
+  StartShoppingAreaRight,
+  StoreButtons,
+  TextContentArea,
+  TextWithSVG,
+  Trusted,
+  WhiteHalf
+} from './styles';
+
+const rale = Raleway({
+  weight: '700',
+  subsets: ['latin']
+});
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <ContentView>
+      <HeroSection>
+        <WhiteHalf>
+          <TextContentArea>
+            <MultiStyleText className={rale.className}>
+              The{' '}
+              <TextWithSVG>
+                <ColoredText>fastest</ColoredText>
+                <Line />
+              </TextWithSVG>{' '}
+              way to <ColoredText>travel</ColoredText> for <ColoredText>free! </ColoredText>
+            </MultiStyleText>
+            <RaleText>
+              Get rewarded in Air Miles whenever you shop your favorites brands on the AladdinMiles app.
+            </RaleText>
+            <AppDownloadArea>
+              <QRCodeBackground>{/* <QRCode width={'89.6'} height={'89.6'} /> */}</QRCodeBackground>
+              <div>
+                <RaleText>Scan to download</RaleText>
+                <ButtonContainer>
+                  <StoreButtons href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088">
+                    <Image alt="Get it on Google Play" src="/images/appstore.svg" width={160} height={46} />
+                  </StoreButtons>
+                  <StoreButtons href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                    <Image alt="Get it on Google Play" src="/images/google-play-badge.svg" width={160} height={46} />
+                  </StoreButtons>
+                </ButtonContainer>
+              </div>
+            </AppDownloadArea>
+          </TextContentArea>
+          <Trusted>
+            <ManText>Trusted by the best businesses</ManText>
+            <Partners>
+              <Image src="/images/intermile.png" width={128} height={40} alt="intermiles" />
+              <Image src="/images/ame.png" width={128} height={40} alt="intermiles" />
+              <Image src="/images/airasia.png" width={75} height={40} alt="intermiles" />
+            </Partners>
+          </Trusted>
+        </WhiteHalf>
+        <ColoredHalf>
+          <HeroImage src="/images/hero-image.png" width={600} height={600} alt="hero images" />
+        </ColoredHalf>
+      </HeroSection>
+      <FourCardSection {...fourCardHome} />
+      <PinkBackground>
+        <StartShoppingAreaLeft>
+          <SmallMultiStyleText className={rale.className}>
+            The ultimate{' '}
+            <TextWithSVG>
+              <ColoredText>one-stop</ColoredText>
+              <Line />
+            </TextWithSVG>{' '}
+            shop for all your needs
+          </SmallMultiStyleText>
+          <SB>
+            <Image src="/images/small-device.png" width={32} height={48} alt="small-device" />
+            <SmallboldText>Download the AladdinMiles app today!</SmallboldText>
+          </SB>
+          <RaleText>Download the AladdinMiles app today and unlock a treasure trove right at your fingertips!</RaleText>
+          <Button href="/#">Start Shopping</Button>
+        </StartShoppingAreaLeft>
+        <StartShoppingAreaRight>
+          <BigCircle></BigCircle>
+          <Image src="/images/slide1.png" width={404} height={640} alt="slide1" />
+        </StartShoppingAreaRight>
+      </PinkBackground>
+      <BlueBackground>
+        <AppDownload>
+          <DownloadContent>
+            <div>
+              <DownloadHeader>Download the AladdinMiles App</DownloadHeader>
+              <RaleTextWhite>Order from your favorite stores and get rewarded for every purchase.</RaleTextWhite>
+            </div>
+            <ButtonContainer>
+              <StoreButtons href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088">
+                <Image alt="Get it on Google Play" src="/images/appstore.svg" width={160} height={50} />
+              </StoreButtons>
+              <StoreButtons href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                <Image alt="Get it on Google Play" src="/images/google-play-badge.svg" width={160} height={600} />
+              </StoreButtons>
+            </ButtonContainer>
+          </DownloadContent>
+        </AppDownload>
+      </BlueBackground>
+    </ContentView>
+  );
 }
