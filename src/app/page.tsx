@@ -106,7 +106,7 @@ export default function Home() {
         </StartShoppingAreaLeft>
         <StartShoppingAreaRight>
           <BigCircle></BigCircle>
-          <Image src="/images/slide1.png" width={404} height={640} alt="slide1" />
+          <Image src="/images/slide1.png" width={404} height={640} alt="slider1" />
         </StartShoppingAreaRight>
       </PinkBackground>
       <BlueBackground>
