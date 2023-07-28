@@ -1,6 +1,6 @@
 1:HL["/aladdinmiles.github.io/_next/static/media/2aaf0723e720e8b9-s.p.woff2",{"as":"font","type":"font/woff2"}]
 2:HL["/aladdinmiles.github.io/_next/static/css/f83ccc1a1435f695.css",{"as":"style"}]
-0:["XIPh5WqUC1NP0xucOcmr6",[[["",{"children":["terms-conditions",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/aladdinmiles.github.io/_next/static/css/f83ccc1a1435f695.css","precedence":"next"}]],"$L4"]]]]
+0:["0OkYFW0wvvMM9eOigWR_q",[[["",{"children":["terms-conditions",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/aladdinmiles.github.io/_next/static/css/f83ccc1a1435f695.css","precedence":"next"}]],"$L4"]]]]
 5:HL["/aladdinmiles.github.io/_next/static/media/05a8cb9c82740950-s.p.woff2",{"as":"font","type":"font/woff2"}]
 6:HL["/aladdinmiles.github.io/_next/static/media/0954233f4a3880d3-s.p.woff2",{"as":"font","type":"font/woff2"}]
 7:HL["/aladdinmiles.github.io/_next/static/media/155bd815325d43d3-s.p.woff2",{"as":"font","type":"font/woff2"}]
@@ -12,7 +12,7 @@ c:HL["/aladdinmiles.github.io/_next/static/media/cd19368c2f67321a-s.p.woff2",{"a
 d:HL["/aladdinmiles.github.io/_next/static/media/d8cea79c6cdf2643-s.p.woff2",{"as":"font","type":"font/woff2"}]
 e:HL["/aladdinmiles.github.io/_next/static/css/0d03fa379545a9ce.css",{"as":"style"}]
 f:I{"id":7767,"chunks":["272:static/chunks/webpack-7c46f348a1611250.js","971:static/chunks/fd9d1056-98dc4ff978e6af33.js","596:static/chunks/596-1801055e3d643cb5.js"],"name":"default","async":false}
-10:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"MainView","async":false}
+10:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"MainView","async":false}
 11:I{"id":7746,"chunks":["107:static/chunks/107-f468147cae43aa45.js","160:static/chunks/app/not-found-22ede45c05a98798.js"],"name":"NavBar","async":false}
 12:I{"id":7746,"chunks":["107:static/chunks/107-f468147cae43aa45.js","160:static/chunks/app/not-found-22ede45c05a98798.js"],"name":"LogoArea","async":false}
 13:I{"id":3222,"chunks":["107:static/chunks/107-f468147cae43aa45.js","931:static/chunks/app/page-23ec15c87dace62b.js"],"name":"Image","async":false}
@@ -26,18 +26,18 @@ f:I{"id":7767,"chunks":["272:static/chunks/webpack-7c46f348a1611250.js","971:sta
 1b:I{"id":3141,"chunks":["107:static/chunks/107-f468147cae43aa45.js","160:static/chunks/app/not-found-22ede45c05a98798.js"],"name":"Socials","async":false}
 1c:I{"id":3141,"chunks":["107:static/chunks/107-f468147cae43aa45.js","160:static/chunks/app/not-found-22ede45c05a98798.js"],"name":"FooterHeader","async":false}
 1d:I{"id":3141,"chunks":["107:static/chunks/107-f468147cae43aa45.js","160:static/chunks/app/not-found-22ede45c05a98798.js"],"name":"FooterLink","async":false}
-1e:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"ContentView","async":false}
-1f:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"Page404","async":false}
-20:I{"id":5224,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"ColoredSection","async":false}
-21:I{"id":5224,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"HeroContentTextArea","async":false}
-22:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"SmallerHeader","async":false}
-23:I{"id":7422,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"MultiStyleText","async":false}
-24:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"RaleText","async":false}
-25:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"LegalContainerView","async":false}
-26:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"Content","async":false}
-27:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"SideNav","async":false}
-28:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"SideLink","async":false}
-29:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-0cef9158fc08eb5a.js"],"name":"MainContent","async":false}
+1e:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"ContentView","async":false}
+1f:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"Page404","async":false}
+20:I{"id":5224,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"ColoredSection","async":false}
+21:I{"id":5224,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"HeroContentTextArea","async":false}
+22:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"SmallerHeader","async":false}
+23:I{"id":7422,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"MultiStyleText","async":false}
+24:I{"id":431,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"RaleText","async":false}
+25:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"LegalContainerView","async":false}
+26:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"Content","async":false}
+27:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"SideNav","async":false}
+28:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"SideLink","async":false}
+29:I{"id":3839,"chunks":["107:static/chunks/107-f468147cae43aa45.js","157:static/chunks/app/terms-conditions/page-fd6097a121ea9729.js"],"name":"MainContent","async":false}
 2a:T128f,
 <p><strong>Terms &amp; Conditions<br />
 Access to, and use of, this application is provided by AladdinMiles subject to the following terms and conditions:</strong></p>
