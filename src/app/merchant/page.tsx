@@ -18,10 +18,10 @@ const BecomeAMerchant: React.FC = () => {
             Sign up now <Arrow />
           </Button>
         </HeroContent>
-        <Image src="/images/merchanttop.png" width={616} height={600} alt="city" />
+        <Image src="/images/merchantTop.png" width={616} height={600} alt="city" />
       </HeroSection>
       <BottomSection>
-        <Image src="/images/merchantbottom.png" width={616} height={600} alt="team" />
+        <Image src="/images/merchantBottom.png" width={616} height={600} alt="team" />
         <HeroContent>
           <HeroContentTextArea>
             <SmallerHeader>Become a partner</SmallerHeader>
