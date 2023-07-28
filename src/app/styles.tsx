@@ -1,5 +1,6 @@
 'use client';
 import { fontSize, heightPixel, widthPixel } from '@/utils/pxToVW';
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Manrope, Raleway } from 'next/font/google';
 import Image from 'next/image';
@@ -21,6 +22,21 @@ export const HeroSection = styled.section({
   flexDirection: 'row'
 });
 
+const bounce = keyframes({
+  from: {
+    transform: `translate3d(0px, ${heightPixel(-90)} , 0px)`
+  },
+  '50%': {
+    transform: `translate3d(0px, ${heightPixel(90)} , 0px)`
+  },
+  '90%': {
+    transform: `translate3d(0px, ${heightPixel(-100)} , 0px)`
+  },
+  to: {
+    transform: `translate3d(0px, ${heightPixel(-90)} , 0px)`
+  }
+});
+
 export const ColoredHalf = styled.div({
   height: heightPixel(824),
   width: '50%',
@@ -28,7 +44,10 @@ export const ColoredHalf = styled.div({
   borderBottomRightRadius: widthPixel(160),
   alignItems: 'center',
   justifyContent: 'center',
-  display: 'flex'
+  display: 'flex',
+  '& img': {
+    animation: `${bounce} 5s ease infinite`
+  }
 });
 
 export const WhiteHalf = styled.div({
@@ -57,7 +76,7 @@ export const Line: React.FC = () => (
   <svg
     width={widthPixel(154)}
     height={heightPixel(8)}
-    viewBox={`0 0 ${widthPixel(154)} ${heightPixel(8)}`}
+    viewBox={`0 0 154 8`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

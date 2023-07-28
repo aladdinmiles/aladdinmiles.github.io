@@ -30,7 +30,8 @@ const Container = styled(Link)({
   borderRadius: widthPixel(4),
   alignItems: 'center',
   justifyContent: 'center',
-  display: 'inline-flex'
+  display: 'inline-flex',
+  textDecoration: 'none'
 });
 
 const Text = styled.span({

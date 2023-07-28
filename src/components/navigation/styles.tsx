@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 export const NavBar = styled.div({
   width: '100%',
+  maxWidth: '100%',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
