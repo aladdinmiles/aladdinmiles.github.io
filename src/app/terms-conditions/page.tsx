@@ -5,7 +5,7 @@ import { SmallerHeader } from '../shared/styled';
 import { ContentView, RaleText } from '../styles';
 import { ColoredSection, HeroContentTextArea } from './styles';
 
-export const Privacy: React.FC = () => {
+const Privacy: React.FC = () => {
   return (
     <ContentView>
       <ColoredSection>

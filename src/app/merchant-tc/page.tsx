@@ -5,7 +5,7 @@ import { SmallerHeader } from '../shared/styled';
 import { ContentView, RaleText } from '../styles';
 import { ColoredSection, HeroContentTextArea } from './styles';
 
-export const Privacy: React.FC = () => {
+const MerchantTC: React.FC = () => {
   return (
     <ContentView>
       <ColoredSection>
@@ -25,4 +25,4 @@ export const Privacy: React.FC = () => {
   );
 };
 
-export default Privacy;
+export default MerchantTC;
