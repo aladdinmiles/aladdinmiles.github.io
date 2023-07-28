@@ -1,11 +1,67 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [157],
+  [648],
   {
-    2884: function (n, t, e) {
-      Promise.resolve().then(e.bind(e, 7422)),
-        Promise.resolve().then(e.bind(e, 431)),
-        Promise.resolve().then(e.bind(e, 5224)),
-        Promise.resolve().then(e.bind(e, 3839));
+    3610: function (n, t, e) {
+      Promise.resolve().then(e.bind(e, 431)),
+        Promise.resolve().then(e.bind(e, 7422)),
+        Promise.resolve().then(e.bind(e, 3839)),
+        Promise.resolve().then(e.bind(e, 2709));
+    },
+    2709: function (n, t, e) {
+      'use strict';
+      e.r(t),
+        e.d(t, {
+          ColoredSection: function () {
+            return f;
+          },
+          HeroContent: function () {
+            return u;
+          },
+          HeroContentTextArea: function () {
+            return s;
+          }
+        });
+      var o = e(230),
+        i = e(7247),
+        r = e(8600);
+      function c() {
+        let n = (0, o._)([
+          '\n  display: flex;\n  height: ',
+          ';\n  padding: ',
+          ' ',
+          ';\n  justify-content: center;\n  align-items: center;\n  background: linear-gradient(163deg, #ffebf0 0%, #fff8eb 100%);\n'
+        ]);
+        return (
+          (c = function () {
+            return n;
+          }),
+          n
+        );
+      }
+      function a() {
+        let n = (0, o._)([
+          '\n  display: inline-flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 40px;\n  width: ',
+          ';\n'
+        ]);
+        return (
+          (a = function () {
+            return n;
+          }),
+          n
+        );
+      }
+      function l() {
+        let n = (0, o._)(['\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 16px;\n']);
+        return (
+          (l = function () {
+            return n;
+          }),
+          n
+        );
+      }
+      let f = r.Z.section(c(), (0, i.Wk)(434), (0, i.Wk)(88.5), (0, i.so)(100)),
+        u = r.Z.div(a(), (0, i.so)(560)),
+        s = r.Z.div(l());
     },
     7422: function (n, t, e) {
       'use strict';
@@ -43,20 +99,11 @@
           n
         );
       }
-      function u() {
+      function f() {
         let n = (0, o._)([
           '\n  display: inline-flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 40px;\n  width: ',
           ';\n'
         ]);
-        return (
-          (u = function () {
-            return n;
-          }),
-          n
-        );
-      }
-      function f() {
-        let n = (0, o._)(['\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 16px;\n']);
         return (
           (f = function () {
             return n;
@@ -64,9 +111,18 @@
           n
         );
       }
+      function u() {
+        let n = (0, o._)(['\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 16px;\n']);
+        return (
+          (u = function () {
+            return n;
+          }),
+          n
+        );
+      }
       let s = a.Z.section(l(), (0, c.Wk)(434), (0, c.Wk)(88.5), (0, c.so)(100)),
-        d = a.Z.div(u(), (0, c.so)(560)),
-        g = a.Z.div(f()),
+        d = a.Z.div(f(), (0, c.so)(560)),
+        g = a.Z.div(u()),
         p = a.Z.h1([r().style, { fontSize: (0, c.JB)(32), color: '#1D2029' }]);
     },
     3839: function (n, t, e) {
@@ -89,7 +145,7 @@
             return Z;
           },
           Header: function () {
-            return w;
+            return b;
           },
           HeaderSection: function () {
             return v;
@@ -113,13 +169,13 @@
             return R;
           },
           SmallerHeader: function () {
-            return y;
+            return w;
           },
           Text: function () {
             return S;
           },
           Wrapper: function () {
-            return b;
+            return y;
           }
         });
       var o = e(230),
@@ -128,8 +184,8 @@
         c = e(6968),
         a = e.n(c),
         l = e(9855),
-        u = e.n(l),
-        f = e(7247),
+        f = e.n(l),
+        u = e(7247),
         s = e(8600),
         d = e(1396),
         g = e.n(d),
@@ -171,18 +227,18 @@
           n
         );
       }
-      let b = s.Z.section({
+      let y = s.Z.section({
           width: '100%',
-          padding: ''.concat((0, f.Wk)(95), ' ').concat((0, f.so)(135)),
+          padding: ''.concat((0, u.Wk)(95), ' ').concat((0, u.so)(135)),
           flexDirection: 'column',
           display: 'flex',
-          gap: (0, f.Wk)(50)
+          gap: (0, u.Wk)(50)
         }),
-        y = s.Z.p([
+        w = s.Z.p([
           r().style,
-          { fontSize: (0, f.JB)(16), color: '#FF1654', textTransform: 'uppercase', lineHeight: '150%' }
+          { fontSize: (0, u.JB)(16), color: '#FF1654', textTransform: 'uppercase', lineHeight: '150%' }
         ]),
-        w = s.Z.p([r().style, { fontSize: (0, f.JB)(32), color: '#1D2029', lineHeight: '150%' }]),
+        b = s.Z.p([r().style, { fontSize: (0, u.JB)(32), color: '#1D2029', lineHeight: '150%' }]),
         v = s.Z.div({ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }),
         _ = s.Z.div({
           display: 'flex',
@@ -190,13 +246,13 @@
           justifyContent: 'space-between',
           flexDirection: 'row',
           padding: 0,
-          gap: (0, f.so)(24)
+          gap: (0, u.so)(24)
         }),
         Z = s.Z.div({
           display: 'flex',
           alignItems: 'flex-start',
           flexDirection: 'column',
-          gap: (0, f.Wk)(24),
+          gap: (0, u.Wk)(24),
           padding: '0px'
         }),
         F = (n) => {
@@ -231,47 +287,47 @@
               alignItems: 'center',
               justifyContent: 'space-between',
               flexDirection: 'row',
-              width: (0, f.so)(572),
-              padding: ''.concat((0, f.Wk)(69), ' ').concat((0, f.so)(40)),
-              borderRadius: (0, f.so)(16),
-              height: (0, f.Wk)(240),
-              gap: (0, f.so)(24),
-              '& img': { width: (0, f.so)(120), height: (0, f.so)(120), objectFit: 'cover', objectPosition: 'center' }
+              width: (0, u.so)(572),
+              padding: ''.concat((0, u.Wk)(69), ' ').concat((0, u.so)(40)),
+              borderRadius: (0, u.so)(16),
+              height: (0, u.Wk)(240),
+              gap: (0, u.so)(24),
+              '& img': { width: (0, u.so)(120), height: (0, u.so)(120), objectFit: 'cover', objectPosition: 'center' }
             },
             F(t)
           ];
         }),
-        W = s.Z.div({ display: 'flex', flexDirection: 'column', gap: (0, f.Wk)(12), width: (0, f.so)(329) }),
-        S = (0, s.Z)(h.RaleText)({ fontSize: (0, f.JB)(22) }),
+        W = s.Z.div({ display: 'flex', flexDirection: 'column', gap: (0, u.Wk)(12), width: (0, u.so)(329) }),
+        S = (0, s.Z)(h.RaleText)({ fontSize: (0, u.JB)(22) }),
         j = (0, s.Z)(h.RaleText)([a().style, { color: '#1D2029' }]),
-        B = s.Z.section(x(), (0, f.Wk)(80), (0, f.so)(100)),
+        B = s.Z.section(x(), (0, u.Wk)(80), (0, u.so)(100)),
         D = s.Z.div(m()),
         R = s.Z.aside({ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }),
         H = s.Z.article([
           {
-            width: (0, f.so)(977),
+            width: (0, u.so)(977),
             margin: 'auto !important',
             '& p': {
               fontWeight: 400,
               margin: 'auto !important',
-              ...u().style,
+              ...f().style,
               color: '#515665',
-              fontSize: (0, f.JB)(22),
+              fontSize: (0, u.JB)(22),
               lineHeight: '160%',
-              padding: ''.concat((0, f.Wk)(12))
+              padding: ''.concat((0, u.Wk)(12))
             }
           }
         ]),
-        T = (0, s.Z)(g())(k(), (0, f.JB)(16), (0, f.Wk)(12), (0, f.so)(10)),
+        T = (0, s.Z)(g())(k(), (0, u.JB)(16), (0, u.Wk)(12), (0, u.so)(10)),
         I = (0, s.Z)(T)((n) => {
           let { href: t } = n,
             e = (0, p.usePathname)();
           return [
             {
               ':hover': { color: '#FF1654' },
-              ':active': { color: '#FF1654', borderLeft: ''.concat((0, f.so)(4), ' solid #FF1654') }
+              ':active': { color: '#FF1654', borderLeft: ''.concat((0, u.so)(4), ' solid #FF1654') }
             },
-            e === t && { color: '#FF1654', borderLeft: ''.concat((0, f.so)(4), ' solid #FF1654') }
+            e === t && { color: '#FF1654', borderLeft: ''.concat((0, u.so)(4), ' solid #FF1654') }
           ];
         });
     },
@@ -304,7 +360,7 @@
             return C;
           },
           ContentView: function () {
-            return y;
+            return w;
           },
           DownloadContent: function () {
             return M;
@@ -316,13 +372,13 @@
             return N;
           },
           HeroSection: function () {
-            return w;
+            return b;
           },
           Line: function () {
             return j;
           },
           MainView: function () {
-            return b;
+            return y;
           },
           ManText: function () {
             return D;
@@ -388,9 +444,9 @@
         c = e(7945),
         a = e.n(c),
         l = e(7676),
-        u = e.n(l),
-        f = e(2821),
-        s = e.n(f),
+        f = e.n(l),
+        u = e(2821),
+        s = e.n(u),
         d = e(7247),
         g = e(9538),
         p = e(8600),
@@ -398,9 +454,9 @@
         x = e.n(h),
         m = e(1396),
         k = e.n(m);
-      let b = p.Z.div({ width: '100%', minHeight: '100%', backgroundColor: '#ffffff' }),
-        y = p.Z.div({ width: '100%' }),
-        w = p.Z.section({ height: (0, d.Wk)(824), width: '100%', display: 'flex', flexDirection: 'row' }),
+      let y = p.Z.div({ width: '100%', minHeight: '100%', backgroundColor: '#ffffff' }),
+        w = p.Z.div({ width: '100%' }),
+        b = p.Z.section({ height: (0, d.Wk)(824), width: '100%', display: 'flex', flexDirection: 'row' }),
         v = (0, g.F4)({
           from: { transform: 'translate3d(0px, '.concat((0, d.Wk)(-90), ' , 0px)') },
           '50%': { transform: 'translate3d(0px, '.concat((0, d.Wk)(90), ' , 0px)') },
@@ -445,7 +501,7 @@
           }),
         B = (n) => {
           let { className: t, children: e } = n;
-          return (0, o.jsx)('p', { className: ''.concat(u().className, ' ').concat(t), children: e });
+          return (0, o.jsx)('p', { className: ''.concat(f().className, ' ').concat(t), children: e });
         },
         D = p.Z.p([
           a().style,
@@ -589,62 +645,6 @@
           display: 'flex'
         });
     },
-    5224: function (n, t, e) {
-      'use strict';
-      e.r(t),
-        e.d(t, {
-          ColoredSection: function () {
-            return u;
-          },
-          HeroContent: function () {
-            return f;
-          },
-          HeroContentTextArea: function () {
-            return s;
-          }
-        });
-      var o = e(230),
-        i = e(7247),
-        r = e(8600);
-      function c() {
-        let n = (0, o._)([
-          '\n  display: flex;\n  height: ',
-          ';\n  padding: ',
-          ' ',
-          ';\n  justify-content: center;\n  align-items: center;\n  background: linear-gradient(163deg, #ffebf0 0%, #fff8eb 100%);\n'
-        ]);
-        return (
-          (c = function () {
-            return n;
-          }),
-          n
-        );
-      }
-      function a() {
-        let n = (0, o._)([
-          '\n  display: inline-flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 40px;\n  width: ',
-          ';\n'
-        ]);
-        return (
-          (a = function () {
-            return n;
-          }),
-          n
-        );
-      }
-      function l() {
-        let n = (0, o._)(['\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 16px;\n']);
-        return (
-          (l = function () {
-            return n;
-          }),
-          n
-        );
-      }
-      let u = r.Z.section(c(), (0, i.Wk)(434), (0, i.Wk)(88.5), (0, i.so)(100)),
-        f = r.Z.div(a(), (0, i.so)(560)),
-        s = r.Z.div(l());
-    },
     7247: function (n, t, e) {
       'use strict';
       e.d(t, {
@@ -670,26 +670,26 @@
     },
     6030: function (n) {
       n.exports = {
-        style: { fontFamily: "'__Raleway_49b7d4', '__Raleway_Fallback_49b7d4'", fontWeight: 700, fontStyle: 'normal' },
-        className: '__className_49b7d4'
+        style: { fontFamily: "'__Raleway_1d251f', '__Raleway_Fallback_1d251f'", fontWeight: 700, fontStyle: 'normal' },
+        className: '__className_1d251f'
       };
     },
     984: function (n) {
       n.exports = {
-        style: { fontFamily: "'__Manrope_b2bd30', '__Manrope_Fallback_b2bd30'", fontWeight: 600, fontStyle: 'normal' },
-        className: '__className_b2bd30'
+        style: { fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'", fontWeight: 600, fontStyle: 'normal' },
+        className: '__className_90b4c2'
       };
     },
     9855: function (n) {
       n.exports = {
-        style: { fontFamily: "'__Raleway_9224eb', '__Raleway_Fallback_9224eb'", fontWeight: 400, fontStyle: 'normal' },
-        className: '__className_9224eb'
+        style: { fontFamily: "'__Raleway_f8758a', '__Raleway_Fallback_f8758a'", fontWeight: 400, fontStyle: 'normal' },
+        className: '__className_f8758a'
       };
     },
     6968: function (n) {
       n.exports = {
-        style: { fontFamily: "'__Raleway_40ac20', '__Raleway_Fallback_40ac20'", fontWeight: 600, fontStyle: 'normal' },
-        className: '__className_40ac20'
+        style: { fontFamily: "'__Raleway_8be77d', '__Raleway_Fallback_8be77d'", fontWeight: 600, fontStyle: 'normal' },
+        className: '__className_8be77d'
       };
     },
     4033: function (n, t, e) {
@@ -709,7 +709,7 @@
   },
   function (n) {
     n.O(0, [107, 971, 596, 744], function () {
-      return n((n.s = 2884));
+      return n((n.s = 3610));
     }),
       (_N_E = n.O());
   }

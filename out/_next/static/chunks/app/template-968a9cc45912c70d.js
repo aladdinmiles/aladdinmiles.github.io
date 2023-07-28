@@ -37,7 +37,7 @@
             return _;
           },
           ContentView: function () {
-            return b;
+            return y;
           },
           DownloadContent: function () {
             return J;
@@ -49,7 +49,7 @@
             return H;
           },
           HeroSection: function () {
-            return y;
+            return b;
           },
           Line: function () {
             return S;
@@ -132,8 +132,8 @@
         m = e(1396),
         k = e.n(m);
       let w = h.Z.div({ width: '100%', minHeight: '100%', backgroundColor: '#ffffff' }),
-        b = h.Z.div({ width: '100%' }),
-        y = h.Z.section({ height: (0, d.Wk)(824), width: '100%', display: 'flex', flexDirection: 'row' }),
+        y = h.Z.div({ width: '100%' }),
+        b = h.Z.section({ height: (0, d.Wk)(824), width: '100%', display: 'flex', flexDirection: 'row' }),
         v = (0, g.F4)({
           from: { transform: 'translate3d(0px, '.concat((0, d.Wk)(-90), ' , 0px)') },
           '50%': { transform: 'translate3d(0px, '.concat((0, d.Wk)(90), ' , 0px)') },
@@ -383,10 +383,10 @@
             return w;
           },
           FooterLink: function () {
-            return b;
+            return y;
           },
           FooterSection: function () {
-            return y;
+            return b;
           },
           FooterText: function () {
             return k;
@@ -441,8 +441,8 @@
         },
         k = (0, l.Z)(x)({ fontSize: (0, s.JB)(16), color: '#ffffff', display: 'block' }),
         w = (0, l.Z)(m)({ fontSize: (0, s.JB)(16), color: '#ffffff', display: 'block' }),
-        b = k.withComponent(g()),
-        y = l.Z.div({ maxWidth: (0, s.so)(280), display: 'flex', flexDirection: 'column', gap: (0, s.Wk)(16) }),
+        y = k.withComponent(g()),
+        b = l.Z.div({ maxWidth: (0, s.so)(280), display: 'flex', flexDirection: 'column', gap: (0, s.Wk)(16) }),
         v = (0, l.Z)(u())({}),
         W = (0, l.Z)(u())({}),
         Z = l.Z.div({
@@ -513,20 +513,20 @@
     },
     6566: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_d410de', '__Manrope_Fallback_d410de'", fontWeight: 400, fontStyle: 'normal' },
-        className: '__className_d410de'
+        style: { fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'", fontWeight: 400, fontStyle: 'normal' },
+        className: '__className_30f681'
       };
     },
     3192: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_d410de', '__Manrope_Fallback_d410de'", fontWeight: 400, fontStyle: 'normal' },
-        className: '__className_d410de'
+        style: { fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'", fontWeight: 400, fontStyle: 'normal' },
+        className: '__className_30f681'
       };
     },
     3833: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_b2bd30', '__Manrope_Fallback_b2bd30'", fontWeight: 600, fontStyle: 'normal' },
-        className: '__className_b2bd30'
+        style: { fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'", fontWeight: 600, fontStyle: 'normal' },
+        className: '__className_90b4c2'
       };
     }
   },

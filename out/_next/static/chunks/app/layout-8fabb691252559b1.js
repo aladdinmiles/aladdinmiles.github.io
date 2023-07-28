@@ -7,8 +7,8 @@
     2471: function () {},
     8788: function (n) {
       n.exports = {
-        style: { fontFamily: "'__Inter_8d56a8', '__Inter_Fallback_8d56a8'", fontStyle: 'normal' },
-        className: '__className_8d56a8'
+        style: { fontFamily: "'__Inter_20951f', '__Inter_Fallback_20951f'", fontStyle: 'normal' },
+        className: '__className_20951f'
       };
     }
   },
