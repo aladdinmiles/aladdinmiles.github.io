@@ -17,7 +17,7 @@ const Privacy: React.FC = () => {
             the following terms; if you do not agree to all of these terms, you may not use or access AladdinMiles
             services.
           </RaleText>
-          <RaleText>Last Updated: 10th July, 2023</RaleText>
+          <RaleText>Last Updated: 11th July, 2023</RaleText>
         </HeroContentTextArea>
       </ColoredSection>
       <LegalContainer>{termCondition}</LegalContainer>
