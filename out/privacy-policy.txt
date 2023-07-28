@@ -1,6 +1,6 @@
 1:HL["/aladdinmiles.github.io/_next/static/media/2aaf0723e720e8b9-s.p.woff2",{"as":"font","type":"font/woff2"}]
 2:HL["/aladdinmiles.github.io/_next/static/css/f83ccc1a1435f695.css",{"as":"style"}]
-0:["0OkYFW0wvvMM9eOigWR_q",[[["",{"children":["privacy-policy",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/aladdinmiles.github.io/_next/static/css/f83ccc1a1435f695.css","precedence":"next"}]],"$L4"]]]]
+0:["ixgRam5LzO6K7RDFsq7Mk",[[["",{"children":["privacy-policy",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/aladdinmiles.github.io/_next/static/css/f83ccc1a1435f695.css","precedence":"next"}]],"$L4"]]]]
 5:HL["/aladdinmiles.github.io/_next/static/media/05a8cb9c82740950-s.p.woff2",{"as":"font","type":"font/woff2"}]
 6:HL["/aladdinmiles.github.io/_next/static/media/0954233f4a3880d3-s.p.woff2",{"as":"font","type":"font/woff2"}]
 7:HL["/aladdinmiles.github.io/_next/static/media/155bd815325d43d3-s.p.woff2",{"as":"font","type":"font/woff2"}]
