@@ -120,7 +120,13 @@ export const Card = styled.div<{ index: number }>(({ index }) => [
     padding: `${heightPixel(69)} ${widthPixel(40)}`,
     borderRadius: widthPixel(16),
     height: heightPixel(240),
-    gap: widthPixel(24)
+    gap: widthPixel(24),
+    '& img': {
+      width: widthPixel(120),
+      height: widthPixel(120),
+      objectFit: 'cover',
+      objectPosition: 'center'
+    }
   },
   getStyle(index)
 ]);

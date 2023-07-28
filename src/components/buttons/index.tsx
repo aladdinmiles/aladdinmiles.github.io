@@ -36,5 +36,14 @@ const Container = styled(Link)({
 
 const Text = styled.span({
   fontSize: fontSize(16),
-  color: '#ffffff'
+  color: '#ffffff',
+  display: 'inline-flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: 0,
+  '& svg': {
+    strokeWidth: widthPixel(24),
+    height: widthPixel(24)
+  }
 });

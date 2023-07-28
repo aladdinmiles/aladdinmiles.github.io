@@ -30,3 +30,34 @@ export const fourCardHome: FourCardProps = {
     ]
   ]
 };
+
+export const fourCardAbout: FourCardProps = {
+  smallHeader: 'our values',
+  header: 'We are a reflection of our values.',
+  rows: [
+    [
+      {
+        image: 'sad-coin.svg',
+        body: 'We strive to always make our customers happy and meet their needs.',
+        header: 'Customer Satisfaction'
+      },
+      {
+        image: 'chart.svg',
+        body: 'We love to do things better than before. Innovation and growth are our watchword.',
+        header: 'Innovation & Growth'
+      }
+    ],
+    [
+      {
+        image: 'transparency.svg',
+        body: 'Bringing the No. 1 loyalty platform to the forefront, we place immense value on trust.',
+        header: 'Transparency & Trust'
+      },
+      {
+        image: 'teamwork.svg',
+        body: 'Our success depends on our team and customers. We value communication and partnership.',
+        header: 'Teamwork'
+      }
+    ]
+  ]
+};

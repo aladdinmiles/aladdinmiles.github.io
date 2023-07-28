@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           <StyledImage src="/logo.png" alt="AladdinMiles logo" width={45} height={32} />
           <StyledImageText src="/logoText.svg" alt="AladdinMiles logo" width={170.4} height={48} />
         </LogoArea>
-        <FooterText>&copy; Copyright 2023 AladdinMiles, all right reserved</FooterText>
+        <FooterText>&copy; Copyright 2023 AladdinMiles, all rights reserved</FooterText>
         <Socials>
           <Image src="/images/facebook-frame.svg" width={24} height={24} alt="facebook" />
           <Image src="/images/instagram-black.svg" width={24} height={24} alt="facebook" />
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
       <FooterSection>
         <FooterHeader>Company</FooterHeader>
         <FooterLink href="/#">Careers</FooterLink>
-        <FooterLink href="/#">About Us</FooterLink>
+        <FooterLink href="/about">About Us</FooterLink>
         <FooterLink href="/#">Email: hello@aladdinmiles.com</FooterLink>
       </FooterSection>
     </FooterBar>

@@ -6,6 +6,7 @@ import { FourCardSection } from './shared';
 import {
   AppDownload,
   AppDownloadArea,
+  Arrow,
   BigCircle,
   BlueBackground,
   ButtonContainer,
@@ -102,7 +103,9 @@ export default function Home() {
             <SmallboldText>Download the AladdinMiles app today!</SmallboldText>
           </SB>
           <RaleText>Download the AladdinMiles app today and unlock a treasure trove right at your fingertips!</RaleText>
-          <Button href="/#">Start Shopping</Button>
+          <Button href="/#">
+            Start Shopping <Arrow />
+          </Button>
         </StartShoppingAreaLeft>
         <StartShoppingAreaRight>
           <BigCircle></BigCircle>
