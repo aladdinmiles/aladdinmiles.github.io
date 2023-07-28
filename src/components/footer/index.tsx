@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
       </FooterSection>
       <FooterSection>
         <FooterHeader>Legal</FooterHeader>
-        <FooterLink href="/#">Privacy Policy</FooterLink>
+        <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
         <FooterLink href="/#">Terms and Conditions</FooterLink>
         <FooterLink href="/#">Merchant T&Cs</FooterLink>
       </FooterSection>

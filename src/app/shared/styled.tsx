@@ -2,6 +2,8 @@
 import { fontSize, heightPixel, widthPixel } from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Manrope, Raleway } from 'next/font/google';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { RaleText } from '../styles';
 
 export const Wrapper = styled.section({
@@ -19,6 +21,11 @@ const man = Manrope({
 
 const rale = Raleway({
   weight: '600',
+  subsets: ['latin', 'cyrillic']
+});
+
+const rale400 = Raleway({
+  weight: '400',
   subsets: ['latin', 'cyrillic']
 });
 
@@ -148,3 +155,67 @@ export const CardHeader = styled(RaleText)([
     color: '#1D2029'
   }
 ]);
+
+export const LegalContainerView = styled.section`
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: ${heightPixel(80)} ${widthPixel(100)};
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+`;
+
+export const SideNav = styled.aside({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start'
+});
+
+export const MainContent = styled.article([
+  {
+    width: widthPixel(977),
+    margin: 'auto !important',
+    '& p': {
+      fontWeight: 400,
+      margin: 'auto !important',
+      ...rale400.style,
+      color: '#515665',
+      fontSize: fontSize(22),
+      lineHeight: '160%',
+      padding: `${heightPixel(12)}`
+    }
+  }
+]);
+
+export const NewLink = styled(Link)`
+  color: #515665;
+  font-size: ${fontSize(16)};
+  font-style: normal;
+  line-height: 140%;
+  padding: ${heightPixel(12)} ${widthPixel(10)};
+`;
+
+export const SideLink = styled(NewLink)(({ href }) => {
+  const currentRoute = usePathname();
+  return [
+    {
+      ':hover': {
+        color: '#FF1654'
+      },
+      ':active': {
+        color: '#FF1654',
+        borderLeft: `${widthPixel(4)} solid #FF1654`
+      }
+    },
+    currentRoute === href && {
+      color: '#FF1654',
+      borderLeft: `${widthPixel(4)} solid #FF1654`
+    }
+  ];
+});
