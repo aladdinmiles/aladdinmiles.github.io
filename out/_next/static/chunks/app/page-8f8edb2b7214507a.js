@@ -1,8 +1,9 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [931],
   {
-    1131: function (t, n, e) {
+    7597: function (t, n, e) {
       Promise.resolve().then(e.t.bind(e, 3222, 23)),
+        Promise.resolve().then(e.bind(e, 6773)),
         Promise.resolve().then(e.bind(e, 431)),
         Promise.resolve().then(e.bind(e, 3839)),
         Promise.resolve().then(e.bind(e, 750)),
@@ -228,7 +229,7 @@
             return Y;
           },
           BigCircle: function () {
-            return q;
+            return Q;
           },
           BlueBackground: function () {
             return J;
@@ -252,7 +253,7 @@
             return E;
           },
           HeroImage: function () {
-            return z;
+            return P;
           },
           HeroSection: function () {
             return b;
@@ -273,7 +274,7 @@
             return $;
           },
           Partners: function () {
-            return P;
+            return z;
           },
           PinkBackground: function () {
             return O;
@@ -300,10 +301,10 @@
             return U;
           },
           StartShoppingAreaLeft: function () {
-            return G;
+            return q;
           },
           StartShoppingAreaRight: function () {
-            return Q;
+            return G;
           },
           StoreButtons: function () {
             return H;
@@ -409,14 +410,14 @@
         }),
         T = h.Z.div({ display: 'flex', flexDirection: 'row', gap: (0, d.so)(10), alignItems: 'center' }),
         H = (0, h.Z)(k())({}),
-        z = (0, h.Z)(m())({
+        P = (0, h.Z)(m())({
           width: (0, d.so)(600),
           height: (0, d.Wk)(600),
           objectFit: 'contain',
           alignSelf: 'center',
           objectPosition: 'center'
         }),
-        P = h.Z.div({ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: (0, d.so)(16) }),
+        z = h.Z.div({ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: (0, d.so)(16) }),
         L = h.Z.div({
           margin: ''
             .concat((0, d.Wk)(0), ' ')
@@ -464,7 +465,7 @@
           display: 'flex',
           flexDirection: 'row'
         }),
-        G = h.Z.div({
+        q = h.Z.div({
           width: '50%',
           padding: ''
             .concat((0, d.Wk)(162), ' ')
@@ -475,7 +476,7 @@
           flexDirection: 'column',
           gap: (0, d.Wk)(40)
         }),
-        Q = h.Z.div({
+        G = h.Z.div({
           width: '50%',
           padding: ''.concat((0, d.Wk)(92), ' ').concat((0, d.so)(80)),
           position: 'relative',
@@ -489,7 +490,7 @@
             objectPosition: 'center'
           }
         }),
-        q = h.Z.div({
+        Q = h.Z.div({
           borderRadius: (0, d.so)(560),
           backgroundColor: '#FF80A1',
           backdropFilter: 'blur('.concat((0, d.so)(43.75), ')'),
@@ -569,6 +570,22 @@
           '& svg': { strokeWidth: (0, c.so)(24), height: (0, c.so)(24) }
         });
     },
+    6773: function (t, n, e) {
+      'use strict';
+      function o(t) {
+        let { src: n, width: e, quality: o } = t;
+        return ''
+          .concat(n, '?w=')
+          .concat(e, '&q=')
+          .concat(o || 75);
+      }
+      e.r(n),
+        e.d(n, {
+          default: function () {
+            return o;
+          }
+        });
+    },
     7247: function (t, n, e) {
       'use strict';
       e.d(n, {
@@ -639,7 +656,7 @@
   },
   function (t) {
     t.O(0, [107, 971, 596, 744], function () {
-      return t((t.s = 1131));
+      return t((t.s = 7597));
     }),
       (_N_E = t.O());
   }

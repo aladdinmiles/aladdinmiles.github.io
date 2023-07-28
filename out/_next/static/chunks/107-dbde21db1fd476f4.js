@@ -1322,12 +1322,12 @@
         c = r(9469);
       r(7873);
       let f = r(2706),
-        d = n._(r(5033)),
+        d = n._(r(6773)),
         p = {
           deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
           imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-          path: '/_next/image',
-          loader: 'default',
+          path: '/_next/image/',
+          loader: 'custom',
           dangerouslyAllowSVG: !1,
           unoptimized: !1
         };
@@ -1511,7 +1511,7 @@
         u = r(7607),
         c = r(2706),
         f = r(6656),
-        d = r(283),
+        d = r(5033),
         p = r(7561),
         m = r(6711),
         h = r(5685),
@@ -1681,7 +1681,7 @@
         Object.assign(t.default, t),
         (e.exports = t.default));
     },
-    283: function (e, t, r) {
+    5033: function (e, t, r) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 }),
         Object.defineProperty(t, 'useIntersection', {
@@ -2215,7 +2215,7 @@
         o = r(2301),
         a = r(7873),
         i = r(3222),
-        s = n._(r(5033)),
+        s = n._(r(6773)),
         l = (e) => {
           (0, a.warnOnce)(
             'Warning: unstable_getImgProps() is experimental and may change or be removed at any time. Use at your own risk.'
@@ -2225,8 +2225,8 @@
             imgConf: {
               deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
               imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-              path: '/_next/image',
-              loader: 'default',
+              path: '/_next/image/',
+              loader: 'custom',
               dangerouslyAllowSVG: !1,
               unoptimized: !1
             }
@@ -2235,22 +2235,6 @@
           return { props: t };
         },
         u = i.Image;
-    },
-    5033: function (e, t) {
-      'use strict';
-      function r(e) {
-        let { config: t, src: r, width: n, quality: o } = e;
-        return t.path + '?url=' + encodeURIComponent(r) + '&w=' + n + '&q=' + (o || 75);
-      }
-      Object.defineProperty(t, '__esModule', { value: !0 }),
-        Object.defineProperty(t, 'default', {
-          enumerable: !0,
-          get: function () {
-            return n;
-          }
-        }),
-        (r.__next_img_default = !0);
-      let n = r;
     },
     2706: function (e, t, r) {
       'use strict';

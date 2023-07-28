@@ -1,12 +1,13 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [489, 160],
   {
-    5190: function (t, n, e) {
+    661: function (t, n, e) {
       Promise.resolve().then(e.bind(e, 431)),
         Promise.resolve().then(e.t.bind(e, 3222, 23)),
-        Promise.resolve().then(e.bind(e, 750)),
+        Promise.resolve().then(e.bind(e, 6773)),
         Promise.resolve().then(e.bind(e, 7746)),
-        Promise.resolve().then(e.bind(e, 3141));
+        Promise.resolve().then(e.bind(e, 3141)),
+        Promise.resolve().then(e.bind(e, 750));
     },
     431: function (t, n, e) {
       'use strict';
@@ -22,7 +23,7 @@
             return Y;
           },
           BigCircle: function () {
-            return q;
+            return Q;
           },
           BlueBackground: function () {
             return z;
@@ -37,7 +38,7 @@
             return _;
           },
           ContentView: function () {
-            return y;
+            return b;
           },
           DownloadContent: function () {
             return J;
@@ -49,7 +50,7 @@
             return H;
           },
           HeroSection: function () {
-            return b;
+            return y;
           },
           Line: function () {
             return S;
@@ -94,10 +95,10 @@
             return U;
           },
           StartShoppingAreaLeft: function () {
-            return G;
+            return q;
           },
           StartShoppingAreaRight: function () {
-            return Q;
+            return G;
           },
           StoreButtons: function () {
             return P;
@@ -132,8 +133,8 @@
         m = e(1396),
         k = e.n(m);
       let w = h.Z.div({ width: '100%', minHeight: '100%', backgroundColor: '#ffffff' }),
-        y = h.Z.div({ width: '100%' }),
-        b = h.Z.section({ height: (0, d.Wk)(824), width: '100%', display: 'flex', flexDirection: 'row' }),
+        b = h.Z.div({ width: '100%' }),
+        y = h.Z.section({ height: (0, d.Wk)(824), width: '100%', display: 'flex', flexDirection: 'row' }),
         v = (0, g.F4)({
           from: { transform: 'translate3d(0px, '.concat((0, d.Wk)(-90), ' , 0px)') },
           '50%': { transform: 'translate3d(0px, '.concat((0, d.Wk)(90), ' , 0px)') },
@@ -258,7 +259,7 @@
           display: 'flex',
           flexDirection: 'row'
         }),
-        G = h.Z.div({
+        q = h.Z.div({
           width: '50%',
           padding: ''
             .concat((0, d.Wk)(162), ' ')
@@ -269,7 +270,7 @@
           flexDirection: 'column',
           gap: (0, d.Wk)(40)
         }),
-        Q = h.Z.div({
+        G = h.Z.div({
           width: '50%',
           padding: ''.concat((0, d.Wk)(92), ' ').concat((0, d.so)(80)),
           position: 'relative',
@@ -283,7 +284,7 @@
             objectPosition: 'center'
           }
         }),
-        q = h.Z.div({
+        Q = h.Z.div({
           borderRadius: (0, d.so)(560),
           backgroundColor: '#FF80A1',
           backdropFilter: 'blur('.concat((0, d.so)(43.75), ')'),
@@ -383,10 +384,10 @@
             return w;
           },
           FooterLink: function () {
-            return y;
+            return b;
           },
           FooterSection: function () {
-            return b;
+            return y;
           },
           FooterText: function () {
             return k;
@@ -441,8 +442,8 @@
         },
         k = (0, l.Z)(x)({ fontSize: (0, s.JB)(16), color: '#ffffff', display: 'block' }),
         w = (0, l.Z)(m)({ fontSize: (0, s.JB)(16), color: '#ffffff', display: 'block' }),
-        y = k.withComponent(g()),
-        b = l.Z.div({ maxWidth: (0, s.so)(280), display: 'flex', flexDirection: 'column', gap: (0, s.Wk)(16) }),
+        b = k.withComponent(g()),
+        y = l.Z.div({ maxWidth: (0, s.so)(280), display: 'flex', flexDirection: 'column', gap: (0, s.Wk)(16) }),
         v = (0, l.Z)(u())({}),
         W = (0, l.Z)(u())({}),
         Z = l.Z.div({
@@ -451,6 +452,22 @@
           alignItems: 'center',
           gap: (0, s.so)(16),
           paddingTop: (0, s.Wk)(8)
+        });
+    },
+    6773: function (t, n, e) {
+      'use strict';
+      function o(t) {
+        let { src: n, width: e, quality: o } = t;
+        return ''
+          .concat(n, '?w=')
+          .concat(e, '&q=')
+          .concat(o || 75);
+      }
+      e.r(n),
+        e.d(n, {
+          default: function () {
+            return o;
+          }
         });
     },
     7746: function (t, n, e) {
@@ -532,7 +549,7 @@
   },
   function (t) {
     t.O(0, [107, 971, 596, 744], function () {
-      return t((t.s = 5190));
+      return t((t.s = 661));
     }),
       (_N_E = t.O());
   }
