@@ -1,12 +1,12 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [489, 160],
+  [160, 489],
   {
-    8768: function (t, n, e) {
+    661: function (t, n, e) {
       Promise.resolve().then(e.bind(e, 431)),
         Promise.resolve().then(e.t.bind(e, 3222, 23)),
         Promise.resolve().then(e.bind(e, 6773)),
-        Promise.resolve().then(e.bind(e, 3141)),
         Promise.resolve().then(e.bind(e, 7746)),
+        Promise.resolve().then(e.bind(e, 3141)),
         Promise.resolve().then(e.bind(e, 750));
     },
     431: function (t, n, e) {
@@ -47,7 +47,7 @@
             return V;
           },
           HeroImage: function () {
-            return H;
+            return L;
           },
           HeroSection: function () {
             return y;
@@ -68,7 +68,7 @@
             return $;
           },
           Partners: function () {
-            return L;
+            return H;
           },
           PinkBackground: function () {
             return O;
@@ -173,8 +173,8 @@
               id: 'Vector',
               d: 'M2 5.64611C28.1648 2.81791 94.7954 -1.0708 152 6',
               stroke: '#FF1F7D',
-              'stroke-width': '4',
-              'stroke-linecap': 'round'
+              strokeWidth: '4',
+              strokeLinecap: 'round'
             })
           }),
         B = (t) => {
@@ -204,14 +204,14 @@
         }),
         R = h.Z.div({ display: 'flex', flexDirection: 'row', gap: (0, d.so)(10), alignItems: 'center' }),
         P = (0, h.Z)(k())({}),
-        H = (0, h.Z)(x())({
+        L = (0, h.Z)(x())({
           width: (0, d.so)(600),
           height: (0, d.Wk)(600),
           objectFit: 'contain',
           alignSelf: 'center',
           objectPosition: 'center'
         }),
-        L = h.Z.div({ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: (0, d.so)(16) }),
+        H = h.Z.div({ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: (0, d.so)(16) }),
         M = h.Z.div({
           margin: ''
             .concat((0, d.Wk)(0), ' ')
@@ -549,7 +549,7 @@
   },
   function (t) {
     t.O(0, [107, 971, 596, 744], function () {
-      return t((t.s = 8768));
+      return t((t.s = 661));
     }),
       (_N_E = t.O());
   }

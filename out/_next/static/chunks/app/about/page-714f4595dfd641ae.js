@@ -1,11 +1,11 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [301],
   {
-    9955: function (n, t, e) {
-      Promise.resolve().then(e.t.bind(e, 3222, 23)),
-        Promise.resolve().then(e.bind(e, 6773)),
-        Promise.resolve().then(e.bind(e, 431)),
+    6366: function (n, t, e) {
+      Promise.resolve().then(e.bind(e, 431)),
         Promise.resolve().then(e.bind(e, 5297)),
+        Promise.resolve().then(e.t.bind(e, 3222, 23)),
+        Promise.resolve().then(e.bind(e, 6773)),
         Promise.resolve().then(e.bind(e, 3839)),
         Promise.resolve().then(e.bind(e, 750));
     },
@@ -362,7 +362,7 @@
       e.r(t),
         e.d(t, {
           AppDownload: function () {
-            return L;
+            return A;
           },
           AppDownloadArea: function () {
             return I;
@@ -374,7 +374,7 @@
             return G;
           },
           BlueBackground: function () {
-            return A;
+            return L;
           },
           ButtonContainer: function () {
             return P;
@@ -521,8 +521,8 @@
               id: 'Vector',
               d: 'M2 5.64611C28.1648 2.81791 94.7954 -1.0708 152 6',
               stroke: '#FF1F7D',
-              'stroke-width': '4',
-              'stroke-linecap': 'round'
+              strokeWidth: '4',
+              strokeLinecap: 'round'
             })
           }),
         B = (n) => {
@@ -567,14 +567,14 @@
             .concat((0, d.Wk)(40), ' ')
             .concat((0, d.so)(100))
         }),
-        A = h.Z.section({
+        L = h.Z.section({
           padding: ''.concat((0, d.Wk)(100), ' ').concat((0, d.so)(80)),
           width: '100%',
           backgroundColor: '#002466',
           alignItems: 'center',
           justifyContent: 'center'
         }),
-        L = h.Z.div({
+        A = h.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
           width: (0, d.so)(1280),
           height: (0, d.Wk)(480),
@@ -792,7 +792,7 @@
   },
   function (n) {
     n.O(0, [107, 971, 596, 744], function () {
-      return n((n.s = 9955));
+      return n((n.s = 6366));
     }),
       (_N_E = n.O());
   }
