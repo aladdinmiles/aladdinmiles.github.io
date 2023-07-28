@@ -66,7 +66,7 @@ const AboutUs: React.FC = () => {
           </RaleText>
         </HistoryContent>
       </HistorySection>
-      <JoinUs>
+      <JoinUs id="careers">
         <JoinUsContent>
           <JoinUsContentTextArea>
             <JoinUsHeader>Join us in building the No. 1 miles reward platform in the world.</JoinUsHeader>

@@ -114,7 +114,7 @@ export default function Home() {
           <Image src="/images/slide1.png" width={404} height={640} alt="slider1" />
         </StartShoppingAreaRight>
       </PinkBackground>
-      <BlueBackground>
+      <BlueBackground id="download">
         <AppDownload>
           <DownloadContent>
             <div>

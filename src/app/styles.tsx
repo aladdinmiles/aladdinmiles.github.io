@@ -92,8 +92,8 @@ export const Line: React.FC = () => (
       id="Vector"
       d="M2 5.64611C28.1648 2.81791 94.7954 -1.0708 152 6"
       stroke="#FF1F7D"
-      stroke-width="4"
-      stroke-linecap="round"
+      strokeWidth="4"
+      strokeLinecap="round"
     />
   </svg>
 );

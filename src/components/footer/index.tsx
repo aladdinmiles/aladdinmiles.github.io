@@ -29,19 +29,19 @@ export const Footer: React.FC = () => {
       </FooterSection>
       <FooterSection>
         <FooterHeader>Product</FooterHeader>
-        <FooterLink href="/#">Download the mobile app</FooterLink>
+        <FooterLink href="/#download">Download the mobile app</FooterLink>
         <FooterLink href="/merchant">Become a merchant</FooterLink>
-        <FooterLink href="/#">Partner with us</FooterLink>
+        <FooterLink href="/merchant#partners">Partner with us</FooterLink>
       </FooterSection>
       <FooterSection>
         <FooterHeader>Legal</FooterHeader>
         <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
-        <FooterLink href="/#">Terms and Conditions</FooterLink>
-        <FooterLink href="/#">Merchant T&Cs</FooterLink>
+        <FooterLink href="/terms-conditions">Terms and Conditions</FooterLink>
+        <FooterLink href="/merchant-tc">Merchant T&Cs</FooterLink>
       </FooterSection>
       <FooterSection>
         <FooterHeader>Company</FooterHeader>
-        <FooterLink href="/#">Careers</FooterLink>
+        <FooterLink href="/about#careers">Careers</FooterLink>
         <FooterLink href="/about">About Us</FooterLink>
         <FooterLink href="/#">Email: hello@aladdinmiles.com</FooterLink>
       </FooterSection>
