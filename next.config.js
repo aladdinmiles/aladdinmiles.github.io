@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: 'export',
-    basePath: '/aladdinmiles.github.io',
-}
+const nextConfig = {};
 
-module.exports = nextConfig
+module.exports = nextConfig;
