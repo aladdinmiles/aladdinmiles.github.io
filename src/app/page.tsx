@@ -60,7 +60,9 @@ export default function Home() {
               Get rewarded in Air Miles whenever you shop your favorites brands on the AladdinMiles app.
             </RaleText>
             <AppDownloadArea>
-              <QRCodeBackground>{/* <QRCode width={'89.6'} height={'89.6'} /> */}</QRCodeBackground>
+              <QRCodeBackground>
+                <Image src="/images/QRCode.svg" alt="qrcode" width={89.6} height={89.6} />
+              </QRCodeBackground>
               <div>
                 <RaleText>Scan to download</RaleText>
                 <ButtonContainer>

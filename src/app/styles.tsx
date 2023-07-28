@@ -147,7 +147,8 @@ export const QRCodeBackground = styled.div({
   borderRadius: widthPixel(140),
   alignItems: 'center',
   justifyContent: 'center',
-  background: '#FF3251'
+  background: '#FF3251',
+  display: 'flex'
 });
 
 export const ButtonContainer = styled.div({
@@ -294,3 +295,11 @@ export const Arrow = () => (
     <path d="M12.5 4L11.09 5.41L16.67 11H4.5V13H16.67L11.09 18.59L12.5 20L20.5 12L12.5 4Z" fill="white" />
   </svg>
 );
+
+export const Page404 = styled.div({
+  height: heightPixel(520),
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  display: 'flex'
+});

@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
       <FooterSection>
         <FooterHeader>Product</FooterHeader>
         <FooterLink href="/#">Download the mobile app</FooterLink>
-        <FooterLink href="/#">Become a merchant</FooterLink>
+        <FooterLink href="/merchant">Become a merchant</FooterLink>
         <FooterLink href="/#">Partner with us</FooterLink>
       </FooterSection>
       <FooterSection>
