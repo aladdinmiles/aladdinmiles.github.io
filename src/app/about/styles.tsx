@@ -130,7 +130,6 @@ export const JoinUsHeader = styled(MultiStyleText)({
 
 export const RaleTextWhite = styled(RaleText)({
   color: '#ffffff',
-  textAlign: 'center',
   width: widthPixel(560),
   textAlign: 'left'
 });
