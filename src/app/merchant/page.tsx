@@ -10,8 +10,10 @@ const BecomeAMerchant: React.FC = () => {
       <HeroSection>
         <HeroContent>
           <HeroContentTextArea>
-            <SmallerHeader>Become a merchant</SmallerHeader>
-            <MultiStyleText>Looking to grow your business? We’ve got you!</MultiStyleText>
+            <SmallerHeader className="small">Become a merchant</SmallerHeader>
+            <MultiStyleText>
+              Looking to <ColoredText>grow</ColoredText> your business? We’ve got you!
+            </MultiStyleText>
             <RaleText>Partner with the world best loyalty platform and watch your business skyrocket.</RaleText>
           </HeroContentTextArea>
           <Button href="/#">
@@ -24,7 +26,7 @@ const BecomeAMerchant: React.FC = () => {
         <Image src="/images/merchantBottom.png" width={616} height={600} alt="team" />
         <HeroContent>
           <HeroContentTextArea>
-            <SmallerHeader>Become a partner</SmallerHeader>
+            <SmallerHeader className="small">Become a partner</SmallerHeader>
             <MultiStyleText>
               <ColoredText>Partner</ColoredText> with us!
             </MultiStyleText>

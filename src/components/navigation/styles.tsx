@@ -1,5 +1,5 @@
 'use client';
-import { heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
+import { heightPixel, mobileHeightPixel, mobileStyle, mobileWidthPixel, widthPixel } from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
@@ -27,8 +27,8 @@ export const NavBar = styled.div({
   alignItems: 'center',
   padding: `${heightPixel(22)} ${widthPixel(100)}`,
   ...mobileStyle({
-    height: heightPixel(60),
-    padding: `${heightPixel(16)} ${widthPixel(14)}`
+    height: mobileHeightPixel(60),
+    padding: `${mobileHeightPixel(16)} ${mobileWidthPixel(14)}`
   })
 });
 
@@ -49,14 +49,14 @@ export const LogoArea = styled(Link)({
   },
   ...mobileStyle({
     '& .actualLogo': {
-      width: widthPixel(32),
-      height: heightPixel(22.756),
+      width: mobileWidthPixel(32),
+      height: mobileHeightPixel(22.756),
       objectFit: 'cover',
       objectPosition: 'center'
     },
     '& .logo-text': {
-      width: widthPixel(113),
-      height: heightPixel(32),
+      width: mobileWidthPixel(113),
+      height: mobileHeightPixel(32),
       objectFit: 'contain'
     }
   })

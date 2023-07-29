@@ -11,6 +11,7 @@ import {
   HeroRight,
   HeroSection,
   HistoryContent,
+  HistoryHeaderSection,
   HistorySection,
   JoinUs,
   JoinUsContent,
@@ -49,8 +50,11 @@ const AboutUs: React.FC = () => {
       <HistorySection>
         <Image src="/images/city.png" width={300} height={600} alt="city" />
         <HistoryContent>
-          <SmallerHeader>OUR HISTORY</SmallerHeader>
-          <MultiStyleText>Our magical story</MultiStyleText>
+          <HistoryHeaderSection>
+            <SmallerHeader>OUR HISTORY</SmallerHeader>
+            <MultiStyleText>Our magical story</MultiStyleText>
+          </HistoryHeaderSection>
+
           <RaleText>
             AladdinMiles is a groundbreaking loyalty program that transforms your everyday purchases into exciting
             travel experiences. You can earn miles effortlessly whenever you shop or dine. These miles can be later

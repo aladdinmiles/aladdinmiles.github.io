@@ -1,5 +1,13 @@
 'use client';
-import { fontSize, heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
+import {
+  fontSize,
+  heightPixel,
+  mobileFontSize,
+  mobileHeightPixel,
+  mobileStyle,
+  mobileWidthPixel,
+  widthPixel
+} from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Manrope, Raleway } from 'next/font/google';
 import Link from 'next/link';
@@ -13,7 +21,10 @@ export const Wrapper = styled.section({
   display: 'flex',
   gap: heightPixel(50),
   ...mobileStyle({
-    padding: `${heightPixel(40)} ${widthPixel(24)}`
+    width: mobileWidthPixel(414),
+    paddingTop: `${mobileHeightPixel(40)}`,
+    alignItems: 'center',
+    justifyContent: 'center'
   })
 });
 
@@ -41,7 +52,7 @@ export const SmallerHeader = styled.p([
     lineHeight: '150%'
   },
   mobileStyle({
-    fontSize: fontSize(12)
+    fontSize: mobileFontSize(12)
   })
 ]);
 
@@ -54,7 +65,8 @@ export const Header = styled.p([
     textAlign: 'center'
   },
   mobileStyle({
-    fontSize: fontSize(24)
+    fontSize: mobileFontSize(24),
+    width: mobileWidthPixel(390)
   })
 ]);
 
@@ -74,7 +86,7 @@ export const ItemRows = styled.div({
   gap: widthPixel(24),
   ...mobileStyle({
     flexDirection: 'column',
-    marginBottom: heightPixel(12)
+    gap: mobileWidthPixel(24)
   })
 });
 
@@ -83,7 +95,11 @@ export const ContentArea = styled.div({
   alignItems: 'flex-start',
   flexDirection: 'column',
   gap: heightPixel(24),
-  padding: '0px'
+  padding: '0px',
+  ...mobileStyle({
+    alignItems: 'center',
+    justifyContent: 'center'
+  })
 });
 
 const getStyle = (index: number) => {
@@ -151,14 +167,17 @@ export const Card = styled.div<{ index: number }>(({ index }) => [
   },
   getStyle(index),
   mobileStyle({
-    width: widthPixel(366),
+    width: mobileWidthPixel(366),
     '& img': {
-      width: widthPixel(76.783),
-      height: widthPixel(76.783),
+      width: mobileWidthPixel(76.783),
+      height: mobileWidthPixel(76.783),
       objectFit: 'cover',
       objectPosition: 'center'
     },
-    padding: `${heightPixel(44)} ${widthPixel(26)}`
+    padding: `${mobileHeightPixel(44)} ${mobileWidthPixel(26)}`,
+    borderRadius: mobileWidthPixel(8),
+    gap: mobileWidthPixel(24),
+    flexShrink: 0
   })
 ]);
 
@@ -168,16 +187,16 @@ export const CardContent = styled.div({
   gap: heightPixel(12),
   width: widthPixel(329),
   ...mobileStyle({
-    maxWidth: widthPixel(210),
-    gap: heightPixel(7.678)
+    width: mobileWidthPixel(210),
+    gap: mobileHeightPixel(7.678)
   })
 });
 
 export const Text = styled(RaleText)({
   fontSize: fontSize(22),
   ...mobileStyle({
-    fontSize: fontSize(14),
-    maxWidth: widthPixel(210)
+    fontSize: mobileFontSize(14),
+    width: mobileWidthPixel(210)
   })
 });
 
@@ -186,31 +205,44 @@ export const CardHeader = styled(RaleText)([
   {
     color: '#1D2029',
     ...mobileStyle({
-      fontSize: fontSize(16),
-      maxWidth: widthPixel(210)
+      fontSize: mobileFontSize(16),
+      width: mobileWidthPixel(210)
     })
   }
 ]);
 
-export const LegalContainerView = styled.section`
+export const LegalContainerView = styled.section([
+  `
   display: flex;
   width: 100%;
   height: auto;
   padding: ${heightPixel(80)} ${widthPixel(100)};
   justify-content: center;
   align-items: center;
-`;
+`,
+  mobileStyle({
+    padding: `${heightPixel(40)} ${widthPixel(24)}`
+  })
+]);
 
-export const Content = styled.div`
+export const Content = styled.div([
+  `
   display: flex;
   align-items: flex-start;
-  gap: 80px;
-`;
+  gap: ${widthPixel(80)};
+`,
+  mobileStyle({
+    flexDirection: 'column'
+  })
+]);
 
 export const SideNav = styled.aside({
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start'
+  alignItems: 'flex-start',
+  ...mobileStyle({
+    display: 'none'
+  })
 });
 
 export const MainContent = styled.article([
@@ -226,7 +258,20 @@ export const MainContent = styled.article([
       lineHeight: '160%',
       padding: `${heightPixel(12)}`
     }
-  }
+  },
+  mobileStyle({
+    width: '100%',
+
+    '& p': {
+      fontWeight: 400,
+      margin: 'auto !important',
+      ...rale400.style,
+      color: '#515665',
+      fontSize: mobileFontSize(16),
+      lineHeight: '160%',
+      padding: `${mobileHeightPixel(12)}`
+    }
+  })
 ]);
 
 export const NewLink = styled(Link)`

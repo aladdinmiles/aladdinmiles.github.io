@@ -1,5 +1,13 @@
 'use client';
-import { fontSize, heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
+import {
+  fontSize,
+  heightPixel,
+  mobileFontSize,
+  mobileHeightPixel,
+  mobileStyle,
+  mobileWidthPixel,
+  widthPixel
+} from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Manrope } from 'next/font/google';
 import Image from 'next/image';
@@ -15,10 +23,10 @@ export const FooterBar = styled.footer({
   padding: `${heightPixel(74)} ${widthPixel(80)}`,
   background: '#002466',
   ...mobileStyle({
-    padding: `${heightPixel(24)} ${widthPixel(24)}`,
+    padding: `${mobileHeightPixel(24)} ${mobileWidthPixel(24)}`,
     flexDirection: 'column-reverse',
     alignItems: 'flex-start',
-    gap: heightPixel(56)
+    gap: mobileHeightPixel(56)
   })
 });
 
@@ -54,13 +62,19 @@ export const BaseHeader: React.FC<{ className?: string; children: ReactNode }> =
 export const FooterText = styled(BaseText)({
   fontSize: fontSize(16),
   color: '#ffffff',
-  display: 'block'
+  display: 'block',
+  ...mobileStyle({
+    fontSize: mobileFontSize(16)
+  })
 });
 
 export const FooterHeader = styled(BaseHeader)({
   fontSize: fontSize(16),
   color: '#ffffff',
-  display: 'block'
+  display: 'block',
+  ...mobileStyle({
+    fontSize: mobileFontSize(16)
+  })
 });
 
 export const FooterLink = FooterText.withComponent(Link);
@@ -71,7 +85,7 @@ export const FooterSection = styled.div({
   flexDirection: 'column',
   gap: heightPixel(16),
   ...mobileStyle({
-    maxWidth: widthPixel(270)
+    maxWidth: mobileWidthPixel(270)
   })
 });
 
@@ -90,5 +104,8 @@ export const Socials = styled.div({
   flexDirection: 'row',
   alignItems: 'center',
   gap: widthPixel(16),
-  paddingTop: heightPixel(8)
+  paddingTop: heightPixel(8),
+  ...mobileStyle({
+    gap: mobileWidthPixel(48)
+  })
 });

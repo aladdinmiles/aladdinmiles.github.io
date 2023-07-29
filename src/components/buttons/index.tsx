@@ -1,6 +1,14 @@
 'use client';
 
-import { fontSize, heightPixel, widthPixel } from '@/utils/pxToVW';
+import {
+  fontSize,
+  heightPixel,
+  mobileFontSize,
+  mobileHeightPixel,
+  mobileStyle,
+  mobileWidthPixel,
+  widthPixel
+} from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Manrope } from 'next/font/google';
 import Link, { LinkProps } from 'next/link';
@@ -31,7 +39,12 @@ const Container = styled(Link)({
   alignItems: 'center',
   justifyContent: 'center',
   display: 'inline-flex',
-  textDecoration: 'none'
+  textDecoration: 'none',
+  ...mobileStyle({
+    width: mobileWidthPixel(220),
+    height: mobileHeightPixel(48),
+    borderRadius: mobileWidthPixel(4)
+  })
 });
 
 const Text = styled.span({
@@ -45,5 +58,12 @@ const Text = styled.span({
   '& svg': {
     strokeWidth: widthPixel(24),
     height: widthPixel(24)
-  }
+  },
+  ...mobileStyle({
+    fontSize: mobileFontSize(16),
+    '& svg': {
+      strokeWidth: mobileWidthPixel(24),
+      height: mobileWidthPixel(24)
+    }
+  })
 });

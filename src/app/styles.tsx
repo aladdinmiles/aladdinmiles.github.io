@@ -1,5 +1,13 @@
 'use client';
-import { fontSize, heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
+import {
+  fontSize,
+  heightPixel,
+  mobileFontSize,
+  mobileHeightPixel,
+  mobileStyle,
+  mobileWidthPixel,
+  widthPixel
+} from '@/utils/pxToVW';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Manrope, Raleway } from 'next/font/google';
@@ -23,7 +31,7 @@ export const HeroSection = styled.section({
   '@media(max-width: 480px)': {
     flexDirection: 'column',
     background: '#FFF5F8',
-    minHeight: heightPixel(1024)
+    height: mobileHeightPixel(924)
   }
 });
 
@@ -65,6 +73,9 @@ export const ColoredHalf = styled.div({
   alignItems: 'center',
   justifyContent: 'center',
   display: 'flex',
+  '& #mobileTrusted': {
+    display: 'none'
+  },
   '@media(max-width: 480px)': {
     width: '100%',
     flexDirection: 'column',
@@ -74,7 +85,7 @@ export const ColoredHalf = styled.div({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',
-      marginTop: heightPixel(42)
+      marginTop: mobileHeightPixel(42)
     }
   }
 });
@@ -99,10 +110,10 @@ export const MultiStyleText = styled.h1([
     fontSize: fontSize(44),
     color: '#1D2029',
     '@media(max-width: 480px)': {
-      fontSize: fontSize(32),
-      width: widthPixel(366),
+      fontSize: mobileFontSize(32),
+      width: mobileWidthPixel(366),
       '& svg': {
-        width: widthPixel(110)
+        width: mobileWidthPixel(110)
       }
     }
   }
@@ -115,7 +126,7 @@ export const ColoredText = styled.span({
 export const TextContentArea = styled.div({
   margin: `${heightPixel(168)} ${widthPixel(24)} ${heightPixel(120)} ${widthPixel(100)}`,
   '@media(max-width: 480px)': {
-    margin: `${heightPixel(40)} ${widthPixel(24)}`
+    margin: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`
   }
 });
 
@@ -169,7 +180,7 @@ export const ManText = styled.p([
     lineHeight: '150%'
   },
   mobileStyle({
-    fontSize: fontSize(12)
+    fontSize: mobileFontSize(12)
   })
 ]);
 
@@ -178,8 +189,8 @@ export const RaleText = styled(RaleBase)({
   fontSize: fontSize(22),
   lineHeight: '160%',
   '@media(max-width: 480px)': {
-    fontSize: fontSize(16),
-    width: widthPixel(366)
+    fontSize: mobileFontSize(16),
+    width: mobileWidthPixel(366)
   }
 });
 
@@ -192,7 +203,7 @@ export const AppDownloadArea = styled.div([
     marginTop: heightPixel(40)
   },
   mobileStyle({
-    marginTop: heightPixel(24),
+    marginTop: mobileHeightPixel(24),
     '& .scanText': {
       display: 'none'
     }
@@ -236,8 +247,8 @@ export const HeroImage = styled(Image)([
     })
   },
   mobileStyle({
-    width: widthPixel(414),
-    height: widthPixel(414)
+    width: mobileWidthPixel(414),
+    height: mobileHeightPixel(414)
   })
 ]);
 
@@ -258,7 +269,7 @@ export const Trusted = styled.div([
     margin: `${heightPixel(0)} ${widthPixel(24)} ${heightPixel(40)} ${widthPixel(100)}`
   },
   mobileStyle({
-    margin: `${heightPixel(40)} ${widthPixel(24)}`,
+    margin: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`,
     display: 'none'
   })
 ]);
@@ -266,11 +277,12 @@ export const Trusted = styled.div([
 export const BlueBackground = styled.section({
   padding: `${heightPixel(100)} ${widthPixel(80)}`,
   width: '100%',
+  display: 'flex',
   backgroundColor: '#002466',
   alignItems: 'center',
   justifyContent: 'center',
   ...mobileStyle({
-    padding: `${heightPixel(100)} ${widthPixel(24)}`
+    padding: `${mobileHeightPixel(100)} ${mobileWidthPixel(24)}`
   })
 });
 
@@ -286,7 +298,7 @@ export const AppDownload = styled.div({
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
   ...mobileStyle({
-    width: widthPixel(414),
+    width: mobileWidthPixel(414),
     backgroundSize: 'scale-down'
   })
 });
@@ -303,7 +315,8 @@ export const DownloadContent = styled.div({
   borderTopLeftRadius: widthPixel(178),
   borderBottomRightRadius: widthPixel(178),
   ...mobileStyle({
-    gap: heightPixel(24)
+    gap: mobileHeightPixel(24),
+    width: mobileWidthPixel(414)
   })
 });
 
@@ -315,7 +328,8 @@ export const DownloadHeader = styled(RaleText)([
     textAlign: 'center'
   },
   mobileStyle({
-    width: widthPixel(316)
+    minWidth: mobileWidthPixel(351),
+    fontSize: mobileFontSize(24)
   })
 ]);
 
@@ -325,9 +339,9 @@ export const RaleTextWhite = styled(RaleText)({
   width: widthPixel(440),
   fontSize: fontSize(24),
   ...mobileStyle({
-    width: widthPixel(316),
+    width: mobileWidthPixel(316),
     margin: '0px',
-    fontSize: fontSize(16)
+    fontSize: mobileFontSize(16)
   })
 });
 
@@ -339,7 +353,7 @@ export const PinkBackground = styled.section({
   flexDirection: 'row',
   ...mobileStyle({
     flexDirection: 'column',
-    borderTopRightRadius: widthPixel(0)
+    borderTopRightRadius: mobileWidthPixel(0)
   })
 });
 
@@ -351,10 +365,7 @@ export const StartShoppingAreaLeft = styled.div({
   flexDirection: 'column',
   gap: heightPixel(40),
   ...mobileStyle({
-    padding: `${heightPixel(40)} ${widthPixel(24)}`,
-    '& h1': {
-      fontSize: fontSize(24)
-    }
+    padding: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`
   })
 });
 
@@ -374,7 +385,14 @@ export const StartShoppingAreaRight = styled.div({
     objectPosition: 'center'
   },
   ...mobileStyle({
-    width: '100%'
+    width: '100%',
+    '& img': {
+      width: mobileWidthPixel(233.88),
+      height: mobileHeightPixel(506.38),
+      position: 'absolute',
+      objectFit: 'contain',
+      objectPosition: 'center'
+    }
   })
 });
 
@@ -387,7 +405,10 @@ export const BigCircle = styled.div({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  ...mobileStyle({})
+  ...mobileStyle({
+    width: mobileHeightPixel(370),
+    height: mobileHeightPixel(370)
+  })
 });
 
 export const SB = styled.div({
@@ -400,13 +421,23 @@ export const SB = styled.div({
     height: heightPixel(48),
     objectFit: 'contain',
     objectPosition: 'center'
-  }
+  },
+  ...mobileStyle({
+    '& img': {
+      width: mobileWidthPixel(16),
+      height: mobileHeightPixel(24)
+    }
+  })
 });
 
 export const SmallboldText = styled(RaleText)([rale600.style]);
 
 export const SmallMultiStyleText = styled(MultiStyleText)({
-  fontSize: fontSize(32)
+  fontSize: fontSize(32),
+  ...mobileStyle({
+    fontSize: mobileFontSize(24),
+    width: mobileWidthPixel(366)
+  })
 });
 
 export const Arrow = () => (
