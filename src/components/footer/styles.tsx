@@ -1,5 +1,5 @@
 'use client';
-import { fontSize, heightPixel, widthPixel } from '@/utils/pxToVW';
+import { fontSize, heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Manrope } from 'next/font/google';
 import Image from 'next/image';
@@ -13,7 +13,13 @@ export const FooterBar = styled.footer({
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: `${heightPixel(74)} ${widthPixel(80)}`,
-  background: '#002466'
+  background: '#002466',
+  ...mobileStyle({
+    padding: `${heightPixel(24)} ${widthPixel(24)}`,
+    flexDirection: 'column-reverse',
+    alignItems: 'flex-start',
+    gap: heightPixel(56)
+  })
 });
 
 export const Content = styled.div({
@@ -21,7 +27,10 @@ export const Content = styled.div({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  gap: `${widthPixel(209)} ${widthPixel(109)} ${widthPixel(109)}`
+  gap: `${widthPixel(209)} ${widthPixel(109)} ${widthPixel(109)}`,
+  ...mobileStyle({
+    flexDirection: 'column'
+  })
 });
 
 const man = Manrope({
@@ -60,7 +69,10 @@ export const FooterSection = styled.div({
   maxWidth: widthPixel(280),
   display: 'flex',
   flexDirection: 'column',
-  gap: heightPixel(16)
+  gap: heightPixel(16),
+  ...mobileStyle({
+    maxWidth: widthPixel(270)
+  })
 });
 
 export const StyledImage = styled(Image)({

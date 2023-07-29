@@ -64,19 +64,25 @@ export default function Home() {
                 <Image src="/images/QRCode.svg" alt="qrcode" width={89.6} height={89.6} />
               </QRCodeBackground>
               <div>
-                <RaleText>Scan to download</RaleText>
+                <RaleText className="scanText">Scan to download</RaleText>
                 <ButtonContainer>
-                  <StoreButtons href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088">
+                  <StoreButtons
+                    target="_blank"
+                    href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088"
+                  >
                     <Image alt="Get it on Google Play" src="/images/appstore.svg" width={160} height={46} />
                   </StoreButtons>
-                  <StoreButtons href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                  <StoreButtons
+                    target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                  >
                     <Image alt="Get it on Google Play" src="/images/google-play-badge.svg" width={160} height={46} />
                   </StoreButtons>
                 </ButtonContainer>
               </div>
             </AppDownloadArea>
           </TextContentArea>
-          <Trusted>
+          <Trusted id="trusted">
             <ManText>Trusted by the best businesses</ManText>
             <Partners>
               <Image src="/images/intermile.png" width={128} height={40} alt="intermiles" />
@@ -86,7 +92,15 @@ export default function Home() {
           </Trusted>
         </WhiteHalf>
         <ColoredHalf>
-          <HeroImage src="/images/hero-image.png" width={600} height={600} alt="hero images" />
+          <HeroImage id="bounce" src="/images/hero-image.png" width={600} height={600} alt="hero images" />
+          <Trusted id="mobileTrusted">
+            <ManText>Trusted by the best businesses</ManText>
+            <Partners>
+              <Image src="/images/intermile.png" width={128} height={40} alt="intermiles" />
+              <Image src="/images/ame.png" width={128} height={40} alt="intermiles" />
+              <Image src="/images/airasia.png" width={75} height={40} alt="intermiles" />
+            </Partners>
+          </Trusted>
         </ColoredHalf>
       </HeroSection>
       <FourCardSection {...fourCardHome} />
@@ -105,7 +119,7 @@ export default function Home() {
             <SmallboldText>Download the AladdinMiles app today!</SmallboldText>
           </SB>
           <RaleText>Download the AladdinMiles app today and unlock a treasure trove right at your fingertips!</RaleText>
-          <Button href="/#">
+          <Button href="/#download">
             Start Shopping <Arrow />
           </Button>
         </StartShoppingAreaLeft>
@@ -122,10 +136,16 @@ export default function Home() {
               <RaleTextWhite>Order from your favorite stores and get rewarded for every purchase.</RaleTextWhite>
             </div>
             <ButtonContainer>
-              <StoreButtons href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088">
+              <StoreButtons
+                target="_blank"
+                href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088"
+              >
                 <Image alt="Get it on Google Play" src="/images/appstore.svg" width={160} height={50} />
               </StoreButtons>
-              <StoreButtons href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+              <StoreButtons
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              >
                 <Image alt="Get it on Google Play" src="/images/google-play-badge.svg" width={160} height={600} />
               </StoreButtons>
             </ButtonContainer>

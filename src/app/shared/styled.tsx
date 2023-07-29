@@ -1,5 +1,5 @@
 'use client';
-import { fontSize, heightPixel, widthPixel } from '@/utils/pxToVW';
+import { fontSize, heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Manrope, Raleway } from 'next/font/google';
 import Link from 'next/link';
@@ -11,7 +11,10 @@ export const Wrapper = styled.section({
   padding: `${heightPixel(95)} ${widthPixel(135)}`,
   flexDirection: 'column',
   display: 'flex',
-  gap: heightPixel(50)
+  gap: heightPixel(50),
+  ...mobileStyle({
+    padding: `${heightPixel(40)} ${widthPixel(24)}`
+  })
 });
 
 const man = Manrope({
@@ -36,7 +39,10 @@ export const SmallerHeader = styled.p([
     color: '#FF1654',
     textTransform: 'uppercase',
     lineHeight: '150%'
-  }
+  },
+  mobileStyle({
+    fontSize: fontSize(12)
+  })
 ]);
 
 export const Header = styled.p([
@@ -44,8 +50,12 @@ export const Header = styled.p([
   {
     fontSize: fontSize(32),
     color: '#1D2029',
-    lineHeight: '150%'
-  }
+    lineHeight: '150%',
+    textAlign: 'center'
+  },
+  mobileStyle({
+    fontSize: fontSize(24)
+  })
 ]);
 
 export const HeaderSection = styled.div({
@@ -61,7 +71,11 @@ export const ItemRows = styled.div({
   justifyContent: 'space-between',
   flexDirection: 'row',
   padding: 0,
-  gap: widthPixel(24)
+  gap: widthPixel(24),
+  ...mobileStyle({
+    flexDirection: 'column',
+    marginBottom: heightPixel(12)
+  })
 });
 
 export const ContentArea = styled.div({
@@ -135,24 +149,46 @@ export const Card = styled.div<{ index: number }>(({ index }) => [
       objectPosition: 'center'
     }
   },
-  getStyle(index)
+  getStyle(index),
+  mobileStyle({
+    width: widthPixel(366),
+    '& img': {
+      width: widthPixel(76.783),
+      height: widthPixel(76.783),
+      objectFit: 'cover',
+      objectPosition: 'center'
+    },
+    padding: `${heightPixel(44)} ${widthPixel(26)}`
+  })
 ]);
 
 export const CardContent = styled.div({
   display: 'flex',
   flexDirection: 'column',
   gap: heightPixel(12),
-  width: widthPixel(329)
+  width: widthPixel(329),
+  ...mobileStyle({
+    maxWidth: widthPixel(210),
+    gap: heightPixel(7.678)
+  })
 });
 
 export const Text = styled(RaleText)({
-  fontSize: fontSize(22)
+  fontSize: fontSize(22),
+  ...mobileStyle({
+    fontSize: fontSize(14),
+    maxWidth: widthPixel(210)
+  })
 });
 
 export const CardHeader = styled(RaleText)([
   rale.style,
   {
-    color: '#1D2029'
+    color: '#1D2029',
+    ...mobileStyle({
+      fontSize: fontSize(16),
+      maxWidth: widthPixel(210)
+    })
   }
 ]);
 

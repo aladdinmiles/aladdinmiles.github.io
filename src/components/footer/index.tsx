@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
   return (
     <FooterBar>
       <FooterSection>
-        <LogoArea>
+        <LogoArea href="/">
           <StyledImage src="/logo.png" alt="AladdinMiles logo" width={45} height={32} />
           <StyledImageText src="/logoText.svg" alt="AladdinMiles logo" width={170.4} height={48} />
         </LogoArea>

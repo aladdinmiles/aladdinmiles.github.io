@@ -1,5 +1,5 @@
 'use client';
-import { fontSize, heightPixel, widthPixel } from '@/utils/pxToVW';
+import { fontSize, heightPixel, mobileStyle, widthPixel } from '@/utils/pxToVW';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Manrope, Raleway } from 'next/font/google';
@@ -19,7 +19,12 @@ export const HeroSection = styled.section({
   height: heightPixel(824),
   width: '100%',
   display: 'flex',
-  flexDirection: 'row'
+  flexDirection: 'row',
+  '@media(max-width: 480px)': {
+    flexDirection: 'column',
+    background: '#FFF5F8',
+    minHeight: heightPixel(1024)
+  }
 });
 
 const bounce = keyframes({
@@ -37,6 +42,21 @@ const bounce = keyframes({
   }
 });
 
+const mobile_bounce = keyframes({
+  from: {
+    transform: `translate3d(0px, ${heightPixel(-40)} , 0px)`
+  },
+  '50%': {
+    transform: `translate3d(0px, ${heightPixel(40)} , 0px)`
+  },
+  '90%': {
+    transform: `translate3d(0px, ${heightPixel(-50)} , 0px)`
+  },
+  to: {
+    transform: `translate3d(0px, ${heightPixel(-40)} , 0px)`
+  }
+});
+
 export const ColoredHalf = styled.div({
   height: heightPixel(824),
   width: '50%',
@@ -45,14 +65,27 @@ export const ColoredHalf = styled.div({
   alignItems: 'center',
   justifyContent: 'center',
   display: 'flex',
-  '& img': {
-    animation: `${bounce} 5s ease infinite`
+  '@media(max-width: 480px)': {
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'normal',
+    justifyContent: 'space-between',
+    '& #mobileTrusted': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      marginTop: heightPixel(42)
+    }
   }
 });
 
 export const WhiteHalf = styled.div({
   height: heightPixel(824),
-  width: '50%'
+  width: '50%',
+  '@media(max-width: 480px)': {
+    width: '100%',
+    flexDirection: 'row'
+  }
 });
 
 const rale700 = Raleway({
@@ -64,7 +97,14 @@ export const MultiStyleText = styled.h1([
   rale700.style,
   {
     fontSize: fontSize(44),
-    color: '#1D2029'
+    color: '#1D2029',
+    '@media(max-width: 480px)': {
+      fontSize: fontSize(32),
+      width: widthPixel(366),
+      '& svg': {
+        width: widthPixel(110)
+      }
+    }
   }
 ]);
 
@@ -73,7 +113,10 @@ export const ColoredText = styled.span({
 });
 
 export const TextContentArea = styled.div({
-  margin: `${heightPixel(168)} ${widthPixel(24)} ${heightPixel(120)} ${widthPixel(100)}`
+  margin: `${heightPixel(168)} ${widthPixel(24)} ${heightPixel(120)} ${widthPixel(100)}`,
+  '@media(max-width: 480px)': {
+    margin: `${heightPixel(40)} ${widthPixel(24)}`
+  }
 });
 
 export const TextWithSVG = styled.div({
@@ -124,32 +167,52 @@ export const ManText = styled.p([
     color: '#1D2029',
     textTransform: 'uppercase',
     lineHeight: '150%'
-  }
+  },
+  mobileStyle({
+    fontSize: fontSize(12)
+  })
 ]);
 
 export const RaleText = styled(RaleBase)({
   color: '#515665',
   fontSize: fontSize(22),
-  lineHeight: '160%'
+  lineHeight: '160%',
+  '@media(max-width: 480px)': {
+    fontSize: fontSize(16),
+    width: widthPixel(366)
+  }
 });
 
-export const AppDownloadArea = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  gap: widthPixel(24),
-  alignItems: 'center',
-  marginTop: heightPixel(40)
-});
+export const AppDownloadArea = styled.div([
+  {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: widthPixel(24),
+    alignItems: 'center',
+    marginTop: heightPixel(40)
+  },
+  mobileStyle({
+    marginTop: heightPixel(24),
+    '& .scanText': {
+      display: 'none'
+    }
+  })
+]);
 
-export const QRCodeBackground = styled.div({
-  width: widthPixel(140),
-  height: widthPixel(140),
-  borderRadius: widthPixel(140),
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '#FF3251',
-  display: 'flex'
-});
+export const QRCodeBackground = styled.div([
+  {
+    width: widthPixel(140),
+    height: widthPixel(140),
+    borderRadius: widthPixel(140),
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#FF3251',
+    display: 'flex'
+  },
+  mobileStyle({
+    display: 'none'
+  })
+]);
 
 export const ButtonContainer = styled.div({
   display: 'flex',
@@ -160,31 +223,55 @@ export const ButtonContainer = styled.div({
 
 export const StoreButtons = styled(Link)({});
 
-export const HeroImage = styled(Image)({
-  width: widthPixel(600),
-  height: heightPixel(600),
-  objectFit: 'contain',
-  alignSelf: 'center',
-  objectPosition: 'center'
-});
+export const HeroImage = styled(Image)([
+  {
+    width: widthPixel(600),
+    height: heightPixel(600),
+    objectFit: 'contain',
+    alignSelf: 'center',
+    objectPosition: 'center',
+    animation: `${bounce} 5s ease infinite`,
+    ...mobileStyle({
+      animation: `${mobile_bounce} 5s ease infinite`
+    })
+  },
+  mobileStyle({
+    width: widthPixel(414),
+    height: widthPixel(414)
+  })
+]);
 
-export const Partners = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  gap: widthPixel(16)
-});
+export const Partners = styled.div([
+  {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: widthPixel(16)
+  },
+  mobileStyle({
+    '& img': {}
+  })
+]);
 
-export const Trusted = styled.div({
-  margin: `${heightPixel(0)} ${widthPixel(24)} ${heightPixel(40)} ${widthPixel(100)}`
-});
+export const Trusted = styled.div([
+  {
+    margin: `${heightPixel(0)} ${widthPixel(24)} ${heightPixel(40)} ${widthPixel(100)}`
+  },
+  mobileStyle({
+    margin: `${heightPixel(40)} ${widthPixel(24)}`,
+    display: 'none'
+  })
+]);
 
 export const BlueBackground = styled.section({
   padding: `${heightPixel(100)} ${widthPixel(80)}`,
   width: '100%',
   backgroundColor: '#002466',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  ...mobileStyle({
+    padding: `${heightPixel(100)} ${widthPixel(24)}`
+  })
 });
 
 export const AppDownload = styled.div({
@@ -197,7 +284,11 @@ export const AppDownload = styled.div({
   justifyContent: 'center',
   flexDirection: 'column',
   backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center'
+  backgroundPosition: 'center',
+  ...mobileStyle({
+    width: widthPixel(414),
+    backgroundSize: 'scale-down'
+  })
 });
 
 export const DownloadContent = styled.div({
@@ -210,22 +301,34 @@ export const DownloadContent = styled.div({
   height: '100%',
   backgroundColor: '#00000012',
   borderTopLeftRadius: widthPixel(178),
-  borderBottomRightRadius: widthPixel(178)
+  borderBottomRightRadius: widthPixel(178),
+  ...mobileStyle({
+    gap: heightPixel(24)
+  })
 });
 
 export const DownloadHeader = styled(RaleText)([
   rale600.style,
   {
     color: '#ffffff',
-    fontSize: fontSize(32)
-  }
+    fontSize: fontSize(32),
+    textAlign: 'center'
+  },
+  mobileStyle({
+    width: widthPixel(316)
+  })
 ]);
 
 export const RaleTextWhite = styled(RaleText)({
   color: '#ffffff',
   textAlign: 'center',
   width: widthPixel(440),
-  fontSize: fontSize(24)
+  fontSize: fontSize(24),
+  ...mobileStyle({
+    width: widthPixel(316),
+    margin: '0px',
+    fontSize: fontSize(16)
+  })
 });
 
 export const PinkBackground = styled.section({
@@ -233,7 +336,11 @@ export const PinkBackground = styled.section({
   borderTopRightRadius: widthPixel(160),
   width: '100%',
   display: 'flex',
-  flexDirection: 'row'
+  flexDirection: 'row',
+  ...mobileStyle({
+    flexDirection: 'column',
+    borderTopRightRadius: widthPixel(0)
+  })
 });
 
 export const StartShoppingAreaLeft = styled.div({
@@ -242,22 +349,33 @@ export const StartShoppingAreaLeft = styled.div({
   display: 'flex',
   alignItems: 'flex-start',
   flexDirection: 'column',
-  gap: heightPixel(40)
+  gap: heightPixel(40),
+  ...mobileStyle({
+    padding: `${heightPixel(40)} ${widthPixel(24)}`,
+    '& h1': {
+      fontSize: fontSize(24)
+    }
+  })
 });
 
 export const StartShoppingAreaRight = styled.div({
   width: '50%',
   padding: `${heightPixel(92)} ${widthPixel(80)}`,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
   position: 'relative',
   '& img': {
     width: widthPixel(404),
     height: heightPixel(640),
     position: 'absolute',
-    top: heightPixel(60),
-    right: widthPixel(195),
     objectFit: 'contain',
     objectPosition: 'center'
-  }
+  },
+  ...mobileStyle({
+    width: '100%'
+  })
 });
 
 export const BigCircle = styled.div({
@@ -268,7 +386,8 @@ export const BigCircle = styled.div({
   height: heightPixel(560),
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  ...mobileStyle({})
 });
 
 export const SB = styled.div({
