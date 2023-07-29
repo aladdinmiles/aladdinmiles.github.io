@@ -2885,7 +2885,7 @@
         a = (Symbol.for('react.fragment'), Object.prototype.hasOwnProperty),
         i = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
         s = { key: !0, ref: !0, __self: !0, __source: !0 };
-      t.jsx = function (e, t, r) {
+      function l(e, t, r) {
         var n,
           l = {},
           u = null,
@@ -2897,7 +2897,8 @@
           a.call(t, n) && !s.hasOwnProperty(n) && (l[n] = t[n]);
         if (e && e.defaultProps) for (n in (t = e.defaultProps)) void 0 === l[n] && (l[n] = t[n]);
         return { $$typeof: o, type: e, key: u, ref: c, props: l, _owner: i.current };
-      };
+      }
+      (t.jsx = l), (t.jsxs = l);
     },
     7437: function (e, t, r) {
       'use strict';
