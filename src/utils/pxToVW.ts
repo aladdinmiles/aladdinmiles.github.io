@@ -16,7 +16,7 @@ export const widthPixel = (px: number, width = WIDTH) => {
 };
 
 export const heightPixel = (px: number, height = HEIGHT) => {
-  const windowWidth = document ? document.body.clientWidth : WIDTH;
+  const windowWidth = document != undefined ? document.body.clientWidth : WIDTH;
   if (windowWidth <= 480) {
     return `${(px / MOBILE_HEIGHT) * 100}vh`;
   }
