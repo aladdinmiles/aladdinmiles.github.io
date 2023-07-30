@@ -716,7 +716,7 @@
           alignItems: 'center',
           position: 'relative',
           '& img': {
-            width: (0, u.so)(404),
+            width: (0, u.Wk)(404),
             height: (0, u.Wk)(640),
             position: 'absolute',
             objectFit: 'contain',
@@ -725,10 +725,10 @@
           ...(0, u.wz)({
             width: '100%',
             '& img': {
-              width: (0, u.CD)(233.88),
-              height: (0, u.$s)(506.38),
+              width: (0, u.$s)(233.88),
+              height: (0, u.$s)(450.38),
               position: 'absolute',
-              objectFit: 'contain',
+              objectFit: 'cover',
               objectPosition: 'center'
             }
           })

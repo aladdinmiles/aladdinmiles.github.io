@@ -1,14 +1,14 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [19],
+  [226],
   {
-    8019: function (t, n, e) {
-      Promise.resolve().then(e.bind(e, 431)),
-        Promise.resolve().then(e.t.bind(e, 3222, 23)),
+    5226: function (t, n, e) {
+      Promise.resolve().then(e.t.bind(e, 3222, 23)),
         Promise.resolve().then(e.bind(e, 6773)),
         Promise.resolve().then(e.bind(e, 7746)),
         Promise.resolve().then(e.bind(e, 3141)),
         Promise.resolve().then(e.bind(e, 750)),
-        Promise.resolve().then(e.bind(e, 4019));
+        Promise.resolve().then(e.bind(e, 4019)),
+        Promise.resolve().then(e.bind(e, 431));
     },
     431: function (t, n, e) {
       'use strict';
@@ -33,7 +33,7 @@
             return T;
           },
           ColoredHalf: function () {
-            return C;
+            return v;
           },
           ColoredText: function () {
             return z;
@@ -114,7 +114,7 @@
             return P;
           },
           WhiteHalf: function () {
-            return v;
+            return C;
           }
         });
       var o = e(7437),
@@ -179,7 +179,7 @@
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
           }
         }),
-        C = g.Z.div({
+        v = g.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -202,7 +202,7 @@
             }
           }
         }),
-        v = g.Z.div({
+        C = g.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
           '@media(max-width: 480px)': {
@@ -429,7 +429,7 @@
           alignItems: 'center',
           position: 'relative',
           '& img': {
-            width: (0, u.so)(404),
+            width: (0, u.Wk)(404),
             height: (0, u.Wk)(640),
             position: 'absolute',
             objectFit: 'contain',
@@ -438,10 +438,10 @@
           ...(0, u.wz)({
             width: '100%',
             '& img': {
-              width: (0, u.CD)(233.88),
-              height: (0, u.$s)(506.38),
+              width: (0, u.$s)(233.88),
+              height: (0, u.$s)(450.38),
               position: 'absolute',
-              objectFit: 'contain',
+              objectFit: 'cover',
               objectPosition: 'center'
             }
           })
@@ -579,7 +579,7 @@
             return m;
           },
           Socials: function () {
-            return C;
+            return v;
           },
           StyledImage: function () {
             return D;
@@ -661,7 +661,7 @@
         }),
         D = (0, l.Z)(f())({}),
         j = (0, l.Z)(f())({}),
-        C = l.Z.div({
+        v = l.Z.div({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
