@@ -388,7 +388,7 @@ export const StartShoppingAreaRight = styled.div({
   alignItems: 'center',
   position: 'relative',
   '& img': {
-    width: widthPixel(404),
+    width: heightPixel(404),
     height: heightPixel(640),
     position: 'absolute',
     objectFit: 'contain',
@@ -397,10 +397,10 @@ export const StartShoppingAreaRight = styled.div({
   ...mobileStyle({
     width: '100%',
     '& img': {
-      width: mobileWidthPixel(233.88),
-      height: mobileHeightPixel(506.38),
+      width: mobileHeightPixel(233.88),
+      height: mobileHeightPixel(450.38),
       position: 'absolute',
-      objectFit: 'contain',
+      objectFit: 'cover',
       objectPosition: 'center'
     }
   })
