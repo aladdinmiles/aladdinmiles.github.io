@@ -1,14 +1,14 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [463],
+  [19],
   {
-    463: function (t, n, e) {
-      Promise.resolve().then(e.t.bind(e, 3222, 23)),
+    8019: function (t, n, e) {
+      Promise.resolve().then(e.bind(e, 431)),
+        Promise.resolve().then(e.t.bind(e, 3222, 23)),
         Promise.resolve().then(e.bind(e, 6773)),
-        Promise.resolve().then(e.bind(e, 3141)),
         Promise.resolve().then(e.bind(e, 7746)),
-        Promise.resolve().then(e.bind(e, 4019)),
+        Promise.resolve().then(e.bind(e, 3141)),
         Promise.resolve().then(e.bind(e, 750)),
-        Promise.resolve().then(e.bind(e, 431));
+        Promise.resolve().then(e.bind(e, 4019));
     },
     431: function (t, n, e) {
       'use strict';
@@ -18,7 +18,7 @@
             return H;
           },
           AppDownloadArea: function () {
-            return T;
+            return $;
           },
           Arrow: function () {
             return Y;
@@ -30,10 +30,10 @@
             return A;
           },
           ButtonContainer: function () {
-            return M;
+            return T;
           },
           ColoredHalf: function () {
-            return v;
+            return C;
           },
           ColoredText: function () {
             return z;
@@ -48,7 +48,7 @@
             return V;
           },
           HeroImage: function () {
-            return R;
+            return N;
           },
           HeroSection: function () {
             return y;
@@ -60,7 +60,7 @@
             return k;
           },
           ManText: function () {
-            return B;
+            return _;
           },
           MultiStyleText: function () {
             return W;
@@ -69,19 +69,19 @@
             return tt;
           },
           Partners: function () {
-            return L;
+            return R;
           },
           PinkBackground: function () {
             return q;
           },
           QRCodeBackground: function () {
-            return $;
+            return I;
           },
           RaleBase: function () {
-            return _;
+            return B;
           },
           RaleText: function () {
-            return I;
+            return M;
           },
           RaleTextWhite: function () {
             return E;
@@ -102,7 +102,7 @@
             return Q;
           },
           StoreButtons: function () {
-            return N;
+            return L;
           },
           TextContentArea: function () {
             return Z;
@@ -114,7 +114,7 @@
             return P;
           },
           WhiteHalf: function () {
-            return j;
+            return v;
           }
         });
       var o = e(7437),
@@ -133,28 +133,53 @@
         x = e.n(p),
         w = e(1396),
         m = e.n(w);
-      let k = g.Z.div({ width: '100%', minHeight: '100%', backgroundColor: '#ffffff' }),
+      let k = g.Z.div({
+          width: '100%',
+          minHeight: '100%',
+          backgroundColor: '#ffffff'
+        }),
         b = g.Z.div({ width: '100%' }),
         y = g.Z.section({
           height: (0, u.Wk)(824),
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          '@media(max-width: 480px)': { flexDirection: 'column', background: '#FFF5F8', height: (0, u.$s)(924) }
-        }),
-        C = (0, h.F4)({
-          from: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)') },
-          '50%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(90), ' , 0px)') },
-          '90%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(-100), ' , 0px)') },
-          to: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)') }
+          '@media(max-width: 480px)': {
+            flexDirection: 'column',
+            background: '#FFF5F8',
+            height: (0, u.$s)(868),
+            marginBottom: (0, u.$s)(50)
+          }
         }),
         D = (0, h.F4)({
-          from: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)') },
-          '50%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(40), ' , 0px)') },
-          '90%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(-50), ' , 0px)') },
-          to: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)') }
+          from: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
+          },
+          '50%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(90), ' , 0px)')
+          },
+          '90%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-100), ' , 0px)')
+          },
+          to: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
+          }
         }),
-        v = g.Z.div({
+        j = (0, h.F4)({
+          from: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
+          },
+          '50%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(40), ' , 0px)')
+          },
+          '90%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-50), ' , 0px)')
+          },
+          to: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
+          }
+        }),
+        C = g.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -168,6 +193,7 @@
             flexDirection: 'column',
             alignItems: 'normal',
             justifyContent: 'space-between',
+            height: (0, u.$s)(868),
             '& #mobileTrusted': {
               display: 'flex',
               flexDirection: 'column',
@@ -176,10 +202,14 @@
             }
           }
         }),
-        j = g.Z.div({
+        v = g.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
-          '@media(max-width: 480px)': { width: '100%', flexDirection: 'row' }
+          '@media(max-width: 480px)': {
+            width: '100%',
+            flexDirection: 'row',
+            height: (0, u.$s)(868)
+          }
         }),
         W = g.Z.h1([
           r().style,
@@ -200,7 +230,9 @@
             .concat((0, u.so)(24), ' ')
             .concat((0, u.Wk)(120), ' ')
             .concat((0, u.so)(100)),
-          '@media(max-width: 480px)': { margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)) }
+          '@media(max-width: 480px)': {
+            margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24))
+          }
         }),
         F = g.Z.div({ display: 'inline-block' }),
         S = () =>
@@ -218,26 +250,46 @@
               strokeLinecap: 'round'
             })
           }),
-        _ = (t) => {
+        B = (t) => {
           let { className: n, children: e } = t;
-          return (0, o.jsx)('p', { className: ''.concat(l().className, ' ').concat(n), children: e });
+          return (0, o.jsx)('p', {
+            className: ''.concat(l().className, ' ').concat(n),
+            children: e
+          });
         },
-        B = g.Z.p([
+        _ = g.Z.p([
           a().style,
-          { fontSize: (0, u.JB)(16), color: '#1D2029', textTransform: 'uppercase', lineHeight: '150%' },
+          {
+            fontSize: (0, u.JB)(16),
+            color: '#1D2029',
+            textTransform: 'uppercase',
+            lineHeight: '150%'
+          },
           (0, u.wz)({ fontSize: (0, u.jo)(12) })
         ]),
-        I = (0, g.Z)(_)({
+        M = (0, g.Z)(B)({
           color: '#515665',
           fontSize: (0, u.JB)(22),
           lineHeight: '160%',
-          '@media(max-width: 480px)': { fontSize: (0, u.jo)(16), width: (0, u.CD)(366) }
+          '@media(max-width: 480px)': {
+            fontSize: (0, u.jo)(16),
+            width: (0, u.CD)(366)
+          }
         }),
-        T = g.Z.div([
-          { display: 'flex', flexDirection: 'row', gap: (0, u.so)(24), alignItems: 'center', marginTop: (0, u.Wk)(40) },
-          (0, u.wz)({ marginTop: (0, u.$s)(24), '& .scanText': { display: 'none' } })
-        ]),
         $ = g.Z.div([
+          {
+            display: 'flex',
+            flexDirection: 'row',
+            gap: (0, u.so)(24),
+            alignItems: 'center',
+            marginTop: (0, u.Wk)(40)
+          },
+          (0, u.wz)({
+            marginTop: (0, u.$s)(24),
+            '& .scanText': { display: 'none' }
+          })
+        ]),
+        I = g.Z.div([
           {
             width: (0, u.so)(140),
             height: (0, u.so)(140),
@@ -249,22 +301,32 @@
           },
           (0, u.wz)({ display: 'none' })
         ]),
-        M = g.Z.div({ display: 'flex', flexDirection: 'row', gap: (0, u.so)(10), alignItems: 'center' }),
-        N = (0, g.Z)(m())({}),
-        R = (0, g.Z)(x())([
+        T = g.Z.div({
+          display: 'flex',
+          flexDirection: 'row',
+          gap: (0, u.so)(10),
+          alignItems: 'center'
+        }),
+        L = (0, g.Z)(m())({}),
+        N = (0, g.Z)(x())([
           {
             width: (0, u.so)(600),
             height: (0, u.Wk)(600),
             objectFit: 'contain',
             alignSelf: 'center',
             objectPosition: 'center',
-            animation: ''.concat(C, ' 5s ease infinite'),
-            ...(0, u.wz)({ animation: ''.concat(D, ' 5s ease infinite') })
+            animation: ''.concat(D, ' 5s ease infinite'),
+            ...(0, u.wz)({ animation: ''.concat(j, ' 5s ease infinite') })
           },
           (0, u.wz)({ width: (0, u.CD)(414), height: (0, u.$s)(414) })
         ]),
-        L = g.Z.div([
-          { display: 'flex', flexDirection: 'row', alignItems: 'center', gap: (0, u.so)(16) },
+        R = g.Z.div([
+          {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: (0, u.so)(16)
+          },
           (0, u.wz)({ '& img': {} })
         ]),
         P = g.Z.div([
@@ -275,7 +337,10 @@
               .concat((0, u.Wk)(40), ' ')
               .concat((0, u.so)(100))
           },
-          (0, u.wz)({ margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)), display: 'none' })
+          (0, u.wz)({
+            margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)),
+            display: 'none'
+          })
         ]),
         A = g.Z.section({
           padding: ''.concat((0, u.Wk)(100), ' ').concat((0, u.so)(80)),
@@ -284,7 +349,9 @@
           backgroundColor: '#002466',
           alignItems: 'center',
           justifyContent: 'center',
-          ...(0, u.wz)({ padding: ''.concat((0, u.$s)(100), ' ').concat((0, u.CD)(24)) })
+          ...(0, u.wz)({
+            padding: ''.concat((0, u.$s)(100), ' ').concat((0, u.CD)(24))
+          })
         }),
         H = g.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
@@ -312,17 +379,21 @@
           borderBottomRightRadius: (0, u.so)(178),
           ...(0, u.wz)({ gap: (0, u.$s)(24), width: (0, u.CD)(414) })
         }),
-        V = (0, g.Z)(I)([
+        V = (0, g.Z)(M)([
           f().style,
           { color: '#ffffff', fontSize: (0, u.JB)(32), textAlign: 'center' },
           (0, u.wz)({ minWidth: (0, u.CD)(351), fontSize: (0, u.jo)(24) })
         ]),
-        E = (0, g.Z)(I)({
+        E = (0, g.Z)(M)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, u.so)(440),
           fontSize: (0, u.JB)(24),
-          ...(0, u.wz)({ width: (0, u.CD)(316), margin: '0px', fontSize: (0, u.jo)(16) })
+          ...(0, u.wz)({
+            width: (0, u.CD)(316),
+            margin: '0px',
+            fontSize: (0, u.jo)(16)
+          })
         }),
         q = g.Z.section({
           backgroundColor: '#FFF5F8',
@@ -330,7 +401,10 @@
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          ...(0, u.wz)({ flexDirection: 'column', borderTopRightRadius: (0, u.CD)(0) })
+          ...(0, u.wz)({
+            flexDirection: 'column',
+            borderTopRightRadius: (0, u.CD)(0)
+          })
         }),
         G = g.Z.div({
           width: '50%',
@@ -342,7 +416,9 @@
           alignItems: 'flex-start',
           flexDirection: 'column',
           gap: (0, u.Wk)(40),
-          ...(0, u.wz)({ padding: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)) })
+          ...(0, u.wz)({
+            padding: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24))
+          })
         }),
         Q = g.Z.div({
           width: '50%',
@@ -386,11 +462,21 @@
           alignItems: 'center',
           flexDirection: 'row',
           gap: (0, u.so)(16),
-          '& img': { width: (0, u.so)(32), height: (0, u.Wk)(48), objectFit: 'contain', objectPosition: 'center' },
-          ...(0, u.wz)({ '& img': { width: (0, u.CD)(16), height: (0, u.$s)(24) } })
+          '& img': {
+            width: (0, u.so)(32),
+            height: (0, u.Wk)(48),
+            objectFit: 'contain',
+            objectPosition: 'center'
+          },
+          ...(0, u.wz)({
+            '& img': { width: (0, u.CD)(16), height: (0, u.$s)(24) }
+          })
         }),
-        U = (0, g.Z)(I)([f().style]),
-        X = (0, g.Z)(W)({ fontSize: (0, u.JB)(32), ...(0, u.wz)({ fontSize: (0, u.jo)(24), width: (0, u.CD)(366) }) }),
+        U = (0, g.Z)(M)([f().style]),
+        X = (0, g.Z)(W)({
+          fontSize: (0, u.JB)(32),
+          ...(0, u.wz)({ fontSize: (0, u.jo)(24), width: (0, u.CD)(366) })
+        }),
         Y = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
@@ -429,7 +515,10 @@
       e(2265);
       let d = (t) => {
           let { children: n, href: e = '/#' } = t;
-          return (0, o.jsx)(f, { href: e, children: (0, o.jsx)(u, { className: r().className, children: n }) });
+          return (0, o.jsx)(f, {
+            href: e,
+            children: (0, o.jsx)(u, { className: r().className, children: n })
+          });
         },
         f = (0, a.Z)(l())({
           backgroundColor: '#FF1654',
@@ -440,7 +529,11 @@
           justifyContent: 'center',
           display: 'inline-flex',
           textDecoration: 'none',
-          ...(0, c.wz)({ width: (0, c.CD)(220), height: (0, c.$s)(48), borderRadius: (0, c.CD)(4) })
+          ...(0, c.wz)({
+            width: (0, c.CD)(220),
+            height: (0, c.$s)(48),
+            borderRadius: (0, c.CD)(4)
+          })
         }),
         u = a.Z.span({
           fontSize: (0, c.JB)(16),
@@ -451,7 +544,10 @@
           justifyContent: 'center',
           margin: 0,
           '& svg': { strokeWidth: (0, c.so)(24), height: (0, c.so)(24) },
-          ...(0, c.wz)({ fontSize: (0, c.jo)(16), '& svg': { strokeWidth: (0, c.CD)(24), height: (0, c.CD)(24) } })
+          ...(0, c.wz)({
+            fontSize: (0, c.jo)(16),
+            '& svg': { strokeWidth: (0, c.CD)(24), height: (0, c.CD)(24) }
+          })
         });
     },
     3141: function (t, n, e) {
@@ -483,13 +579,13 @@
             return m;
           },
           Socials: function () {
-            return v;
-          },
-          StyledImage: function () {
             return C;
           },
-          StyledImageText: function () {
+          StyledImage: function () {
             return D;
+          },
+          StyledImageText: function () {
+            return j;
           }
         });
       var o = e(7437),
@@ -531,11 +627,17 @@
         }),
         x = (t) => {
           let { className: n, children: e } = t;
-          return (0, o.jsx)('p', { className: ''.concat(r().className, ' ').concat(n), children: e });
+          return (0, o.jsx)('p', {
+            className: ''.concat(r().className, ' ').concat(n),
+            children: e
+          });
         },
         w = (t) => {
           let { className: n, children: e } = t;
-          return (0, o.jsx)('p', { className: ''.concat(a().className, ' ').concat(n), children: e });
+          return (0, o.jsx)('p', {
+            className: ''.concat(a().className, ' ').concat(n),
+            children: e
+          });
         },
         m = (0, l.Z)(x)({
           fontSize: (0, s.JB)(16),
@@ -557,9 +659,9 @@
           gap: (0, s.Wk)(16),
           ...(0, s.wz)({ maxWidth: (0, s.CD)(270) })
         }),
-        C = (0, l.Z)(f())({}),
         D = (0, l.Z)(f())({}),
-        v = l.Z.div({
+        j = (0, l.Z)(f())({}),
+        C = l.Z.div({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -589,15 +691,16 @@
       e.r(n),
         e.d(n, {
           TopBarMobile: function () {
-            return l;
+            return f;
           }
         });
       var o = e(7437),
         i = e(6691),
         r = e.n(i),
         c = e(2265),
-        a = e(7746);
-      let s = () =>
+        a = e(750),
+        s = e(7746);
+      let l = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
             width: '24',
@@ -612,31 +715,83 @@
               strokeLinejoin: 'round'
             })
           }),
-        l = () => {
+        d = () =>
+          (0, o.jsx)('svg', {
+            xmlns: 'http://www.w3.org/2000/svg',
+            width: '24',
+            height: '24',
+            viewBox: '0 0 24 24',
+            fill: 'none',
+            children: (0, o.jsx)('path', {
+              d: 'M18 6L6 18M6 6L18 18',
+              stroke: '#1D2029',
+              'stroke-width': '2',
+              'stroke-linecap': 'round',
+              'stroke-linejoin': 'round'
+            })
+          }),
+        f = () => {
           let [t, n] = (0, c.useState)(!1);
-          return (0, o.jsxs)(a.NavBar, {
-            id: 'mobile',
+          return (0, o.jsxs)(s.MobileWrapper, {
             children: [
-              (0, o.jsxs)(a.LogoArea, {
-                href: '/',
+              (0, o.jsxs)(s.NavBar, {
+                id: 'mobile',
                 children: [
-                  (0, o.jsx)(r(), {
-                    className: 'actualLogo',
-                    src: '/logo.png',
-                    alt: 'AladdinMiles logo',
-                    width: 45,
-                    height: 32
+                  (0, o.jsxs)(s.LogoArea, {
+                    href: '/',
+                    children: [
+                      (0, o.jsx)(r(), {
+                        className: 'actualLogo',
+                        src: '/logo.png',
+                        alt: 'AladdinMiles logo',
+                        width: 45,
+                        height: 32
+                      }),
+                      (0, o.jsx)(r(), {
+                        className: 'logo-text',
+                        src: '/logoText.svg',
+                        alt: 'AladdinMiles logo',
+                        width: 160,
+                        height: 45
+                      })
+                    ]
                   }),
-                  (0, o.jsx)(r(), {
-                    className: 'logo-text',
-                    src: '/logoText.svg',
-                    alt: 'AladdinMiles logo',
-                    width: 160,
-                    height: 45
+                  (0, o.jsx)(s.MenuAction, {
+                    onClick: () => n((t) => !t),
+                    children: t ? (0, o.jsx)(d, {}) : (0, o.jsx)(l, {})
                   })
                 ]
               }),
-              (0, o.jsx)(a.MenuAction, { onClick: () => n(!0), children: (0, o.jsx)(s, {}) })
+              t &&
+                (0, o.jsxs)(s.DropDownView, {
+                  children: [
+                    (0, o.jsx)(s.MobileLink, { href: '/', children: 'Home' }),
+                    (0, o.jsx)(s.MobileLink, {
+                      href: '/about',
+                      children: 'About us'
+                    }),
+                    (0, o.jsx)(s.MobileLink, {
+                      href: '/merchant',
+                      children: 'Become a merchant'
+                    }),
+                    (0, o.jsx)(s.MobileLink, {
+                      href: '/privacy-policy',
+                      children: 'Privacy policy'
+                    }),
+                    (0, o.jsx)(s.MobileLink, {
+                      href: '/terms-conditions',
+                      children: 'Terms and conditions'
+                    }),
+                    (0, o.jsx)(s.MobileLink, {
+                      href: '/merchant-tc',
+                      children: 'Merchant terms and conditions'
+                    }),
+                    (0, o.jsx)(a.Button, {
+                      href: '/#download',
+                      children: 'Download the app'
+                    })
+                  ]
+                })
             ]
           });
         };
@@ -645,68 +800,112 @@
       'use strict';
       e.r(n),
         e.d(n, {
-          LogoArea: function () {
-            return l;
+          DropDownView: function () {
+            return h;
           },
-          MenuAction: function () {
+          LogoArea: function () {
             return d;
           },
+          MenuAction: function () {
+            return u;
+          },
+          MobileLink: function () {
+            return g;
+          },
+          MobileWrapper: function () {
+            return f;
+          },
           NavBar: function () {
-            return s;
+            return l;
           },
           Wrapper: function () {
-            return a;
+            return s;
           }
         });
-      var o = e(7247),
-        i = e(8600),
-        r = e(1396),
-        c = e.n(r);
-      let a = i.Z.div({
+      var o = e(431),
+        i = e(7247),
+        r = e(8600),
+        c = e(1396),
+        a = e.n(c);
+      let s = r.Z.div({
           width: '100%',
           '& #mobile': { display: 'none' },
-          ...(0, o.wz)({ '& #mobile': { display: 'flex' }, '& #large': { display: 'none' } })
+          ...(0, i.wz)({
+            '& #mobile': { display: 'flex' },
+            '& #large': { display: 'none' }
+          })
         }),
-        s = i.Z.div({
+        l = r.Z.div({
           width: '100%',
           maxWidth: '100%',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: ''.concat((0, o.Wk)(22), ' ').concat((0, o.so)(100)),
-          ...(0, o.wz)({ height: (0, o.$s)(60), padding: ''.concat((0, o.$s)(16), ' ').concat((0, o.CD)(14)) })
+          padding: ''.concat((0, i.Wk)(22), ' ').concat((0, i.so)(100)),
+          ...(0, i.wz)({
+            height: (0, i.$s)(60),
+            padding: ''.concat((0, i.$s)(16), ' ').concat((0, i.CD)(14))
+          })
         }),
-        l = (0, i.Z)(c())({
+        d = (0, r.Z)(a())({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
           '& .actualLogo': {
-            width: (0, o.so)(45),
-            height: (0, o.Wk)(32),
+            width: (0, i.so)(45),
+            height: (0, i.Wk)(32),
             objectFit: 'cover',
             objectPosition: 'center'
           },
-          '& .logo-text': { width: (0, o.so)(160), height: (0, o.Wk)(45), objectFit: 'contain' },
-          ...(0, o.wz)({
+          '& .logo-text': {
+            width: (0, i.so)(160),
+            height: (0, i.Wk)(45),
+            objectFit: 'contain'
+          },
+          ...(0, i.wz)({
             '& .actualLogo': {
-              width: (0, o.CD)(32),
-              height: (0, o.$s)(22.756),
+              width: (0, i.CD)(32),
+              height: (0, i.$s)(22.756),
               objectFit: 'cover',
               objectPosition: 'center'
             },
-            '& .logo-text': { width: (0, o.CD)(113), height: (0, o.$s)(32), objectFit: 'contain' }
+            '& .logo-text': {
+              width: (0, i.CD)(113),
+              height: (0, i.$s)(32),
+              objectFit: 'contain'
+            }
           })
         }),
-        d = i.Z.button({
+        f = r.Z.div({
+          display: 'flex',
+          flexDirection: 'column',
+          backgroundColor: '#ffffff',
+          position: 'relative'
+        }),
+        u = r.Z.button({
           textDecoration: 'none',
-          width: (0, o.so)(50),
-          height: (0, o.so)(50),
+          width: (0, i.CD)(50),
+          height: (0, i.$s)(50),
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: 'transparent'
-        });
+        }),
+        h = r.Z.div({
+          width: '100%',
+          minHeight: (0, i.$s)(740),
+          padding: ''.concat((0, i.$s)(40), ' ').concat((0, i.CD)(24)),
+          position: 'absolute',
+          zIndex: 100,
+          top: (0, i.$s)(60),
+          backgroundColor: '#ffffff',
+          left: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: (0, i.$s)(40)
+        }),
+        g = (0, r.Z)(o.RaleText.withComponent(a()))({ width: (0, i.CD)(158) });
     },
     7247: function (t, n, e) {
       'use strict';
@@ -734,11 +933,17 @@
         }
       });
       let o = function (t) {
-          let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1440;
+          let n =
+            arguments.length > 1 && void 0 !== arguments[1]
+              ? arguments[1]
+              : 1440;
           return ''.concat((t / n) * 100, 'vw');
         },
         i = function (t) {
-          let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 924;
+          let n =
+            arguments.length > 1 && void 0 !== arguments[1]
+              ? arguments[1]
+              : 924;
           return ''.concat((t / n) * 100, 'vh');
         },
         r = (t) => o(t, 414),
@@ -749,19 +954,31 @@
     },
     6566: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'", fontWeight: 400, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
+          fontWeight: 400,
+          fontStyle: 'normal'
+        },
         className: '__className_30f681'
       };
     },
     3192: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'", fontWeight: 400, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
+          fontWeight: 400,
+          fontStyle: 'normal'
+        },
         className: '__className_30f681'
       };
     },
     3833: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'", fontWeight: 600, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
+          fontWeight: 600,
+          fontStyle: 'normal'
+        },
         className: '__className_90b4c2'
       };
     }

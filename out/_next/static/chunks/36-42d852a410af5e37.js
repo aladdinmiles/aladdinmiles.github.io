@@ -65,8 +65,8 @@
         d = e(8600),
         u = e(1396),
         g = e.n(u),
-        p = e(4033),
-        h = e(431);
+        h = e(4033),
+        p = e(431);
       function w() {
         let t = (0, o._)([
           '\n  color: #515665;\n  font-size: ',
@@ -96,15 +96,30 @@
         }),
         x = d.Z.p([
           r().style,
-          { fontSize: (0, f.JB)(16), color: '#FF1654', textTransform: 'uppercase', lineHeight: '150%' },
+          {
+            fontSize: (0, f.JB)(16),
+            color: '#FF1654',
+            textTransform: 'uppercase',
+            lineHeight: '150%'
+          },
           (0, f.wz)({ fontSize: (0, f.jo)(12) })
         ]),
         k = d.Z.p([
           r().style,
-          { fontSize: (0, f.JB)(32), color: '#1D2029', lineHeight: '150%', textAlign: 'center' },
+          {
+            fontSize: (0, f.JB)(32),
+            color: '#1D2029',
+            lineHeight: '150%',
+            textAlign: 'center'
+          },
           (0, f.wz)({ fontSize: (0, f.jo)(24), width: (0, f.CD)(390) })
         ]),
-        C = d.Z.div({ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }),
+        C = d.Z.div({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column'
+        }),
         y = d.Z.div({
           display: 'flex',
           alignItems: 'center',
@@ -127,22 +142,34 @@
             case 0:
               return {
                 backgroundColor: '#D9FFE8',
-                '&:hover': { backgroundColor: '#194C2E', '& p': { color: '#ffffff' } }
+                '&:hover': {
+                  backgroundColor: '#194C2E',
+                  '& p': { color: '#ffffff' }
+                }
               };
             case 1:
               return {
                 backgroundColor: '#FFE5EC',
-                '&:hover': { backgroundColor: '#5C0A20', '& p': { color: '#ffffff' } }
+                '&:hover': {
+                  backgroundColor: '#5C0A20',
+                  '& p': { color: '#ffffff' }
+                }
               };
             case 2:
               return {
                 backgroundColor: '#FFF0E5',
-                '&:hover': { backgroundColor: '#662B00', '& p': { color: '#ffffff' } }
+                '&:hover': {
+                  backgroundColor: '#662B00',
+                  '& p': { color: '#ffffff' }
+                }
               };
             case 3:
               return {
                 backgroundColor: '#EBF2FF',
-                '&:hover': { backgroundColor: '#0A275C', '& p': { color: '#ffffff' } }
+                '&:hover': {
+                  backgroundColor: '#0A275C',
+                  '& p': { color: '#ffffff' }
+                }
               };
           }
         },
@@ -159,7 +186,12 @@
               borderRadius: (0, f.so)(16),
               height: (0, f.Wk)(240),
               gap: (0, f.so)(24),
-              '& img': { width: (0, f.so)(120), height: (0, f.so)(120), objectFit: 'cover', objectPosition: 'center' }
+              '& img': {
+                width: (0, f.so)(120),
+                height: (0, f.so)(120),
+                objectFit: 'cover',
+                objectPosition: 'center'
+              }
             },
             D(n),
             (0, f.wz)({
@@ -184,22 +216,33 @@
           width: (0, f.so)(329),
           ...(0, f.wz)({ width: (0, f.CD)(210), gap: (0, f.$s)(7.678) })
         }),
-        W = (0, d.Z)(h.RaleText)({
+        W = (0, d.Z)(p.RaleText)({
           fontSize: (0, f.JB)(22),
           ...(0, f.wz)({ fontSize: (0, f.jo)(14), width: (0, f.CD)(210) })
         }),
-        v = (0, d.Z)(h.RaleText)([
+        v = (0, d.Z)(p.RaleText)([
           a().style,
-          { color: '#1D2029', ...(0, f.wz)({ fontSize: (0, f.jo)(16), width: (0, f.CD)(210) }) }
+          {
+            color: '#1D2029',
+            ...(0, f.wz)({ fontSize: (0, f.jo)(16), width: (0, f.CD)(210) })
+          }
         ]),
         Z = d.Z.section([
           '\n  display: flex;\n  width: 100%;\n  height: auto;\n  padding: '
             .concat((0, f.Wk)(80), ' ')
-            .concat((0, f.so)(100), ';\n  justify-content: center;\n  align-items: center;\n'),
-          (0, f.wz)({ padding: ''.concat((0, f.Wk)(40), ' ').concat((0, f.so)(24)) })
+            .concat(
+              (0, f.so)(100),
+              ';\n  justify-content: center;\n  align-items: center;\n'
+            ),
+          (0, f.wz)({
+            padding: ''.concat((0, f.Wk)(40), ' ').concat((0, f.so)(24))
+          })
         ]),
         j = d.Z.div([
-          '\n  display: flex;\n  align-items: flex-start;\n  gap: '.concat((0, f.so)(80), ';\n'),
+          '\n  display: flex;\n  align-items: flex-start;\n  gap: '.concat(
+            (0, f.so)(80),
+            ';\n'
+          ),
           (0, f.wz)({ flexDirection: 'column' })
         ]),
         S = d.Z.aside({
@@ -238,13 +281,19 @@
         B = (0, d.Z)(g())(w(), (0, f.JB)(16), (0, f.Wk)(12), (0, f.so)(10)),
         R = (0, d.Z)(B)((t) => {
           let { href: n } = t,
-            e = (0, p.usePathname)();
+            e = (0, h.usePathname)();
           return [
             {
               ':hover': { color: '#FF1654' },
-              ':active': { color: '#FF1654', borderLeft: ''.concat((0, f.so)(4), ' solid #FF1654') }
+              ':active': {
+                color: '#FF1654',
+                borderLeft: ''.concat((0, f.so)(4), ' solid #FF1654')
+              }
             },
-            e === n && { color: '#FF1654', borderLeft: ''.concat((0, f.so)(4), ' solid #FF1654') }
+            e === n && {
+              color: '#FF1654',
+              borderLeft: ''.concat((0, f.so)(4), ' solid #FF1654')
+            }
           ];
         });
     },
@@ -268,7 +317,7 @@
             return N;
           },
           ButtonContainer: function () {
-            return H;
+            return $;
           },
           ColoredHalf: function () {
             return z;
@@ -340,7 +389,7 @@
             return G;
           },
           StoreButtons: function () {
-            return $;
+            return H;
           },
           TextContentArea: function () {
             return Z;
@@ -366,33 +415,58 @@
         d = e.n(f),
         u = e(7247),
         g = e(9538),
-        p = e(8600),
-        h = e(6691),
-        w = e.n(h),
+        h = e(8600),
+        p = e(6691),
+        w = e.n(p),
         m = e(1396),
         x = e.n(m);
-      let k = p.Z.div({ width: '100%', minHeight: '100%', backgroundColor: '#ffffff' }),
-        C = p.Z.div({ width: '100%' }),
-        y = p.Z.section({
+      let k = h.Z.div({
+          width: '100%',
+          minHeight: '100%',
+          backgroundColor: '#ffffff'
+        }),
+        C = h.Z.div({ width: '100%' }),
+        y = h.Z.section({
           height: (0, u.Wk)(824),
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          '@media(max-width: 480px)': { flexDirection: 'column', background: '#FFF5F8', height: (0, u.$s)(924) }
+          '@media(max-width: 480px)': {
+            flexDirection: 'column',
+            background: '#FFF5F8',
+            height: (0, u.$s)(868),
+            marginBottom: (0, u.$s)(50)
+          }
         }),
         b = (0, g.F4)({
-          from: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)') },
-          '50%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(90), ' , 0px)') },
-          '90%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(-100), ' , 0px)') },
-          to: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)') }
+          from: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
+          },
+          '50%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(90), ' , 0px)')
+          },
+          '90%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-100), ' , 0px)')
+          },
+          to: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
+          }
         }),
         D = (0, g.F4)({
-          from: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)') },
-          '50%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(40), ' , 0px)') },
-          '90%': { transform: 'translate3d(0px, '.concat((0, u.Wk)(-50), ' , 0px)') },
-          to: { transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)') }
+          from: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
+          },
+          '50%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(40), ' , 0px)')
+          },
+          '90%': {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-50), ' , 0px)')
+          },
+          to: {
+            transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
+          }
         }),
-        z = p.Z.div({
+        z = h.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -406,6 +480,7 @@
             flexDirection: 'column',
             alignItems: 'normal',
             justifyContent: 'space-between',
+            height: (0, u.$s)(868),
             '& #mobileTrusted': {
               display: 'flex',
               flexDirection: 'column',
@@ -414,12 +489,16 @@
             }
           }
         }),
-        F = p.Z.div({
+        F = h.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
-          '@media(max-width: 480px)': { width: '100%', flexDirection: 'row' }
+          '@media(max-width: 480px)': {
+            width: '100%',
+            flexDirection: 'row',
+            height: (0, u.$s)(868)
+          }
         }),
-        W = p.Z.h1([
+        W = h.Z.h1([
           r().style,
           {
             fontSize: (0, u.JB)(44),
@@ -431,16 +510,18 @@
             }
           }
         ]),
-        v = p.Z.span({ color: '#FF1453' }),
-        Z = p.Z.div({
+        v = h.Z.span({ color: '#FF1453' }),
+        Z = h.Z.div({
           margin: ''
             .concat((0, u.Wk)(168), ' ')
             .concat((0, u.so)(24), ' ')
             .concat((0, u.Wk)(120), ' ')
             .concat((0, u.so)(100)),
-          '@media(max-width: 480px)': { margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)) }
+          '@media(max-width: 480px)': {
+            margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24))
+          }
         }),
-        j = p.Z.div({ display: 'inline-block' }),
+        j = h.Z.div({ display: 'inline-block' }),
         S = () =>
           (0, o.jsx)('svg', {
             width: (0, u.so)(154),
@@ -458,24 +539,44 @@
           }),
         _ = (t) => {
           let { className: n, children: e } = t;
-          return (0, o.jsx)('p', { className: ''.concat(s().className, ' ').concat(n), children: e });
+          return (0, o.jsx)('p', {
+            className: ''.concat(s().className, ' ').concat(n),
+            children: e
+          });
         },
-        B = p.Z.p([
+        B = h.Z.p([
           a().style,
-          { fontSize: (0, u.JB)(16), color: '#1D2029', textTransform: 'uppercase', lineHeight: '150%' },
+          {
+            fontSize: (0, u.JB)(16),
+            color: '#1D2029',
+            textTransform: 'uppercase',
+            lineHeight: '150%'
+          },
           (0, u.wz)({ fontSize: (0, u.jo)(12) })
         ]),
-        R = (0, p.Z)(_)({
+        R = (0, h.Z)(_)({
           color: '#515665',
           fontSize: (0, u.JB)(22),
           lineHeight: '160%',
-          '@media(max-width: 480px)': { fontSize: (0, u.jo)(16), width: (0, u.CD)(366) }
+          '@media(max-width: 480px)': {
+            fontSize: (0, u.jo)(16),
+            width: (0, u.CD)(366)
+          }
         }),
-        T = p.Z.div([
-          { display: 'flex', flexDirection: 'row', gap: (0, u.so)(24), alignItems: 'center', marginTop: (0, u.Wk)(40) },
-          (0, u.wz)({ marginTop: (0, u.$s)(24), '& .scanText': { display: 'none' } })
+        T = h.Z.div([
+          {
+            display: 'flex',
+            flexDirection: 'row',
+            gap: (0, u.so)(24),
+            alignItems: 'center',
+            marginTop: (0, u.Wk)(40)
+          },
+          (0, u.wz)({
+            marginTop: (0, u.$s)(24),
+            '& .scanText': { display: 'none' }
+          })
         ]),
-        I = p.Z.div([
+        I = h.Z.div([
           {
             width: (0, u.so)(140),
             height: (0, u.so)(140),
@@ -487,9 +588,14 @@
           },
           (0, u.wz)({ display: 'none' })
         ]),
-        H = p.Z.div({ display: 'flex', flexDirection: 'row', gap: (0, u.so)(10), alignItems: 'center' }),
-        $ = (0, p.Z)(x())({}),
-        L = (0, p.Z)(w())([
+        $ = h.Z.div({
+          display: 'flex',
+          flexDirection: 'row',
+          gap: (0, u.so)(10),
+          alignItems: 'center'
+        }),
+        H = (0, h.Z)(x())({}),
+        L = (0, h.Z)(w())([
           {
             width: (0, u.so)(600),
             height: (0, u.Wk)(600),
@@ -501,11 +607,16 @@
           },
           (0, u.wz)({ width: (0, u.CD)(414), height: (0, u.$s)(414) })
         ]),
-        A = p.Z.div([
-          { display: 'flex', flexDirection: 'row', alignItems: 'center', gap: (0, u.so)(16) },
+        A = h.Z.div([
+          {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: (0, u.so)(16)
+          },
           (0, u.wz)({ '& img': {} })
         ]),
-        J = p.Z.div([
+        J = h.Z.div([
           {
             margin: ''
               .concat((0, u.Wk)(0), ' ')
@@ -513,18 +624,23 @@
               .concat((0, u.Wk)(40), ' ')
               .concat((0, u.so)(100))
           },
-          (0, u.wz)({ margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)), display: 'none' })
+          (0, u.wz)({
+            margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)),
+            display: 'none'
+          })
         ]),
-        N = p.Z.section({
+        N = h.Z.section({
           padding: ''.concat((0, u.Wk)(100), ' ').concat((0, u.so)(80)),
           width: '100%',
           display: 'flex',
           backgroundColor: '#002466',
           alignItems: 'center',
           justifyContent: 'center',
-          ...(0, u.wz)({ padding: ''.concat((0, u.$s)(100), ' ').concat((0, u.CD)(24)) })
+          ...(0, u.wz)({
+            padding: ''.concat((0, u.$s)(100), ' ').concat((0, u.CD)(24))
+          })
         }),
-        P = p.Z.div({
+        P = h.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
           width: (0, u.so)(1280),
           height: (0, u.Wk)(480),
@@ -537,7 +653,7 @@
           backgroundPosition: 'center',
           ...(0, u.wz)({ width: (0, u.CD)(414), backgroundSize: 'scale-down' })
         }),
-        M = p.Z.div({
+        M = h.Z.div({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -550,27 +666,34 @@
           borderBottomRightRadius: (0, u.so)(178),
           ...(0, u.wz)({ gap: (0, u.$s)(24), width: (0, u.CD)(414) })
         }),
-        E = (0, p.Z)(R)([
+        E = (0, h.Z)(R)([
           d().style,
           { color: '#ffffff', fontSize: (0, u.JB)(32), textAlign: 'center' },
           (0, u.wz)({ minWidth: (0, u.CD)(351), fontSize: (0, u.jo)(24) })
         ]),
-        V = (0, p.Z)(R)({
+        V = (0, h.Z)(R)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, u.so)(440),
           fontSize: (0, u.JB)(24),
-          ...(0, u.wz)({ width: (0, u.CD)(316), margin: '0px', fontSize: (0, u.jo)(16) })
+          ...(0, u.wz)({
+            width: (0, u.CD)(316),
+            margin: '0px',
+            fontSize: (0, u.jo)(16)
+          })
         }),
-        O = p.Z.section({
+        O = h.Z.section({
           backgroundColor: '#FFF5F8',
           borderTopRightRadius: (0, u.so)(160),
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          ...(0, u.wz)({ flexDirection: 'column', borderTopRightRadius: (0, u.CD)(0) })
+          ...(0, u.wz)({
+            flexDirection: 'column',
+            borderTopRightRadius: (0, u.CD)(0)
+          })
         }),
-        q = p.Z.div({
+        q = h.Z.div({
           width: '50%',
           padding: ''
             .concat((0, u.Wk)(162), ' ')
@@ -580,9 +703,11 @@
           alignItems: 'flex-start',
           flexDirection: 'column',
           gap: (0, u.Wk)(40),
-          ...(0, u.wz)({ padding: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24)) })
+          ...(0, u.wz)({
+            padding: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24))
+          })
         }),
-        G = p.Z.div({
+        G = h.Z.div({
           width: '50%',
           padding: ''.concat((0, u.Wk)(92), ' ').concat((0, u.so)(80)),
           display: 'flex',
@@ -608,7 +733,7 @@
             }
           })
         }),
-        Q = p.Z.div({
+        Q = h.Z.div({
           borderRadius: (0, u.so)(560),
           backgroundColor: '#FF80A1',
           backdropFilter: 'blur('.concat((0, u.so)(43.75), ')'),
@@ -619,16 +744,26 @@
           justifyContent: 'center',
           ...(0, u.wz)({ width: (0, u.$s)(370), height: (0, u.$s)(370) })
         }),
-        K = p.Z.div({
+        K = h.Z.div({
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'row',
           gap: (0, u.so)(16),
-          '& img': { width: (0, u.so)(32), height: (0, u.Wk)(48), objectFit: 'contain', objectPosition: 'center' },
-          ...(0, u.wz)({ '& img': { width: (0, u.CD)(16), height: (0, u.$s)(24) } })
+          '& img': {
+            width: (0, u.so)(32),
+            height: (0, u.Wk)(48),
+            objectFit: 'contain',
+            objectPosition: 'center'
+          },
+          ...(0, u.wz)({
+            '& img': { width: (0, u.CD)(16), height: (0, u.$s)(24) }
+          })
         }),
-        U = (0, p.Z)(R)([d().style]),
-        X = (0, p.Z)(W)({ fontSize: (0, u.JB)(32), ...(0, u.wz)({ fontSize: (0, u.jo)(24), width: (0, u.CD)(366) }) }),
+        U = (0, h.Z)(R)([d().style]),
+        X = (0, h.Z)(W)({
+          fontSize: (0, u.JB)(32),
+          ...(0, u.wz)({ fontSize: (0, u.jo)(24), width: (0, u.CD)(366) })
+        }),
         Y = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
@@ -641,7 +776,7 @@
               fill: 'white'
             })
           }),
-        tt = p.Z.div({
+        tt = h.Z.div({
           height: (0, u.Wk)(520),
           justifyContent: 'center',
           alignItems: 'center',
@@ -691,11 +826,17 @@
         }
       });
       let o = function (t) {
-          let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1440;
+          let n =
+            arguments.length > 1 && void 0 !== arguments[1]
+              ? arguments[1]
+              : 1440;
           return ''.concat((t / n) * 100, 'vw');
         },
         i = function (t) {
-          let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 924;
+          let n =
+            arguments.length > 1 && void 0 !== arguments[1]
+              ? arguments[1]
+              : 924;
           return ''.concat((t / n) * 100, 'vh');
         },
         r = (t) => o(t, 414),
@@ -706,19 +847,31 @@
     },
     984: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'", fontWeight: 600, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
+          fontWeight: 600,
+          fontStyle: 'normal'
+        },
         className: '__className_90b4c2'
       };
     },
     9855: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Raleway_f8758a', '__Raleway_Fallback_f8758a'", fontWeight: 400, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Raleway_f8758a', '__Raleway_Fallback_f8758a'",
+          fontWeight: 400,
+          fontStyle: 'normal'
+        },
         className: '__className_f8758a'
       };
     },
     6968: function (t) {
       t.exports = {
-        style: { fontFamily: "'__Raleway_8be77d', '__Raleway_Fallback_8be77d'", fontWeight: 600, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Raleway_8be77d', '__Raleway_Fallback_8be77d'",
+          fontWeight: 600,
+          fontStyle: 'normal'
+        },
         className: '__className_8be77d'
       };
     },
@@ -728,7 +881,12 @@
     230: function (t, n, e) {
       'use strict';
       function o(t, n) {
-        return n || (n = t.slice(0)), Object.freeze(Object.defineProperties(t, { raw: { value: Object.freeze(n) } }));
+        return (
+          n || (n = t.slice(0)),
+          Object.freeze(
+            Object.defineProperties(t, { raw: { value: Object.freeze(n) } })
+          )
+        );
       }
       e.d(n, {
         _: function () {

@@ -1,11 +1,11 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [931],
   {
-    2618: function (e, n, t) {
-      Promise.resolve().then(t.t.bind(t, 3222, 23)),
+    6350: function (e, n, t) {
+      Promise.resolve().then(t.bind(t, 431)),
+        Promise.resolve().then(t.t.bind(t, 3222, 23)),
         Promise.resolve().then(t.bind(t, 6773)),
         Promise.resolve().then(t.bind(t, 3839)),
-        Promise.resolve().then(t.bind(t, 431)),
         Promise.resolve().then(t.bind(t, 750)),
         Promise.resolve().then(t.t.bind(t, 8142, 23));
     },
@@ -27,7 +27,10 @@
       t(2265);
       let c = (e) => {
           let { children: n, href: t = '/#' } = e;
-          return (0, o.jsx)(h, { href: t, children: (0, o.jsx)(_, { className: i().className, children: n }) });
+          return (0, o.jsx)(h, {
+            href: t,
+            children: (0, o.jsx)(_, { className: i().className, children: n })
+          });
         },
         h = (0, l.Z)(f())({
           backgroundColor: '#FF1654',
@@ -38,7 +41,11 @@
           justifyContent: 'center',
           display: 'inline-flex',
           textDecoration: 'none',
-          ...(0, r.wz)({ width: (0, r.CD)(220), height: (0, r.$s)(48), borderRadius: (0, r.CD)(4) })
+          ...(0, r.wz)({
+            width: (0, r.CD)(220),
+            height: (0, r.$s)(48),
+            borderRadius: (0, r.CD)(4)
+          })
         }),
         _ = l.Z.span({
           fontSize: (0, r.JB)(16),
@@ -49,25 +56,36 @@
           justifyContent: 'center',
           margin: 0,
           '& svg': { strokeWidth: (0, r.so)(24), height: (0, r.so)(24) },
-          ...(0, r.wz)({ fontSize: (0, r.jo)(16), '& svg': { strokeWidth: (0, r.CD)(24), height: (0, r.CD)(24) } })
+          ...(0, r.wz)({
+            fontSize: (0, r.jo)(16),
+            '& svg': { strokeWidth: (0, r.CD)(24), height: (0, r.CD)(24) }
+          })
         });
     },
     8142: function (e) {
       e.exports = {
-        style: { fontFamily: "'__Raleway_1d251f', '__Raleway_Fallback_1d251f'", fontWeight: 700, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Raleway_1d251f', '__Raleway_Fallback_1d251f'",
+          fontWeight: 700,
+          fontStyle: 'normal'
+        },
         className: '__className_1d251f'
       };
     },
     6566: function (e) {
       e.exports = {
-        style: { fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'", fontWeight: 400, fontStyle: 'normal' },
+        style: {
+          fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
+          fontWeight: 400,
+          fontStyle: 'normal'
+        },
         className: '__className_30f681'
       };
     }
   },
   function (e) {
     e.O(0, [107, 36, 971, 596, 744], function () {
-      return e((e.s = 2618));
+      return e((e.s = 6350));
     }),
       (_N_E = e.O());
   }
