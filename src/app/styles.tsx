@@ -43,9 +43,6 @@ const bounce = keyframes({
   '50%': {
     transform: `translate3d(0px, ${heightPixel(90)} , 0px)`
   },
-  '90%': {
-    transform: `translate3d(0px, ${heightPixel(-100)} , 0px)`
-  },
   to: {
     transform: `translate3d(0px, ${heightPixel(-90)} , 0px)`
   }
@@ -57,9 +54,6 @@ const mobile_bounce = keyframes({
   },
   '50%': {
     transform: `translate3d(0px, ${heightPixel(40)} , 0px)`
-  },
-  '90%': {
-    transform: `translate3d(0px, ${heightPixel(-50)} , 0px)`
   },
   to: {
     transform: `translate3d(0px, ${heightPixel(-40)} , 0px)`
