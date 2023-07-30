@@ -18,7 +18,7 @@
             return H;
           },
           AppDownloadArea: function () {
-            return $;
+            return I;
           },
           Arrow: function () {
             return Y;
@@ -30,7 +30,7 @@
             return A;
           },
           ButtonContainer: function () {
-            return T;
+            return $;
           },
           ColoredHalf: function () {
             return v;
@@ -75,7 +75,7 @@
             return q;
           },
           QRCodeBackground: function () {
-            return I;
+            return T;
           },
           RaleBase: function () {
             return B;
@@ -158,9 +158,6 @@
           '50%': {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(90), ' , 0px)')
           },
-          '90%': {
-            transform: 'translate3d(0px, '.concat((0, u.Wk)(-100), ' , 0px)')
-          },
           to: {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
           }
@@ -171,9 +168,6 @@
           },
           '50%': {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(40), ' , 0px)')
-          },
-          '90%': {
-            transform: 'translate3d(0px, '.concat((0, u.Wk)(-50), ' , 0px)')
           },
           to: {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
@@ -193,7 +187,6 @@
             flexDirection: 'column',
             alignItems: 'normal',
             justifyContent: 'space-between',
-            height: (0, u.$s)(868),
             '& #mobileTrusted': {
               display: 'flex',
               flexDirection: 'column',
@@ -205,11 +198,7 @@
         C = g.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
-          '@media(max-width: 480px)': {
-            width: '100%',
-            flexDirection: 'row',
-            height: (0, u.$s)(868)
-          }
+          '@media(max-width: 480px)': { width: '100%', flexDirection: 'row' }
         }),
         W = g.Z.h1([
           r().style,
@@ -276,7 +265,7 @@
             width: (0, u.CD)(366)
           }
         }),
-        $ = g.Z.div([
+        I = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -289,7 +278,7 @@
             '& .scanText': { display: 'none' }
           })
         ]),
-        I = g.Z.div([
+        T = g.Z.div([
           {
             width: (0, u.so)(140),
             height: (0, u.so)(140),
@@ -301,7 +290,7 @@
           },
           (0, u.wz)({ display: 'none' })
         ]),
-        T = g.Z.div({
+        $ = g.Z.div({
           display: 'flex',
           flexDirection: 'row',
           gap: (0, u.so)(10),

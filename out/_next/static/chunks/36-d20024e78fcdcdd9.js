@@ -445,9 +445,6 @@
           '50%': {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(90), ' , 0px)')
           },
-          '90%': {
-            transform: 'translate3d(0px, '.concat((0, u.Wk)(-100), ' , 0px)')
-          },
           to: {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
           }
@@ -458,9 +455,6 @@
           },
           '50%': {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(40), ' , 0px)')
-          },
-          '90%': {
-            transform: 'translate3d(0px, '.concat((0, u.Wk)(-50), ' , 0px)')
           },
           to: {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
@@ -480,7 +474,6 @@
             flexDirection: 'column',
             alignItems: 'normal',
             justifyContent: 'space-between',
-            height: (0, u.$s)(868),
             '& #mobileTrusted': {
               display: 'flex',
               flexDirection: 'column',
@@ -492,11 +485,7 @@
         F = h.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
-          '@media(max-width: 480px)': {
-            width: '100%',
-            flexDirection: 'row',
-            height: (0, u.$s)(868)
-          }
+          '@media(max-width: 480px)': { width: '100%', flexDirection: 'row' }
         }),
         W = h.Z.h1([
           r().style,
