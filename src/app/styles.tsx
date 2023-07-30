@@ -82,7 +82,6 @@ export const ColoredHalf = styled.div({
     flexDirection: 'column',
     alignItems: 'normal',
     justifyContent: 'space-between',
-    height: mobileHeightPixel(868),
     '& #mobileTrusted': {
       display: 'flex',
       flexDirection: 'column',
@@ -97,8 +96,7 @@ export const WhiteHalf = styled.div({
   width: '50%',
   '@media(max-width: 480px)': {
     width: '100%',
-    flexDirection: 'row',
-    height: mobileHeightPixel(868)
+    flexDirection: 'row'
   }
 });
 
