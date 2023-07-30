@@ -1,5 +1,12 @@
 'use client';
-import { heightPixel, mobileHeightPixel, mobileStyle, mobileWidthPixel, widthPixel } from '@/utils/pxToVW';
+import { RaleText } from '@/app/styles';
+import {
+  heightPixel,
+  mobileHeightPixel,
+  mobileStyle,
+  mobileWidthPixel,
+  widthPixel
+} from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
@@ -62,12 +69,37 @@ export const LogoArea = styled(Link)({
   })
 });
 
+export const MobileWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: '#ffffff',
+  position: 'relative'
+});
+
 export const MenuAction = styled.button({
   textDecoration: 'none',
-  width: widthPixel(50),
-  height: widthPixel(50),
+  width: mobileWidthPixel(50),
+  height: mobileHeightPixel(50),
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: 'transparent'
+});
+
+export const DropDownView = styled.div({
+  width: '100%',
+  minHeight: mobileHeightPixel(740),
+  padding: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`,
+  position: 'absolute',
+  zIndex: 100,
+  top: mobileHeightPixel(60),
+  backgroundColor: '#ffffff',
+  left: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: mobileHeightPixel(40)
+});
+
+export const MobileLink = styled(RaleText.withComponent(Link))({
+  width: mobileWidthPixel(158)
 });

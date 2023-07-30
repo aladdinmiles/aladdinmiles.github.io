@@ -1,5 +1,13 @@
 'use client';
-import { fontSize, heightPixel, mobileFontSize, mobileStyle, widthPixel } from '@/utils/pxToVW';
+import {
+  fontSize,
+  heightPixel,
+  mobileFontSize,
+  mobileHeightPixel,
+  mobileStyle,
+  mobileWidthPixel,
+  widthPixel
+} from '@/utils/pxToVW';
 import styled from '@emotion/styled';
 import { Raleway } from 'next/font/google';
 
@@ -13,7 +21,7 @@ export const ColoredSection = styled.section([
   background: linear-gradient(163deg, #ffebf0 0%, #fff8eb 100%);
 `,
   mobileStyle({
-    padding: `${heightPixel(40)} ${widthPixel(24)}`
+    padding: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`
   })
 ]);
 

@@ -31,7 +31,8 @@ export const HeroSection = styled.section({
   '@media(max-width: 480px)': {
     flexDirection: 'column',
     background: '#FFF5F8',
-    height: mobileHeightPixel(924)
+    height: mobileHeightPixel(868),
+    marginBottom: mobileHeightPixel(50)
   }
 });
 
@@ -81,6 +82,7 @@ export const ColoredHalf = styled.div({
     flexDirection: 'column',
     alignItems: 'normal',
     justifyContent: 'space-between',
+    height: mobileHeightPixel(868),
     '& #mobileTrusted': {
       display: 'flex',
       flexDirection: 'column',
@@ -95,7 +97,8 @@ export const WhiteHalf = styled.div({
   width: '50%',
   '@media(max-width: 480px)': {
     width: '100%',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    height: mobileHeightPixel(868)
   }
 });
 
@@ -124,7 +127,9 @@ export const ColoredText = styled.span({
 });
 
 export const TextContentArea = styled.div({
-  margin: `${heightPixel(168)} ${widthPixel(24)} ${heightPixel(120)} ${widthPixel(100)}`,
+  margin: `${heightPixel(168)} ${widthPixel(24)} ${heightPixel(
+    120
+  )} ${widthPixel(100)}`,
   '@media(max-width: 480px)': {
     margin: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`
   }
@@ -167,7 +172,10 @@ const rale600 = Raleway({
   subsets: ['latin', 'cyrillic']
 });
 
-export const RaleBase: React.FC<{ className?: string; children: ReactNode }> = ({ className, children }) => (
+export const RaleBase: React.FC<{
+  className?: string;
+  children: ReactNode;
+}> = ({ className, children }) => (
   <p className={`${rale.className} ${className}`}>{children}</p>
 );
 
@@ -266,7 +274,9 @@ export const Partners = styled.div([
 
 export const Trusted = styled.div([
   {
-    margin: `${heightPixel(0)} ${widthPixel(24)} ${heightPixel(40)} ${widthPixel(100)}`
+    margin: `${heightPixel(0)} ${widthPixel(24)} ${heightPixel(
+      40
+    )} ${widthPixel(100)}`
   },
   mobileStyle({
     margin: `${mobileHeightPixel(40)} ${mobileWidthPixel(24)}`,
@@ -441,8 +451,17 @@ export const SmallMultiStyleText = styled(MultiStyleText)({
 });
 
 export const Arrow = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-    <path d="M12.5 4L11.09 5.41L16.67 11H4.5V13H16.67L11.09 18.59L12.5 20L20.5 12L12.5 4Z" fill="white" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="25"
+    height="24"
+    viewBox="0 0 25 24"
+    fill="none"
+  >
+    <path
+      d="M12.5 4L11.09 5.41L16.67 11H4.5V13H16.67L11.09 18.59L12.5 20L20.5 12L12.5 4Z"
+      fill="white"
+    />
   </svg>
 );
 
