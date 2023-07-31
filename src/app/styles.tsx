@@ -14,6 +14,7 @@ import { Manrope, Raleway } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import QRCode from 'react-qr-code';
 
 export const MainView = styled.div({
   width: '100%',
@@ -31,8 +32,7 @@ export const HeroSection = styled.section({
   '@media(max-width: 480px)': {
     flexDirection: 'column',
     background: '#FFF5F8',
-    height: mobileHeightPixel(868),
-    marginBottom: mobileHeightPixel(50)
+    height: mobileHeightPixel(868)
   }
 });
 
@@ -76,6 +76,7 @@ export const ColoredHalf = styled.div({
     flexDirection: 'column',
     alignItems: 'normal',
     justifyContent: 'space-between',
+    height: mobileHeightPixel(552),
     '& #mobileTrusted': {
       display: 'flex',
       flexDirection: 'column',
@@ -89,8 +90,7 @@ export const WhiteHalf = styled.div({
   height: heightPixel(824),
   width: '50%',
   '@media(max-width: 480px)': {
-    width: '100%',
-    flexDirection: 'row'
+    width: '100%'
   }
 });
 
@@ -113,6 +113,12 @@ export const MultiStyleText = styled.h1([
     }
   }
 ]);
+
+export const StyledQRCode = styled(QRCode)({
+  width: widthPixel(78.4),
+  height: widthPixel(78.4),
+  alignSelf: 'center'
+});
 
 export const ColoredText = styled.span({
   color: '#FF1453'

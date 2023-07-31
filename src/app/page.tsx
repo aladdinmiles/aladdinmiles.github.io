@@ -2,6 +2,7 @@ import { Button } from '@/components/buttons';
 import { Raleway } from 'next/font/google';
 import Image from 'next/image';
 import { fourCardHome } from './content';
+import { QRCode } from './qrcode';
 import { FourCardSection } from './shared';
 import {
   AppDownload,
@@ -54,14 +55,16 @@ export default function Home() {
                 <ColoredText>fastest</ColoredText>
                 <Line />
               </TextWithSVG>{' '}
-              way to <ColoredText>travel</ColoredText> for <ColoredText>free! </ColoredText>
+              way to <ColoredText>travel</ColoredText> for{' '}
+              <ColoredText>free! </ColoredText>
             </MultiStyleText>
             <RaleText>
-              Get rewarded in Air Miles whenever you shop your favorites brands on the AladdinMiles app.
+              Get rewarded in Air Miles whenever you shop your favorites brands
+              on the AladdinMiles app.
             </RaleText>
             <AppDownloadArea>
               <QRCodeBackground>
-                <Image src="/images/QRCode.svg" alt="qrcode" width={89.6} height={89.6} />
+                <QRCode />
               </QRCodeBackground>
               <div>
                 <RaleText className="scanText">Scan to download</RaleText>
@@ -70,13 +73,23 @@ export default function Home() {
                     target="_blank"
                     href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088"
                   >
-                    <Image alt="Get it on Google Play" src="/images/appstore.svg" width={160} height={46} />
+                    <Image
+                      alt="Get it on Google Play"
+                      src="/images/appstore.svg"
+                      width={160}
+                      height={46}
+                    />
                   </StoreButtons>
                   <StoreButtons
                     target="_blank"
                     href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
                   >
-                    <Image alt="Get it on Google Play" src="/images/google-play-badge.svg" width={160} height={46} />
+                    <Image
+                      alt="Get it on Google Play"
+                      src="/images/google-play-badge.svg"
+                      width={160}
+                      height={46}
+                    />
                   </StoreButtons>
                 </ButtonContainer>
               </div>
@@ -85,20 +98,56 @@ export default function Home() {
           <Trusted id="trusted">
             <ManText>Trusted by the best businesses</ManText>
             <Partners>
-              <Image src="/images/intermile.png" width={128} height={40} alt="intermiles" />
-              <Image src="/images/ame.png" width={128} height={40} alt="intermiles" />
-              <Image src="/images/airasia.png" width={75} height={40} alt="intermiles" />
+              <Image
+                src="/images/intermile.png"
+                width={128}
+                height={40}
+                alt="intermiles"
+              />
+              <Image
+                src="/images/ame.png"
+                width={128}
+                height={40}
+                alt="intermiles"
+              />
+              <Image
+                src="/images/airasia.png"
+                width={75}
+                height={40}
+                alt="intermiles"
+              />
             </Partners>
           </Trusted>
         </WhiteHalf>
         <ColoredHalf>
-          <HeroImage id="bounce" src="/images/hero-image.png" width={600} height={600} alt="hero images" />
+          <HeroImage
+            id="bounce"
+            src="/images/hero-image.png"
+            width={600}
+            height={600}
+            alt="hero images"
+          />
           <Trusted id="mobileTrusted">
             <ManText>Trusted by the best businesses</ManText>
             <Partners>
-              <Image src="/images/intermile.png" width={128} height={40} alt="intermiles" />
-              <Image src="/images/ame.png" width={128} height={40} alt="intermiles" />
-              <Image src="/images/airasia.png" width={75} height={40} alt="intermiles" />
+              <Image
+                src="/images/intermile.png"
+                width={128}
+                height={40}
+                alt="intermiles"
+              />
+              <Image
+                src="/images/ame.png"
+                width={128}
+                height={40}
+                alt="intermiles"
+              />
+              <Image
+                src="/images/airasia.png"
+                width={75}
+                height={40}
+                alt="intermiles"
+              />
             </Partners>
           </Trusted>
         </ColoredHalf>
@@ -115,17 +164,30 @@ export default function Home() {
             shop for all your needs
           </SmallMultiStyleText>
           <SB>
-            <Image src="/images/small-device.png" width={32} height={48} alt="small-device" />
+            <Image
+              src="/images/small-device.png"
+              width={32}
+              height={48}
+              alt="small-device"
+            />
             <SmallboldText>Download the AladdinMiles app today!</SmallboldText>
           </SB>
-          <RaleText>Download the AladdinMiles app today and unlock a treasure trove right at your fingertips!</RaleText>
+          <RaleText>
+            Download the AladdinMiles app today and unlock a treasure trove
+            right at your fingertips!
+          </RaleText>
           <Button href="/#download">
             Start Shopping <Arrow />
           </Button>
         </StartShoppingAreaLeft>
         <StartShoppingAreaRight>
           <BigCircle></BigCircle>
-          <Image src="/images/slide1.png" width={404} height={640} alt="slider1" />
+          <Image
+            src="/images/slide1.png"
+            width={404}
+            height={640}
+            alt="slider1"
+          />
         </StartShoppingAreaRight>
       </PinkBackground>
       <BlueBackground id="download">
@@ -133,20 +195,33 @@ export default function Home() {
           <DownloadContent>
             <div>
               <DownloadHeader>Download the AladdinMiles App</DownloadHeader>
-              <RaleTextWhite>Order from your favorite stores and get rewarded for every purchase.</RaleTextWhite>
+              <RaleTextWhite>
+                Order from your favorite stores and get rewarded for every
+                purchase.
+              </RaleTextWhite>
             </div>
             <ButtonContainer>
               <StoreButtons
                 target="_blank"
                 href="https://apps.apple.com/app/aladdin-miles-%D8%A7%D9%85%D9%8A%D8%A7%D9%84-%D8%B9%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%8A%D9%86/id1503894088"
               >
-                <Image alt="Get it on Google Play" src="/images/appstore.svg" width={160} height={50} />
+                <Image
+                  alt="Get it on Google Play"
+                  src="/images/appstore.svg"
+                  width={160}
+                  height={50}
+                />
               </StoreButtons>
               <StoreButtons
                 target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.aladdinmiles.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
               >
-                <Image alt="Get it on Google Play" src="/images/google-play-badge.svg" width={160} height={600} />
+                <Image
+                  alt="Get it on Google Play"
+                  src="/images/google-play-badge.svg"
+                  width={160}
+                  height={600}
+                />
               </StoreButtons>
             </ButtonContainer>
           </DownloadContent>
