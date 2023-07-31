@@ -1,3 +1,4 @@
+'use client';
 import { detectOS } from '@/utils/detectOS';
 
 const DownloadApp: React.FC = () => {
