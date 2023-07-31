@@ -1,3 +1,4 @@
+'use client';
 export function detectOS() {
   const platform = navigator.platform;
   if (platform.indexOf('Win') !== -1) return 'Windows';
