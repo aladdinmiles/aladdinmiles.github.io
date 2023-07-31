@@ -77,6 +77,7 @@ export const ColoredHalf = styled.div({
     alignItems: 'normal',
     justifyContent: 'space-between',
     height: mobileHeightPixel(552),
+    borderBottomRightRadius: 0,
     '& #mobileTrusted': {
       display: 'flex',
       flexDirection: 'column',
@@ -464,9 +465,38 @@ export const Arrow = () => (
 );
 
 export const Page404 = styled.div({
-  height: heightPixel(520),
-  justifyContent: 'center',
+  height: heightPixel(824),
+  justifyContent: 'space-evenly',
   alignItems: 'center',
   width: '100%',
-  display: 'flex'
+  display: 'flex',
+  flexDirection: 'row',
+  background:
+    'linear-gradient(163deg, #FFEBF0 0%, #FFF8EB 99.99%, #FFF8EB 100%)',
+  '& img': {
+    height: heightPixel(506),
+    width: widthPixel(480)
+  },
+  ...mobileStyle({
+    flexDirection: 'column',
+    justifyContent: 'center',
+    '& img': {
+      height: heightPixel(317),
+      width: widthPixel(300)
+    }
+  })
+});
+
+export const SideLeft404 = styled.div({
+  paddingLeft: widthPixel(100),
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  gap: heightPixel(40),
+  width: widthPixel(596),
+  ...mobileStyle({
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: `${heightPixel(40)} ${widthPixel(24)}`
+  })
 });

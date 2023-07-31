@@ -1,6 +1,7 @@
 import { Footer } from '@/components/footer';
 import { TopBar } from '@/components/navigation';
 import { ReactNode } from 'react';
+import { MerchantForm } from './merchant/form';
 import { MainView } from './styles';
 
 type IProp = {
@@ -12,6 +13,7 @@ const Template: React.FC<IProp> = ({ children }) => {
       <TopBar />
       {children}
       <Footer />
+      <MerchantForm />
     </MainView>
   );
 };

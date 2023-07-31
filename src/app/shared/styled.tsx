@@ -177,7 +177,8 @@ export const Card = styled.div<{ index: number }>(({ index }) => [
     padding: `${mobileHeightPixel(44)} ${mobileWidthPixel(26)}`,
     borderRadius: mobileWidthPixel(8),
     gap: mobileWidthPixel(24),
-    flexShrink: 0
+    flexShrink: 0,
+    height: mobileHeightPixel(154)
   })
 ]);
 
