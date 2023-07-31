@@ -1,120 +1,123 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [226],
+  [19],
   {
-    5226: function (t, n, e) {
-      Promise.resolve().then(e.t.bind(e, 3222, 23)),
+    8019: function (t, n, e) {
+      Promise.resolve().then(e.bind(e, 431)),
+        Promise.resolve().then(e.t.bind(e, 3222, 23)),
         Promise.resolve().then(e.bind(e, 6773)),
         Promise.resolve().then(e.bind(e, 7746)),
         Promise.resolve().then(e.bind(e, 3141)),
         Promise.resolve().then(e.bind(e, 750)),
-        Promise.resolve().then(e.bind(e, 4019)),
-        Promise.resolve().then(e.bind(e, 431));
+        Promise.resolve().then(e.bind(e, 4019));
     },
     431: function (t, n, e) {
       'use strict';
       e.r(n),
         e.d(n, {
           AppDownload: function () {
-            return H;
+            return V;
           },
           AppDownloadArea: function () {
-            return I;
+            return $;
           },
           Arrow: function () {
-            return Y;
+            return tn;
           },
           BigCircle: function () {
-            return K;
+            return U;
           },
           BlueBackground: function () {
-            return A;
+            return J;
           },
           ButtonContainer: function () {
-            return $;
+            return R;
           },
           ColoredHalf: function () {
             return v;
           },
           ColoredText: function () {
-            return z;
-          },
-          ContentView: function () {
-            return b;
-          },
-          DownloadContent: function () {
-            return J;
-          },
-          DownloadHeader: function () {
-            return V;
-          },
-          HeroImage: function () {
-            return N;
-          },
-          HeroSection: function () {
-            return y;
-          },
-          Line: function () {
-            return S;
-          },
-          MainView: function () {
-            return k;
-          },
-          ManText: function () {
-            return _;
-          },
-          MultiStyleText: function () {
-            return W;
-          },
-          Page404: function () {
-            return tt;
-          },
-          Partners: function () {
-            return R;
-          },
-          PinkBackground: function () {
-            return q;
-          },
-          QRCodeBackground: function () {
-            return T;
-          },
-          RaleBase: function () {
-            return B;
-          },
-          RaleText: function () {
-            return M;
-          },
-          RaleTextWhite: function () {
-            return E;
-          },
-          SB: function () {
-            return O;
-          },
-          SmallMultiStyleText: function () {
-            return X;
-          },
-          SmallboldText: function () {
-            return U;
-          },
-          StartShoppingAreaLeft: function () {
-            return G;
-          },
-          StartShoppingAreaRight: function () {
-            return Q;
-          },
-          StoreButtons: function () {
-            return L;
-          },
-          TextContentArea: function () {
-            return Z;
-          },
-          TextWithSVG: function () {
             return F;
           },
-          Trusted: function () {
+          ContentView: function () {
+            return y;
+          },
+          DownloadContent: function () {
+            return E;
+          },
+          DownloadHeader: function () {
+            return Q;
+          },
+          HeroImage: function () {
             return P;
           },
+          HeroSection: function () {
+            return j;
+          },
+          Line: function () {
+            return _;
+          },
+          MainView: function () {
+            return b;
+          },
+          ManText: function () {
+            return I;
+          },
+          MultiStyleText: function () {
+            return z;
+          },
+          Page404: function () {
+            return te;
+          },
+          Partners: function () {
+            return A;
+          },
+          PinkBackground: function () {
+            return G;
+          },
+          QRCodeBackground: function () {
+            return L;
+          },
+          RaleBase: function () {
+            return M;
+          },
+          RaleText: function () {
+            return T;
+          },
+          RaleTextWhite: function () {
+            return q;
+          },
+          SB: function () {
+            return X;
+          },
+          SmallMultiStyleText: function () {
+            return tt;
+          },
+          SmallboldText: function () {
+            return Y;
+          },
+          StartShoppingAreaLeft: function () {
+            return K;
+          },
+          StartShoppingAreaRight: function () {
+            return O;
+          },
+          StoreButtons: function () {
+            return N;
+          },
+          StyledQRCode: function () {
+            return Z;
+          },
+          TextContentArea: function () {
+            return S;
+          },
+          TextWithSVG: function () {
+            return B;
+          },
+          Trusted: function () {
+            return H;
+          },
           WhiteHalf: function () {
-            return C;
+            return W;
           }
         });
       var o = e(7437),
@@ -132,14 +135,15 @@
         p = e(6691),
         x = e.n(p),
         w = e(1396),
-        m = e.n(w);
-      let k = g.Z.div({
+        m = e.n(w),
+        k = e(7747);
+      let b = g.Z.div({
           width: '100%',
           minHeight: '100%',
           backgroundColor: '#ffffff'
         }),
-        b = g.Z.div({ width: '100%' }),
-        y = g.Z.section({
+        y = g.Z.div({ width: '100%' }),
+        j = g.Z.section({
           height: (0, u.Wk)(824),
           width: '100%',
           display: 'flex',
@@ -147,8 +151,7 @@
           '@media(max-width: 480px)': {
             flexDirection: 'column',
             background: '#FFF5F8',
-            height: (0, u.$s)(868),
-            marginBottom: (0, u.$s)(50)
+            height: (0, u.$s)(868)
           }
         }),
         D = (0, h.F4)({
@@ -162,7 +165,7 @@
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-90), ' , 0px)')
           }
         }),
-        j = (0, h.F4)({
+        C = (0, h.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, u.Wk)(-40), ' , 0px)')
           },
@@ -187,6 +190,7 @@
             flexDirection: 'column',
             alignItems: 'normal',
             justifyContent: 'space-between',
+            height: (0, u.$s)(552),
             '& #mobileTrusted': {
               display: 'flex',
               flexDirection: 'column',
@@ -195,12 +199,12 @@
             }
           }
         }),
-        C = g.Z.div({
+        W = g.Z.div({
           height: (0, u.Wk)(824),
           width: '50%',
-          '@media(max-width: 480px)': { width: '100%', flexDirection: 'row' }
+          '@media(max-width: 480px)': { width: '100%' }
         }),
-        W = g.Z.h1([
+        z = g.Z.h1([
           r().style,
           {
             fontSize: (0, u.JB)(44),
@@ -212,8 +216,13 @@
             }
           }
         ]),
-        z = g.Z.span({ color: '#FF1453' }),
-        Z = g.Z.div({
+        Z = (0, g.Z)(k.Z)({
+          width: (0, u.so)(78.4),
+          height: (0, u.so)(78.4),
+          alignSelf: 'center'
+        }),
+        F = g.Z.span({ color: '#FF1453' }),
+        S = g.Z.div({
           margin: ''
             .concat((0, u.Wk)(168), ' ')
             .concat((0, u.so)(24), ' ')
@@ -223,8 +232,8 @@
             margin: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24))
           }
         }),
-        F = g.Z.div({ display: 'inline-block' }),
-        S = () =>
+        B = g.Z.div({ display: 'inline-block' }),
+        _ = () =>
           (0, o.jsx)('svg', {
             width: (0, u.so)(154),
             height: (0, u.Wk)(8),
@@ -239,14 +248,14 @@
               strokeLinecap: 'round'
             })
           }),
-        B = (t) => {
+        M = (t) => {
           let { className: n, children: e } = t;
           return (0, o.jsx)('p', {
             className: ''.concat(l().className, ' ').concat(n),
             children: e
           });
         },
-        _ = g.Z.p([
+        I = g.Z.p([
           a().style,
           {
             fontSize: (0, u.JB)(16),
@@ -256,7 +265,7 @@
           },
           (0, u.wz)({ fontSize: (0, u.jo)(12) })
         ]),
-        M = (0, g.Z)(B)({
+        T = (0, g.Z)(M)({
           color: '#515665',
           fontSize: (0, u.JB)(22),
           lineHeight: '160%',
@@ -265,7 +274,7 @@
             width: (0, u.CD)(366)
           }
         }),
-        I = g.Z.div([
+        $ = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -278,7 +287,7 @@
             '& .scanText': { display: 'none' }
           })
         ]),
-        T = g.Z.div([
+        L = g.Z.div([
           {
             width: (0, u.so)(140),
             height: (0, u.so)(140),
@@ -290,14 +299,14 @@
           },
           (0, u.wz)({ display: 'none' })
         ]),
-        $ = g.Z.div({
+        R = g.Z.div({
           display: 'flex',
           flexDirection: 'row',
           gap: (0, u.so)(10),
           alignItems: 'center'
         }),
-        L = (0, g.Z)(m())({}),
-        N = (0, g.Z)(x())([
+        N = (0, g.Z)(m())({}),
+        P = (0, g.Z)(x())([
           {
             width: (0, u.so)(600),
             height: (0, u.Wk)(600),
@@ -305,11 +314,11 @@
             alignSelf: 'center',
             objectPosition: 'center',
             animation: ''.concat(D, ' 5s ease infinite'),
-            ...(0, u.wz)({ animation: ''.concat(j, ' 5s ease infinite') })
+            ...(0, u.wz)({ animation: ''.concat(C, ' 5s ease infinite') })
           },
           (0, u.wz)({ width: (0, u.CD)(414), height: (0, u.$s)(414) })
         ]),
-        R = g.Z.div([
+        A = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -318,7 +327,7 @@
           },
           (0, u.wz)({ '& img': {} })
         ]),
-        P = g.Z.div([
+        H = g.Z.div([
           {
             margin: ''
               .concat((0, u.Wk)(0), ' ')
@@ -331,7 +340,7 @@
             display: 'none'
           })
         ]),
-        A = g.Z.section({
+        J = g.Z.section({
           padding: ''.concat((0, u.Wk)(100), ' ').concat((0, u.so)(80)),
           width: '100%',
           display: 'flex',
@@ -342,7 +351,7 @@
             padding: ''.concat((0, u.$s)(100), ' ').concat((0, u.CD)(24))
           })
         }),
-        H = g.Z.div({
+        V = g.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
           width: (0, u.so)(1280),
           height: (0, u.Wk)(480),
@@ -355,7 +364,7 @@
           backgroundPosition: 'center',
           ...(0, u.wz)({ width: (0, u.CD)(414), backgroundSize: 'scale-down' })
         }),
-        J = g.Z.div({
+        E = g.Z.div({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -368,12 +377,12 @@
           borderBottomRightRadius: (0, u.so)(178),
           ...(0, u.wz)({ gap: (0, u.$s)(24), width: (0, u.CD)(414) })
         }),
-        V = (0, g.Z)(M)([
+        Q = (0, g.Z)(T)([
           f().style,
           { color: '#ffffff', fontSize: (0, u.JB)(32), textAlign: 'center' },
           (0, u.wz)({ minWidth: (0, u.CD)(351), fontSize: (0, u.jo)(24) })
         ]),
-        E = (0, g.Z)(M)({
+        q = (0, g.Z)(T)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, u.so)(440),
@@ -384,7 +393,7 @@
             fontSize: (0, u.jo)(16)
           })
         }),
-        q = g.Z.section({
+        G = g.Z.section({
           backgroundColor: '#FFF5F8',
           borderTopRightRadius: (0, u.so)(160),
           width: '100%',
@@ -395,7 +404,7 @@
             borderTopRightRadius: (0, u.CD)(0)
           })
         }),
-        G = g.Z.div({
+        K = g.Z.div({
           width: '50%',
           padding: ''
             .concat((0, u.Wk)(162), ' ')
@@ -409,7 +418,7 @@
             padding: ''.concat((0, u.$s)(40), ' ').concat((0, u.CD)(24))
           })
         }),
-        Q = g.Z.div({
+        O = g.Z.div({
           width: '50%',
           padding: ''.concat((0, u.Wk)(92), ' ').concat((0, u.so)(80)),
           display: 'flex',
@@ -435,7 +444,7 @@
             }
           })
         }),
-        K = g.Z.div({
+        U = g.Z.div({
           borderRadius: (0, u.so)(560),
           backgroundColor: '#FF80A1',
           backdropFilter: 'blur('.concat((0, u.so)(43.75), ')'),
@@ -446,7 +455,7 @@
           justifyContent: 'center',
           ...(0, u.wz)({ width: (0, u.$s)(370), height: (0, u.$s)(370) })
         }),
-        O = g.Z.div({
+        X = g.Z.div({
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'row',
@@ -461,12 +470,12 @@
             '& img': { width: (0, u.CD)(16), height: (0, u.$s)(24) }
           })
         }),
-        U = (0, g.Z)(M)([f().style]),
-        X = (0, g.Z)(W)({
+        Y = (0, g.Z)(T)([f().style]),
+        tt = (0, g.Z)(z)({
           fontSize: (0, u.JB)(32),
           ...(0, u.wz)({ fontSize: (0, u.jo)(24), width: (0, u.CD)(366) })
         }),
-        Y = () =>
+        tn = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
             width: '25',
@@ -478,7 +487,7 @@
               fill: 'white'
             })
           }),
-        tt = g.Z.div({
+        te = g.Z.div({
           height: (0, u.Wk)(520),
           justifyContent: 'center',
           alignItems: 'center',
@@ -568,13 +577,13 @@
             return m;
           },
           Socials: function () {
-            return v;
+            return C;
           },
           StyledImage: function () {
-            return D;
+            return j;
           },
           StyledImageText: function () {
-            return j;
+            return D;
           }
         });
       var o = e(7437),
@@ -648,9 +657,9 @@
           gap: (0, s.Wk)(16),
           ...(0, s.wz)({ maxWidth: (0, s.CD)(270) })
         }),
-        D = (0, l.Z)(f())({}),
         j = (0, l.Z)(f())({}),
-        v = l.Z.div({
+        D = (0, l.Z)(f())({}),
+        C = l.Z.div({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
