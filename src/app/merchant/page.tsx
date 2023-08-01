@@ -1,8 +1,19 @@
 import { Button } from '@/components/buttons';
 import Image from 'next/image';
 import { SmallerHeader } from '../shared/styled';
-import { Arrow, ColoredText, ContentView, MultiStyleText, RaleText } from '../styles';
-import { BottomSection, HeroContent, HeroContentTextArea, HeroSection } from './styles';
+import {
+  Arrow,
+  ColoredText,
+  ContentView,
+  MultiStyleText,
+  RaleText
+} from '../styles';
+import {
+  BottomSection,
+  HeroContent,
+  HeroContentTextArea,
+  HeroSection
+} from './styles';
 
 const BecomeAMerchant: React.FC = () => {
   return (
@@ -12,18 +23,32 @@ const BecomeAMerchant: React.FC = () => {
           <HeroContentTextArea>
             <SmallerHeader className="small">Become a merchant</SmallerHeader>
             <MultiStyleText>
-              Looking to <ColoredText>grow</ColoredText> your business? We’ve got you!
+              Looking to <ColoredText>grow</ColoredText> your business? We’ve
+              got you!
             </MultiStyleText>
-            <RaleText>Partner with the world best loyalty platform and watch your business skyrocket.</RaleText>
+            <RaleText>
+              Partner with the world best loyalty platform and watch your
+              business skyrocket.
+            </RaleText>
           </HeroContentTextArea>
-          <Button href="/#">
+          <Button href="/merchant?action=request">
             Sign up now <Arrow />
           </Button>
         </HeroContent>
-        <Image src="/images/merchantTop.png" width={616} height={600} alt="city" />
+        <Image
+          src="/images/merchantTop.png"
+          width={616}
+          height={600}
+          alt="city"
+        />
       </HeroSection>
       <BottomSection id="partners">
-        <Image src="/images/merchantBottom.png" width={616} height={600} alt="team" />
+        <Image
+          src="/images/merchantBottom.png"
+          width={616}
+          height={600}
+          alt="team"
+        />
         <HeroContent>
           <HeroContentTextArea>
             <SmallerHeader className="small">Become a partner</SmallerHeader>
@@ -31,9 +56,11 @@ const BecomeAMerchant: React.FC = () => {
               <ColoredText>Partner</ColoredText> with us!
             </MultiStyleText>
             <RaleText>
-              AladdinMiles is the first mobile app that allows users earn airline miles from everyday spending, travel
-              and activities. Let your customers earn miles when they spend at restaurants, retail outlets, boutique and
-              luxury hotels, premium spas, gift cards, tickets to major events and attractions, and much more!{' '}
+              AladdinMiles is the first mobile app that allows users earn
+              airline miles from everyday spending, travel and activities. Let
+              your customers earn miles when they spend at restaurants, retail
+              outlets, boutique and luxury hotels, premium spas, gift cards,
+              tickets to major events and attractions, and much more!{' '}
             </RaleText>
           </HeroContentTextArea>
           <Button href="/#">

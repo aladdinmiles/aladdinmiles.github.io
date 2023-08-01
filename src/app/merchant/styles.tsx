@@ -2,12 +2,16 @@
 import {
   fontSize,
   heightPixel,
+  mobileFontSize,
   mobileHeightPixel,
   mobileStyle,
   mobileWidthPixel,
   widthPixel
 } from '@/utils/pxToVW';
 import styled from '@emotion/styled';
+import { Manrope, Raleway } from 'next/font/google';
+import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { RaleText } from '../styles';
 
 export const HeroSection = styled.div({
@@ -97,21 +101,31 @@ export const BottomSection = styled.div({
   })
 });
 
-export const FormWrapper = styled.div({
-  width: '100%',
-  height: heightPixel(1620),
-  backgroundColor: 'rgba(51, 52, 58, 0.35)',
-  // display: 'flex',
-  justifyContent: 'center',
-  position: 'absolute',
-  top: 0,
-  paddingTop: heightPixel(160),
-  display: 'none',
-  flexDirection: 'row',
-  ...mobileStyle({
-    paddingTop: heightPixel(100)
-  })
-});
+export const FormWrapper = styled.div(
+  {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(51, 52, 58, 0.35)',
+    justifyContent: 'center',
+    position: 'absolute',
+    top: 0,
+    paddingTop: heightPixel(160),
+    flexDirection: 'row',
+    ...mobileStyle({
+      paddingTop: heightPixel(100)
+    })
+  },
+  () => {
+    const currentRoute = usePathname();
+    const searchParams = useSearchParams();
+
+    const action = searchParams.get('action');
+    return {
+      display:
+        currentRoute === '/merchant' && action === 'request' ? 'flex' : 'none'
+    };
+  }
+);
 
 export const FormCard = styled.div({
   width: widthPixel(1000),
@@ -121,16 +135,27 @@ export const FormCard = styled.div({
   flexDirection: 'row',
   display: 'flex',
   justifyContent: 'space-between',
+  position: 'relative',
   ...mobileStyle({
-    flexDirection: 'column-reverse',
+    flexDirection: 'column',
     width: mobileWidthPixel(382),
     height: mobileHeightPixel(800),
     borderRadius: mobileWidthPixel(8)
+    // backgroundColor: '#FEE6ED',
   })
 });
 
 export const FormContainer = styled.div({
-  padding: `${heightPixel(40)} ${widthPixel(56)} ${heightPixel(66)}`
+  padding: `${heightPixel(40)} ${widthPixel(56)} ${heightPixel(66)}`,
+  alignItems: 'center',
+  justifyContent: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  width: widthPixel(600),
+  height: heightPixel(640),
+  ...mobileStyle({
+    width: '100%'
+  })
 });
 
 export const FormRight = styled.div({
@@ -143,7 +168,9 @@ export const FormRight = styled.div({
   borderTopRightRadius: widthPixel(16),
   borderBottomRightRadius: widthPixel(16),
   ...mobileStyle({
-    height: '50%'
+    width: '100%',
+    borderBottomLeftRadius: widthPixel(16),
+    borderTopRightRadius: widthPixel(0)
   })
 });
 
@@ -163,8 +190,7 @@ gap: ${heightPixel(40)};`,
   },
   mobileStyle({
     '& svg': {
-      width: widthPixel(160),
-      height: widthPixel(160)
+      width: '100%'
     }
   })
 ]);
@@ -172,6 +198,101 @@ gap: ${heightPixel(40)};`,
 export const CardText = styled(RaleText)({
   fontSize: fontSize(20),
   textAlign: 'center'
+});
+
+export const CardHeaderSection = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: heightPixel(24),
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: widthPixel(320),
+  '& img': {
+    width: widthPixel(64),
+    height: heightPixel(46),
+    objectFit: 'cover'
+  },
+  ...mobileStyle({
+    '& img': {
+      width: mobileWidthPixel(64),
+      height: mobileHeightPixel(46),
+      objectFit: 'cover'
+    }
+  })
+});
+
+const rale700 = Raleway({
+  subsets: ['latin', 'cyrillic'],
+  weight: '700'
+});
+
+const man600 = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  weight: '600'
+});
+
+export const CHT = styled.p([
+  rale700.style,
+  {
+    fontSize: fontSize(20),
+    color: '#1D2029',
+    textTransform: 'uppercase',
+    ...mobileStyle({
+      fontSize: mobileFontSize(20)
+    })
+  }
+]);
+
+export const CHeaderTextArea = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center'
+});
+
+export const CT = styled(RaleText)({
+  fontSize: fontSize(14),
+  textAlign: 'center'
+});
+
+export const Submit = styled.button({
+  background: '#FF1654',
+  borderRadius: widthPixel(4),
+  width: widthPixel(488),
+  height: heightPixel(54),
+  padding: `${heightPixel(15)} ${widthPixel(32)}`,
+  color: '#ffffff',
+  fontSize: fontSize(14),
+  ...man600.style,
+  ...mobileStyle({
+    width: '100%',
+    fontSize: mobileFontSize(14),
+    borderRadius: mobileWidthPixel(4)
+  })
+});
+
+export const Form = styled.div({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: heightPixel(16),
+  paddingTop: heightPixel(24),
+  paddingBottom: heightPixel(40)
+});
+
+export const CloseButton = styled(Link)({
+  display: 'inline-flex',
+  width: widthPixel(32),
+  height: widthPixel(32),
+  alignItems: 'center',
+  justifyContent: 'center',
+  position: 'absolute',
+  right: widthPixel(24),
+  top: heightPixel(24),
+  '& svg': {
+    width: widthPixel(24),
+    height: widthPixel(24)
+  }
 });
 
 export const CardIcon = () => (

@@ -125,6 +125,11 @@ export const ColoredText = styled.span({
   color: '#FF1453'
 });
 
+export const ChildrenContainer = styled.div({
+  position: 'relative',
+  width: '100%'
+});
+
 export const TextContentArea = styled.div({
   margin: `${heightPixel(168)} ${widthPixel(24)} ${heightPixel(
     120

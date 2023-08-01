@@ -51,11 +51,17 @@ const man600 = Manrope({
   subsets: ['latin', 'cyrillic']
 });
 
-export const BaseText: React.FC<{ className?: string; children: ReactNode }> = ({ className, children }) => (
+export const BaseText: React.FC<{
+  className?: string;
+  children: ReactNode;
+}> = ({ className, children }) => (
   <p className={`${man.className} ${className}`}>{children}</p>
 );
 
-export const BaseHeader: React.FC<{ className?: string; children: ReactNode }> = ({ className, children }) => (
+export const BaseHeader: React.FC<{
+  className?: string;
+  children: ReactNode;
+}> = ({ className, children }) => (
   <p className={`${man600.className} ${className}`}>{children}</p>
 );
 
@@ -89,14 +95,14 @@ export const FooterSection = styled.div({
   })
 });
 
-export const StyledImage = styled(Image)({
-  // width: widthPixel(40.8),
-  // height: heightPixel(28.8)
-});
-
 export const StyledImageText = styled(Image)({
-  // width: widthPixel(170.4),
-  // height: heightPixel(48)
+  width: widthPixel(214),
+  height: heightPixel(48),
+  objectFit: 'cover',
+  ...mobileStyle({
+    width: mobileWidthPixel(178.333),
+    height: mobileHeightPixel(40)
+  })
 });
 
 export const Socials = styled.div({

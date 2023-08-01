@@ -8,8 +8,13 @@ export const TopBar: React.FC = () => {
     <Wrapper>
       <NavBar id="large">
         <LogoArea href="/">
-          <Image className="actualLogo" src="/logo.png" alt="AladdinMiles logo" width={45} height={32} />
-          <Image className="logo-text" src="/logoText.svg" alt="AladdinMiles logo" width={160} height={45} />
+          <Image
+            className="actualLogo"
+            src="/images/Aladdin-Logo-Vertical-Color.svg"
+            alt="AladdinMiles logo"
+            width={177.8}
+            height={40}
+          />
         </LogoArea>
         <Button href="/#download">Download the app</Button>
       </NavBar>

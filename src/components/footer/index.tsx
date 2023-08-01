@@ -7,7 +7,6 @@ import {
   FooterSection,
   FooterText,
   Socials,
-  StyledImage,
   StyledImageText
 } from './styles';
 
@@ -16,15 +15,41 @@ export const Footer: React.FC = () => {
     <FooterBar>
       <FooterSection>
         <LogoArea href="/">
-          <StyledImage src="/logo.png" alt="AladdinMiles logo" width={45} height={32} />
-          <StyledImageText src="/logoText.svg" alt="AladdinMiles logo" width={170.4} height={48} />
+          <StyledImageText
+            src="/images/Aladdin-Logo-Vertical-White.svg"
+            alt="AladdinMiles logo"
+            width={170.4}
+            height={48}
+          />
         </LogoArea>
-        <FooterText>&copy; Copyright 2023 AladdinMiles, all rights reserved</FooterText>
+        <FooterText>
+          &copy; Copyright 2023 AladdinMiles, all rights reserved
+        </FooterText>
         <Socials>
-          <Image src="/images/facebook-frame.svg" width={24} height={24} alt="facebook" />
-          <Image src="/images/instagram-black.svg" width={24} height={24} alt="facebook" />
-          <Image src="/images/twitter-black.svg" width={24} height={24} alt="facebook" />
-          <Image src="/images/whats-app-black.svg" width={24} height={24} alt="facebook" />
+          <Image
+            src="/images/facebook-frame.svg"
+            width={24}
+            height={24}
+            alt="facebook"
+          />
+          <Image
+            src="/images/instagram-black.svg"
+            width={24}
+            height={24}
+            alt="facebook"
+          />
+          <Image
+            src="/images/twitter-black.svg"
+            width={24}
+            height={24}
+            alt="facebook"
+          />
+          <Image
+            src="/images/whats-app-black.svg"
+            width={24}
+            height={24}
+            alt="facebook"
+          />
         </Socials>
       </FooterSection>
       <FooterSection>

@@ -29,7 +29,7 @@ const MenuIcon = () => (
   </svg>
 );
 
-const CloseIcon = () => (
+export const CloseIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -55,17 +55,10 @@ export const TopBarMobile: React.FC = () => {
         <LogoArea href="/">
           <Image
             className="actualLogo"
-            src="/logo.png"
+            src="/images/Aladdin-Logo-Vertical-Color.svg"
             alt="AladdinMiles logo"
-            width={45}
-            height={32}
-          />
-          <Image
-            className="logo-text"
-            src="/logoText.svg"
-            alt="AladdinMiles logo"
-            width={160}
-            height={45}
+            width={124.44}
+            height={28}
           />
         </LogoArea>
         <MenuAction onClick={() => setOpen((prev) => !prev)}>

@@ -44,27 +44,17 @@ export const LogoArea = styled(Link)({
   flexDirection: 'row',
   alignItems: 'center',
   '& .actualLogo': {
-    width: widthPixel(45),
-    height: heightPixel(32),
+    width: widthPixel(177.8),
+    height: heightPixel(40),
     objectFit: 'cover',
     objectPosition: 'center'
   },
-  '& .logo-text': {
-    width: widthPixel(160),
-    height: heightPixel(45),
-    objectFit: 'contain'
-  },
   ...mobileStyle({
     '& .actualLogo': {
-      width: mobileWidthPixel(32),
-      height: mobileHeightPixel(22.756),
+      width: mobileWidthPixel(124.444),
+      height: mobileHeightPixel(28),
       objectFit: 'cover',
       objectPosition: 'center'
-    },
-    '& .logo-text': {
-      width: mobileWidthPixel(113),
-      height: mobileHeightPixel(32),
-      objectFit: 'contain'
     }
   })
 });
