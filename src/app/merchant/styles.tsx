@@ -292,7 +292,15 @@ export const CloseButton = styled(Link)({
   '& svg': {
     width: widthPixel(24),
     height: widthPixel(24)
-  }
+  },
+  ...mobileStyle({
+    width: mobileWidthPixel(32),
+    height: mobileHeightPixel(32),
+    '& svg': {
+      width: mobileWidthPixel(24),
+      height: mobileWidthPixel(24)
+    }
+  })
 });
 
 export const CardIcon = () => (
