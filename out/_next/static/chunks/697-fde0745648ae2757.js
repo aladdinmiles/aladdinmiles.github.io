@@ -1,190 +1,302 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [872],
+  [697],
   {
-    5718: function (e, t, o) {
-      Promise.resolve().then(o.t.bind(o, 3222, 23)),
-        Promise.resolve().then(o.bind(o, 6773)),
-        Promise.resolve().then(o.bind(o, 750)),
-        Promise.resolve().then(o.bind(o, 431)),
-        Promise.resolve().then(o.bind(o, 3839)),
-        Promise.resolve().then(o.bind(o, 4914));
-    },
-    4914: function (e, t, o) {
+    4914: function (t, e, o) {
       'use strict';
-      o.r(t),
-        o.d(t, {
+      o.r(e),
+        o.d(e, {
           BottomSection: function () {
-            return c;
-          },
-          CardIcon: function () {
             return x;
           },
+          CHT: function () {
+            return _;
+          },
+          CHeaderTextArea: function () {
+            return y;
+          },
+          CT: function () {
+            return V;
+          },
+          CardHeaderSection: function () {
+            return b;
+          },
+          CardIcon: function () {
+            return W;
+          },
           CardText: function () {
-            return j;
+            return D;
+          },
+          CloseButton: function () {
+            return v;
+          },
+          Form: function () {
+            return M;
           },
           FormCard: function () {
-            return u;
+            return j;
           },
           FormContainer: function () {
-            return k;
+            return w;
           },
           FormRight: function () {
-            return p;
+            return F;
           },
           FormWrapper: function () {
-            return h;
+            return C;
           },
           HeroContent: function () {
-            return l;
+            return p;
           },
           HeroContentTextArea: function () {
-            return a;
+            return g;
           },
           HeroSection: function () {
-            return d;
+            return k;
           },
           IconWrapper: function () {
-            return f;
+            return m;
+          },
+          Submit: function () {
+            return H;
           }
         });
       var n = o(7437),
-        i = o(7247),
-        r = o(8600),
-        s = o(431);
-      let d = r.Z.div({
+        i = o(302),
+        r = o.n(i),
+        s = o(1145),
+        a = o.n(s),
+        d = o(7247),
+        l = o(8600),
+        c = o(1396),
+        u = o.n(c),
+        h = o(4033),
+        f = o(431);
+      let k = l.Z.div({
           backgroundColor: '#FFF5F8',
           display: 'flex',
           flexDirection: 'row',
-          padding: ''.concat((0, i.Wk)(100), ' ').concat((0, i.so)(80)),
+          padding: ''.concat((0, d.Wk)(100), ' ').concat((0, d.so)(80)),
           alignItems: 'center',
           justifyContent: 'space-between',
           '& img': {
-            width: (0, i.so)(616),
-            height: (0, i.so)(600),
+            width: (0, d.so)(616),
+            height: (0, d.so)(600),
             objectFit: 'cover',
             objectPosition: 'center'
           },
-          ...(0, i.wz)({
+          ...(0, d.wz)({
             flexDirection: 'column',
-            padding: ''.concat((0, i.$s)(40), ' ').concat((0, i.CD)(24)),
+            padding: ''.concat((0, d.$s)(40), ' ').concat((0, d.CD)(24)),
             alignItems: 'flex-start',
             textAlign: 'center',
-            gap: (0, i.$s)(40),
+            gap: (0, d.$s)(40),
             '& img': {
-              width: (0, i.CD)(414),
-              height: (0, i.CD)(404),
+              width: (0, d.CD)(414),
+              height: (0, d.CD)(404),
               objectFit: 'cover',
               objectPosition: 'center'
             }
           })
         }),
-        l = r.Z.div([
+        p = l.Z.div([
           '\n  display: inline-flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: '
-            .concat((0, i.Wk)(40), ';\n  width: ')
-            .concat((0, i.so)(560), ';\n'),
-          (0, i.wz)({ alignItems: 'center', width: '100%' })
+            .concat((0, d.Wk)(40), ';\n  width: ')
+            .concat((0, d.so)(560), ';\n'),
+          (0, d.wz)({ alignItems: 'center', width: '100%' })
         ]),
-        a = r.Z.div([
+        g = l.Z.div([
           '\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: '.concat(
-            (0, i.Wk)(16),
+            (0, d.Wk)(16),
             ';\n'
           ),
-          (0, i.wz)({ '& .small': { textAlign: 'center', width: '100%' } })
+          (0, d.wz)({ '& .small': { textAlign: 'center', width: '100%' } })
         ]),
-        c = r.Z.div({
+        x = l.Z.div({
           backgroundColor: '#FFFFFF',
           display: 'flex',
           flexDirection: 'row',
           padding: ''
-            .concat((0, i.Wk)(81), ' ')
-            .concat((0, i.so)(80), ' ')
-            .concat((0, i.Wk)(79)),
+            .concat((0, d.Wk)(81), ' ')
+            .concat((0, d.so)(80), ' ')
+            .concat((0, d.Wk)(79)),
           alignItems: 'center',
-          gap: (0, i.so)(54),
+          gap: (0, d.so)(54),
           justifyContent: 'space-between',
           '& img': {
-            width: (0, i.so)(586),
-            height: (0, i.so)(600),
+            width: (0, d.so)(586),
+            height: (0, d.so)(600),
             objectFit: 'cover',
             objectPosition: 'center'
           },
-          ...(0, i.wz)({
+          ...(0, d.wz)({
             backgroundColor: '#EBF2FF',
             flexDirection: 'column-reverse',
-            padding: ''.concat((0, i.$s)(40), ' ').concat((0, i.CD)(24)),
+            padding: ''.concat((0, d.$s)(40), ' ').concat((0, d.CD)(24)),
             alignItems: 'flex-start',
             textAlign: 'center',
-            gap: (0, i.$s)(40),
+            gap: (0, d.$s)(40),
             '& img': {
-              width: (0, i.CD)(414),
-              height: (0, i.CD)(404),
+              width: (0, d.CD)(414),
+              height: (0, d.CD)(404),
               objectFit: 'cover',
               objectPosition: 'center'
             }
           })
         }),
-        h = r.Z.div({
-          width: '100%',
-          height: (0, i.Wk)(1620),
-          backgroundColor: 'rgba(51, 52, 58, 0.35)',
-          justifyContent: 'center',
-          position: 'absolute',
-          top: 0,
-          paddingTop: (0, i.Wk)(160),
-          display: 'none',
-          flexDirection: 'row',
-          ...(0, i.wz)({ paddingTop: (0, i.Wk)(100) })
-        }),
-        u = r.Z.div({
-          width: (0, i.so)(1e3),
-          height: (0, i.Wk)(640),
-          borderRadius: (0, i.so)(16),
+        C = l.Z.div(
+          {
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(51, 52, 58, 0.35)',
+            justifyContent: 'center',
+            position: 'absolute',
+            top: 0,
+            paddingTop: (0, d.Wk)(160),
+            flexDirection: 'row',
+            ...(0, d.wz)({ paddingTop: (0, d.Wk)(100) })
+          },
+          () => {
+            let t = (0, h.usePathname)(),
+              e = (0, h.useSearchParams)(),
+              o = e.get('action');
+            return {
+              display: '/merchant' === t && 'request' === o ? 'flex' : 'none'
+            };
+          }
+        ),
+        j = l.Z.div({
+          width: (0, d.so)(1e3),
+          height: (0, d.Wk)(640),
+          borderRadius: (0, d.so)(16),
           backgroundColor: '#ffffff',
           flexDirection: 'row',
           display: 'flex',
           justifyContent: 'space-between',
-          ...(0, i.wz)({
-            flexDirection: 'column-reverse',
-            width: (0, i.CD)(382),
-            height: (0, i.$s)(800),
-            borderRadius: (0, i.CD)(8)
+          position: 'relative',
+          ...(0, d.wz)({
+            flexDirection: 'column',
+            width: (0, d.CD)(382),
+            height: (0, d.$s)(800),
+            borderRadius: (0, d.CD)(8)
           })
         }),
-        k = r.Z.div({
+        w = l.Z.div({
           padding: ''
-            .concat((0, i.Wk)(40), ' ')
-            .concat((0, i.so)(56), ' ')
-            .concat((0, i.Wk)(66))
+            .concat((0, d.Wk)(40), ' ')
+            .concat((0, d.so)(56), ' ')
+            .concat((0, d.Wk)(66)),
+          alignItems: 'center',
+          justifyContent: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          width: (0, d.so)(600),
+          height: (0, d.Wk)(640),
+          ...(0, d.wz)({ width: '100%' })
         }),
-        p = r.Z.div({
+        F = l.Z.div({
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: '#FEE6ED',
           height: '100%',
-          width: (0, i.so)(364),
-          borderTopRightRadius: (0, i.so)(16),
-          borderBottomRightRadius: (0, i.so)(16),
-          ...(0, i.wz)({ height: '50%' })
+          width: (0, d.so)(364),
+          borderTopRightRadius: (0, d.so)(16),
+          borderBottomRightRadius: (0, d.so)(16),
+          ...(0, d.wz)({
+            width: '100%',
+            borderBottomLeftRadius: (0, d.so)(16),
+            borderTopRightRadius: (0, d.so)(0)
+          })
         }),
-        f = r.Z.div([
+        m = l.Z.div([
           '\ndisplay: inline-flex;\npadding: '
-            .concat((0, i.Wk)(138), ' ')
+            .concat((0, d.Wk)(138), ' ')
             .concat(
-              (0, i.so)(64),
+              (0, d.so)(64),
               ';\nflex-direction: column;\njustify-content: center;\nalign-items: center;\ngap: '
             )
-            .concat((0, i.Wk)(40), ';'),
-          { '& svg': { width: (0, i.so)(240), height: (0, i.so)(240) } },
-          (0, i.wz)({
-            '& svg': { width: (0, i.so)(160), height: (0, i.so)(160) }
-          })
+            .concat((0, d.Wk)(40), ';'),
+          { '& svg': { width: (0, d.so)(240), height: (0, d.so)(240) } },
+          (0, d.wz)({ '& svg': { width: '100%' } })
         ]),
-        j = (0, r.Z)(s.RaleText)({
-          fontSize: (0, i.JB)(20),
+        D = (0, l.Z)(f.RaleText)({
+          fontSize: (0, d.JB)(20),
           textAlign: 'center'
         }),
-        x = () =>
+        b = l.Z.div({
+          display: 'flex',
+          flexDirection: 'column',
+          gap: (0, d.Wk)(24),
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: (0, d.so)(320),
+          '& img': {
+            width: (0, d.so)(64),
+            height: (0, d.Wk)(46),
+            objectFit: 'cover'
+          },
+          ...(0, d.wz)({
+            '& img': {
+              width: (0, d.CD)(64),
+              height: (0, d.$s)(46),
+              objectFit: 'cover'
+            }
+          })
+        }),
+        _ = l.Z.p([
+          r().style,
+          {
+            fontSize: (0, d.JB)(20),
+            color: '#1D2029',
+            textTransform: 'uppercase',
+            ...(0, d.wz)({ fontSize: (0, d.jo)(20) })
+          }
+        ]),
+        y = l.Z.div({
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }),
+        V = (0, l.Z)(f.RaleText)({
+          fontSize: (0, d.JB)(14),
+          textAlign: 'center'
+        }),
+        H = l.Z.button({
+          background: '#FF1654',
+          borderRadius: (0, d.so)(4),
+          width: (0, d.so)(488),
+          height: (0, d.Wk)(54),
+          padding: ''.concat((0, d.Wk)(15), ' ').concat((0, d.so)(32)),
+          color: '#ffffff',
+          fontSize: (0, d.JB)(14),
+          ...a().style,
+          ...(0, d.wz)({
+            width: '100%',
+            fontSize: (0, d.jo)(14),
+            borderRadius: (0, d.CD)(4)
+          })
+        }),
+        M = l.Z.div({
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: (0, d.Wk)(16),
+          paddingTop: (0, d.Wk)(24),
+          paddingBottom: (0, d.Wk)(40)
+        }),
+        v = (0, l.Z)(u())({
+          display: 'inline-flex',
+          width: (0, d.so)(32),
+          height: (0, d.so)(32),
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'absolute',
+          right: (0, d.so)(24),
+          top: (0, d.Wk)(24),
+          '& svg': { width: (0, d.so)(24), height: (0, d.so)(24) }
+        }),
+        W = () =>
           (0, n.jsxs)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
             width: '240',
@@ -422,10 +534,10 @@
             ]
           });
     },
-    750: function (e, t, o) {
+    750: function (t, e, o) {
       'use strict';
-      o.r(t),
-        o.d(t, {
+      o.r(e),
+        o.d(e, {
           Button: function () {
             return c;
           }
@@ -434,18 +546,18 @@
         i = o(6566),
         r = o.n(i),
         s = o(7247),
-        d = o(8600),
-        l = o(1396),
-        a = o.n(l);
+        a = o(8600),
+        d = o(1396),
+        l = o.n(d);
       o(2265);
-      let c = (e) => {
-          let { children: t, href: o = '/#' } = e;
-          return (0, n.jsx)(h, {
+      let c = (t) => {
+          let { children: e, href: o = '/#' } = t;
+          return (0, n.jsx)(u, {
             href: o,
-            children: (0, n.jsx)(u, { className: r().className, children: t })
+            children: (0, n.jsx)(h, { className: r().className, children: e })
           });
         },
-        h = (0, d.Z)(a())({
+        u = (0, a.Z)(l())({
           backgroundColor: '#FF1654',
           width: (0, s.so)(240),
           height: (0, s.Wk)(56),
@@ -460,7 +572,7 @@
             borderRadius: (0, s.CD)(4)
           })
         }),
-        u = d.Z.span({
+        h = a.Z.span({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'inline-flex',
@@ -475,8 +587,28 @@
           })
         });
     },
-    6566: function (e) {
-      e.exports = {
+    1145: function (t) {
+      t.exports = {
+        style: {
+          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
+          fontWeight: 600,
+          fontStyle: 'normal'
+        },
+        className: '__className_90b4c2'
+      };
+    },
+    302: function (t) {
+      t.exports = {
+        style: {
+          fontFamily: "'__Raleway_4f9084', '__Raleway_Fallback_4f9084'",
+          fontWeight: 700,
+          fontStyle: 'normal'
+        },
+        className: '__className_4f9084'
+      };
+    },
+    6566: function (t) {
+      t.exports = {
         style: {
           fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
           fontWeight: 400,
@@ -485,11 +617,5 @@
         className: '__className_30f681'
       };
     }
-  },
-  function (e) {
-    e.O(0, [890, 36, 971, 596, 744], function () {
-      return e((e.s = 5718));
-    }),
-      (_N_E = e.O());
   }
 ]);
