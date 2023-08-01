@@ -1,29 +1,19 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [79],
+  [449],
   {
-    4079: function (e, t, n) {
-      Promise.resolve().then(n.bind(n, 431)),
-        Promise.resolve().then(n.bind(n, 3371)),
-        Promise.resolve().then(n.t.bind(n, 3222, 23)),
-        Promise.resolve().then(n.bind(n, 6773)),
-        Promise.resolve().then(n.bind(n, 3141)),
-        Promise.resolve().then(n.bind(n, 7746)),
-        Promise.resolve().then(n.bind(n, 750)),
-        Promise.resolve().then(n.bind(n, 4019));
-    },
-    3371: function (e, t, n) {
+    3371: function (t, n, e) {
       'use strict';
-      n.r(t),
-        n.d(t, {
+      e.r(n),
+        e.d(n, {
           MerchantForm: function () {
             return g;
           }
         });
-      var o = n(7437),
-        i = n(4053),
-        r = n.n(i),
-        c = n(7247),
-        a = n(8600);
+      var o = e(7437),
+        i = e(4053),
+        r = e.n(i),
+        c = e(7247),
+        a = e(8600);
       let s = a.Z.input({
         width: '100%',
         height: (0, c.Wk)(56),
@@ -38,11 +28,11 @@
           borderRadius: (0, c.CD)(8)
         })
       });
-      var l = n(4019),
-        d = n(6691),
-        u = n.n(d),
-        f = n(431),
-        h = n(4914);
+      var l = e(4019),
+        d = e(6691),
+        u = e.n(d),
+        f = e(431),
+        h = e(4914);
       let g = () =>
         (0, o.jsx)(h.FormWrapper, {
           id: 'formWrapper',
@@ -105,10 +95,10 @@
           })
         });
     },
-    431: function (e, t, n) {
+    431: function (t, n, e) {
       'use strict';
-      n.r(t),
-        n.d(t, {
+      e.r(n),
+        e.d(n, {
           AppDownload: function () {
             return E;
           },
@@ -116,7 +106,7 @@
             return $;
           },
           Arrow: function () {
-            return en;
+            return te;
           },
           BigCircle: function () {
             return X;
@@ -131,13 +121,13 @@
             return S;
           },
           ColoredHalf: function () {
-            return D;
+            return v;
           },
           ColoredText: function () {
             return Z;
           },
           ContentView: function () {
-            return j;
+            return b;
           },
           DownloadContent: function () {
             return q;
@@ -146,7 +136,7 @@
             return G;
           },
           HeroImage: function () {
-            return P;
+            return N;
           },
           HeroSection: function () {
             return C;
@@ -155,7 +145,7 @@
             return M;
           },
           MainView: function () {
-            return b;
+            return j;
           },
           ManText: function () {
             return L;
@@ -164,10 +154,10 @@
             return F;
           },
           Page404: function () {
-            return eo;
+            return to;
           },
           Partners: function () {
-            return N;
+            return P;
           },
           PinkBackground: function () {
             return K;
@@ -188,13 +178,13 @@
             return Y;
           },
           SideLeft404: function () {
-            return ei;
+            return ti;
           },
           SmallMultiStyleText: function () {
-            return et;
+            return tn;
           },
           SmallboldText: function () {
-            return ee;
+            return tt;
           },
           StartShoppingAreaLeft: function () {
             return O;
@@ -221,29 +211,29 @@
             return W;
           }
         });
-      var o = n(7437),
-        i = n(3424),
-        r = n.n(i),
-        c = n(7945),
-        a = n.n(c),
-        s = n(7676),
-        l = n.n(s),
-        d = n(2821),
-        u = n.n(d),
-        f = n(7247),
-        h = n(9538),
-        g = n(8600),
-        p = n(6691),
-        x = n.n(p),
-        m = n(1396),
-        w = n.n(m),
-        k = n(7747);
-      let b = g.Z.div({
+      var o = e(7437),
+        i = e(3424),
+        r = e.n(i),
+        c = e(7945),
+        a = e.n(c),
+        s = e(7676),
+        l = e.n(s),
+        d = e(2821),
+        u = e.n(d),
+        f = e(7247),
+        h = e(9538),
+        g = e(8600),
+        p = e(6691),
+        x = e.n(p),
+        w = e(1396),
+        m = e.n(w),
+        k = e(7747);
+      let j = g.Z.div({
           width: '100%',
           minHeight: '100%',
           backgroundColor: '#ffffff'
         }),
-        j = g.Z.div({ width: '100%' }),
+        b = g.Z.div({ width: '100%' }),
         C = g.Z.section({
           height: (0, f.Wk)(824),
           width: '100%',
@@ -266,7 +256,7 @@
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-90), ' , 0px)')
           }
         }),
-        v = (0, h.F4)({
+        D = (0, h.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-40), ' , 0px)')
           },
@@ -277,7 +267,7 @@
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-40), ' , 0px)')
           }
         }),
-        D = g.Z.div({
+        v = g.Z.div({
           height: (0, f.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -351,11 +341,11 @@
               strokeLinecap: 'round'
             })
           }),
-        T = (e) => {
-          let { className: t, children: n } = e;
+        T = (t) => {
+          let { className: n, children: e } = t;
           return (0, o.jsx)('p', {
-            className: ''.concat(l().className, ' ').concat(t),
-            children: n
+            className: ''.concat(l().className, ' ').concat(n),
+            children: e
           });
         },
         L = g.Z.p([
@@ -408,8 +398,8 @@
           gap: (0, f.so)(10),
           alignItems: 'center'
         }),
-        H = (0, g.Z)(w())({}),
-        P = (0, g.Z)(x())([
+        H = (0, g.Z)(m())({}),
+        N = (0, g.Z)(x())([
           {
             width: (0, f.so)(600),
             height: (0, f.Wk)(600),
@@ -417,11 +407,11 @@
             alignSelf: 'center',
             objectPosition: 'center',
             animation: ''.concat(y, ' 5s ease infinite'),
-            ...(0, f.wz)({ animation: ''.concat(v, ' 5s ease infinite') })
+            ...(0, f.wz)({ animation: ''.concat(D, ' 5s ease infinite') })
           },
           (0, f.wz)({ width: (0, f.CD)(414), height: (0, f.$s)(414) })
         ]),
-        N = g.Z.div([
+        P = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -573,12 +563,12 @@
             '& img': { width: (0, f.CD)(16), height: (0, f.$s)(24) }
           })
         }),
-        ee = (0, g.Z)(I)([u().style]),
-        et = (0, g.Z)(F)({
+        tt = (0, g.Z)(I)([u().style]),
+        tn = (0, g.Z)(F)({
           fontSize: (0, f.JB)(32),
           ...(0, f.wz)({ fontSize: (0, f.jo)(24), width: (0, f.CD)(366) })
         }),
-        en = () =>
+        te = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
             width: '25',
@@ -590,7 +580,7 @@
               fill: 'white'
             })
           }),
-        eo = g.Z.div({
+        to = g.Z.div({
           height: (0, f.Wk)(824),
           justifyContent: 'space-evenly',
           alignItems: 'center',
@@ -606,7 +596,7 @@
             '& img': { height: (0, f.Wk)(317), width: (0, f.so)(300) }
           })
         }),
-        ei = g.Z.div({
+        ti = g.Z.div({
           paddingLeft: (0, f.so)(100),
           display: 'flex',
           justifyContent: 'center',
@@ -620,12 +610,12 @@
           })
         });
     },
-    3141: function (e, t, n) {
+    3141: function (t, n, e) {
       'use strict';
-      n.r(t),
-        n.d(t, {
+      e.r(n),
+        e.d(n, {
           BaseHeader: function () {
-            return m;
+            return w;
           },
           BaseText: function () {
             return x;
@@ -640,13 +630,13 @@
             return k;
           },
           FooterLink: function () {
-            return b;
-          },
-          FooterSection: function () {
             return j;
           },
+          FooterSection: function () {
+            return b;
+          },
           FooterText: function () {
-            return w;
+            return m;
           },
           Socials: function () {
             return y;
@@ -655,17 +645,17 @@
             return C;
           }
         });
-      var o = n(7437),
-        i = n(3192),
-        r = n.n(i),
-        c = n(3833),
-        a = n.n(c),
-        s = n(7247),
-        l = n(8600),
-        d = n(6691),
-        u = n.n(d),
-        f = n(1396),
-        h = n.n(f);
+      var o = e(7437),
+        i = e(3192),
+        r = e.n(i),
+        c = e(3833),
+        a = e.n(c),
+        s = e(7247),
+        l = e(8600),
+        d = e(6691),
+        u = e.n(d),
+        f = e(1396),
+        h = e.n(f);
       let g = l.Z.footer({
           width: '100%',
           display: 'flex',
@@ -692,34 +682,34 @@
             .concat((0, s.so)(109)),
           ...(0, s.wz)({ flexDirection: 'column' })
         }),
-        x = (e) => {
-          let { className: t, children: n } = e;
+        x = (t) => {
+          let { className: n, children: e } = t;
           return (0, o.jsx)('p', {
-            className: ''.concat(r().className, ' ').concat(t),
-            children: n
+            className: ''.concat(r().className, ' ').concat(n),
+            children: e
           });
         },
-        m = (e) => {
-          let { className: t, children: n } = e;
+        w = (t) => {
+          let { className: n, children: e } = t;
           return (0, o.jsx)('p', {
-            className: ''.concat(a().className, ' ').concat(t),
-            children: n
+            className: ''.concat(a().className, ' ').concat(n),
+            children: e
           });
         },
-        w = (0, l.Z)(x)({
+        m = (0, l.Z)(x)({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
           ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        k = (0, l.Z)(m)({
+        k = (0, l.Z)(w)({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
           ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        b = w.withComponent(h()),
-        j = l.Z.div({
+        j = m.withComponent(h()),
+        b = l.Z.div({
           maxWidth: (0, s.so)(280),
           display: 'flex',
           flexDirection: 'column',
@@ -741,26 +731,26 @@
           ...(0, s.wz)({ gap: (0, s.CD)(48) })
         });
     },
-    6773: function (e, t, n) {
+    6773: function (t, n, e) {
       'use strict';
-      function o(e) {
-        let { src: t, width: n, quality: o } = e;
+      function o(t) {
+        let { src: n, width: e, quality: o } = t;
         return ''
-          .concat(t, '?w=')
-          .concat(n, '&q=')
+          .concat(n, '?w=')
+          .concat(e, '&q=')
           .concat(o || 75);
       }
-      n.r(t),
-        n.d(t, {
+      e.r(n),
+        e.d(n, {
           default: function () {
             return o;
           }
         });
     },
-    4019: function (e, t, n) {
+    4019: function (t, n, e) {
       'use strict';
-      n.r(t),
-        n.d(t, {
+      e.r(n),
+        e.d(n, {
           CloseIcon: function () {
             return d;
           },
@@ -768,12 +758,12 @@
             return u;
           }
         });
-      var o = n(7437),
-        i = n(6691),
-        r = n.n(i),
-        c = n(2265),
-        a = n(750),
-        s = n(7746);
+      var o = e(7437),
+        i = e(6691),
+        r = e.n(i),
+        c = e(2265),
+        a = e(750),
+        s = e(7746);
       let l = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
@@ -805,7 +795,7 @@
             })
           }),
         u = () => {
-          let [e, t] = (0, c.useState)(!1);
+          let [t, n] = (0, c.useState)(!1);
           return (0, o.jsxs)(s.MobileWrapper, {
             children: [
               (0, o.jsxs)(s.NavBar, {
@@ -822,12 +812,12 @@
                     })
                   }),
                   (0, o.jsx)(s.MenuAction, {
-                    onClick: () => t((e) => !e),
-                    children: e ? (0, o.jsx)(d, {}) : (0, o.jsx)(l, {})
+                    onClick: () => n((t) => !t),
+                    children: t ? (0, o.jsx)(d, {}) : (0, o.jsx)(l, {})
                   })
                 ]
               }),
-              e &&
+              t &&
                 (0, o.jsxs)(s.DropDownView, {
                   children: [
                     (0, o.jsx)(s.MobileLink, { href: '/', children: 'Home' }),
@@ -861,10 +851,10 @@
           });
         };
     },
-    7746: function (e, t, n) {
+    7746: function (t, n, e) {
       'use strict';
-      n.r(t),
-        n.d(t, {
+      e.r(n),
+        e.d(n, {
           DropDownView: function () {
             return h;
           },
@@ -887,11 +877,11 @@
             return s;
           }
         });
-      var o = n(431),
-        i = n(7247),
-        r = n(8600),
-        c = n(1396),
-        a = n.n(c);
+      var o = e(431),
+        i = e(7247),
+        r = e(8600),
+        c = e(1396),
+        a = e.n(c);
       let s = r.Z.div({
           width: '100%',
           '& #mobile': { display: 'none' },
@@ -962,9 +952,9 @@
         }),
         g = (0, r.Z)(o.RaleText.withComponent(a()))({ width: (0, i.CD)(158) });
     },
-    7247: function (e, t, n) {
+    7247: function (t, n, e) {
       'use strict';
-      n.d(t, {
+      e.d(n, {
         $s: function () {
           return c;
         },
@@ -987,28 +977,28 @@
           return l;
         }
       });
-      let o = function (e) {
-          let t =
+      let o = function (t) {
+          let n =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : 1440;
-          return ''.concat((e / t) * 100, 'vw');
+          return ''.concat((t / n) * 100, 'vw');
         },
-        i = function (e) {
-          let t =
+        i = function (t) {
+          let n =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : 924;
-          return ''.concat((e / t) * 100, 'vh');
+          return ''.concat((t / n) * 100, 'vh');
         },
-        r = (e) => o(e, 414),
-        c = (e) => i(e, 740),
-        a = (e, t) => o(e, t),
-        s = (e) => o(e, 414),
-        l = (e) => ({ '@media(max-width: 480px)': e });
+        r = (t) => o(t, 414),
+        c = (t) => i(t, 740),
+        a = (t, n) => o(t, n),
+        s = (t) => o(t, 414),
+        l = (t) => ({ '@media(max-width: 480px)': t });
     },
-    3192: function (e) {
-      e.exports = {
+    3192: function (t) {
+      t.exports = {
         style: {
           fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
           fontWeight: 400,
@@ -1017,8 +1007,8 @@
         className: '__className_30f681'
       };
     },
-    3833: function (e) {
-      e.exports = {
+    3833: function (t) {
+      t.exports = {
         style: {
           fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
           fontWeight: 600,
@@ -1027,8 +1017,8 @@
         className: '__className_90b4c2'
       };
     },
-    4053: function (e) {
-      e.exports = {
+    4053: function (t) {
+      t.exports = {
         style: {
           fontFamily: "'__Manrope_44e3df', '__Manrope_Fallback_44e3df'",
           fontStyle: 'normal'

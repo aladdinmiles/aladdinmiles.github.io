@@ -294,7 +294,12 @@
           position: 'absolute',
           right: (0, d.so)(24),
           top: (0, d.Wk)(24),
-          '& svg': { width: (0, d.so)(24), height: (0, d.so)(24) }
+          '& svg': { width: (0, d.so)(24), height: (0, d.so)(24) },
+          ...(0, d.wz)({
+            width: (0, d.CD)(32),
+            height: (0, d.$s)(32),
+            '& svg': { width: (0, d.CD)(24), height: (0, d.CD)(24) }
+          })
         }),
         W = () =>
           (0, n.jsxs)('svg', {
