@@ -145,7 +145,7 @@ export const FormCard = styled.div({
   })
 });
 
-export const FormContainer = styled.div({
+export const FormContainer = styled.form({
   padding: `${heightPixel(40)} ${widthPixel(56)} ${heightPixel(66)}`,
   alignItems: 'center',
   justifyContent: 'center',

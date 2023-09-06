@@ -16,18 +16,22 @@
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
+    "@types/validator": "^13.9.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
+    "phone": "^3.1.37",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-qr-code": "^2.0.11",
     "react-svg": "^16.1.19",
+    "react-toastify": "^9.1.3",
     "sharp": "^0.32.4",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "husky": "^8.0.3",
@@ -42,5 +46,6 @@
     "tabWidth": 2,
     "semi": true,
     "singleQuote": true
-  }
+  },
+  "proxy": "https://ambe.aladdinmiles.com"
 }

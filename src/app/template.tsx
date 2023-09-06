@@ -1,6 +1,8 @@
 import { Footer } from '@/components/footer';
 import { TopBar } from '@/components/navigation';
 import { ReactNode } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { MerchantForm } from './merchant/form';
 import { ChildrenContainer, MainView } from './styles';
 
@@ -16,6 +18,7 @@ const Template: React.FC<IProp> = ({ children }) => {
         <MerchantForm />
       </ChildrenContainer>
       <Footer />
+      <ToastContainer position="top-center" />
     </MainView>
   );
 };
