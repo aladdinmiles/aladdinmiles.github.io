@@ -1,21 +1,21 @@
+'use strict';
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [697],
   {
     4914: function (t, e, o) {
-      'use strict';
       o.r(e),
         o.d(e, {
           BottomSection: function () {
             return x;
           },
           CHT: function () {
-            return _;
+            return V;
           },
           CHeaderTextArea: function () {
-            return y;
+            return H;
           },
           CT: function () {
-            return V;
+            return y;
           },
           CardHeaderSection: function () {
             return b;
@@ -24,10 +24,10 @@
             return W;
           },
           CardText: function () {
-            return D;
+            return m;
           },
           CloseButton: function () {
-            return v;
+            return Z;
           },
           Form: function () {
             return M;
@@ -51,48 +51,48 @@
             return g;
           },
           HeroSection: function () {
-            return k;
+            return f;
           },
           IconWrapper: function () {
-            return m;
+            return D;
           },
           Submit: function () {
-            return H;
+            return v;
           }
         });
       var n = o(7437),
         i = o(302),
         r = o.n(i),
         s = o(1145),
-        a = o.n(s),
-        d = o(7247),
+        d = o.n(s),
+        c = o(7247),
         l = o(8600),
-        c = o(1396),
-        u = o.n(c),
-        h = o(4033),
-        f = o(431);
-      let k = l.Z.div({
+        a = o(1396),
+        h = o.n(a),
+        u = o(4033),
+        k = o(431);
+      let f = l.Z.div({
           backgroundColor: '#FFF5F8',
           display: 'flex',
           flexDirection: 'row',
-          padding: ''.concat((0, d.Wk)(100), ' ').concat((0, d.so)(80)),
+          padding: ''.concat((0, c.Wk)(100), ' ').concat((0, c.so)(80)),
           alignItems: 'center',
           justifyContent: 'space-between',
           '& img': {
-            width: (0, d.so)(616),
-            height: (0, d.so)(600),
+            width: (0, c.so)(616),
+            height: (0, c.so)(600),
             objectFit: 'cover',
             objectPosition: 'center'
           },
-          ...(0, d.wz)({
+          ...(0, c.wz)({
             flexDirection: 'column',
-            padding: ''.concat((0, d.$s)(40), ' ').concat((0, d.CD)(24)),
+            padding: ''.concat((0, c.$s)(40), ' ').concat((0, c.CD)(24)),
             alignItems: 'flex-start',
             textAlign: 'center',
-            gap: (0, d.$s)(40),
+            gap: (0, c.$s)(40),
             '& img': {
-              width: (0, d.CD)(414),
-              height: (0, d.CD)(404),
+              width: (0, c.CD)(414),
+              height: (0, c.CD)(404),
               objectFit: 'cover',
               objectPosition: 'center'
             }
@@ -100,44 +100,44 @@
         }),
         p = l.Z.div([
           '\n  display: inline-flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: '
-            .concat((0, d.Wk)(40), ';\n  width: ')
-            .concat((0, d.so)(560), ';\n'),
-          (0, d.wz)({ alignItems: 'center', width: '100%' })
+            .concat((0, c.Wk)(40), ';\n  width: ')
+            .concat((0, c.so)(560), ';\n'),
+          (0, c.wz)({ alignItems: 'center', width: '100%' })
         ]),
         g = l.Z.div([
           '\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: '.concat(
-            (0, d.Wk)(16),
+            (0, c.Wk)(16),
             ';\n'
           ),
-          (0, d.wz)({ '& .small': { textAlign: 'center', width: '100%' } })
+          (0, c.wz)({ '& .small': { textAlign: 'center', width: '100%' } })
         ]),
         x = l.Z.div({
           backgroundColor: '#FFFFFF',
           display: 'flex',
           flexDirection: 'row',
           padding: ''
-            .concat((0, d.Wk)(81), ' ')
-            .concat((0, d.so)(80), ' ')
-            .concat((0, d.Wk)(79)),
+            .concat((0, c.Wk)(81), ' ')
+            .concat((0, c.so)(80), ' ')
+            .concat((0, c.Wk)(79)),
           alignItems: 'center',
-          gap: (0, d.so)(54),
+          gap: (0, c.so)(54),
           justifyContent: 'space-between',
           '& img': {
-            width: (0, d.so)(586),
-            height: (0, d.so)(600),
+            width: (0, c.so)(586),
+            height: (0, c.so)(600),
             objectFit: 'cover',
             objectPosition: 'center'
           },
-          ...(0, d.wz)({
+          ...(0, c.wz)({
             backgroundColor: '#EBF2FF',
             flexDirection: 'column-reverse',
-            padding: ''.concat((0, d.$s)(40), ' ').concat((0, d.CD)(24)),
+            padding: ''.concat((0, c.$s)(40), ' ').concat((0, c.CD)(24)),
             alignItems: 'flex-start',
             textAlign: 'center',
-            gap: (0, d.$s)(40),
+            gap: (0, c.$s)(40),
             '& img': {
-              width: (0, d.CD)(414),
-              height: (0, d.CD)(404),
+              width: (0, c.CD)(414),
+              height: (0, c.CD)(404),
               objectFit: 'cover',
               objectPosition: 'center'
             }
@@ -151,13 +151,13 @@
             justifyContent: 'center',
             position: 'absolute',
             top: 0,
-            paddingTop: (0, d.Wk)(160),
+            paddingTop: (0, c.Wk)(160),
             flexDirection: 'row',
-            ...(0, d.wz)({ paddingTop: (0, d.Wk)(100) })
+            ...(0, c.wz)({ paddingTop: (0, c.Wk)(100) })
           },
           () => {
-            let t = (0, h.usePathname)(),
-              e = (0, h.useSearchParams)(),
+            let t = (0, u.usePathname)(),
+              e = (0, u.useSearchParams)(),
               o = e.get('action');
             return {
               display: '/merchant' === t && 'request' === o ? 'flex' : 'none'
@@ -165,33 +165,33 @@
           }
         ),
         j = l.Z.div({
-          width: (0, d.so)(1e3),
-          height: (0, d.Wk)(640),
-          borderRadius: (0, d.so)(16),
+          width: (0, c.so)(1e3),
+          height: (0, c.Wk)(640),
+          borderRadius: (0, c.so)(16),
           backgroundColor: '#ffffff',
           flexDirection: 'row',
           display: 'flex',
           justifyContent: 'space-between',
           position: 'relative',
-          ...(0, d.wz)({
+          ...(0, c.wz)({
             flexDirection: 'column',
-            width: (0, d.CD)(382),
-            height: (0, d.$s)(800),
-            borderRadius: (0, d.CD)(8)
+            width: (0, c.CD)(382),
+            height: (0, c.$s)(800),
+            borderRadius: (0, c.CD)(8)
           })
         }),
-        w = l.Z.div({
+        w = l.Z.form({
           padding: ''
-            .concat((0, d.Wk)(40), ' ')
-            .concat((0, d.so)(56), ' ')
-            .concat((0, d.Wk)(66)),
+            .concat((0, c.Wk)(40), ' ')
+            .concat((0, c.so)(56), ' ')
+            .concat((0, c.Wk)(66)),
           alignItems: 'center',
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          width: (0, d.so)(600),
-          height: (0, d.Wk)(640),
-          ...(0, d.wz)({ width: '100%' })
+          width: (0, c.so)(600),
+          height: (0, c.Wk)(640),
+          ...(0, c.wz)({ width: '100%' })
         }),
         F = l.Z.div({
           display: 'flex',
@@ -199,106 +199,106 @@
           alignItems: 'center',
           backgroundColor: '#FEE6ED',
           height: '100%',
-          width: (0, d.so)(364),
-          borderTopRightRadius: (0, d.so)(16),
-          borderBottomRightRadius: (0, d.so)(16),
-          ...(0, d.wz)({
+          width: (0, c.so)(364),
+          borderTopRightRadius: (0, c.so)(16),
+          borderBottomRightRadius: (0, c.so)(16),
+          ...(0, c.wz)({
             width: '100%',
-            borderBottomLeftRadius: (0, d.so)(16),
-            borderTopRightRadius: (0, d.so)(0)
+            borderBottomLeftRadius: (0, c.so)(16),
+            borderTopRightRadius: (0, c.so)(0)
           })
         }),
-        m = l.Z.div([
+        D = l.Z.div([
           '\ndisplay: inline-flex;\npadding: '
-            .concat((0, d.Wk)(138), ' ')
+            .concat((0, c.Wk)(138), ' ')
             .concat(
-              (0, d.so)(64),
+              (0, c.so)(64),
               ';\nflex-direction: column;\njustify-content: center;\nalign-items: center;\ngap: '
             )
-            .concat((0, d.Wk)(40), ';'),
-          { '& svg': { width: (0, d.so)(240), height: (0, d.so)(240) } },
-          (0, d.wz)({ '& svg': { width: '100%' } })
+            .concat((0, c.Wk)(40), ';'),
+          { '& svg': { width: (0, c.so)(240), height: (0, c.so)(240) } },
+          (0, c.wz)({ '& svg': { width: '100%' } })
         ]),
-        D = (0, l.Z)(f.RaleText)({
-          fontSize: (0, d.JB)(20),
+        m = (0, l.Z)(k.RaleText)({
+          fontSize: (0, c.JB)(20),
           textAlign: 'center'
         }),
         b = l.Z.div({
           display: 'flex',
           flexDirection: 'column',
-          gap: (0, d.Wk)(24),
+          gap: (0, c.Wk)(24),
           alignItems: 'center',
           justifyContent: 'center',
-          width: (0, d.so)(320),
+          width: (0, c.so)(320),
           '& img': {
-            width: (0, d.so)(64),
-            height: (0, d.Wk)(46),
+            width: (0, c.so)(64),
+            height: (0, c.Wk)(46),
             objectFit: 'cover'
           },
-          ...(0, d.wz)({
+          ...(0, c.wz)({
             '& img': {
-              width: (0, d.CD)(64),
-              height: (0, d.$s)(46),
+              width: (0, c.CD)(64),
+              height: (0, c.$s)(46),
               objectFit: 'cover'
             }
           })
         }),
-        _ = l.Z.p([
+        V = l.Z.p([
           r().style,
           {
-            fontSize: (0, d.JB)(20),
+            fontSize: (0, c.JB)(20),
             color: '#1D2029',
             textTransform: 'uppercase',
-            ...(0, d.wz)({ fontSize: (0, d.jo)(20) })
+            ...(0, c.wz)({ fontSize: (0, c.jo)(20) })
           }
         ]),
-        y = l.Z.div({
+        H = l.Z.div({
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center'
         }),
-        V = (0, l.Z)(f.RaleText)({
-          fontSize: (0, d.JB)(14),
+        y = (0, l.Z)(k.RaleText)({
+          fontSize: (0, c.JB)(14),
           textAlign: 'center'
         }),
-        H = l.Z.button({
+        v = l.Z.button({
           background: '#FF1654',
-          borderRadius: (0, d.so)(4),
-          width: (0, d.so)(488),
-          height: (0, d.Wk)(54),
-          padding: ''.concat((0, d.Wk)(15), ' ').concat((0, d.so)(32)),
+          borderRadius: (0, c.so)(4),
+          width: (0, c.so)(488),
+          height: (0, c.Wk)(54),
+          padding: ''.concat((0, c.Wk)(15), ' ').concat((0, c.so)(32)),
           color: '#ffffff',
-          fontSize: (0, d.JB)(14),
-          ...a().style,
-          ...(0, d.wz)({
+          fontSize: (0, c.JB)(14),
+          ...d().style,
+          ...(0, c.wz)({
             width: '100%',
-            fontSize: (0, d.jo)(14),
-            borderRadius: (0, d.CD)(4)
+            fontSize: (0, c.jo)(14),
+            borderRadius: (0, c.CD)(4)
           })
         }),
         M = l.Z.div({
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
-          gap: (0, d.Wk)(16),
-          paddingTop: (0, d.Wk)(24),
-          paddingBottom: (0, d.Wk)(40)
+          gap: (0, c.Wk)(16),
+          paddingTop: (0, c.Wk)(24),
+          paddingBottom: (0, c.Wk)(40)
         }),
-        v = (0, l.Z)(u())({
+        Z = (0, l.Z)(h())({
           display: 'inline-flex',
-          width: (0, d.so)(32),
-          height: (0, d.so)(32),
+          width: (0, c.so)(32),
+          height: (0, c.so)(32),
           alignItems: 'center',
           justifyContent: 'center',
           position: 'absolute',
-          right: (0, d.so)(24),
-          top: (0, d.Wk)(24),
-          '& svg': { width: (0, d.so)(24), height: (0, d.so)(24) },
-          ...(0, d.wz)({
-            width: (0, d.CD)(32),
-            height: (0, d.$s)(32),
-            '& svg': { width: (0, d.CD)(24), height: (0, d.CD)(24) }
+          right: (0, c.so)(24),
+          top: (0, c.Wk)(24),
+          '& svg': { width: (0, c.so)(24), height: (0, c.so)(24) },
+          ...(0, c.wz)({
+            width: (0, c.CD)(32),
+            height: (0, c.$s)(32),
+            '& svg': { width: (0, c.CD)(24), height: (0, c.CD)(24) }
           })
         }),
         W = () =>
@@ -540,29 +540,28 @@
           });
     },
     750: function (t, e, o) {
-      'use strict';
       o.r(e),
         o.d(e, {
           Button: function () {
-            return c;
+            return a;
           }
         });
       var n = o(7437),
         i = o(6566),
         r = o.n(i),
         s = o(7247),
-        a = o(8600),
-        d = o(1396),
-        l = o.n(d);
+        d = o(8600),
+        c = o(1396),
+        l = o.n(c);
       o(2265);
-      let c = (t) => {
+      let a = (t) => {
           let { children: e, href: o = '/#' } = t;
-          return (0, n.jsx)(u, {
+          return (0, n.jsx)(h, {
             href: o,
-            children: (0, n.jsx)(h, { className: r().className, children: e })
+            children: (0, n.jsx)(u, { className: r().className, children: e })
           });
         },
-        u = (0, a.Z)(l())({
+        h = (0, d.Z)(l())({
           backgroundColor: '#FF1654',
           width: (0, s.so)(240),
           height: (0, s.Wk)(56),
@@ -577,7 +576,7 @@
             borderRadius: (0, s.CD)(4)
           })
         }),
-        h = a.Z.span({
+        u = d.Z.span({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'inline-flex',
@@ -591,36 +590,6 @@
             '& svg': { strokeWidth: (0, s.CD)(24), height: (0, s.CD)(24) }
           })
         });
-    },
-    1145: function (t) {
-      t.exports = {
-        style: {
-          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
-          fontWeight: 600,
-          fontStyle: 'normal'
-        },
-        className: '__className_90b4c2'
-      };
-    },
-    302: function (t) {
-      t.exports = {
-        style: {
-          fontFamily: "'__Raleway_4f9084', '__Raleway_Fallback_4f9084'",
-          fontWeight: 700,
-          fontStyle: 'normal'
-        },
-        className: '__className_4f9084'
-      };
-    },
-    6566: function (t) {
-      t.exports = {
-        style: {
-          fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
-          fontWeight: 400,
-          fontStyle: 'normal'
-        },
-        className: '__className_30f681'
-      };
     }
   }
 ]);

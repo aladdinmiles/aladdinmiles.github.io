@@ -1,50 +1,103 @@
+'use strict';
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [449],
   {
-    3371: function (t, n, e) {
-      'use strict';
-      e.r(n),
-        e.d(n, {
+    3371: function (e, t, n) {
+      n.r(t),
+        n.d(t, {
           MerchantForm: function () {
-            return g;
+            return k;
           }
         });
-      var o = e(7437),
-        i = e(4053),
-        r = e.n(i),
-        c = e(7247),
-        a = e(8600);
-      let s = a.Z.input({
+      var o = n(7437),
+        i = n(4053),
+        r = n.n(i),
+        a = n(7247),
+        c = n(8600);
+      let s = c.Z.input({
         width: '100%',
-        height: (0, c.Wk)(56),
-        fontSize: (0, c.JB)(14),
-        border: ''.concat((0, c.so)(1), ' solid #B2B7C2'),
-        borderRadius: (0, c.so)(8),
-        padding: ''.concat((0, c.Wk)(8), ' ').concat((0, c.so)(16)),
+        height: (0, a.Wk)(56),
+        fontSize: (0, a.JB)(14),
+        border: ''.concat((0, a.so)(1), ' solid #B2B7C2'),
+        borderRadius: (0, a.so)(8),
+        padding: ''.concat((0, a.Wk)(8), ' ').concat((0, a.so)(16)),
         ...r().style,
-        ...(0, c.wz)({
-          padding: ''.concat((0, c.$s)(8), ' ').concat((0, c.CD)(16)),
-          fontSize: (0, c.jo)(14),
-          borderRadius: (0, c.CD)(8)
+        ...(0, a.wz)({
+          padding: ''.concat((0, a.$s)(8), ' ').concat((0, a.CD)(16)),
+          fontSize: (0, a.jo)(14),
+          borderRadius: (0, a.CD)(8)
         })
       });
-      var l = e(4019),
-        d = e(6691),
-        u = e.n(d),
-        f = e(431),
-        h = e(4914);
-      let g = () =>
-        (0, o.jsx)(h.FormWrapper, {
+      var l = n(4019),
+        d = n(6691),
+        u = n.n(d),
+        f = n(4281),
+        h = n.n(f),
+        g = n(2265),
+        p = n(171),
+        x = n(4589),
+        m = n.n(x),
+        w = n(431),
+        j = n(4914);
+      let k = () => {
+        let [e, t] = (0, g.useState)({}),
+          n = (e) => {
+            let n = e.target.name;
+            t((t) => ({ ...t, [n]: e.target.value }));
+          },
+          i = async (t) => {
+            var n, o;
+            t.preventDefault();
+            let i =
+              Object.values(e).length > 0 && Object.values(e).every((e) => !!e);
+            if (i) {
+              if (m().isEmail(e.email || '')) {
+                if (
+                  !h()(null !== (n = e.phone) && void 0 !== n ? n : '').isValid
+                ) {
+                  (0, p.toast)(
+                    'Please enter a valid phone number(including country code)',
+                    { type: 'error' }
+                  );
+                  return;
+                }
+              } else {
+                (0, p.toast)('Please enter a valid email', { type: 'error' });
+                return;
+              }
+            } else {
+              (0, p.toast)('Please fill all fields', { type: 'error' });
+              return;
+            }
+            try {
+              await fetch('/api/v1/merchant/leads/open?lang=english', {
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  ...e,
+                  phone: h()(null !== (o = e.phone) && void 0 !== o ? o : '')
+                    .phoneNumber
+                }),
+                method: 'POST'
+              }),
+                (0, p.toast)('Request submitted!', { type: 'success' });
+            } catch (e) {
+              (0, p.toast)('Request failed!', { type: 'error' }),
+                console.log(e);
+            }
+          };
+        return (0, o.jsx)(j.FormWrapper, {
           id: 'formWrapper',
-          children: (0, o.jsxs)(h.FormCard, {
+          children: (0, o.jsxs)(j.FormCard, {
             children: [
-              (0, o.jsx)(h.CloseButton, {
+              (0, o.jsx)(j.CloseButton, {
                 href: '/merchant',
                 children: (0, o.jsx)(l.CloseIcon, {})
               }),
-              (0, o.jsxs)(h.FormContainer, {
+              (0, o.jsxs)(j.FormContainer, {
+                autoComplete: 'on',
+                onSubmit: i,
                 children: [
-                  (0, o.jsxs)(h.CardHeaderSection, {
+                  (0, o.jsxs)(j.CardHeaderSection, {
                     children: [
                       (0, o.jsx)(u(), {
                         src: '/images/Aladdin-Logo-Color.svg',
@@ -52,10 +105,10 @@
                         width: 64,
                         height: 46
                       }),
-                      (0, o.jsxs)(h.CHeaderTextArea, {
+                      (0, o.jsxs)(j.CHeaderTextArea, {
                         children: [
-                          (0, o.jsx)(h.CHT, { children: 'Become a merchant' }),
-                          (0, o.jsx)(h.CT, {
+                          (0, o.jsx)(j.CHT, { children: 'Become a merchant' }),
+                          (0, o.jsx)(j.CT, {
                             children:
                               'Join AladdinMiles as a merchant and grow your customer base.'
                           })
@@ -63,178 +116,198 @@
                       })
                     ]
                   }),
-                  (0, o.jsxs)(h.Form, {
+                  (0, o.jsxs)(j.Form, {
                     children: [
-                      (0, o.jsx)(s, { placeholder: 'Name *' }),
-                      (0, o.jsx)(s, { placeholder: 'Venue name' }),
-                      (0, o.jsx)(s, { placeholder: 'Phone number' }),
-                      (0, o.jsx)(s, { placeholder: 'Email address' })
+                      (0, o.jsx)(s, {
+                        placeholder: 'Name',
+                        name: 'name',
+                        value: e.name,
+                        onChange: n
+                      }),
+                      (0, o.jsx)(s, {
+                        placeholder: 'Venue name',
+                        name: 'venue_name',
+                        value: e.venue_name,
+                        onChange: n
+                      }),
+                      (0, o.jsx)(s, {
+                        placeholder: 'Phone number +96600000000',
+                        name: 'phone',
+                        value: e.phone,
+                        onChange: n
+                      }),
+                      (0, o.jsx)(s, {
+                        placeholder: 'Email address',
+                        name: 'email',
+                        value: e.email,
+                        onChange: n
+                      })
                     ]
                   }),
-                  (0, o.jsx)(h.Submit, { children: 'Submit Request' })
+                  (0, o.jsx)(j.Submit, { children: 'Submit Request' })
                 ]
               }),
-              (0, o.jsx)(h.FormRight, {
-                children: (0, o.jsxs)(h.IconWrapper, {
+              (0, o.jsx)(j.FormRight, {
+                children: (0, o.jsxs)(j.IconWrapper, {
                   children: [
-                    (0, o.jsxs)(h.CardText, {
+                    (0, o.jsxs)(j.CardText, {
                       children: [
                         'Get ',
-                        (0, o.jsx)(f.ColoredText, { children: 'access' }),
+                        (0, o.jsx)(w.ColoredText, { children: 'access' }),
                         ' to the right audience and',
                         ' ',
-                        (0, o.jsx)(f.ColoredText, { children: 'grow' }),
+                        (0, o.jsx)(w.ColoredText, { children: 'grow' }),
                         ' your business.'
                       ]
                     }),
-                    (0, o.jsx)(h.CardIcon, {})
+                    (0, o.jsx)(j.CardIcon, {})
                   ]
                 })
               })
             ]
           })
         });
+      };
     },
-    431: function (t, n, e) {
-      'use strict';
-      e.r(n),
-        e.d(n, {
+    431: function (e, t, n) {
+      n.r(t),
+        n.d(t, {
           AppDownload: function () {
-            return E;
+            return _;
           },
           AppDownloadArea: function () {
-            return $;
+            return R;
           },
           Arrow: function () {
-            return te;
+            return en;
           },
           BigCircle: function () {
             return X;
           },
           BlueBackground: function () {
-            return V;
+            return E;
           },
           ButtonContainer: function () {
-            return A;
+            return H;
           },
           ChildrenContainer: function () {
             return S;
           },
           ColoredHalf: function () {
-            return v;
+            return D;
           },
           ColoredText: function () {
             return Z;
           },
           ContentView: function () {
-            return b;
+            return C;
           },
           DownloadContent: function () {
             return q;
           },
           DownloadHeader: function () {
-            return G;
+            return O;
           },
           HeroImage: function () {
             return N;
           },
           HeroSection: function () {
-            return C;
+            return b;
           },
           Line: function () {
-            return M;
-          },
-          MainView: function () {
-            return j;
-          },
-          ManText: function () {
             return L;
           },
+          MainView: function () {
+            return k;
+          },
+          ManText: function () {
+            return $;
+          },
           MultiStyleText: function () {
-            return F;
+            return z;
           },
           Page404: function () {
-            return to;
+            return eo;
           },
           Partners: function () {
-            return P;
+            return J;
           },
           PinkBackground: function () {
-            return K;
+            return Q;
           },
           QRCodeBackground: function () {
-            return R;
+            return A;
           },
           RaleBase: function () {
-            return T;
-          },
-          RaleText: function () {
             return I;
           },
+          RaleText: function () {
+            return M;
+          },
           RaleTextWhite: function () {
-            return Q;
+            return G;
           },
           SB: function () {
             return Y;
           },
           SideLeft404: function () {
-            return ti;
+            return ei;
           },
           SmallMultiStyleText: function () {
-            return tn;
+            return et;
           },
           SmallboldText: function () {
-            return tt;
+            return ee;
           },
           StartShoppingAreaLeft: function () {
-            return O;
+            return K;
           },
           StartShoppingAreaRight: function () {
             return U;
           },
           StoreButtons: function () {
-            return H;
+            return P;
           },
           StyledQRCode: function () {
-            return z;
+            return F;
           },
           TextContentArea: function () {
             return B;
           },
           TextWithSVG: function () {
-            return _;
+            return T;
           },
           Trusted: function () {
-            return J;
+            return V;
           },
           WhiteHalf: function () {
             return W;
           }
         });
-      var o = e(7437),
-        i = e(3424),
-        r = e.n(i),
-        c = e(7945),
-        a = e.n(c),
-        s = e(7676),
-        l = e.n(s),
-        d = e(2821),
-        u = e.n(d),
-        f = e(7247),
-        h = e(9538),
-        g = e(8600),
-        p = e(6691),
-        x = e.n(p),
-        w = e(1396),
-        m = e.n(w),
-        k = e(7747);
-      let j = g.Z.div({
+      var o = n(7437),
+        i = n(3424),
+        r = n.n(i),
+        a = n(7945),
+        c = n.n(a),
+        s = n(7676),
+        l = n.n(s),
+        d = n(2821),
+        u = n.n(d),
+        f = n(7247),
+        h = n(9538),
+        g = n(8600),
+        p = n(6691),
+        x = n.n(p),
+        m = n(1396),
+        w = n.n(m),
+        j = n(7747);
+      let k = g.Z.div({
           width: '100%',
           minHeight: '100%',
           backgroundColor: '#ffffff'
         }),
-        b = g.Z.div({ width: '100%' }),
-        C = g.Z.section({
+        C = g.Z.div({ width: '100%' }),
+        b = g.Z.section({
           height: (0, f.Wk)(824),
           width: '100%',
           display: 'flex',
@@ -245,7 +318,7 @@
             height: (0, f.$s)(868)
           }
         }),
-        y = (0, h.F4)({
+        v = (0, h.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-90), ' , 0px)')
           },
@@ -256,7 +329,7 @@
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-90), ' , 0px)')
           }
         }),
-        D = (0, h.F4)({
+        y = (0, h.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-40), ' , 0px)')
           },
@@ -267,7 +340,7 @@
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-40), ' , 0px)')
           }
         }),
-        v = g.Z.div({
+        D = g.Z.div({
           height: (0, f.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -296,7 +369,7 @@
           width: '50%',
           '@media(max-width: 480px)': { width: '100%' }
         }),
-        F = g.Z.h1([
+        z = g.Z.h1([
           r().style,
           {
             fontSize: (0, f.JB)(44),
@@ -308,7 +381,7 @@
             }
           }
         ]),
-        z = (0, g.Z)(k.Z)({
+        F = (0, g.Z)(j.Z)({
           width: (0, f.so)(78.4),
           height: (0, f.so)(78.4),
           alignSelf: 'center'
@@ -325,8 +398,8 @@
             margin: ''.concat((0, f.$s)(40), ' ').concat((0, f.CD)(24))
           }
         }),
-        _ = g.Z.div({ display: 'inline-block' }),
-        M = () =>
+        T = g.Z.div({ display: 'inline-block' }),
+        L = () =>
           (0, o.jsx)('svg', {
             width: (0, f.so)(154),
             height: (0, f.Wk)(8),
@@ -341,15 +414,15 @@
               strokeLinecap: 'round'
             })
           }),
-        T = (t) => {
-          let { className: n, children: e } = t;
+        I = (e) => {
+          let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
-            className: ''.concat(l().className, ' ').concat(n),
-            children: e
+            className: ''.concat(l().className, ' ').concat(t),
+            children: n
           });
         },
-        L = g.Z.p([
-          a().style,
+        $ = g.Z.p([
+          c().style,
           {
             fontSize: (0, f.JB)(16),
             color: '#1D2029',
@@ -358,7 +431,7 @@
           },
           (0, f.wz)({ fontSize: (0, f.jo)(12) })
         ]),
-        I = (0, g.Z)(T)({
+        M = (0, g.Z)(I)({
           color: '#515665',
           fontSize: (0, f.JB)(22),
           lineHeight: '160%',
@@ -367,7 +440,7 @@
             width: (0, f.CD)(366)
           }
         }),
-        $ = g.Z.div([
+        R = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -380,7 +453,7 @@
             '& .scanText': { display: 'none' }
           })
         ]),
-        R = g.Z.div([
+        A = g.Z.div([
           {
             width: (0, f.so)(140),
             height: (0, f.so)(140),
@@ -392,13 +465,13 @@
           },
           (0, f.wz)({ display: 'none' })
         ]),
-        A = g.Z.div({
+        H = g.Z.div({
           display: 'flex',
           flexDirection: 'row',
           gap: (0, f.so)(10),
           alignItems: 'center'
         }),
-        H = (0, g.Z)(m())({}),
+        P = (0, g.Z)(w())({}),
         N = (0, g.Z)(x())([
           {
             width: (0, f.so)(600),
@@ -406,12 +479,12 @@
             objectFit: 'contain',
             alignSelf: 'center',
             objectPosition: 'center',
-            animation: ''.concat(y, ' 5s ease infinite'),
-            ...(0, f.wz)({ animation: ''.concat(D, ' 5s ease infinite') })
+            animation: ''.concat(v, ' 5s ease infinite'),
+            ...(0, f.wz)({ animation: ''.concat(y, ' 5s ease infinite') })
           },
           (0, f.wz)({ width: (0, f.CD)(414), height: (0, f.$s)(414) })
         ]),
-        P = g.Z.div([
+        J = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -420,7 +493,7 @@
           },
           (0, f.wz)({ '& img': {} })
         ]),
-        J = g.Z.div([
+        V = g.Z.div([
           {
             margin: ''
               .concat((0, f.Wk)(0), ' ')
@@ -433,7 +506,7 @@
             display: 'none'
           })
         ]),
-        V = g.Z.section({
+        E = g.Z.section({
           padding: ''.concat((0, f.Wk)(100), ' ').concat((0, f.so)(80)),
           width: '100%',
           display: 'flex',
@@ -444,7 +517,7 @@
             padding: ''.concat((0, f.$s)(100), ' ').concat((0, f.CD)(24))
           })
         }),
-        E = g.Z.div({
+        _ = g.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
           width: (0, f.so)(1280),
           height: (0, f.Wk)(480),
@@ -470,12 +543,12 @@
           borderBottomRightRadius: (0, f.so)(178),
           ...(0, f.wz)({ gap: (0, f.$s)(24), width: (0, f.CD)(414) })
         }),
-        G = (0, g.Z)(I)([
+        O = (0, g.Z)(M)([
           u().style,
           { color: '#ffffff', fontSize: (0, f.JB)(32), textAlign: 'center' },
           (0, f.wz)({ minWidth: (0, f.CD)(351), fontSize: (0, f.jo)(24) })
         ]),
-        Q = (0, g.Z)(I)({
+        G = (0, g.Z)(M)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, f.so)(440),
@@ -486,7 +559,7 @@
             fontSize: (0, f.jo)(16)
           })
         }),
-        K = g.Z.section({
+        Q = g.Z.section({
           backgroundColor: '#FFF5F8',
           borderTopRightRadius: (0, f.so)(160),
           width: '100%',
@@ -497,7 +570,7 @@
             borderTopRightRadius: (0, f.CD)(0)
           })
         }),
-        O = g.Z.div({
+        K = g.Z.div({
           width: '50%',
           padding: ''
             .concat((0, f.Wk)(162), ' ')
@@ -563,12 +636,12 @@
             '& img': { width: (0, f.CD)(16), height: (0, f.$s)(24) }
           })
         }),
-        tt = (0, g.Z)(I)([u().style]),
-        tn = (0, g.Z)(F)({
+        ee = (0, g.Z)(M)([u().style]),
+        et = (0, g.Z)(z)({
           fontSize: (0, f.JB)(32),
           ...(0, f.wz)({ fontSize: (0, f.jo)(24), width: (0, f.CD)(366) })
         }),
-        te = () =>
+        en = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
             width: '25',
@@ -580,7 +653,7 @@
               fill: 'white'
             })
           }),
-        to = g.Z.div({
+        eo = g.Z.div({
           height: (0, f.Wk)(824),
           justifyContent: 'space-evenly',
           alignItems: 'center',
@@ -596,7 +669,7 @@
             '& img': { height: (0, f.Wk)(317), width: (0, f.so)(300) }
           })
         }),
-        ti = g.Z.div({
+        ei = g.Z.div({
           paddingLeft: (0, f.so)(100),
           display: 'flex',
           justifyContent: 'center',
@@ -610,12 +683,11 @@
           })
         });
     },
-    3141: function (t, n, e) {
-      'use strict';
-      e.r(n),
-        e.d(n, {
+    3141: function (e, t, n) {
+      n.r(t),
+        n.d(t, {
           BaseHeader: function () {
-            return w;
+            return m;
           },
           BaseText: function () {
             return x;
@@ -627,35 +699,35 @@
             return g;
           },
           FooterHeader: function () {
-            return k;
-          },
-          FooterLink: function () {
             return j;
           },
+          FooterLink: function () {
+            return k;
+          },
           FooterSection: function () {
-            return b;
+            return C;
           },
           FooterText: function () {
-            return m;
+            return w;
           },
           Socials: function () {
-            return y;
+            return v;
           },
           StyledImageText: function () {
-            return C;
+            return b;
           }
         });
-      var o = e(7437),
-        i = e(3192),
-        r = e.n(i),
-        c = e(3833),
-        a = e.n(c),
-        s = e(7247),
-        l = e(8600),
-        d = e(6691),
-        u = e.n(d),
-        f = e(1396),
-        h = e.n(f);
+      var o = n(7437),
+        i = n(3192),
+        r = n.n(i),
+        a = n(3833),
+        c = n.n(a),
+        s = n(7247),
+        l = n(8600),
+        d = n(6691),
+        u = n.n(d),
+        f = n(1396),
+        h = n.n(f);
       let g = l.Z.footer({
           width: '100%',
           display: 'flex',
@@ -682,47 +754,47 @@
             .concat((0, s.so)(109)),
           ...(0, s.wz)({ flexDirection: 'column' })
         }),
-        x = (t) => {
-          let { className: n, children: e } = t;
+        x = (e) => {
+          let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
-            className: ''.concat(r().className, ' ').concat(n),
-            children: e
+            className: ''.concat(r().className, ' ').concat(t),
+            children: n
           });
         },
-        w = (t) => {
-          let { className: n, children: e } = t;
+        m = (e) => {
+          let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
-            className: ''.concat(a().className, ' ').concat(n),
-            children: e
+            className: ''.concat(c().className, ' ').concat(t),
+            children: n
           });
         },
-        m = (0, l.Z)(x)({
+        w = (0, l.Z)(x)({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
           ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        k = (0, l.Z)(w)({
+        j = (0, l.Z)(m)({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
           ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        j = m.withComponent(h()),
-        b = l.Z.div({
+        k = w.withComponent(h()),
+        C = l.Z.div({
           maxWidth: (0, s.so)(280),
           display: 'flex',
           flexDirection: 'column',
           gap: (0, s.Wk)(16),
           ...(0, s.wz)({ maxWidth: (0, s.CD)(270) })
         }),
-        C = (0, l.Z)(u())({
+        b = (0, l.Z)(u())({
           width: (0, s.so)(214),
           height: (0, s.Wk)(48),
           objectFit: 'cover',
           ...(0, s.wz)({ width: (0, s.CD)(178.333), height: (0, s.$s)(40) })
         }),
-        y = l.Z.div({
+        v = l.Z.div({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -731,26 +803,24 @@
           ...(0, s.wz)({ gap: (0, s.CD)(48) })
         });
     },
-    6773: function (t, n, e) {
-      'use strict';
-      function o(t) {
-        let { src: n, width: e, quality: o } = t;
+    6773: function (e, t, n) {
+      function o(e) {
+        let { src: t, width: n, quality: o } = e;
         return ''
-          .concat(n, '?w=')
-          .concat(e, '&q=')
+          .concat(t, '?w=')
+          .concat(n, '&q=')
           .concat(o || 75);
       }
-      e.r(n),
-        e.d(n, {
+      n.r(t),
+        n.d(t, {
           default: function () {
             return o;
           }
         });
     },
-    4019: function (t, n, e) {
-      'use strict';
-      e.r(n),
-        e.d(n, {
+    4019: function (e, t, n) {
+      n.r(t),
+        n.d(t, {
           CloseIcon: function () {
             return d;
           },
@@ -758,12 +828,12 @@
             return u;
           }
         });
-      var o = e(7437),
-        i = e(6691),
-        r = e.n(i),
-        c = e(2265),
-        a = e(750),
-        s = e(7746);
+      var o = n(7437),
+        i = n(6691),
+        r = n.n(i),
+        a = n(2265),
+        c = n(750),
+        s = n(7746);
       let l = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
@@ -795,7 +865,7 @@
             })
           }),
         u = () => {
-          let [t, n] = (0, c.useState)(!1);
+          let [e, t] = (0, a.useState)(!1);
           return (0, o.jsxs)(s.MobileWrapper, {
             children: [
               (0, o.jsxs)(s.NavBar, {
@@ -812,12 +882,12 @@
                     })
                   }),
                   (0, o.jsx)(s.MenuAction, {
-                    onClick: () => n((t) => !t),
-                    children: t ? (0, o.jsx)(d, {}) : (0, o.jsx)(l, {})
+                    onClick: () => t((e) => !e),
+                    children: e ? (0, o.jsx)(d, {}) : (0, o.jsx)(l, {})
                   })
                 ]
               }),
-              t &&
+              e &&
                 (0, o.jsxs)(s.DropDownView, {
                   children: [
                     (0, o.jsx)(s.MobileLink, { href: '/', children: 'Home' }),
@@ -841,7 +911,7 @@
                       href: '/merchant-tc',
                       children: 'Merchant terms and conditions'
                     }),
-                    (0, o.jsx)(a.Button, {
+                    (0, o.jsx)(c.Button, {
                       href: '/#download',
                       children: 'Download the app'
                     })
@@ -851,10 +921,9 @@
           });
         };
     },
-    7746: function (t, n, e) {
-      'use strict';
-      e.r(n),
-        e.d(n, {
+    7746: function (e, t, n) {
+      n.r(t),
+        n.d(t, {
           DropDownView: function () {
             return h;
           },
@@ -877,11 +946,11 @@
             return s;
           }
         });
-      var o = e(431),
-        i = e(7247),
-        r = e(8600),
-        c = e(1396),
-        a = e.n(c);
+      var o = n(431),
+        i = n(7247),
+        r = n(8600),
+        a = n(1396),
+        c = n.n(a);
       let s = r.Z.div({
           width: '100%',
           '& #mobile': { display: 'none' },
@@ -903,7 +972,7 @@
             padding: ''.concat((0, i.$s)(16), ' ').concat((0, i.CD)(14))
           })
         }),
-        d = (0, r.Z)(a())({
+        d = (0, r.Z)(c())({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -950,19 +1019,18 @@
           flexDirection: 'column',
           gap: (0, i.$s)(40)
         }),
-        g = (0, r.Z)(o.RaleText.withComponent(a()))({ width: (0, i.CD)(158) });
+        g = (0, r.Z)(o.RaleText.withComponent(c()))({ width: (0, i.CD)(158) });
     },
-    7247: function (t, n, e) {
-      'use strict';
-      e.d(n, {
+    7247: function (e, t, n) {
+      n.d(t, {
         $s: function () {
-          return c;
+          return a;
         },
         CD: function () {
           return r;
         },
         JB: function () {
-          return a;
+          return c;
         },
         Wk: function () {
           return i;
@@ -977,54 +1045,25 @@
           return l;
         }
       });
-      let o = function (t) {
-          let n =
+      let o = function (e) {
+          let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : 1440;
-          return ''.concat((t / n) * 100, 'vw');
+          return ''.concat((e / t) * 100, 'vw');
         },
-        i = function (t) {
-          let n =
+        i = function (e) {
+          let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : 924;
-          return ''.concat((t / n) * 100, 'vh');
+          return ''.concat((e / t) * 100, 'vh');
         },
-        r = (t) => o(t, 414),
-        c = (t) => i(t, 740),
-        a = (t, n) => o(t, n),
-        s = (t) => o(t, 414),
-        l = (t) => ({ '@media(max-width: 480px)': t });
-    },
-    3192: function (t) {
-      t.exports = {
-        style: {
-          fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
-          fontWeight: 400,
-          fontStyle: 'normal'
-        },
-        className: '__className_30f681'
-      };
-    },
-    3833: function (t) {
-      t.exports = {
-        style: {
-          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
-          fontWeight: 600,
-          fontStyle: 'normal'
-        },
-        className: '__className_90b4c2'
-      };
-    },
-    4053: function (t) {
-      t.exports = {
-        style: {
-          fontFamily: "'__Manrope_44e3df', '__Manrope_Fallback_44e3df'",
-          fontStyle: 'normal'
-        },
-        className: '__className_44e3df'
-      };
+        r = (e) => o(e, 414),
+        a = (e) => i(e, 740),
+        c = (e, t) => o(e, t),
+        s = (e) => o(e, 414),
+        l = (e) => ({ '@media(max-width: 480px)': e });
     }
   }
 ]);
