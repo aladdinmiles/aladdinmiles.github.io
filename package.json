@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "dev": "NODE_ENV=development next dev",
+    "dev": "BUILD_PROFILE=development next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "NODE_ENV=production next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "BUILD_PROFILE=production next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig =
-  process.env.NODE_ENV == 'development' || process.env.NODE_ENV == 'test'
+  process.env.BUILD_PROFILE == 'development' ||
+  process.env.BUILD_PROFILE == 'test'
     ? {}
     : {
         output: 'export',
