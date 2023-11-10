@@ -1,4 +1,5 @@
 import { Button } from '@/components/buttons';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { fourCardAbout } from '../content';
 import { FourCardSection } from '../shared';
@@ -26,6 +27,13 @@ import {
   PinkBox,
   RaleTextWhite
 } from './styles';
+
+export const metadata: Metadata = {
+  title: 'About us',
+  description: 'About AladdinMiles',
+  keywords:
+    'About us, About AladdinMiles, Travel for free, Travel for free KSA, Travel for free Saudi Arabia, Travel for free world wide, merchants, venues, AladdinMiles Portal, Loyalty app, loyalty saudi arabia, airlines loyalty in saudi arabia, loyalty app KSA, AladdinMiles Kingdom'
+};
 
 const AboutUs: React.FC = () => {
   return (
