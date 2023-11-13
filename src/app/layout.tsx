@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'AladdinMiles',
-  description: 'Aladdinmiles loyalty app',
+  description:
+    'AladdinMiles is the first loyalty app that allows you travel for free. Get rewarded in Air Miles whenever you shop your favorites brands on the AladdinMiles app.',
   keywords:
     'AladdinMiles, Travel for free, Travel for free KSA, Travel for free Saudi Arabia, Travel for free world wide, merchants, venues, AladdinMiles Portal, Loyalty app, loyalty saudi arabia, airlines loyalty in saudi arabia, loyalty app KSA, AladdinMiles Kingdom'
 };
