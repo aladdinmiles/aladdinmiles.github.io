@@ -50,33 +50,34 @@
        * LICENSE file in the root directory of this source tree.
        */ var i = r(2265),
         t = Symbol.for('react.element'),
-        o = (Symbol.for('react.fragment'), Object.prototype.hasOwnProperty),
-        a =
+        o = Symbol.for('react.fragment'),
+        a = Object.prototype.hasOwnProperty,
+        f =
           i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED
             .ReactCurrentOwner,
-        f = { key: !0, ref: !0, __self: !0, __source: !0 };
-      function d(e, n, r) {
+        d = { key: !0, ref: !0, __self: !0, __source: !0 };
+      function u(e, n, r) {
         var i,
-          d = {},
+          o = {},
           u = null,
           c = null;
         for (i in (void 0 !== r && (u = '' + r),
         void 0 !== n.key && (u = '' + n.key),
         void 0 !== n.ref && (c = n.ref),
         n))
-          o.call(n, i) && !f.hasOwnProperty(i) && (d[i] = n[i]);
+          a.call(n, i) && !d.hasOwnProperty(i) && (o[i] = n[i]);
         if (e && e.defaultProps)
-          for (i in (n = e.defaultProps)) void 0 === d[i] && (d[i] = n[i]);
+          for (i in (n = e.defaultProps)) void 0 === o[i] && (o[i] = n[i]);
         return {
           $$typeof: t,
           type: e,
           key: u,
           ref: c,
-          props: d,
-          _owner: a.current
+          props: o,
+          _owner: f.current
         };
       }
-      (n.jsx = d), (n.jsxs = d);
+      (n.Fragment = o), (n.jsx = u), (n.jsxs = u);
     },
     7437: function (e, n, r) {
       'use strict';
