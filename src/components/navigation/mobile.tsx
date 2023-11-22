@@ -61,7 +61,10 @@ export const TopBarMobile: React.FC = () => {
             height={28}
           />
         </LogoArea>
-        <MenuAction onClick={() => setOpen((prev) => !prev)}>
+        <MenuAction
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label="toogle-navigation"
+        >
           {open ? <CloseIcon /> : <MenuIcon />}
         </MenuAction>
       </NavBar>
