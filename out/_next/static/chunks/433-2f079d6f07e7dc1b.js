@@ -2592,7 +2592,7 @@
               s +
               ' ' +
               u +
-              "'%3E%3Cfilter id='b' colorInterpolationFilters='sRGB'%3E%3CfeGaussianBlur stdDeviation='" +
+              "'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='" +
               (n && o ? '1' : '20') +
               "'/%3E" +
               l +

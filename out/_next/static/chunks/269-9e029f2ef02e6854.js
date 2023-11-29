@@ -184,7 +184,7 @@
           e
             .toLowerCase()
             .split('/')
-            .some((e) => 'app' == e) &&
+            .some((e) => 'app' == e || 'auth' == e) &&
             window.location.replace('aladdinmiles:/'.concat(e)),
           (0, o.jsx)(o.Fragment, {})
         );
