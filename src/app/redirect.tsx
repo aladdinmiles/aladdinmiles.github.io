@@ -9,7 +9,7 @@ export const Redirect: React.FC = () => {
     path
       .toLowerCase()
       .split('/')
-      .some((p) => 'app' == p)
+      .some((p) => 'app' == p || 'auth' == p)
   ) {
     window.location.replace(`aladdinmiles:/${path}`);
   }

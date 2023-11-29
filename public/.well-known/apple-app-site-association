@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "5VZQU3YST8.com.aladdinmiles.customer",
-        "paths": [ "/app/*"]
+        "paths": [ "/app/*", "/auth/*"]
       }
     ]
   }

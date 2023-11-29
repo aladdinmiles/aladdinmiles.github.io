@@ -349,156 +349,156 @@ export const CardIcon = () => (
     <path
       d="M65 172.003H70"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M53 172.003H58"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M62 175.003V180.003"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M62 163.002V168.002"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M52 107.001V165.001"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M192 117.001V175.001"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M52 92.0018V102.002"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M67 82.0013V123.245C67 126.424 69.5867 129.001 72.7773 129.001H172.223C175.413 129.001 178 126.424 178 123.245V82.4268"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M167 81.001V79.9693C167 77.2253 164.728 75.001 161.924 75.001H150.076C147.273 75.001 145 77.2253 145 79.9693V80.7921"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M99 81.001V79.9693C99 77.2253 96.7274 75.001 93.924 75.001H82.076C79.2726 75.001 77 77.2253 77 79.9693V81.001"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M153 73.8414V66.8725C153 66.3924 152.61 66.0019 152.131 66.0019H91.8692C91.39 66.0019 91 66.3924 91 66.8725V74.0019"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M85 73.9237V67.0773C85 63.1758 88.2713 60.0016 92.2922 60.0016H152.708C156.729 60.0016 160 63.1758 160 67.0773V74.0016"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M132.846 137.002H112.154C110.412 137.002 109 135.562 109 133.785V125.219C109 123.442 110.412 122.002 112.154 122.002H132.846C134.588 122.002 136 123.442 136 125.219V133.785C136 135.562 134.588 137.002 132.846 137.002Z"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M173 92.0022V121.216C173 122.755 171.745 124.002 170.196 124.002H144"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M67 85.0015H177"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M108 172.003H77"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M192 100.002V103.002"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M192 109.002V112.002"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M198 106.003H195"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M189 106.003H186"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M187 115.002V170.281C187 173.993 183.975 177.002 180.244 177.002H70"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M57 162.001V87.7609C57 84.0275 60.0168 81.001 63.7382 81.001H180.262C183.983 81.001 187 84.0275 187 87.7609V95.114"
       stroke="#5D2F89"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <defs>
       <filter
@@ -508,9 +508,9 @@ export const CardIcon = () => (
         width="315"
         height="315"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feGaussianBlur in="BackgroundImageFix" stdDeviation="18.75" />
         <feComposite
           in2="SourceAlpha"
