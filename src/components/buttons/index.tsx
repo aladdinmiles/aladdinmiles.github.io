@@ -23,9 +23,9 @@ type Props = LinkProps & {
   children: ReactNode;
 };
 
-export const Button: React.FC<Props> = ({ children, href = '/#' }) => {
+export const Button: React.FC<Props> = ({ children, href = '/#', ...rest }) => {
   return (
-    <Container href={href} aria-label="buttons">
+    <Container href={href} aria-label="buttons" {...rest}>
       <Text className={man.className}>{children}</Text>
     </Container>
   );

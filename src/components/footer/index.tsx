@@ -68,6 +68,7 @@ export const Footer: React.FC = () => {
         <FooterHeader>Company</FooterHeader>
         <FooterLink href="/about#careers">Careers</FooterLink>
         <FooterLink href="/about">About Us</FooterLink>
+        <FooterLink href="/contact">Contact Us</FooterLink>
         <FooterLink href="mailto:hello@aladdinmiles.com">
           Email: hello@aladdinmiles.com
         </FooterLink>
