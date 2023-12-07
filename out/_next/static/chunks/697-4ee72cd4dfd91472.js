@@ -555,10 +555,11 @@
         a = o.n(c);
       o(2265);
       let l = (t) => {
-          let { children: e, href: o = '/#' } = t;
+          let { children: e, href: o = '/#', ...i } = t;
           return (0, n.jsx)(u, {
             href: o,
             'aria-label': 'buttons',
+            ...i,
             children: (0, n.jsx)(h, { className: r().className, children: e })
           });
         },

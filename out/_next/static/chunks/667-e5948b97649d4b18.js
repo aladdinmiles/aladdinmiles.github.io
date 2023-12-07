@@ -1,72 +1,55 @@
 'use strict';
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [269],
+  [667],
   {
-    3371: function (e, t, n) {
+    8974: function (e, t, n) {
       n.r(t),
         n.d(t, {
           MerchantForm: function () {
-            return k;
+            return x;
           }
         });
       var o = n(7437),
-        i = n(4053),
-        r = n.n(i),
-        a = n(7247),
-        c = n(8600);
-      let l = c.Z.input({
-        width: '100%',
-        height: (0, a.Wk)(56),
-        fontSize: (0, a.JB)(14),
-        border: ''.concat((0, a.so)(1), ' solid #B2B7C2'),
-        borderRadius: (0, a.so)(8),
-        padding: ''.concat((0, a.Wk)(8), ' ').concat((0, a.so)(16)),
-        ...r().style,
-        ...(0, a.wz)({
-          padding: ''.concat((0, a.$s)(8), ' ').concat((0, a.CD)(16)),
-          fontSize: (0, a.jo)(14),
-          borderRadius: (0, a.CD)(8)
-        })
-      });
-      var s = n(4019),
-        d = n(6691),
-        u = n.n(d),
-        f = n(4281),
+        i = n(8430),
+        r = n(4019),
+        a = n(6691),
+        c = n.n(a),
+        l = n(4281),
+        s = n.n(l),
+        d = n(2265),
+        u = n(171),
+        f = n(4589),
         h = n.n(f),
-        g = n(2265),
-        p = n(171),
-        x = n(4589),
-        m = n.n(x),
-        w = n(431),
-        j = n(4914);
-      let k = () => {
-        let [e, t] = (0, g.useState)({}),
+        g = n(431),
+        p = n(4914);
+      let x = () => {
+        let [e, t] = (0, d.useState)({}),
           n = (e) => {
             let n = e.target.name;
             t((t) => ({ ...t, [n]: e.target.value }));
           },
-          i = async (t) => {
+          a = async (t) => {
             var n, o;
             t.preventDefault();
             let i =
               Object.values(e).length > 0 && Object.values(e).every((e) => !!e);
             if (i) {
-              if (m().isEmail(e.email || '')) {
+              if (h().isEmail(e.email || '')) {
                 if (
-                  !h()(null !== (n = e.phone) && void 0 !== n ? n : '').isValid
+                  !s()(null !== (n = e.phone) && void 0 !== n ? n : '').isValid
                 ) {
-                  (0, p.toast)(
+                  (0, u.toast)(
                     'Please enter a valid phone number(including country code)',
                     { type: 'error' }
                   );
                   return;
                 }
               } else {
-                (0, p.toast)('Please enter a valid email', { type: 'error' });
+                (0, u.toast)('Please enter a valid email', { type: 'error' });
                 return;
               }
             } else {
-              (0, p.toast)('Please fill all fields', { type: 'error' });
+              (0, u.toast)('Please fill all fields', { type: 'error' });
               return;
             }
             try {
@@ -74,41 +57,41 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                   ...e,
-                  phone: h()(null !== (o = e.phone) && void 0 !== o ? o : '')
+                  phone: s()(null !== (o = e.phone) && void 0 !== o ? o : '')
                     .phoneNumber
                 }),
                 method: 'POST'
               }),
-                (0, p.toast)('Request submitted!', { type: 'success' });
+                (0, u.toast)('Request submitted!', { type: 'success' });
             } catch (e) {
-              (0, p.toast)('Request failed!', { type: 'error' }),
+              (0, u.toast)('Request failed!', { type: 'error' }),
                 console.log(e);
             }
           };
-        return (0, o.jsx)(j.FormWrapper, {
+        return (0, o.jsx)(p.FormWrapper, {
           id: 'formWrapper',
-          children: (0, o.jsxs)(j.FormCard, {
+          children: (0, o.jsxs)(p.FormCard, {
             children: [
-              (0, o.jsx)(j.CloseButton, {
+              (0, o.jsx)(p.CloseButton, {
                 href: '/merchant',
-                children: (0, o.jsx)(s.CloseIcon, {})
+                children: (0, o.jsx)(r.CloseIcon, {})
               }),
-              (0, o.jsxs)(j.FormContainer, {
+              (0, o.jsxs)(p.FormContainer, {
                 autoComplete: 'on',
-                onSubmit: i,
+                onSubmit: a,
                 children: [
-                  (0, o.jsxs)(j.CardHeaderSection, {
+                  (0, o.jsxs)(p.CardHeaderSection, {
                     children: [
-                      (0, o.jsx)(u(), {
+                      (0, o.jsx)(c(), {
                         src: '/images/Aladdin-Logo-Color.svg',
                         alt: 'aladdin logo',
                         width: 64,
                         height: 46
                       }),
-                      (0, o.jsxs)(j.CHeaderTextArea, {
+                      (0, o.jsxs)(p.CHeaderTextArea, {
                         children: [
-                          (0, o.jsx)(j.CHT, { children: 'Become a merchant' }),
-                          (0, o.jsx)(j.CT, {
+                          (0, o.jsx)(p.CHT, { children: 'Become a merchant' }),
+                          (0, o.jsx)(p.CT, {
                             children:
                               'Join AladdinMiles as a merchant and grow your customer base.'
                           })
@@ -116,27 +99,27 @@
                       })
                     ]
                   }),
-                  (0, o.jsxs)(j.Form, {
+                  (0, o.jsxs)(p.Form, {
                     children: [
-                      (0, o.jsx)(l, {
+                      (0, o.jsx)(i.TextInput, {
                         placeholder: 'Name',
                         name: 'name',
                         value: e.name,
                         onChange: n
                       }),
-                      (0, o.jsx)(l, {
+                      (0, o.jsx)(i.TextInput, {
                         placeholder: 'Venue name',
                         name: 'venue_name',
                         value: e.venue_name,
                         onChange: n
                       }),
-                      (0, o.jsx)(l, {
+                      (0, o.jsx)(i.TextInput, {
                         placeholder: 'Phone number +96600000000',
                         name: 'phone',
                         value: e.phone,
                         onChange: n
                       }),
-                      (0, o.jsx)(l, {
+                      (0, o.jsx)(i.TextInput, {
                         placeholder: 'Email address',
                         name: 'email',
                         value: e.email,
@@ -144,23 +127,23 @@
                       })
                     ]
                   }),
-                  (0, o.jsx)(j.Submit, { children: 'Submit Request' })
+                  (0, o.jsx)(p.Submit, { children: 'Submit Request' })
                 ]
               }),
-              (0, o.jsx)(j.FormRight, {
-                children: (0, o.jsxs)(j.IconWrapper, {
+              (0, o.jsx)(p.FormRight, {
+                children: (0, o.jsxs)(p.IconWrapper, {
                   children: [
-                    (0, o.jsxs)(j.CardText, {
+                    (0, o.jsxs)(p.CardText, {
                       children: [
                         'Get ',
-                        (0, o.jsx)(w.ColoredText, { children: 'access' }),
+                        (0, o.jsx)(g.ColoredText, { children: 'access' }),
                         ' to the right audience and',
                         ' ',
-                        (0, o.jsx)(w.ColoredText, { children: 'grow' }),
+                        (0, o.jsx)(g.ColoredText, { children: 'grow' }),
                         ' your business.'
                       ]
                     }),
-                    (0, o.jsx)(j.CardIcon, {})
+                    (0, o.jsx)(p.CardIcon, {})
                   ]
                 })
               })
@@ -236,7 +219,7 @@
             return b;
           },
           Line: function () {
-            return L;
+            return I;
           },
           MainView: function () {
             return k;
@@ -260,7 +243,7 @@
             return A;
           },
           RaleBase: function () {
-            return I;
+            return L;
           },
           RaleText: function () {
             return $;
@@ -420,7 +403,7 @@
           }
         }),
         T = g.Z.div({ display: 'inline-block' }),
-        L = () =>
+        I = () =>
           (0, o.jsx)('svg', {
             width: (0, f.so)(154),
             height: (0, f.Wk)(8),
@@ -435,7 +418,7 @@
               strokeLinecap: 'round'
             })
           }),
-        I = (e) => {
+        L = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(s().className, ' ').concat(t),
@@ -452,7 +435,7 @@
           },
           (0, f.wz)({ fontSize: (0, f.jo)(12) })
         ]),
-        $ = (0, g.Z)(I)({
+        $ = (0, g.Z)(L)({
           color: '#515665',
           fontSize: (0, f.JB)(22),
           lineHeight: '160%',
@@ -823,6 +806,32 @@
           paddingTop: (0, l.Wk)(8),
           ...(0, l.wz)({ gap: (0, l.CD)(48) })
         });
+    },
+    8430: function (e, t, n) {
+      n.r(t),
+        n.d(t, {
+          TextInput: function () {
+            return c;
+          }
+        });
+      var o = n(4053),
+        i = n.n(o),
+        r = n(7247),
+        a = n(8600);
+      let c = a.Z.input({
+        width: '100%',
+        height: (0, r.Wk)(56),
+        fontSize: (0, r.JB)(14),
+        border: ''.concat((0, r.so)(1), ' solid #B2B7C2'),
+        borderRadius: (0, r.so)(8),
+        padding: ''.concat((0, r.Wk)(8), ' ').concat((0, r.so)(16)),
+        ...i().style,
+        ...(0, r.wz)({
+          padding: ''.concat((0, r.$s)(8), ' ').concat((0, r.CD)(16)),
+          fontSize: (0, r.jo)(14),
+          borderRadius: (0, r.CD)(8)
+        })
+      });
     },
     6773: function (e, t, n) {
       function o(e) {
