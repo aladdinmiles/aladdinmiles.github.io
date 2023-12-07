@@ -1,5 +1,6 @@
 import { TextInput } from '@/components/inputs/textInput';
 import { Metadata } from 'next';
+import React from 'react';
 import {
   Background,
   Form,
