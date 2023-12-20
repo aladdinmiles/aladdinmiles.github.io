@@ -1,60 +1,60 @@
 @font-face {
-  font-family: __Raleway_1d251f;
+  font-family: __Raleway_5e2547;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(/_next/static/media/a9d0a98b13c714be-s.woff2) format('woff2');
+  src: url(/_next/static/media/6e5d849952d0b688-s.woff2) format('woff2');
   unicode-range: U+0460-052f, U+1c80-1c88, U+20b4, U+2de0-2dff, U+a640-a69f,
     U+fe2e-fe2f;
 }
 @font-face {
-  font-family: __Raleway_1d251f;
+  font-family: __Raleway_5e2547;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(/_next/static/media/443b9ddcfbdbb3f9-s.woff2) format('woff2');
+  src: url(/_next/static/media/6f5ea4d40d45fdc5-s.p.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045f, U+0490-0491, U+04b0-04b1, U+2116;
 }
 @font-face {
-  font-family: __Raleway_1d251f;
+  font-family: __Raleway_5e2547;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(/_next/static/media/d46a42c78f3b2ec7-s.woff2) format('woff2');
+  src: url(/_next/static/media/0480a9e1d1acf74a-s.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01a0-01a1,
     U+01af-01b0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
     U+1ea0-1ef9, U+20ab;
 }
 @font-face {
-  font-family: __Raleway_1d251f;
+  font-family: __Raleway_5e2547;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(/_next/static/media/31b6729ab25ad361-s.woff2) format('woff2');
+  src: url(/_next/static/media/1613604a2329a3c2-s.woff2) format('woff2');
   unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f, U+1ef2-1eff,
     U+2020, U+20a0-20ab, U+20ad-20cf, U+2113, U+2c60-2c7f, U+a720-a7ff;
 }
 @font-face {
-  font-family: __Raleway_1d251f;
+  font-family: __Raleway_5e2547;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(/_next/static/media/a949128b18320e27-s.p.woff2) format('woff2');
+  src: url(/_next/static/media/6a1999d623f8c8db-s.p.woff2) format('woff2');
   unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
     U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074, U+20ac, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+feff, U+fffd;
 }
 @font-face {
-  font-family: __Raleway_Fallback_1d251f;
+  font-family: __Raleway_Fallback_5e2547;
   src: local('Arial');
   ascent-override: 89.62%;
   descent-override: 22.31%;
   line-gap-override: 0%;
   size-adjust: 104.89%;
 }
-.__className_1d251f {
-  font-family: __Raleway_1d251f, __Raleway_Fallback_1d251f;
-  font-weight: 700;
+.__className_5e2547 {
+  font-family: __Raleway_5e2547, __Raleway_Fallback_5e2547;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -125,187 +125,120 @@
   font-style: normal;
 }
 @font-face {
-  font-family: __Manrope_90b4c2;
+  font-family: __Raleway_501d33;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/_next/static/media/e74552dcc1f8551c-s.woff2) format('woff2');
+  src: url(/_next/static/media/ca9de9133d160021-s.woff2) format('woff2');
   unicode-range: U+0460-052f, U+1c80-1c88, U+20b4, U+2de0-2dff, U+a640-a69f,
     U+fe2e-fe2f;
 }
 @font-face {
-  font-family: __Manrope_90b4c2;
+  font-family: __Raleway_501d33;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/_next/static/media/2aa1b4d0ea2e981f-s.p.woff2) format('woff2');
+  src: url(/_next/static/media/624c100eb899e10d-s.p.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045f, U+0490-0491, U+04b0-04b1, U+2116;
 }
 @font-face {
-  font-family: __Manrope_90b4c2;
+  font-family: __Raleway_501d33;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/_next/static/media/3c7f70d19754e4d2-s.woff2) format('woff2');
-  unicode-range: U+0370-03ff;
-}
-@font-face {
-  font-family: __Manrope_90b4c2;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/_next/static/media/9d7b793e3d43caff-s.woff2) format('woff2');
+  src: url(/_next/static/media/c41548e18cd13c57-s.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01a0-01a1,
     U+01af-01b0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
     U+1ea0-1ef9, U+20ab;
 }
 @font-face {
-  font-family: __Manrope_90b4c2;
+  font-family: __Raleway_501d33;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/_next/static/media/2165c847d699eaa0-s.woff2) format('woff2');
+  src: url(/_next/static/media/fdba8d2c85963d47-s.woff2) format('woff2');
   unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f, U+1ef2-1eff,
     U+2020, U+20a0-20ab, U+20ad-20cf, U+2113, U+2c60-2c7f, U+a720-a7ff;
 }
 @font-face {
-  font-family: __Manrope_90b4c2;
+  font-family: __Raleway_501d33;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/_next/static/media/82fa68ce1e066724-s.p.woff2) format('woff2');
+  src: url(/_next/static/media/049c3ff3682e65a1-s.p.woff2) format('woff2');
   unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
     U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074, U+20ac, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+feff, U+fffd;
 }
 @font-face {
-  font-family: __Manrope_Fallback_90b4c2;
-  src: local('Arial');
-  ascent-override: 102.96%;
-  descent-override: 28.98%;
-  line-gap-override: 0%;
-  size-adjust: 103.53%;
-}
-.__className_90b4c2 {
-  font-family: __Manrope_90b4c2, __Manrope_Fallback_90b4c2;
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: __Raleway_8be77d;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/_next/static/media/a85e955600739c7d-s.woff2) format('woff2');
-  unicode-range: U+0460-052f, U+1c80-1c88, U+20b4, U+2de0-2dff, U+a640-a69f,
-    U+fe2e-fe2f;
-}
-@font-face {
-  font-family: __Raleway_8be77d;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/_next/static/media/d8cea79c6cdf2643-s.p.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045f, U+0490-0491, U+04b0-04b1, U+2116;
-}
-@font-face {
-  font-family: __Raleway_8be77d;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/_next/static/media/ffcbc71dfc2a1f7e-s.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01a0-01a1,
-    U+01af-01b0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1ea0-1ef9, U+20ab;
-}
-@font-face {
-  font-family: __Raleway_8be77d;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/_next/static/media/195ed94f4889aa32-s.woff2) format('woff2');
-  unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f, U+1ef2-1eff,
-    U+2020, U+20a0-20ab, U+20ad-20cf, U+2113, U+2c60-2c7f, U+a720-a7ff;
-}
-@font-face {
-  font-family: __Raleway_8be77d;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/_next/static/media/0954233f4a3880d3-s.p.woff2) format('woff2');
-  unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
-    U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074, U+20ac, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+feff, U+fffd;
-}
-@font-face {
-  font-family: __Raleway_Fallback_8be77d;
+  font-family: __Raleway_Fallback_501d33;
   src: local('Arial');
   ascent-override: 89.62%;
   descent-override: 22.31%;
   line-gap-override: 0%;
   size-adjust: 104.89%;
 }
-.__className_8be77d {
-  font-family: __Raleway_8be77d, __Raleway_Fallback_8be77d;
+.__className_501d33 {
+  font-family: __Raleway_501d33, __Raleway_Fallback_501d33;
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: __Raleway_f8758a;
+  font-family: __Raleway_25e0a3;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(/_next/static/media/6ebbd0c7f067e2eb-s.woff2) format('woff2');
+  src: url(/_next/static/media/490eba76978f3623-s.woff2) format('woff2');
   unicode-range: U+0460-052f, U+1c80-1c88, U+20b4, U+2de0-2dff, U+a640-a69f,
     U+fe2e-fe2f;
 }
 @font-face {
-  font-family: __Raleway_f8758a;
+  font-family: __Raleway_25e0a3;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(/_next/static/media/155bd815325d43d3-s.p.woff2) format('woff2');
+  src: url(/_next/static/media/15662646287acc38-s.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045f, U+0490-0491, U+04b0-04b1, U+2116;
 }
 @font-face {
-  font-family: __Raleway_f8758a;
+  font-family: __Raleway_25e0a3;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(/_next/static/media/bec9e7fd773e8fdf-s.woff2) format('woff2');
+  src: url(/_next/static/media/5b88a69c4d984dfd-s.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01a0-01a1,
     U+01af-01b0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
     U+1ea0-1ef9, U+20ab;
 }
 @font-face {
-  font-family: __Raleway_f8758a;
+  font-family: __Raleway_25e0a3;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(/_next/static/media/aae364e7053e3119-s.woff2) format('woff2');
+  src: url(/_next/static/media/16b7e308294a9eea-s.woff2) format('woff2');
   unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f, U+1ef2-1eff,
     U+2020, U+20a0-20ab, U+20ad-20cf, U+2113, U+2c60-2c7f, U+a720-a7ff;
 }
 @font-face {
-  font-family: __Raleway_f8758a;
+  font-family: __Raleway_25e0a3;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(/_next/static/media/05a8cb9c82740950-s.p.woff2) format('woff2');
+  src: url(/_next/static/media/a1fa3bdd0b28b01f-s.p.woff2) format('woff2');
   unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
     U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074, U+20ac, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+feff, U+fffd;
 }
 @font-face {
-  font-family: __Raleway_Fallback_f8758a;
+  font-family: __Raleway_Fallback_25e0a3;
   src: local('Arial');
   ascent-override: 89.62%;
   descent-override: 22.31%;
   line-gap-override: 0%;
   size-adjust: 104.89%;
 }
-.__className_f8758a {
-  font-family: __Raleway_f8758a, __Raleway_Fallback_f8758a;
-  font-weight: 400;
+.__className_25e0a3 {
+  font-family: __Raleway_25e0a3, __Raleway_Fallback_25e0a3;
+  font-weight: 700;
   font-style: normal;
 }

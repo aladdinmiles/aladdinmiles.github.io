@@ -1,6 +1,6 @@
 'use strict';
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [667],
+  [403],
   {
     8974: function (e, t, n) {
       n.r(t),
@@ -152,27 +152,6 @@
         });
       };
     },
-    4868: function (e, t, n) {
-      n.r(t),
-        n.d(t, {
-          Redirect: function () {
-            return r;
-          }
-        });
-      var o = n(7437),
-        i = n(4033);
-      let r = () => {
-        let e = (0, i.usePathname)();
-        return (
-          e
-            .toLowerCase()
-            .split('/')
-            .some((e) => 'app' == e || 'auth' == e) &&
-            window.location.replace('aladdinmiles:/'.concat(e)),
-          (0, o.jsx)(o.Fragment, {})
-        );
-      };
-    },
     431: function (e, t, n) {
       n.r(t),
         n.d(t, {
@@ -180,7 +159,7 @@
             return _;
           },
           AppDownloadArea: function () {
-            return M;
+            return R;
           },
           Arrow: function () {
             return en;
@@ -225,7 +204,7 @@
             return k;
           },
           ManText: function () {
-            return R;
+            return $;
           },
           MultiStyleText: function () {
             return z;
@@ -246,7 +225,7 @@
             return L;
           },
           RaleText: function () {
-            return $;
+            return M;
           },
           RaleTextWhite: function () {
             return G;
@@ -425,7 +404,7 @@
             children: n
           });
         },
-        R = g.Z.p([
+        $ = g.Z.p([
           c().style,
           {
             fontSize: (0, f.JB)(16),
@@ -435,7 +414,7 @@
           },
           (0, f.wz)({ fontSize: (0, f.jo)(12) })
         ]),
-        $ = (0, g.Z)(L)({
+        M = (0, g.Z)(L)({
           color: '#515665',
           fontSize: (0, f.JB)(22),
           lineHeight: '160%',
@@ -444,7 +423,7 @@
             width: (0, f.CD)(366)
           }
         }),
-        M = g.Z.div([
+        R = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -547,12 +526,12 @@
           borderBottomRightRadius: (0, f.so)(178),
           ...(0, f.wz)({ gap: (0, f.$s)(24), width: (0, f.CD)(414) })
         }),
-        O = (0, g.Z)($)([
+        O = (0, g.Z)(M)([
           u().style,
           { color: '#ffffff', fontSize: (0, f.JB)(32), textAlign: 'center' },
           (0, f.wz)({ minWidth: (0, f.CD)(351), fontSize: (0, f.jo)(24) })
         ]),
-        G = (0, g.Z)($)({
+        G = (0, g.Z)(M)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, f.so)(440),
@@ -640,7 +619,7 @@
             '& img': { width: (0, f.CD)(16), height: (0, f.$s)(24) }
           })
         }),
-        ee = (0, g.Z)($)([u().style]),
+        ee = (0, g.Z)(M)([u().style]),
         et = (0, g.Z)(z)({
           fontSize: (0, f.JB)(32),
           ...(0, f.wz)({ fontSize: (0, f.jo)(24), width: (0, f.CD)(366) })
