@@ -4,7 +4,9 @@ import {
   fontSize,
   heightPixel,
   mobileFontSize,
+  mobileHeightPixel,
   mobileStyle,
+  mobileWidthPixel,
   widthPixel
 } from '@/utils/pxToVW';
 import styled from '@emotion/styled';
@@ -25,7 +27,12 @@ export const Form = styled.div({
   gap: `${heightPixel(40)} 0`,
   justifyContent: 'center',
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  ...mobileStyle({
+    width: '100%',
+    padding: `0 ${mobileWidthPixel(40)}`,
+    alignItems: 'center'
+  })
 });
 
 const man600 = Manrope({
@@ -76,7 +83,13 @@ export const SideBySide = styled.div({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  columnGap: widthPixel(16)
+  columnGap: widthPixel(16),
+  ...mobileStyle({
+    width: '100%',
+    flexDirection: 'column',
+    rowGap: mobileHeightPixel(24),
+    columnGap: 0
+  })
 });
 
 export const Label = styled.p([
@@ -91,26 +104,46 @@ export const Label = styled.p([
   })
 ]);
 
-export const InputWrapper = styled.div({
-  flexDirection: 'column',
-  display: 'flex',
-  justifyContent: 'flex-start',
-  alignItems: 'flex-start',
-  width: '50%'
-});
+export const InputWrapper = styled.div([
+  {
+    flexDirection: 'column',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: '50%'
+  },
+  mobileStyle({
+    width: '100%'
+  })
+]);
 
-export const Submit = styled(Button)({
-  width: widthPixel(720)
-});
+export const Submit = styled(Button)([
+  {
+    width: widthPixel(720)
+  },
+  mobileStyle({
+    width: '100%'
+  })
+]);
 
-export const TwentyFour = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  rowGap: widthPixel(24)
-});
+export const TwentyFour = styled.div([
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: widthPixel(24)
+  },
+  mobileStyle({
+    rowGap: mobileHeightPixel(24),
+    width: '100%'
+  })
+]);
 
 export const Img = styled(Image)({
   width: widthPixel(240),
   height: widthPixel(240),
-  alignSelf: 'center'
+  alignSelf: 'center',
+  ...mobileStyle({
+    width: mobileWidthPixel(240),
+    height: mobileWidthPixel(240)
+  })
 });

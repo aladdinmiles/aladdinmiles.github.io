@@ -6,6 +6,7 @@ import {
   Form,
   GetHelp,
   Header,
+  Img,
   InputWrapper,
   Label,
   SideBySide,
@@ -25,43 +26,45 @@ export const metadata: Metadata = {
 const Contact: React.FC = () => {
   return (
     <Background>
-      <Form>
-        <TwentyFour>
-          <GetHelp>Get Help</GetHelp>
-          <div>
-            <Header>Need help? Contact us.</Header>
-            <SubHeader>
-              Complete this form to get connected to our support team. We will
-              get back to you shortly.
-            </SubHeader>
-          </div>
-        </TwentyFour>
-        <TwentyFour>
-          <SideBySide>
-            <InputWrapper>
-              <Label>First Name</Label>
-              <TextInput name="first_name" />
-            </InputWrapper>
-            <InputWrapper>
-              <Label>Last Name</Label>
-              <TextInput name="last_name" />
-            </InputWrapper>
-          </SideBySide>
-          <SideBySide>
-            <InputWrapper>
-              <Label>Phone Number</Label>
-              <TextInput name="phone" />
-            </InputWrapper>
-            <InputWrapper>
-              <Label>Email</Label>
-              <TextInput name="email" />
-            </InputWrapper>
-          </SideBySide>
-        </TwentyFour>
-        <Submit href="#">Submit</Submit>
-      </Form>
+      {false && (
+        <Form>
+          <TwentyFour>
+            <GetHelp>Get Help</GetHelp>
+            <div>
+              <Header>Need help? Contact us.</Header>
+              <SubHeader>
+                Complete this form to get connected to our support team. We will
+                get back to you shortly.
+              </SubHeader>
+            </div>
+          </TwentyFour>
+          <TwentyFour>
+            <SideBySide>
+              <InputWrapper>
+                <Label>First Name</Label>
+                <TextInput name="first_name" />
+              </InputWrapper>
+              <InputWrapper>
+                <Label>Last Name</Label>
+                <TextInput name="last_name" />
+              </InputWrapper>
+            </SideBySide>
+            <SideBySide>
+              <InputWrapper>
+                <Label>Phone Number</Label>
+                <TextInput name="phone" />
+              </InputWrapper>
+              <InputWrapper>
+                <Label>Email</Label>
+                <TextInput name="email" />
+              </InputWrapper>
+            </SideBySide>
+          </TwentyFour>
+          <Submit href="#">Submit</Submit>
+        </Form>
+      )}
 
-      {/* {false && (
+      {true && (
         <Form>
           <TwentyFour>
             <GetHelp>Get Help</GetHelp>
@@ -79,9 +82,8 @@ const Contact: React.FC = () => {
             width={240}
             height={240}
           />
-          <Submit href="#">Submit</Submit>
         </Form>
-      )} */}
+      )}
     </Background>
   );
 };
