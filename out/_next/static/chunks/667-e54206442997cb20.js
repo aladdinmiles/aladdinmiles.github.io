@@ -6,7 +6,7 @@
       n.r(t),
         n.d(t, {
           MerchantForm: function () {
-            return x;
+            return m;
           }
         });
       var o = n(7437),
@@ -22,7 +22,7 @@
         h = n.n(f),
         g = n(431),
         p = n(4914);
-      let x = () => {
+      let m = () => {
         let [e, t] = (0, d.useState)({}),
           n = (e) => {
             let n = e.target.name;
@@ -168,7 +168,13 @@
             .toLowerCase()
             .split('/')
             .some((e) => 'app' == e || 'auth' == e) &&
-            window.location.replace('aladdinmiles:/'.concat(e)),
+            ('www.aladdinmiles.com' == window.location.host
+              ? window.location.replace('aladdinmiles:/'.concat(e))
+              : 'staging.aladdinmiles.com' == window.location.host
+              ? window.location.replace('com.aladdinmiles.staging:/'.concat(e))
+              : window.location.replace(
+                  'com.aladdinmiles.amatest:/'.concat(e)
+                )),
           (0, o.jsx)(o.Fragment, {})
         );
       };
@@ -301,9 +307,9 @@
         h = n(9538),
         g = n(8600),
         p = n(6691),
-        x = n.n(p),
-        m = n(1396),
-        w = n.n(m),
+        m = n.n(p),
+        x = n(1396),
+        w = n.n(x),
         j = n(7747);
       let k = g.Z.div({
           width: '100%',
@@ -476,7 +482,7 @@
           alignItems: 'center'
         }),
         P = (0, g.Z)(w())({}),
-        N = (0, g.Z)(x())([
+        N = (0, g.Z)(m())([
           {
             width: (0, f.so)(600),
             height: (0, f.Wk)(600),
@@ -691,10 +697,10 @@
       n.r(t),
         n.d(t, {
           BaseHeader: function () {
-            return m;
+            return x;
           },
           BaseText: function () {
-            return x;
+            return m;
           },
           Content: function () {
             return p;
@@ -758,27 +764,27 @@
             .concat((0, l.so)(109)),
           ...(0, l.wz)({ flexDirection: 'column' })
         }),
-        x = (e) => {
+        m = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(r().className, ' ').concat(t),
             children: n
           });
         },
-        m = (e) => {
+        x = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(c().className, ' ').concat(t),
             children: n
           });
         },
-        w = (0, s.Z)(x)({
+        w = (0, s.Z)(m)({
           fontSize: (0, l.JB)(16),
           color: '#ffffff',
           display: 'block',
           ...(0, l.wz)({ fontSize: (0, l.jo)(16) })
         }),
-        j = (0, s.Z)(m)({
+        j = (0, s.Z)(x)({
           fontSize: (0, l.JB)(16),
           color: '#ffffff',
           display: 'block',
