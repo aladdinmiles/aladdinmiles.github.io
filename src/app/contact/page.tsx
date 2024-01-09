@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const Contact: React.FC = () => {
   return (
     <Background>
-      {false && (
+      {true && (
         <Form>
           <TwentyFour>
             <GetHelp>Get Help</GetHelp>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
         </Form>
       )}
 
-      {true && (
+      {false && (
         <Form>
           <TwentyFour>
             <GetHelp>Get Help</GetHelp>
