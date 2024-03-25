@@ -172,9 +172,10 @@
               ? window.location.replace('aladdinmiles:/'.concat(e))
               : 'staging.aladdinmiles.com' == window.location.host
               ? window.location.replace('com.aladdinmiles.staging:/'.concat(e))
-              : window.location.replace(
+              : (console.log('path for here'),
+                window.location.replace(
                   'com.aladdinmiles.amatest:/'.concat(e)
-                )),
+                ))),
           (0, o.jsx)(o.Fragment, {})
         );
       };
