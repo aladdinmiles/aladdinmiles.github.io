@@ -16,6 +16,8 @@ export const Redirect: React.FC = () => {
     } else if (window.location.host == 'staging.aladdinmiles.com') {
       window.location.replace(`com.aladdinmiles.staging:/${path}`);
     } else {
+      console.log('path for here');
+
       window.location.replace(`com.aladdinmiles.amatest:/${path}`);
     }
   }

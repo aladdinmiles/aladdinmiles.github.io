@@ -13,7 +13,7 @@ import {
   StoreButtons,
   TextWithSVG,
   View
-} from './styles';
+} from '../styles';
 
 const rale = Raleway({
   weight: '700',
