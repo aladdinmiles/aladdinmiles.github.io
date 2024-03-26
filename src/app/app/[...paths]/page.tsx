@@ -14,6 +14,7 @@ import {
   TextWithSVG,
   View
 } from '../styles';
+import { Redirect } from '@/app/redirect';
 
 const rale = Raleway({
   weight: '700',
@@ -68,6 +69,7 @@ const MobileApp: React.FC = () => {
           src="/images/mobile_landing.png"
         />
       </View>
+      <Redirect />
     </ContentView>
   );
 };

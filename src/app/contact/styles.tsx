@@ -92,12 +92,16 @@ export const SideBySide = styled.div({
   })
 });
 
-export const Label = styled.p([
+export const Label = styled.label([
   man400.style,
   {
     fontSize: fontSize(14),
     color: '#515665',
-    textAlign: 'center'
+    textAlign: 'center',
+    verticalAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    columnGap: widthPixel(10)
   },
   mobileStyle({
     fontSize: mobileFontSize(14)

@@ -1,4 +1,6 @@
 'use client';
+import { Button } from '@/components/buttons';
+import { TextInput } from '@/components/inputs/textInput';
 import {
   fontSize,
   heightPixel,
@@ -533,3 +535,96 @@ export const DownloadImage = styled(Image)({
 export const Left = styled.div({
   paddingLeft: widthPixel(80)
 });
+
+// Delete Section
+
+export const DeleteView = styled.section({
+  display: 'flex',
+  width: '100%',
+  height: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#f9f9f9',
+  padding: `${heightPixel(50)} 0`,
+  ...mobileStyle({
+    width: mobileWidthPixel(720),
+    height: mobileHeightPixel(824)
+  })
+});
+
+export const DeleteCard = styled.div({
+  display: 'flex',
+  boxShadow: `rgba(0, 0, 0, 0.24) 0px ${widthPixel(3)} ${heightPixel(8)}`,
+  borderRadius: widthPixel(16)
+});
+
+export const LeftCard = styled.div(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  rowGap: heightPixel(20),
+  width: widthPixel(400),
+  borderTopLeftRadius: widthPixel(16),
+  borderBottomLeftRadius: widthPixel(16),
+  backgroundColor: '#FF1654df',
+  padding: `${heightPixel(32)} ${widthPixel(32)}`,
+  justifyContent: 'center',
+  ...mobileStyle({
+    width: mobileWidthPixel(400),
+    borderTopLeftRadius: mobileWidthPixel(16),
+    borderBottomLeftRadius: mobileWidthPixel(16)
+  })
+}));
+
+export const RightCard = styled.form(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  rowGap: heightPixel(20),
+  width: widthPixel(600),
+  minHeight: heightPixel(500),
+  borderTopRightRadius: widthPixel(16),
+  borderBottomRightRadius: widthPixel(16),
+  backgroundColor: '#FFFFFF',
+  padding: `${heightPixel(32)} ${widthPixel(32)}`,
+  justifyContent: 'center',
+  ...mobileStyle({
+    width: mobileWidthPixel(400),
+    borderTopLeftRadius: mobileWidthPixel(16),
+    borderBottomLeftRadius: mobileWidthPixel(16),
+    minHeight: mobileHeightPixel(500)
+  })
+}));
+
+export const DeleteManText = styled.h2([
+  rale600.style,
+  {
+    fontSize: fontSize(22),
+    color: '#ffffff'
+  },
+  mobileStyle({
+    fontSize: mobileFontSize(16)
+  })
+]);
+
+export const DeleteSmallText = styled.p([
+  man.style,
+  {
+    fontSize: fontSize(16),
+    color: '#ffffff'
+  },
+  mobileStyle({
+    fontSize: mobileFontSize(12)
+  })
+]);
+
+export const Input = styled(TextInput)({
+  width: widthPixel(490),
+  ...mobileStyle({
+    width: mobileWidthPixel(400)
+  })
+});
+
+export const Actions = styled(SB)({
+  marginTop: heightPixel(20)
+});
+
+export const Checkbox = styled.input({});

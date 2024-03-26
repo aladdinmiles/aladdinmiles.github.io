@@ -20,7 +20,6 @@ const Template: React.FC<IProp> = ({ children }) => {
       </ChildrenContainer>
       <Footer />
       <ToastContainer position="top-center" />
-      <Redirect />
     </MainView>
   );
 };
