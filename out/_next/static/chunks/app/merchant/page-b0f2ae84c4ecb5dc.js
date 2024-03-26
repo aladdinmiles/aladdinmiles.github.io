@@ -9,26 +9,6 @@
         Promise.resolve().then(o.bind(o, 4914)),
         Promise.resolve().then(o.bind(o, 750));
     },
-    1145: function (e) {
-      e.exports = {
-        style: {
-          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
-          fontWeight: 600,
-          fontStyle: 'normal'
-        },
-        className: '__className_90b4c2'
-      };
-    },
-    302: function (e) {
-      e.exports = {
-        style: {
-          fontFamily: "'__Raleway_94295c', '__Raleway_Fallback_94295c'",
-          fontWeight: 700,
-          fontStyle: 'normal'
-        },
-        className: '__className_94295c'
-      };
-    },
     6566: function (e) {
       e.exports = {
         style: {

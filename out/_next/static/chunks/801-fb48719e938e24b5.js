@@ -1,12 +1,12 @@
-'use strict';
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [667],
+  [801],
   {
     8974: function (e, t, n) {
+      'use strict';
       n.r(t),
         n.d(t, {
           MerchantForm: function () {
-            return m;
+            return x;
           }
         });
       var o = n(7437),
@@ -14,15 +14,15 @@
         r = n(4019),
         a = n(6691),
         c = n.n(a),
-        l = n(4281),
-        s = n.n(l),
+        s = n(4281),
+        l = n.n(s),
         d = n(2265),
         u = n(171),
         f = n(4589),
         h = n.n(f),
-        g = n(431),
-        p = n(4914);
-      let m = () => {
+        p = n(431),
+        g = n(4914);
+      let x = () => {
         let [e, t] = (0, d.useState)({}),
           n = (e) => {
             let n = e.target.name;
@@ -36,7 +36,7 @@
             if (i) {
               if (h().isEmail(e.email || '')) {
                 if (
-                  !s()(null !== (n = e.phone) && void 0 !== n ? n : '').isValid
+                  !l()(null !== (n = e.phone) && void 0 !== n ? n : '').isValid
                 ) {
                   (0, u.toast)(
                     'Please enter a valid phone number(including country code)',
@@ -57,7 +57,7 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                   ...e,
-                  phone: s()(null !== (o = e.phone) && void 0 !== o ? o : '')
+                  phone: l()(null !== (o = e.phone) && void 0 !== o ? o : '')
                     .phoneNumber
                 }),
                 method: 'POST'
@@ -68,19 +68,19 @@
                 console.log(e);
             }
           };
-        return (0, o.jsx)(p.FormWrapper, {
+        return (0, o.jsx)(g.FormWrapper, {
           id: 'formWrapper',
-          children: (0, o.jsxs)(p.FormCard, {
+          children: (0, o.jsxs)(g.FormCard, {
             children: [
-              (0, o.jsx)(p.CloseButton, {
+              (0, o.jsx)(g.CloseButton, {
                 href: '/merchant',
                 children: (0, o.jsx)(r.CloseIcon, {})
               }),
-              (0, o.jsxs)(p.FormContainer, {
+              (0, o.jsxs)(g.FormContainer, {
                 autoComplete: 'on',
                 onSubmit: a,
                 children: [
-                  (0, o.jsxs)(p.CardHeaderSection, {
+                  (0, o.jsxs)(g.CardHeaderSection, {
                     children: [
                       (0, o.jsx)(c(), {
                         src: '/images/Aladdin-Logo-Color.svg',
@@ -88,10 +88,10 @@
                         width: 64,
                         height: 46
                       }),
-                      (0, o.jsxs)(p.CHeaderTextArea, {
+                      (0, o.jsxs)(g.CHeaderTextArea, {
                         children: [
-                          (0, o.jsx)(p.CHT, { children: 'Become a merchant' }),
-                          (0, o.jsx)(p.CT, {
+                          (0, o.jsx)(g.CHT, { children: 'Become a merchant' }),
+                          (0, o.jsx)(g.CT, {
                             children:
                               'Join AladdinMiles as a merchant and grow your customer base.'
                           })
@@ -99,7 +99,7 @@
                       })
                     ]
                   }),
-                  (0, o.jsxs)(p.Form, {
+                  (0, o.jsxs)(g.Form, {
                     children: [
                       (0, o.jsx)(i.TextInput, {
                         placeholder: 'Name',
@@ -127,23 +127,23 @@
                       })
                     ]
                   }),
-                  (0, o.jsx)(p.Submit, { children: 'Submit Request' })
+                  (0, o.jsx)(g.Submit, { children: 'Submit Request' })
                 ]
               }),
-              (0, o.jsx)(p.FormRight, {
-                children: (0, o.jsxs)(p.IconWrapper, {
+              (0, o.jsx)(g.FormRight, {
+                children: (0, o.jsxs)(g.IconWrapper, {
                   children: [
-                    (0, o.jsxs)(p.CardText, {
+                    (0, o.jsxs)(g.CardText, {
                       children: [
                         'Get ',
-                        (0, o.jsx)(g.ColoredText, { children: 'access' }),
+                        (0, o.jsx)(p.ColoredText, { children: 'access' }),
                         ' to the right audience and',
                         ' ',
-                        (0, o.jsx)(g.ColoredText, { children: 'grow' }),
+                        (0, o.jsx)(p.ColoredText, { children: 'grow' }),
                         ' your business.'
                       ]
                     }),
-                    (0, o.jsx)(p.CardIcon, {})
+                    (0, o.jsx)(g.CardIcon, {})
                   ]
                 })
               })
@@ -152,42 +152,15 @@
         });
       };
     },
-    4868: function (e, t, n) {
-      n.r(t),
-        n.d(t, {
-          Redirect: function () {
-            return r;
-          }
-        });
-      var o = n(7437),
-        i = n(4033);
-      let r = () => {
-        let e = (0, i.usePathname)();
-        return (
-          e
-            .toLowerCase()
-            .split('/')
-            .some((e) => 'app' == e || 'auth' == e) &&
-            ('www.aladdinmiles.com' == window.location.host
-              ? window.location.replace('aladdinmiles:/'.concat(e))
-              : 'staging.aladdinmiles.com' == window.location.host
-              ? window.location.replace('com.aladdinmiles.staging:/'.concat(e))
-              : (console.log('path for here'),
-                window.location.replace(
-                  'com.aladdinmiles.amatest:/'.concat(e)
-                ))),
-          (0, o.jsx)(o.Fragment, {})
-        );
-      };
-    },
     431: function (e, t, n) {
+      'use strict';
       n.r(t),
         n.d(t, {
           AppDownload: function () {
-            return _;
+            return E;
           },
           AppDownloadArea: function () {
-            return M;
+            return R;
           },
           Arrow: function () {
             return en;
@@ -196,10 +169,10 @@
             return X;
           },
           BlueBackground: function () {
-            return E;
+            return V;
           },
           ButtonContainer: function () {
-            return H;
+            return A;
           },
           ChildrenContainer: function () {
             return S;
@@ -211,7 +184,7 @@
             return Z;
           },
           ContentView: function () {
-            return C;
+            return j;
           },
           DownloadContent: function () {
             return q;
@@ -223,31 +196,31 @@
             return N;
           },
           HeroSection: function () {
-            return b;
+            return C;
           },
           Line: function () {
             return I;
           },
           MainView: function () {
-            return k;
+            return b;
           },
           ManText: function () {
-            return R;
+            return M;
           },
           MultiStyleText: function () {
-            return z;
+            return F;
           },
           Page404: function () {
             return eo;
           },
           Partners: function () {
-            return J;
+            return P;
           },
           PinkBackground: function () {
             return Q;
           },
           QRCodeBackground: function () {
-            return A;
+            return _;
           },
           RaleBase: function () {
             return L;
@@ -277,10 +250,10 @@
             return U;
           },
           StoreButtons: function () {
-            return P;
+            return H;
           },
           StyledQRCode: function () {
-            return F;
+            return z;
           },
           TextContentArea: function () {
             return B;
@@ -289,7 +262,7 @@
             return T;
           },
           Trusted: function () {
-            return V;
+            return J;
           },
           WhiteHalf: function () {
             return W;
@@ -300,25 +273,25 @@
         r = n.n(i),
         a = n(7945),
         c = n.n(a),
-        l = n(7676),
-        s = n.n(l),
+        s = n(7676),
+        l = n.n(s),
         d = n(2821),
         u = n.n(d),
         f = n(7247),
         h = n(9538),
-        g = n(8600),
-        p = n(6691),
-        m = n.n(p),
-        x = n(1396),
-        w = n.n(x),
-        j = n(7747);
-      let k = g.Z.div({
+        p = n(8600),
+        g = n(6691),
+        x = n.n(g),
+        m = n(1396),
+        w = n.n(m),
+        k = n(7747);
+      let b = p.Z.div({
           width: '100%',
           minHeight: '100%',
           backgroundColor: '#ffffff'
         }),
-        C = g.Z.div({ width: '100%' }),
-        b = g.Z.section({
+        j = p.Z.div({ width: '100%' }),
+        C = p.Z.section({
           height: (0, f.Wk)(824),
           width: '100%',
           display: 'flex',
@@ -329,7 +302,7 @@
             height: (0, f.$s)(868)
           }
         }),
-        v = (0, h.F4)({
+        y = (0, h.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-90), ' , 0px)')
           },
@@ -340,7 +313,7 @@
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-90), ' , 0px)')
           }
         }),
-        y = (0, h.F4)({
+        v = (0, h.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-40), ' , 0px)')
           },
@@ -351,7 +324,7 @@
             transform: 'translate3d(0px, '.concat((0, f.Wk)(-40), ' , 0px)')
           }
         }),
-        D = g.Z.div({
+        D = p.Z.div({
           height: (0, f.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -375,12 +348,12 @@
             }
           }
         }),
-        W = g.Z.div({
+        W = p.Z.div({
           height: (0, f.Wk)(824),
           width: '50%',
           '@media(max-width: 480px)': { width: '100%' }
         }),
-        z = g.Z.h1([
+        F = p.Z.h1([
           r().style,
           {
             fontSize: (0, f.JB)(44),
@@ -392,14 +365,14 @@
             }
           }
         ]),
-        F = (0, g.Z)(j.Z)({
+        z = (0, p.Z)(k.Z)({
           width: (0, f.so)(78.4),
           height: (0, f.so)(78.4),
           alignSelf: 'center'
         }),
-        Z = g.Z.span({ color: '#FF1453' }),
-        S = g.Z.div({ position: 'relative', width: '100%' }),
-        B = g.Z.div({
+        Z = p.Z.span({ color: '#FF1453' }),
+        S = p.Z.div({ position: 'relative', width: '100%' }),
+        B = p.Z.div({
           margin: ''
             .concat((0, f.Wk)(168), ' ')
             .concat((0, f.so)(24), ' ')
@@ -409,7 +382,7 @@
             margin: ''.concat((0, f.$s)(40), ' ').concat((0, f.CD)(24))
           }
         }),
-        T = g.Z.div({ display: 'inline-block' }),
+        T = p.Z.div({ display: 'inline-block' }),
         I = () =>
           (0, o.jsx)('svg', {
             width: (0, f.so)(154),
@@ -428,11 +401,11 @@
         L = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
-            className: ''.concat(s().className, ' ').concat(t),
+            className: ''.concat(l().className, ' ').concat(t),
             children: n
           });
         },
-        R = g.Z.p([
+        M = p.Z.p([
           c().style,
           {
             fontSize: (0, f.JB)(16),
@@ -442,7 +415,7 @@
           },
           (0, f.wz)({ fontSize: (0, f.jo)(12) })
         ]),
-        $ = (0, g.Z)(L)({
+        $ = (0, p.Z)(L)({
           color: '#515665',
           fontSize: (0, f.JB)(22),
           lineHeight: '160%',
@@ -451,7 +424,7 @@
             width: (0, f.CD)(366)
           }
         }),
-        M = g.Z.div([
+        R = p.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -464,7 +437,7 @@
             '& .scanText': { display: 'none' }
           })
         ]),
-        A = g.Z.div([
+        _ = p.Z.div([
           {
             width: (0, f.so)(140),
             height: (0, f.so)(140),
@@ -476,26 +449,26 @@
           },
           (0, f.wz)({ display: 'none' })
         ]),
-        H = g.Z.div({
+        A = p.Z.div({
           display: 'flex',
           flexDirection: 'row',
           gap: (0, f.so)(10),
           alignItems: 'center'
         }),
-        P = (0, g.Z)(w())({}),
-        N = (0, g.Z)(m())([
+        H = (0, p.Z)(w())({}),
+        N = (0, p.Z)(x())([
           {
             width: (0, f.so)(600),
             height: (0, f.Wk)(600),
             objectFit: 'contain',
             alignSelf: 'center',
             objectPosition: 'center',
-            animation: ''.concat(v, ' 5s ease infinite'),
-            ...(0, f.wz)({ animation: ''.concat(y, ' 5s ease infinite') })
+            animation: ''.concat(y, ' 5s ease infinite'),
+            ...(0, f.wz)({ animation: ''.concat(v, ' 5s ease infinite') })
           },
           (0, f.wz)({ width: (0, f.CD)(414), height: (0, f.$s)(414) })
         ]),
-        J = g.Z.div([
+        P = p.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -504,7 +477,7 @@
           },
           (0, f.wz)({ '& img': {} })
         ]),
-        V = g.Z.div([
+        J = p.Z.div([
           {
             margin: ''
               .concat((0, f.Wk)(0), ' ')
@@ -517,7 +490,7 @@
             display: 'none'
           })
         ]),
-        E = g.Z.section({
+        V = p.Z.section({
           padding: ''.concat((0, f.Wk)(100), ' ').concat((0, f.so)(80)),
           width: '100%',
           display: 'flex',
@@ -528,7 +501,7 @@
             padding: ''.concat((0, f.$s)(100), ' ').concat((0, f.CD)(24))
           })
         }),
-        _ = g.Z.div({
+        E = p.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
           width: (0, f.so)(1280),
           height: (0, f.Wk)(480),
@@ -541,7 +514,7 @@
           backgroundPosition: 'center',
           ...(0, f.wz)({ width: (0, f.CD)(414), backgroundSize: 'scale-down' })
         }),
-        q = g.Z.div({
+        q = p.Z.div({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -554,12 +527,12 @@
           borderBottomRightRadius: (0, f.so)(178),
           ...(0, f.wz)({ gap: (0, f.$s)(24), width: (0, f.CD)(414) })
         }),
-        O = (0, g.Z)($)([
+        O = (0, p.Z)($)([
           u().style,
           { color: '#ffffff', fontSize: (0, f.JB)(32), textAlign: 'center' },
           (0, f.wz)({ minWidth: (0, f.CD)(351), fontSize: (0, f.jo)(24) })
         ]),
-        G = (0, g.Z)($)({
+        G = (0, p.Z)($)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, f.so)(440),
@@ -570,7 +543,7 @@
             fontSize: (0, f.jo)(16)
           })
         }),
-        Q = g.Z.section({
+        Q = p.Z.section({
           backgroundColor: '#FFF5F8',
           borderTopRightRadius: (0, f.so)(160),
           width: '100%',
@@ -581,7 +554,7 @@
             borderTopRightRadius: (0, f.CD)(0)
           })
         }),
-        K = g.Z.div({
+        K = p.Z.div({
           width: '50%',
           padding: ''
             .concat((0, f.Wk)(162), ' ')
@@ -595,7 +568,7 @@
             padding: ''.concat((0, f.$s)(40), ' ').concat((0, f.CD)(24))
           })
         }),
-        U = g.Z.div({
+        U = p.Z.div({
           width: '50%',
           padding: ''.concat((0, f.Wk)(92), ' ').concat((0, f.so)(80)),
           display: 'flex',
@@ -621,7 +594,7 @@
             }
           })
         }),
-        X = g.Z.div({
+        X = p.Z.div({
           borderRadius: (0, f.so)(560),
           backgroundColor: '#FF80A1',
           backdropFilter: 'blur('.concat((0, f.so)(43.75), ')'),
@@ -632,7 +605,7 @@
           justifyContent: 'center',
           ...(0, f.wz)({ width: (0, f.$s)(370), height: (0, f.$s)(370) })
         }),
-        Y = g.Z.div({
+        Y = p.Z.div({
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'row',
@@ -647,8 +620,8 @@
             '& img': { width: (0, f.CD)(16), height: (0, f.$s)(24) }
           })
         }),
-        ee = (0, g.Z)($)([u().style]),
-        et = (0, g.Z)(z)({
+        ee = (0, p.Z)($)([u().style]),
+        et = (0, p.Z)(F)({
           fontSize: (0, f.JB)(32),
           ...(0, f.wz)({ fontSize: (0, f.jo)(24), width: (0, f.CD)(366) })
         }),
@@ -664,7 +637,7 @@
               fill: 'white'
             })
           }),
-        eo = g.Z.div({
+        eo = p.Z.div({
           height: (0, f.Wk)(824),
           justifyContent: 'space-evenly',
           alignItems: 'center',
@@ -680,7 +653,7 @@
             '& img': { height: (0, f.Wk)(317), width: (0, f.so)(300) }
           })
         }),
-        ei = g.Z.div({
+        ei = p.Z.div({
           paddingLeft: (0, f.so)(100),
           display: 'flex',
           justifyContent: 'center',
@@ -695,37 +668,38 @@
         });
     },
     3141: function (e, t, n) {
+      'use strict';
       n.r(t),
         n.d(t, {
           BaseHeader: function () {
-            return x;
-          },
-          BaseText: function () {
             return m;
           },
-          Content: function () {
-            return p;
+          BaseText: function () {
+            return x;
           },
-          FooterBar: function () {
+          Content: function () {
             return g;
           },
-          FooterHeader: function () {
-            return j;
+          FooterBar: function () {
+            return p;
           },
-          FooterLink: function () {
+          FooterHeader: function () {
             return k;
           },
+          FooterLink: function () {
+            return b;
+          },
           FooterSection: function () {
-            return C;
+            return j;
           },
           FooterText: function () {
             return w;
           },
           Socials: function () {
-            return v;
+            return y;
           },
           StyledImageText: function () {
-            return b;
+            return C;
           }
         });
       var o = n(7437),
@@ -733,88 +707,89 @@
         r = n.n(i),
         a = n(3833),
         c = n.n(a),
-        l = n(7247),
-        s = n(8600),
+        s = n(7247),
+        l = n(8600),
         d = n(6691),
         u = n.n(d),
         f = n(1396),
         h = n.n(f);
-      let g = s.Z.footer({
+      let p = l.Z.footer({
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: ''.concat((0, l.Wk)(74), ' ').concat((0, l.so)(80)),
+          padding: ''.concat((0, s.Wk)(74), ' ').concat((0, s.so)(80)),
           background: '#002466',
-          ...(0, l.wz)({
-            padding: ''.concat((0, l.$s)(24), ' ').concat((0, l.CD)(24)),
+          ...(0, s.wz)({
+            padding: ''.concat((0, s.$s)(24), ' ').concat((0, s.CD)(24)),
             flexDirection: 'column-reverse',
             alignItems: 'flex-start',
-            gap: (0, l.$s)(56)
+            gap: (0, s.$s)(56)
           })
         }),
-        p = s.Z.div({
+        g = l.Z.div({
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: ''
-            .concat((0, l.so)(209), ' ')
-            .concat((0, l.so)(109), ' ')
-            .concat((0, l.so)(109)),
-          ...(0, l.wz)({ flexDirection: 'column' })
+            .concat((0, s.so)(209), ' ')
+            .concat((0, s.so)(109), ' ')
+            .concat((0, s.so)(109)),
+          ...(0, s.wz)({ flexDirection: 'column' })
         }),
-        m = (e) => {
+        x = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(r().className, ' ').concat(t),
             children: n
           });
         },
-        x = (e) => {
+        m = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(c().className, ' ').concat(t),
             children: n
           });
         },
-        w = (0, s.Z)(m)({
-          fontSize: (0, l.JB)(16),
+        w = (0, l.Z)(x)({
+          fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
-          ...(0, l.wz)({ fontSize: (0, l.jo)(16) })
+          ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        j = (0, s.Z)(x)({
-          fontSize: (0, l.JB)(16),
+        k = (0, l.Z)(m)({
+          fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
-          ...(0, l.wz)({ fontSize: (0, l.jo)(16) })
+          ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        k = w.withComponent(h()),
-        C = s.Z.div({
-          maxWidth: (0, l.so)(280),
+        b = w.withComponent(h()),
+        j = l.Z.div({
+          maxWidth: (0, s.so)(280),
           display: 'flex',
           flexDirection: 'column',
-          gap: (0, l.Wk)(16),
-          ...(0, l.wz)({ maxWidth: (0, l.CD)(270) })
+          gap: (0, s.Wk)(16),
+          ...(0, s.wz)({ maxWidth: (0, s.CD)(270) })
         }),
-        b = (0, s.Z)(u())({
-          width: (0, l.so)(214),
-          height: (0, l.Wk)(48),
+        C = (0, l.Z)(u())({
+          width: (0, s.so)(214),
+          height: (0, s.Wk)(48),
           objectFit: 'cover',
-          ...(0, l.wz)({ width: (0, l.CD)(178.333), height: (0, l.$s)(40) })
+          ...(0, s.wz)({ width: (0, s.CD)(178.333), height: (0, s.$s)(40) })
         }),
-        v = s.Z.div({
+        y = l.Z.div({
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
-          gap: (0, l.so)(16),
-          paddingTop: (0, l.Wk)(8),
-          ...(0, l.wz)({ gap: (0, l.CD)(48) })
+          gap: (0, s.so)(16),
+          paddingTop: (0, s.Wk)(8),
+          ...(0, s.wz)({ gap: (0, s.CD)(48) })
         });
     },
     8430: function (e, t, n) {
+      'use strict';
       n.r(t),
         n.d(t, {
           TextInput: function () {
@@ -841,6 +816,7 @@
       });
     },
     6773: function (e, t, n) {
+      'use strict';
       function o(e) {
         let { src: t, width: n, quality: o } = e;
         return ''
@@ -856,6 +832,7 @@
         });
     },
     4019: function (e, t, n) {
+      'use strict';
       n.r(t),
         n.d(t, {
           CloseIcon: function () {
@@ -870,8 +847,8 @@
         r = n.n(i),
         a = n(2265),
         c = n(750),
-        l = n(7746);
-      let s = () =>
+        s = n(7746);
+      let l = () =>
           (0, o.jsx)('svg', {
             xmlns: 'http://www.w3.org/2000/svg',
             width: '24',
@@ -903,12 +880,12 @@
           }),
         u = () => {
           let [e, t] = (0, a.useState)(!1);
-          return (0, o.jsxs)(l.MobileWrapper, {
+          return (0, o.jsxs)(s.MobileWrapper, {
             children: [
-              (0, o.jsxs)(l.NavBar, {
+              (0, o.jsxs)(s.NavBar, {
                 id: 'mobile',
                 children: [
-                  (0, o.jsx)(l.LogoArea, {
+                  (0, o.jsx)(s.LogoArea, {
                     href: '/',
                     children: (0, o.jsx)(r(), {
                       className: 'actualLogo',
@@ -918,34 +895,34 @@
                       height: 28
                     })
                   }),
-                  (0, o.jsx)(l.MenuAction, {
+                  (0, o.jsx)(s.MenuAction, {
                     onClick: () => t((e) => !e),
                     'aria-label': 'toogle-navigation',
-                    children: e ? (0, o.jsx)(d, {}) : (0, o.jsx)(s, {})
+                    children: e ? (0, o.jsx)(d, {}) : (0, o.jsx)(l, {})
                   })
                 ]
               }),
               e &&
-                (0, o.jsxs)(l.DropDownView, {
+                (0, o.jsxs)(s.DropDownView, {
                   children: [
-                    (0, o.jsx)(l.MobileLink, { href: '/', children: 'Home' }),
-                    (0, o.jsx)(l.MobileLink, {
+                    (0, o.jsx)(s.MobileLink, { href: '/', children: 'Home' }),
+                    (0, o.jsx)(s.MobileLink, {
                       href: '/about',
                       children: 'About us'
                     }),
-                    (0, o.jsx)(l.MobileLink, {
+                    (0, o.jsx)(s.MobileLink, {
                       href: '/merchant',
                       children: 'Become a merchant'
                     }),
-                    (0, o.jsx)(l.MobileLink, {
+                    (0, o.jsx)(s.MobileLink, {
                       href: '/privacy-policy',
                       children: 'Privacy policy'
                     }),
-                    (0, o.jsx)(l.MobileLink, {
+                    (0, o.jsx)(s.MobileLink, {
                       href: '/terms-conditions',
                       children: 'Terms and conditions'
                     }),
-                    (0, o.jsx)(l.MobileLink, {
+                    (0, o.jsx)(s.MobileLink, {
                       href: '/merchant-tc',
                       children: 'Merchant terms and conditions'
                     }),
@@ -960,6 +937,7 @@
         };
     },
     7746: function (e, t, n) {
+      'use strict';
       n.r(t),
         n.d(t, {
           DropDownView: function () {
@@ -972,16 +950,16 @@
             return f;
           },
           MobileLink: function () {
-            return g;
+            return p;
           },
           MobileWrapper: function () {
             return u;
           },
           NavBar: function () {
-            return s;
+            return l;
           },
           Wrapper: function () {
-            return l;
+            return s;
           }
         });
       var o = n(431),
@@ -989,7 +967,7 @@
         r = n(8600),
         a = n(1396),
         c = n.n(a);
-      let l = r.Z.div({
+      let s = r.Z.div({
           width: '100%',
           '& #mobile': { display: 'none' },
           ...(0, i.wz)({
@@ -997,7 +975,7 @@
             '& #large': { display: 'none' }
           })
         }),
-        s = r.Z.div({
+        l = r.Z.div({
           width: '100%',
           maxWidth: '100%',
           display: 'flex',
@@ -1057,9 +1035,10 @@
           flexDirection: 'column',
           gap: (0, i.$s)(40)
         }),
-        g = (0, r.Z)(o.RaleText.withComponent(c()))({ width: (0, i.CD)(158) });
+        p = (0, r.Z)(o.RaleText.withComponent(c()))({ width: (0, i.CD)(158) });
     },
     7247: function (e, t, n) {
+      'use strict';
       n.d(t, {
         $s: function () {
           return a;
@@ -1074,13 +1053,13 @@
           return i;
         },
         jo: function () {
-          return l;
+          return s;
         },
         so: function () {
           return o;
         },
         wz: function () {
-          return s;
+          return l;
         }
       });
       let o = function (e) {
@@ -1100,8 +1079,31 @@
         r = (e) => o(e, 414),
         a = (e) => i(e, 740),
         c = (e, t) => o(e, t),
-        l = (e) => o(e, 414),
-        s = (e) => ({ '@media(max-width: 480px)': e });
+        s = (e) => o(e, 414),
+        l = (e) => ({ '@media(max-width: 480px)': e });
+    },
+    3192: function (e) {
+      e.exports = {
+        style: {
+          fontFamily: "'__Manrope_30f681', '__Manrope_Fallback_30f681'",
+          fontWeight: 400,
+          fontStyle: 'normal'
+        },
+        className: '__className_30f681'
+      };
+    },
+    3833: function (e) {
+      e.exports = {
+        style: {
+          fontFamily: "'__Manrope_90b4c2', '__Manrope_Fallback_90b4c2'",
+          fontWeight: 600,
+          fontStyle: 'normal'
+        },
+        className: '__className_90b4c2'
+      };
+    },
+    4033: function (e, t, n) {
+      e.exports = n(8165);
     }
   }
 ]);
