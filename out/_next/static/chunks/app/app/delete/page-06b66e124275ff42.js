@@ -53,11 +53,7 @@
                 e.append('password', t.password);
               let n = await fetch(
                   'https://ambe.aladdinmiles.com/api/v1/login/access-token',
-                  {
-                    headers: { 'Content-Type': 'multipart/form-data' },
-                    body: e,
-                    method: 'POST'
-                  }
+                  { body: e, method: 'POST' }
                 ),
                 o = await n.json();
               if (n.status >= 400) throw o;
