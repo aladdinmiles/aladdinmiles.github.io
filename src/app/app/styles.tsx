@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/components/buttons';
+import { Button, NoLinkButton, OutlinedButton } from '@/components/buttons';
 import { TextInput } from '@/components/inputs/textInput';
 import {
   fontSize,
@@ -547,13 +547,15 @@ export const DeleteView = styled.section({
   backgroundColor: '#f9f9f9',
   padding: `${heightPixel(50)} 0`,
   ...mobileStyle({
-    width: mobileWidthPixel(720),
-    height: mobileHeightPixel(824)
+    width: '100%',
+    height: '100%',
+    padding: `0`
   })
 });
 
 export const DeleteCard = styled.div({
   display: 'flex',
+  flexDirection: 'column',
   boxShadow: `rgba(0, 0, 0, 0.24) 0px ${widthPixel(3)} ${heightPixel(8)}`,
   borderRadius: widthPixel(16)
 });
@@ -569,9 +571,9 @@ export const LeftCard = styled.div(({ theme }) => ({
   padding: `${heightPixel(32)} ${widthPixel(32)}`,
   justifyContent: 'center',
   ...mobileStyle({
-    width: mobileWidthPixel(400),
-    borderTopLeftRadius: mobileWidthPixel(16),
-    borderBottomLeftRadius: mobileWidthPixel(16)
+    width: '100%',
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0
   })
 }));
 
@@ -587,10 +589,10 @@ export const RightCard = styled.form(({ theme }) => ({
   padding: `${heightPixel(32)} ${widthPixel(32)}`,
   justifyContent: 'center',
   ...mobileStyle({
-    width: mobileWidthPixel(400),
-    borderTopLeftRadius: mobileWidthPixel(16),
-    borderBottomLeftRadius: mobileWidthPixel(16),
-    minHeight: mobileHeightPixel(500)
+    width: '100%',
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+    padding: `${mobileHeightPixel(32)} ${mobileWidthPixel(32)}`
   })
 }));
 
@@ -619,12 +621,29 @@ export const DeleteSmallText = styled.p([
 export const Input = styled(TextInput)({
   width: widthPixel(490),
   ...mobileStyle({
-    width: mobileWidthPixel(400)
+    width: '100%'
   })
 });
 
 export const Actions = styled(SB)({
-  marginTop: heightPixel(20)
+  marginTop: heightPixel(20),
+  ...mobileStyle({
+    flexDirection: 'column-reverse',
+    rowGap: mobileHeightPixel(15)
+  })
 });
 
 export const Checkbox = styled.input({});
+
+export const DeleteButton = styled(NoLinkButton)(
+  mobileStyle({
+    width: '100%'
+  })
+);
+
+export const CancelButton = styled(OutlinedButton)(
+  mobileStyle({
+    width: '100%',
+    border: 0
+  })
+);

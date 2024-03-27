@@ -4,7 +4,9 @@ import validator from 'validator';
 import React, { useState } from 'react';
 import {
   Actions,
+  CancelButton,
   Checkbox,
+  DeleteButton,
   DeleteCard,
   DeleteManText,
   DeleteSmallText,
@@ -129,7 +131,7 @@ export default (() => {
             <Label>Phone number / Email</Label>
             <Input
               name="username"
-              placeholder="+234800000000"
+              placeholder="e.g +234800000000"
               onChange={handleChange}
             />
           </InputWrapper>
@@ -155,8 +157,8 @@ export default (() => {
             </Label>
           </InputWrapper>
           <Actions>
-            <OutlinedButton href="/">Cancel</OutlinedButton>
-            <NoLinkButton disabled={isLoading}>Delete Account</NoLinkButton>
+            <CancelButton href="/">Cancel</CancelButton>
+            <DeleteButton disabled={isLoading}>Delete Account</DeleteButton>
           </Actions>
         </RightCard>
       </DeleteCard>
