@@ -53,16 +53,15 @@
                 e.append('password', t.password);
               let n = await fetch(
                   'https://ambe.aladdinmiles.com/api/v1/login/access-token',
-                  {
-                    headers: {
-                      'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: e,
-                    method: 'POST'
-                  }
+                  { body: e, method: 'POST' }
                 ),
                 o = await n.json();
+              if (n.status >= 400) throw o;
               console.log(o),
+                await fetch('https://ambe.aladdinmiles.com/api/v1/users/me', {
+                  headers: { Authorization: 'Bearer ' + o.access_token },
+                  method: 'DELETE'
+                }),
                 (0, d.toast)('Account Deleted!', { type: 'success' });
             } catch (t) {
               console.log(t),
@@ -161,7 +160,7 @@
             return O;
           },
           AppDownloadArea: function () {
-            return N;
+            return A;
           },
           Arrow: function () {
             return to;
@@ -170,7 +169,7 @@
             return X;
           },
           BlueBackground: function () {
-            return E;
+            return V;
           },
           ButtonContainer: function () {
             return P;
@@ -212,7 +211,7 @@
             return tc;
           },
           HeroImage: function () {
-            return M;
+            return E;
           },
           HeroSection: function () {
             return D;
@@ -242,13 +241,13 @@
             return ti;
           },
           Partners: function () {
-            return J;
+            return M;
           },
           PinkBackground: function () {
             return Y;
           },
           QRCodeBackground: function () {
-            return A;
+            return N;
           },
           RaleBase: function () {
             return I;
@@ -293,7 +292,7 @@
             return T;
           },
           Trusted: function () {
-            return V;
+            return J;
           },
           View: function () {
             return ta;
@@ -460,7 +459,7 @@
             width: (0, h.CD)(366)
           }
         }),
-        N = g.Z.div([
+        A = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -473,7 +472,7 @@
             '& .scanText': { display: 'none' }
           })
         ]),
-        A = g.Z.div([
+        N = g.Z.div([
           {
             width: (0, h.so)(140),
             height: (0, h.so)(140),
@@ -493,7 +492,7 @@
           marginTop: (0, h.Wk)(64)
         }),
         H = (0, g.Z)(y())({}),
-        M = (0, g.Z)(m())([
+        E = (0, g.Z)(m())([
           {
             width: (0, h.so)(600),
             height: (0, h.Wk)(600),
@@ -505,7 +504,7 @@
           },
           (0, h.wz)({ width: (0, h.CD)(414), height: (0, h.$s)(414) })
         ]),
-        J = g.Z.div([
+        M = g.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -514,7 +513,7 @@
           },
           (0, h.wz)({ '& img': {} })
         ]),
-        V = g.Z.div([
+        J = g.Z.div([
           {
             margin: ''
               .concat((0, h.Wk)(0), ' ')
@@ -527,7 +526,7 @@
             display: 'none'
           })
         ]),
-        E = g.Z.section({
+        V = g.Z.section({
           padding: ''.concat((0, h.Wk)(100), ' ').concat((0, h.so)(80)),
           width: '100%',
           display: 'flex',
