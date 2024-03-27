@@ -21,12 +21,12 @@
         let [t, e] = (0, a.useState)({ password: '', username: '' }),
           [n, i] = a.useState(!1),
           [u, h] = (0, a.useState)(!1),
-          p = (t) => {
+          g = (t) => {
             let n = t.target.name,
               o = t.target.value;
             e((t) => ({ ...t, [n]: o }));
           },
-          g = async (e) => {
+          p = async (e) => {
             var n, o;
             e.preventDefault(), h(!0);
             let i =
@@ -52,16 +52,19 @@
               e.append('username', t.username),
                 e.append('password', t.password);
               let n = await fetch(
-                  'https://ambe.aladdinmiles.com/api/v1/login/access-token',
+                  'https://staging.ambe.aladdinmiles.com/api/v1/login/access-token',
                   { body: e, method: 'POST' }
                 ),
                 o = await n.json();
               if (n.status >= 400) throw o;
               console.log(o),
-                await fetch('https://ambe.aladdinmiles.com/api/v1/users/me', {
-                  headers: { Authorization: 'Bearer ' + o.access_token },
-                  method: 'DELETE'
-                }),
+                await fetch(
+                  'https://staging.ambe.aladdinmiles.com/api/v1/users/me',
+                  {
+                    headers: { Authorization: 'Bearer ' + o.access_token },
+                    method: 'DELETE'
+                  }
+                ),
                 (0, d.toast)('Account Deleted!', { type: 'success' });
             } catch (t) {
               console.log(t),
@@ -91,7 +94,7 @@
                 ]
               }),
               (0, o.jsxs)(c.RightCard, {
-                onSubmit: g,
+                onSubmit: p,
                 children: [
                   (0, o.jsxs)(s.InputWrapper, {
                     children: [
@@ -99,7 +102,7 @@
                       (0, o.jsx)(c.Input, {
                         name: 'username',
                         placeholder: '+234800000000',
-                        onChange: p
+                        onChange: g
                       })
                     ]
                   }),
@@ -108,7 +111,7 @@
                       (0, o.jsx)(s.Label, { children: 'Password' }),
                       (0, o.jsx)(c.Input, {
                         name: 'password',
-                        onChange: p,
+                        onChange: g,
                         type: n ? 'text' : 'password'
                       })
                     ]
@@ -196,7 +199,7 @@
             return th;
           },
           DeleteSmallText: function () {
-            return tp;
+            return tg;
           },
           DeleteView: function () {
             return tl;
@@ -217,7 +220,7 @@
             return D;
           },
           Input: function () {
-            return tg;
+            return tp;
           },
           Left: function () {
             return ts;
@@ -312,20 +315,20 @@
         u = n.n(d),
         f = n(8430),
         h = n(7247),
-        p = n(9538),
-        g = n(8600),
+        g = n(9538),
+        p = n(8600),
         w = n(6691),
         m = n.n(w),
         x = n(1396),
         y = n.n(x),
         k = n(7747);
-      let b = g.Z.div({
+      let b = p.Z.div({
           width: '100%',
           minHeight: '100%',
           backgroundColor: '#ffffff'
         }),
-        C = g.Z.div({ width: '100%' }),
-        D = g.Z.section({
+        C = p.Z.div({ width: '100%' }),
+        D = p.Z.section({
           height: (0, h.Wk)(824),
           width: '100%',
           display: 'flex',
@@ -336,7 +339,7 @@
             height: (0, h.$s)(868)
           }
         }),
-        j = (0, p.F4)({
+        j = (0, g.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, h.Wk)(-90), ' , 0px)')
           },
@@ -347,7 +350,7 @@
             transform: 'translate3d(0px, '.concat((0, h.Wk)(-90), ' , 0px)')
           }
         }),
-        F = (0, p.F4)({
+        F = (0, g.F4)({
           from: {
             transform: 'translate3d(0px, '.concat((0, h.Wk)(-40), ' , 0px)')
           },
@@ -358,7 +361,7 @@
             transform: 'translate3d(0px, '.concat((0, h.Wk)(-40), ' , 0px)')
           }
         }),
-        W = g.Z.div({
+        W = p.Z.div({
           height: (0, h.Wk)(824),
           width: '50%',
           background: '#FFF5F8',
@@ -382,12 +385,12 @@
             }
           }
         }),
-        v = g.Z.div({
+        v = p.Z.div({
           height: (0, h.Wk)(824),
           width: '50%',
           '@media(max-width: 480px)': { width: '100%' }
         }),
-        S = g.Z.h1([
+        S = p.Z.h1([
           r().style,
           {
             fontSize: (0, h.JB)(44),
@@ -399,14 +402,14 @@
             }
           }
         ]),
-        Z = (0, g.Z)(k.Z)({
+        Z = (0, p.Z)(k.Z)({
           width: (0, h.so)(78.4),
           height: (0, h.so)(78.4),
           alignSelf: 'center'
         }),
-        z = g.Z.span({ color: '#FF1453' }),
-        _ = g.Z.div({ position: 'relative', width: '100%' }),
-        R = g.Z.div({
+        z = p.Z.span({ color: '#FF1453' }),
+        _ = p.Z.div({ position: 'relative', width: '100%' }),
+        R = p.Z.div({
           margin: ''
             .concat((0, h.Wk)(168), ' ')
             .concat((0, h.so)(24), ' ')
@@ -416,7 +419,7 @@
             margin: ''.concat((0, h.$s)(40), ' ').concat((0, h.CD)(24))
           }
         }),
-        T = g.Z.div({ display: 'inline-block' }),
+        T = p.Z.div({ display: 'inline-block' }),
         B = () =>
           (0, o.jsx)('svg', {
             width: (0, h.so)(210),
@@ -439,7 +442,7 @@
             children: n
           });
         },
-        L = g.Z.p([
+        L = p.Z.p([
           c().style,
           {
             fontSize: (0, h.JB)(16),
@@ -449,7 +452,7 @@
           },
           (0, h.wz)({ fontSize: (0, h.jo)(12) })
         ]),
-        $ = (0, g.Z)(I)({
+        $ = (0, p.Z)(I)({
           color: '#515665',
           fontSize: (0, h.JB)(22),
           lineHeight: '160%',
@@ -459,7 +462,7 @@
             width: (0, h.CD)(366)
           }
         }),
-        A = g.Z.div([
+        A = p.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -472,7 +475,7 @@
             '& .scanText': { display: 'none' }
           })
         ]),
-        N = g.Z.div([
+        N = p.Z.div([
           {
             width: (0, h.so)(140),
             height: (0, h.so)(140),
@@ -484,15 +487,15 @@
           },
           (0, h.wz)({ display: 'none' })
         ]),
-        P = g.Z.div({
+        P = p.Z.div({
           display: 'flex',
           flexDirection: 'row',
           gap: (0, h.so)(10),
           alignItems: 'center',
           marginTop: (0, h.Wk)(64)
         }),
-        H = (0, g.Z)(y())({}),
-        E = (0, g.Z)(m())([
+        H = (0, p.Z)(y())({}),
+        E = (0, p.Z)(m())([
           {
             width: (0, h.so)(600),
             height: (0, h.Wk)(600),
@@ -504,7 +507,7 @@
           },
           (0, h.wz)({ width: (0, h.CD)(414), height: (0, h.$s)(414) })
         ]),
-        M = g.Z.div([
+        M = p.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -513,7 +516,7 @@
           },
           (0, h.wz)({ '& img': {} })
         ]),
-        J = g.Z.div([
+        J = p.Z.div([
           {
             margin: ''
               .concat((0, h.Wk)(0), ' ')
@@ -526,7 +529,7 @@
             display: 'none'
           })
         ]),
-        V = g.Z.section({
+        V = p.Z.section({
           padding: ''.concat((0, h.Wk)(100), ' ').concat((0, h.so)(80)),
           width: '100%',
           display: 'flex',
@@ -537,7 +540,7 @@
             padding: ''.concat((0, h.$s)(100), ' ').concat((0, h.CD)(24))
           })
         }),
-        O = g.Z.div({
+        O = p.Z.div({
           background: 'url(/images/dotBg.png), no-repeat',
           width: (0, h.so)(1280),
           height: (0, h.Wk)(480),
@@ -550,7 +553,7 @@
           backgroundPosition: 'center',
           ...(0, h.wz)({ width: (0, h.CD)(414), backgroundSize: 'scale-down' })
         }),
-        G = g.Z.div({
+        G = p.Z.div({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -563,12 +566,12 @@
           borderBottomRightRadius: (0, h.so)(178),
           ...(0, h.wz)({ gap: (0, h.$s)(24), width: (0, h.CD)(414) })
         }),
-        Q = (0, g.Z)($)([
+        Q = (0, p.Z)($)([
           u().style,
           { color: '#ffffff', fontSize: (0, h.JB)(32), textAlign: 'center' },
           (0, h.wz)({ minWidth: (0, h.CD)(351), fontSize: (0, h.jo)(24) })
         ]),
-        q = (0, g.Z)($)({
+        q = (0, p.Z)($)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, h.so)(440),
@@ -579,7 +582,7 @@
             fontSize: (0, h.jo)(16)
           })
         }),
-        Y = g.Z.section({
+        Y = p.Z.section({
           backgroundColor: '#FFF5F8',
           borderTopRightRadius: (0, h.so)(160),
           width: '100%',
@@ -590,7 +593,7 @@
             borderTopRightRadius: (0, h.CD)(0)
           })
         }),
-        K = g.Z.div({
+        K = p.Z.div({
           width: '50%',
           padding: ''
             .concat((0, h.Wk)(162), ' ')
@@ -604,7 +607,7 @@
             padding: ''.concat((0, h.$s)(40), ' ').concat((0, h.CD)(24))
           })
         }),
-        U = g.Z.div({
+        U = p.Z.div({
           width: '50%',
           padding: ''.concat((0, h.Wk)(92), ' ').concat((0, h.so)(80)),
           display: 'flex',
@@ -630,7 +633,7 @@
             }
           })
         }),
-        X = g.Z.div({
+        X = p.Z.div({
           borderRadius: (0, h.so)(560),
           backgroundColor: '#FF80A1',
           backdropFilter: 'blur('.concat((0, h.so)(43.75), ')'),
@@ -641,7 +644,7 @@
           justifyContent: 'center',
           ...(0, h.wz)({ width: (0, h.$s)(370), height: (0, h.$s)(370) })
         }),
-        tt = g.Z.div({
+        tt = p.Z.div({
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'row',
@@ -656,8 +659,8 @@
             '& img': { width: (0, h.CD)(16), height: (0, h.$s)(24) }
           })
         }),
-        te = (0, g.Z)($)([u().style]),
-        tn = (0, g.Z)(S)({
+        te = (0, p.Z)($)([u().style]),
+        tn = (0, p.Z)(S)({
           fontSize: (0, h.JB)(32),
           ...(0, h.wz)({ fontSize: (0, h.jo)(24), width: (0, h.CD)(366) })
         }),
@@ -673,7 +676,7 @@
               fill: 'white'
             })
           }),
-        ti = g.Z.div({
+        ti = p.Z.div({
           height: (0, h.Wk)(824),
           justifyContent: 'space-evenly',
           alignItems: 'center',
@@ -689,7 +692,7 @@
             '& img': { height: (0, h.Wk)(317), width: (0, h.so)(300) }
           })
         }),
-        tr = g.Z.div({
+        tr = p.Z.div({
           paddingLeft: (0, h.so)(100),
           display: 'flex',
           justifyContent: 'center',
@@ -702,7 +705,7 @@
             padding: ''.concat((0, h.Wk)(40), ' ').concat((0, h.so)(24))
           })
         }),
-        ta = g.Z.div({
+        ta = p.Z.div({
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -710,14 +713,14 @@
           alignItems: 'center',
           ...(0, h.wz)({ flexDirection: 'column', height: (0, h.$s)(824) })
         }),
-        tc = (0, g.Z)(m())({
+        tc = (0, p.Z)(m())({
           width: (0, h.so)(720),
           height: (0, h.Wk)(824),
           objectFit: 'contain',
           ...(0, h.wz)({ width: (0, h.CD)(720), height: (0, h.$s)(824) })
         }),
-        ts = g.Z.div({ paddingLeft: (0, h.so)(80) }),
-        tl = g.Z.section({
+        ts = p.Z.div({ paddingLeft: (0, h.so)(80) }),
+        tl = p.Z.section({
           display: 'flex',
           width: '100%',
           height: '100%',
@@ -727,14 +730,14 @@
           padding: ''.concat((0, h.Wk)(50), ' 0'),
           ...(0, h.wz)({ width: (0, h.CD)(720), height: (0, h.$s)(824) })
         }),
-        td = g.Z.div({
+        td = p.Z.div({
           display: 'flex',
           boxShadow: 'rgba(0, 0, 0, 0.24) 0px '
             .concat((0, h.so)(3), ' ')
             .concat((0, h.Wk)(8)),
           borderRadius: (0, h.so)(16)
         }),
-        tu = g.Z.div((t) => {
+        tu = p.Z.div((t) => {
           let { theme: e } = t;
           return {
             display: 'flex',
@@ -753,7 +756,7 @@
             })
           };
         }),
-        tf = g.Z.form((t) => {
+        tf = p.Z.form((t) => {
           let { theme: e } = t;
           return {
             display: 'flex',
@@ -774,22 +777,22 @@
             })
           };
         }),
-        th = g.Z.h2([
+        th = p.Z.h2([
           u().style,
           { fontSize: (0, h.JB)(22), color: '#ffffff' },
           (0, h.wz)({ fontSize: (0, h.jo)(16) })
         ]),
-        tp = g.Z.p([
+        tg = p.Z.p([
           c().style,
           { fontSize: (0, h.JB)(16), color: '#ffffff' },
           (0, h.wz)({ fontSize: (0, h.jo)(12) })
         ]),
-        tg = (0, g.Z)(f.TextInput)({
+        tp = (0, p.Z)(f.TextInput)({
           width: (0, h.so)(490),
           ...(0, h.wz)({ width: (0, h.CD)(400) })
         }),
-        tw = (0, g.Z)(tt)({ marginTop: (0, h.Wk)(20) }),
-        tm = g.Z.input({});
+        tw = (0, p.Z)(tt)({ marginTop: (0, h.Wk)(20) }),
+        tm = p.Z.input({});
     },
     5792: function (t) {
       t.exports = {
