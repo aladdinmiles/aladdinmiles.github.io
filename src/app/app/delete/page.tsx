@@ -83,7 +83,7 @@ export default (() => {
         'https://ambe.aladdinmiles.com/api/v1/login/access-token',
         {
           headers: {
-            'Content-Type': 'multipart/formdata'
+            'Content-Type': 'multipart/form-data'
           },
           body: newForm,
           method: 'POST'
