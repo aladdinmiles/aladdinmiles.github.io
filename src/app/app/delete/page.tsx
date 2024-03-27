@@ -82,22 +82,22 @@ export default (() => {
       const loggedIn = await fetch(
         'https://ambe.aladdinmiles.com/api/v1/login/access-token',
         {
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          },
           body: newForm,
           method: 'POST'
         }
       );
       const token = await loggedIn.json();
+      if (loggedIn.status >= 400) {
+        throw token;
+      }
       console.log(token);
 
-      // const res = await fetch('https://ambe.aladdinmiles.com/api/v1/users/me', {
-      //   headers: {
-      //     Authorization: 'Bearer '+token.access_token
-      //   },
-      //   method: 'DELETE'
-      // });
+      const res = await fetch('https://ambe.aladdinmiles.com/api/v1/users/me', {
+        headers: {
+          Authorization: 'Bearer ' + token.access_token
+        },
+        method: 'DELETE'
+      });
       toast('Account Deleted!', { type: 'success' });
     } catch (e: any) {
       console.log(e);
