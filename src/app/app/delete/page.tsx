@@ -82,9 +82,6 @@ export default (() => {
       const loggedIn = await fetch(
         'https://ambe.aladdinmiles.com/api/v1/login/access-token',
         {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          },
           body: newForm,
           method: 'POST'
         }
