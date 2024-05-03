@@ -347,5 +347,6 @@
   "reviewOrder": "Review Order",
   "continueShopping": "Continue Shopping",
   "paymentSuccessful": "Payment Successful",
-  "rewardText": "You have received a reward of %{miles} miles for this order."
+  "rewardText": "You have received a reward of %{miles} miles for this order.",
+  "paid": "Paid"
 }

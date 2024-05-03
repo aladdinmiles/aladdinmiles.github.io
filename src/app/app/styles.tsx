@@ -555,9 +555,12 @@ export const DeleteView = styled.section({
 
 export const DeleteCard = styled.div({
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   boxShadow: `rgba(0, 0, 0, 0.24) 0px ${widthPixel(3)} ${heightPixel(8)}`,
-  borderRadius: widthPixel(16)
+  borderRadius: widthPixel(16),
+  ...mobileStyle({
+    flexDirection: 'column'
+  })
 });
 
 export const LeftCard = styled.div(({ theme }) => ({
