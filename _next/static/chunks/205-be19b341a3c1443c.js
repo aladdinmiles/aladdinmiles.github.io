@@ -588,11 +588,12 @@
         }),
         tu = p.Z.div({
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           boxShadow: 'rgba(0, 0, 0, 0.24) 0px '
             .concat((0, g.so)(3), ' ')
             .concat((0, g.Wk)(8)),
-          borderRadius: (0, g.so)(16)
+          borderRadius: (0, g.so)(16),
+          ...(0, g.wz)({ flexDirection: 'column' })
         }),
         tf = p.Z.div((t) => {
           let { theme: n } = t;
