@@ -1,12 +1,12 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [801],
+  [667],
   {
     8974: function (e, t, n) {
       'use strict';
       n.r(t),
         n.d(t, {
           MerchantForm: function () {
-            return x;
+            return m;
           }
         });
       var o = n(7437),
@@ -22,7 +22,7 @@
         h = n.n(f),
         p = n(431),
         g = n(4914);
-      let x = () => {
+      let m = () => {
         let [e, t] = (0, d.useState)({}),
           n = (e) => {
             let n = e.target.name;
@@ -152,6 +152,34 @@
         });
       };
     },
+    4868: function (e, t, n) {
+      'use strict';
+      n.r(t),
+        n.d(t, {
+          Redirect: function () {
+            return r;
+          }
+        });
+      var o = n(7437),
+        i = n(4033);
+      let r = () => {
+        let e = (0, i.usePathname)();
+        return (
+          e
+            .toLowerCase()
+            .split('/')
+            .some((e) => 'app' == e || 'auth' == e) &&
+            ('www.aladdinmiles.com' == window.location.host
+              ? window.location.replace('aladdinmiles:/'.concat(e))
+              : 'staging.aladdinmiles.com' == window.location.host
+              ? window.location.replace('com.aladdinmiles.staging:/'.concat(e))
+              : window.location.replace(
+                  'com.aladdinmiles.amatest:/'.concat(e)
+                )),
+          (0, o.jsx)(o.Fragment, {})
+        );
+      };
+    },
     431: function (e, t, n) {
       'use strict';
       n.r(t),
@@ -160,7 +188,7 @@
             return E;
           },
           AppDownloadArea: function () {
-            return R;
+            return $;
           },
           Arrow: function () {
             return en;
@@ -226,7 +254,7 @@
             return L;
           },
           RaleText: function () {
-            return $;
+            return R;
           },
           RaleTextWhite: function () {
             return G;
@@ -281,9 +309,9 @@
         h = n(9538),
         p = n(8600),
         g = n(6691),
-        x = n.n(g),
-        m = n(1396),
-        w = n.n(m),
+        m = n.n(g),
+        x = n(1396),
+        w = n.n(x),
         k = n(7747);
       let b = p.Z.div({
           width: '100%',
@@ -415,7 +443,7 @@
           },
           (0, f.wz)({ fontSize: (0, f.jo)(12) })
         ]),
-        $ = (0, p.Z)(L)({
+        R = (0, p.Z)(L)({
           color: '#515665',
           fontSize: (0, f.JB)(22),
           lineHeight: '160%',
@@ -424,7 +452,7 @@
             width: (0, f.CD)(366)
           }
         }),
-        R = p.Z.div([
+        $ = p.Z.div([
           {
             display: 'flex',
             flexDirection: 'row',
@@ -456,7 +484,7 @@
           alignItems: 'center'
         }),
         H = (0, p.Z)(w())({}),
-        N = (0, p.Z)(x())([
+        N = (0, p.Z)(m())([
           {
             width: (0, f.so)(600),
             height: (0, f.Wk)(600),
@@ -527,12 +555,12 @@
           borderBottomRightRadius: (0, f.so)(178),
           ...(0, f.wz)({ gap: (0, f.$s)(24), width: (0, f.CD)(414) })
         }),
-        O = (0, p.Z)($)([
+        O = (0, p.Z)(R)([
           u().style,
           { color: '#ffffff', fontSize: (0, f.JB)(32), textAlign: 'center' },
           (0, f.wz)({ minWidth: (0, f.CD)(351), fontSize: (0, f.jo)(24) })
         ]),
-        G = (0, p.Z)($)({
+        G = (0, p.Z)(R)({
           color: '#ffffff',
           textAlign: 'center',
           width: (0, f.so)(440),
@@ -620,7 +648,7 @@
             '& img': { width: (0, f.CD)(16), height: (0, f.$s)(24) }
           })
         }),
-        ee = (0, p.Z)($)([u().style]),
+        ee = (0, p.Z)(R)([u().style]),
         et = (0, p.Z)(F)({
           fontSize: (0, f.JB)(32),
           ...(0, f.wz)({ fontSize: (0, f.jo)(24), width: (0, f.CD)(366) })
@@ -672,10 +700,10 @@
       n.r(t),
         n.d(t, {
           BaseHeader: function () {
-            return m;
+            return x;
           },
           BaseText: function () {
-            return x;
+            return m;
           },
           Content: function () {
             return g;
@@ -739,27 +767,27 @@
             .concat((0, s.so)(109)),
           ...(0, s.wz)({ flexDirection: 'column' })
         }),
-        x = (e) => {
+        m = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(r().className, ' ').concat(t),
             children: n
           });
         },
-        m = (e) => {
+        x = (e) => {
           let { className: t, children: n } = e;
           return (0, o.jsx)('p', {
             className: ''.concat(c().className, ' ').concat(t),
             children: n
           });
         },
-        w = (0, l.Z)(x)({
+        w = (0, l.Z)(m)({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
           ...(0, s.wz)({ fontSize: (0, s.jo)(16) })
         }),
-        k = (0, l.Z)(m)({
+        k = (0, l.Z)(x)({
           fontSize: (0, s.JB)(16),
           color: '#ffffff',
           display: 'block',
