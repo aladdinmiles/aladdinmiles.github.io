@@ -6,7 +6,7 @@
     "prepare": "husky install",
     "dev": "BUILD_PROFILE=development next dev",
     "build": "BUILD_PROFILE=production next build",
-    "start": "BUILD_PROFILE=production yarn build && BUILD_PROFILE=production next start",
+    "start": "BUILD_PROFILE=production next start",
     "lint": "next lint",
     "deploy": "BUILD_PROFILE=static next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
