@@ -6,9 +6,9 @@
     "prepare": "husky install",
     "dev": "BUILD_PROFILE=development next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "BUILD_PROFILE=production next start",
     "lint": "next lint",
-    "deploy": "BUILD_PROFILE=production next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "BUILD_PROFILE=static next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
