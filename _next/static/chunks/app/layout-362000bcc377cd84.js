@@ -1,9 +1,9 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [185],
   {
-    8522: function (e, n, t) {
-      Promise.resolve().then(t.t.bind(t, 8788, 23)),
-        Promise.resolve().then(t.t.bind(t, 2471, 23));
+    1730: function (e, n, t) {
+      Promise.resolve().then(t.t.bind(t, 2471, 23)),
+        Promise.resolve().then(t.t.bind(t, 8788, 23));
     },
     2471: function () {},
     8788: function (e) {
@@ -18,7 +18,7 @@
   },
   function (e) {
     e.O(0, [971, 596, 744], function () {
-      return e((e.s = 8522));
+      return e((e.s = 1730));
     }),
       (_N_E = e.O());
   }
