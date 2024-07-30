@@ -9,5 +9,6 @@ export function detectOS() {
     if (platform.indexOf('Android') !== -1) return 'Android';
     if (platform.indexOf('iPad') !== -1) return 'iPad';
   }
+  console.log('here here');
   return 'Unknown';
 }
