@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import StartContractForm from './form';
-import MerchantContainer from '../../container';
+import MerchantContainer from '../../components/container';
+import { steps } from '@/constants/merchantContract';
 
 export const metadata: Metadata = {
   title: 'Merchant Contract | Start Contract',
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 const StartContract: React.FC = () => {
   return (
     <MerchantContainer
+      steps={steps.salesFlow}
       activeStepTitle="AladdinMiles Percentage"
       content={<StartContractForm />}
     />

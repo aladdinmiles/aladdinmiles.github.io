@@ -4,13 +4,20 @@ import {
   HorizontalStepProgressTracker,
   VerticalStepProgressTracker
 } from '@/components/stepProgressTracker';
-import { steps } from '@/constants/merchantContract';
 import { Button } from '@headlessui/react';
 import Link from 'next/link';
 
-type Props = { activeStepTitle: string; content: React.ReactElement };
+type Props = {
+  steps: string[];
+  activeStepTitle: string;
+  content: React.ReactElement;
+};
 
-const MerchantContainer: React.FC<Props> = ({ activeStepTitle, content }) => {
+const MerchantContainer: React.FC<Props> = ({
+  steps,
+  activeStepTitle,
+  content
+}) => {
   return (
     <ContentView className="relative">
       {/* Sticky top */}
@@ -45,7 +52,7 @@ const MerchantContainer: React.FC<Props> = ({ activeStepTitle, content }) => {
           {/* Progress tracker */}
           <HorizontalStepProgressTracker
             className="hidden sm:block"
-            steps={steps.salesFlow}
+            steps={steps}
             content={content}
             activeStepTitle={activeStepTitle}
           />
@@ -54,7 +61,7 @@ const MerchantContainer: React.FC<Props> = ({ activeStepTitle, content }) => {
             {/* Progress tracker */}
             <VerticalStepProgressTracker
               className="flex sm:hidden"
-              steps={steps.salesFlow}
+              steps={steps}
               content={content}
               activeStepTitle={activeStepTitle}
             />

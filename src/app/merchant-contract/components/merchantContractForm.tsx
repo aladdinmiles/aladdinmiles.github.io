@@ -1,6 +1,6 @@
 'use client';
 import { useFormik } from 'formik';
-import { MerchantDetailsSchema } from '../../schema';
+import { MerchantDetailsSchema } from './schema';
 import Input from '@/components/inputs/input';
 import Image from 'next/image';
 import prependCountryCode from '@/utils/prependCountryCode';

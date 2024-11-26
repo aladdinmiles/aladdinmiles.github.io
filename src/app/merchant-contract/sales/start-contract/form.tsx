@@ -3,7 +3,7 @@ import { Button, Radio, RadioGroup } from '@headlessui/react';
 import { useFormik } from 'formik';
 import { MilesPercentage, milesPercentage } from '@/constants/merchantContract';
 import classNames from '@/utils/classNames';
-import { StartContractSchema } from '../../schema';
+import { StartContractSchema } from '../../components/schema';
 import Input from '@/components/inputs/input';
 import { useRouter } from 'next/navigation';
 import { IoArrowForward } from 'react-icons/io5';
