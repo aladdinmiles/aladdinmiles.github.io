@@ -1,6 +1,6 @@
 import classNames from '@/utils/classNames';
-import Image from 'next/image';
 import React from 'react';
+import { FiCheck } from 'react-icons/fi';
 
 type Props = {
   className?: string;
@@ -121,12 +121,7 @@ const ProgressTitle: React.FC<{
         )}
       >
         {isCompleted ? (
-          <Image
-            src="/images/check-mark.svg"
-            alt="Completed"
-            width={16}
-            height={16}
-          />
+          <FiCheck className="w-4 h-4 text-success-500" />
         ) : (
           <p className="text-xs sm:text-sm">{step}</p>
         )}

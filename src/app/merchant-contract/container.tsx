@@ -1,11 +1,12 @@
 import { ContentView } from '@/app/styles';
-import { OutlinedButton } from '@/components/buttons';
 import Image from 'next/image';
 import {
   HorizontalStepProgressTracker,
   VerticalStepProgressTracker
 } from '@/components/stepProgressTracker';
 import { steps } from '@/constants/merchantContract';
+import { Button } from '@headlessui/react';
+import Link from 'next/link';
 
 type Props = { activeStepTitle: string; content: React.ReactElement };
 
@@ -19,12 +20,14 @@ const MerchantContainer: React.FC<Props> = ({ activeStepTitle, content }) => {
           <p>Merchant Contract</p>
         </div>
 
-        <OutlinedButton
-          className="!w-auto !h-auto !px-4 !py-2 !hidden sm:!flex"
-          href="/contact"
-        >
-          Contact Support
-        </OutlinedButton>
+        <Link target="_blank" href="/contact">
+          <Button
+            className="rounded px-4 py-2 border border-primary-500 text-primary-500 hidden sm:flex"
+            type="button"
+          >
+            Contact Support
+          </Button>
+        </Link>
       </div>
 
       <div className="w-full flex flex-col items-center pb-20">

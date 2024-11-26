@@ -1,33 +1,40 @@
 'use client';
-import { Radio, RadioGroup } from '@headlessui/react';
+import { Button, Radio, RadioGroup } from '@headlessui/react';
 import { useFormik } from 'formik';
 import { MilesPercentage, milesPercentage } from '@/constants/merchantContract';
 import classNames from '@/utils/classNames';
 import { StartContractSchema } from '../../schema';
-import { NoLinkButton } from '@/components/buttons';
 import Input from '@/components/inputs/input';
+import { useRouter } from 'next/navigation';
+import { IoArrowForward } from 'react-icons/io5';
+import getSelectedMilesPercentage from '@/utils/getSelectedMilesPercentage';
 
 const StartContractForm: React.FC = () => {
+  const { push } = useRouter();
+
   const formik = useFormik<{
-    customMilesPercentage: MilesPercentage['value'];
+    commission: MilesPercentage['value'];
     selectedMilesPercentage: MilesPercentage;
   }>({
     enableReinitialize: true,
     initialValues: {
-      customMilesPercentage: 0,
-      selectedMilesPercentage: milesPercentage[0]
+      commission: getSelectedMilesPercentage()?.value || 0,
+      selectedMilesPercentage:
+        getSelectedMilesPercentage() || milesPercentage[0]
     },
     validationSchema: StartContractSchema,
     onSubmit: (values) => {
-      let payload = { percentage: values.selectedMilesPercentage.value / 100 };
+      let payload = values.selectedMilesPercentage;
 
       if (values.selectedMilesPercentage.id === 'others') {
         payload = {
-          percentage: values.customMilesPercentage / 100
+          ...values.selectedMilesPercentage,
+          value: values.commission
         };
       }
 
-      console.log('payload', payload);
+      localStorage.setItem('selectedMilesPercentage', JSON.stringify(payload));
+      push('/merchant-contract/sales/merchant-details');
     }
   });
 
@@ -81,18 +88,18 @@ const StartContractForm: React.FC = () => {
                     {percentage.id === 'others' ? (
                       <>
                         <Input
-                          id="customMilesPercentage"
-                          name="customMilesPercentage"
+                          id="commission"
+                          name="commission"
                           type="number"
                           label={percentage.description}
-                          value={formik.values.customMilesPercentage}
+                          value={formik.values.commission}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           isInvalid={
-                            formik.touched.customMilesPercentage &&
-                            Boolean(formik.errors.customMilesPercentage)
+                            formik.touched.commission &&
+                            Boolean(formik.errors.commission)
                           }
-                          errorMsg={formik.errors.customMilesPercentage}
+                          errorMsg={formik.errors.commission}
                           rightAffix={
                             <div className="h-full w-full flex items-center justify-center">
                               <p>%</p>
@@ -113,13 +120,14 @@ const StartContractForm: React.FC = () => {
         </RadioGroup>
 
         <div className="flex justify-end py-10">
-          <NoLinkButton
-            className="disabled:opacity-30 !h-auto !w-auto px-6 py-4 !rounded"
+          <Button
+            className="disabled:opacity-30 px-4 sm:px-6 py-2 sm:py-4 text-white bg-primary-500 hover:bg-primary-600 rounded-md flex items-center gap-1 sm:gap-2"
             disabled={isDisabled}
             type="submit"
           >
-            Save and Continue
-          </NoLinkButton>
+            Save and continue
+            <IoArrowForward className="w-4 sm:w-5 h-4 sm:h-5" />
+          </Button>
         </div>
       </div>
     </form>
