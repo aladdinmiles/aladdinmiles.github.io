@@ -40,7 +40,6 @@ const StartContractForm: React.FC = () => {
         formik.handleSubmit(e);
       }}
     >
-      <h2 className="text-xl pb-3">AladdinMiles Percentage</h2>
       <div className="px-0 sm:px-8">
         <RadioGroup
           value={formik.values.selectedMilesPercentage}

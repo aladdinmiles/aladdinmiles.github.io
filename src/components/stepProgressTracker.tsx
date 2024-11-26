@@ -1,4 +1,5 @@
 import classNames from '@/utils/classNames';
+import Image from 'next/image';
 import React from 'react';
 
 type Props = {
@@ -41,7 +42,10 @@ export const HorizontalStepProgressTracker: React.FC<Props> = ({
         })}
       </div>
 
-      <div className="p-4 sm:p-6 w-full">{content}</div>
+      <div className="p-4 sm:p-6 w-full">
+        <h2 className="text-xl pb-3">{activeStepTitle}</h2>
+        {content}
+      </div>
     </div>
   );
 };
@@ -68,16 +72,20 @@ export const VerticalStepProgressTracker: React.FC<Props> = ({
               title={step}
             />
 
-            {index < steps.length - 1 && (
-              <div className="h-full flex">
+            <div className="h-full flex">
+              {index < steps.length - 1 && (
                 <ProgressDivider
                   direction="vertical"
                   isCompleted={isCompleted}
                 />
-
-                <div className="p-4 pr-0 sm:p-6 w-full">{content}</div>
-              </div>
-            )}
+              )}
+              {isCurrentStep && (
+                <div className="p-4 pr-0 sm:p-6 w-full">
+                  <h2 className="text-xl pb-3">{activeStepTitle}</h2>
+                  {content}
+                </div>
+              )}
+            </div>
           </React.Fragment>
         );
       })}
@@ -112,7 +120,16 @@ const ProgressTitle: React.FC<{
           'w-6 h-6 flex items-center justify-center rounded-full'
         )}
       >
-        <p className="text-xs sm:text-sm">{step}</p>
+        {isCompleted ? (
+          <Image
+            src="/images/check-mark.svg"
+            alt="Completed"
+            width={16}
+            height={16}
+          />
+        ) : (
+          <p className="text-xs sm:text-sm">{step}</p>
+        )}
       </div>
       <p className="w-max text-sm sm:text-base">{title}</p>
     </div>
@@ -127,7 +144,9 @@ const ProgressDivider: React.FC<{
     <div
       className={classNames(
         isCompleted ? 'bg-success-500' : 'bg-gray-200',
-        direction === 'horizontal' ? 'w-full h-[1px]' : 'w-[1px] h-[full]'
+        direction === 'horizontal'
+          ? 'w-full h-[1px]'
+          : 'w-[1px] min-h-[20px] h-[full]'
       )}
     />
   );

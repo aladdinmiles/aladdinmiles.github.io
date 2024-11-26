@@ -7,9 +7,9 @@ import {
 } from '@/components/stepProgressTracker';
 import { steps } from '@/constants/merchantContract';
 
-type Props = { content: React.ReactElement };
+type Props = { activeStepTitle: string; content: React.ReactElement };
 
-const MerchantContainer: React.FC<Props> = ({ content }) => {
+const MerchantContainer: React.FC<Props> = ({ activeStepTitle, content }) => {
   return (
     <ContentView className="relative">
       {/* Sticky top */}
@@ -44,7 +44,7 @@ const MerchantContainer: React.FC<Props> = ({ content }) => {
             className="hidden sm:block"
             steps={steps.salesFlow}
             content={content}
-            activeStepTitle="AladdinMiles Percentage"
+            activeStepTitle={activeStepTitle}
           />
 
           <div className="flex flex-row sm:flex-col w-full">
@@ -53,7 +53,7 @@ const MerchantContainer: React.FC<Props> = ({ content }) => {
               className="flex sm:hidden"
               steps={steps.salesFlow}
               content={content}
-              activeStepTitle="AladdinMiles Percentage"
+              activeStepTitle={activeStepTitle}
             />
           </div>
         </div>

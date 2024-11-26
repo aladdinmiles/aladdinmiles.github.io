@@ -11,7 +11,12 @@ export const metadata: Metadata = {
 };
 
 const StartContract: React.FC = () => {
-  return <MerchantContainer content={<StartContractForm />} />;
+  return (
+    <MerchantContainer
+      activeStepTitle="AladdinMiles Percentage"
+      content={<StartContractForm />}
+    />
+  );
 };
 
 export default StartContract;
