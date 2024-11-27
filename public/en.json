@@ -348,5 +348,6 @@
   "continueShopping": "Continue Shopping",
   "paymentSuccessful": "Payment Successful",
   "rewardText": "You have received a reward of %{miles} miles for this order.",
-  "paid": "Paid"
+  "paid": "Paid",
+  "tooManyOrders": "The venue has too many active orders at the moment"
 }
