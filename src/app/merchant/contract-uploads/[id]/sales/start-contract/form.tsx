@@ -45,8 +45,7 @@ const StartContractForm: React.FC = () => {
     endpoint: e.CONTRACT_UPLOADS('', `?checksum=${checkSum}&contract_id=${id}`),
     method: 'post',
     options: {
-      headers: { 'Content-Type': 'application/json' },
-      withCredentials: true
+      headers: { 'Content-Type': 'application/json' }
     },
     onSuccess: (success) => {
       push(pathname.replace('start-contract', 'merchant-details'));
