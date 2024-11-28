@@ -1,5 +1,7 @@
 'use client';
+
 import { useReducer } from 'react';
+import axios, { AxiosRequestConfig } from 'axios';
 import { FetchState } from '../types';
 import {
   Action,
@@ -10,7 +12,6 @@ import {
   SUCCESS
 } from './reducer';
 import { convertKeysToCamelCase } from '@/utils/convertKeys';
-import axios, { AxiosRequestConfig } from 'axios';
 
 type UseMutationProps<T> = {
   endpoint: string;
@@ -21,71 +22,68 @@ type UseMutationProps<T> = {
 };
 
 type UseMutationResponse<T> = {
-  action: (payload: Partial<T>) => void;
+  action: (payload?: Partial<T>) => void;
   state: FetchState<T>;
 };
 
 type SendPayloadProps<T> = {
   endpoint: string;
-  payload: Partial<T>;
+  payload?: Partial<T>;
   method: 'post' | 'put' | 'patch' | 'delete';
-  dispatch: React.Dispatch<Action<any>>;
   options?: AxiosRequestConfig;
+  dispatch: React.Dispatch<Action<T>>;
   onSuccess?: (success: FetchState<T>['success']) => void;
   onError?: (error: FetchState<T>['error']) => void;
 };
 
 const sendPayload = async <T>({
   endpoint,
-  payload,
+  payload = {},
   method,
-  dispatch,
   options = {},
+  dispatch,
   onSuccess,
   onError
 }: SendPayloadProps<T>) => {
   const apiBaseUrl = process.env.API_URL;
+
   if (!apiBaseUrl) {
     throw new Error('API_URL is not defined in the environment variables.');
   }
   dispatch({ type: LOADING });
 
   try {
-    const response = await axios.post(
-      `${apiBaseUrl}${endpoint}`,
-      payload,
-      options
-    );
-    console.log('response', response);
+    const response = await axios({
+      url: `${apiBaseUrl}${endpoint}`,
+      method,
+      data: payload,
+      ...options
+    });
 
-    const successStatusCodes = [200, 201, 202, 204];
-    if (!successStatusCodes.includes(response.status)) {
+    const isSuccessful =
+      [200, 201, 202, 204].includes(response.status) ||
+      response.data?.status === 'ok';
+
+    if (!isSuccessful) {
       throw {
-        message: response.data.detail || response.statusText,
+        message: response.data?.detail || response.statusText,
         status: response.status,
         error: response.data
       };
     }
 
     const success = {
-      message: response.data.detail,
+      message: response.data?.detail || 'Operation succeeded',
       status: response.status,
-      data: convertKeysToCamelCase(response.data.data)
+      data: convertKeysToCamelCase(response.data?.data)
     };
 
-    dispatch({
-      type: SUCCESS,
-      success,
-      data: convertKeysToCamelCase(response.data.data)
-    });
-    if (typeof onSuccess === 'function') {
-      onSuccess(success);
-    }
+    dispatch({ type: SUCCESS, success, data: success.data });
+    onSuccess?.(success);
   } catch (error: any) {
+    console.error('error', error);
     dispatch({ type: ERROR, error });
-    if (typeof onError === 'function') {
-      onError(error);
-    }
+    onError?.(error);
   }
 };
 
@@ -98,17 +96,17 @@ export default function useMutation<T>({
 }: UseMutationProps<T>): UseMutationResponse<T> {
   const [state, dispatch] = useReducer(reducer<T>, initialState(false));
 
-  return {
-    action: (payload: Partial<T>) =>
-      sendPayload({
-        endpoint,
-        payload,
-        method,
-        options,
-        dispatch,
-        onSuccess,
-        onError
-      }),
-    state
+  const action = (payload?: Partial<T>) => {
+    sendPayload({
+      endpoint,
+      payload,
+      method,
+      options,
+      dispatch,
+      onSuccess,
+      onError
+    });
   };
+
+  return { action, state };
 }
