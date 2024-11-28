@@ -56,8 +56,10 @@ const sendPayload = async <T>({
       payload,
       options
     );
+    console.log('response', response);
 
-    if (response.status !== 200 || 201) {
+    const successStatusCodes = [200, 201, 202, 204];
+    if (!successStatusCodes.includes(response.status)) {
       throw {
         message: response.data.detail || response.statusText,
         status: response.status,
