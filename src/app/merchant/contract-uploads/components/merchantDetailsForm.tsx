@@ -65,6 +65,8 @@ const MerchantDetailsForm: React.FC = () => {
   const [show, setShow] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
 
+  const isSalesPerson = pathname.includes('/sales/merchant-details');
+
   const { isLoading, data } = useQuery<MerchantContractDetails>(
     e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`)
   );
@@ -75,10 +77,13 @@ const MerchantDetailsForm: React.FC = () => {
     options: { headers: { 'Content-Type': 'application/json' } },
     onSuccess: (success) => {
       setShow(true);
-      copyToClipboard(window.location.href.replace('/sales', ''), () =>
-        setCopied(true)
-      );
-      setTimeout(() => setCopied(false), 10000);
+      if (isSalesPerson) {
+        copyToClipboard(
+          window.location.href.replace('/sales/merchant-details', '/details'),
+          () => setCopied(true)
+        );
+        setTimeout(() => setCopied(false), 60000);
+      }
     },
     onError: (error) => {
       toast(error?.message, { type: 'error' });
@@ -103,11 +108,7 @@ const MerchantDetailsForm: React.FC = () => {
   const isDisabled =
     isLoading || state.isLoading || Object.keys(formik.errors).length !== 0;
 
-  if (
-    pathname.includes('/sales/merchant-details') &&
-    data &&
-    typeof data?.commission !== 'number'
-  ) {
+  if (isSalesPerson && data && typeof data?.commission !== 'number') {
     window.location.replace(
       pathname.replace('merchant-details', 'start-contract')
     );
@@ -344,7 +345,7 @@ const MerchantDetailsForm: React.FC = () => {
               disabled={isDisabled}
               type="submit"
             >
-              Save and copy link
+              {isSalesPerson ? `Save and copy link` : `Save and continue`}
               <IoArrowForward className="w-4 sm:w-5 h-4 sm:h-5" />
             </Button>
           </div>
@@ -353,7 +354,7 @@ const MerchantDetailsForm: React.FC = () => {
 
       <SuccessState
         isOpen={show}
-        onClose={handleClose}
+        // onClose={handleClose}
         title="Merchant Information Saved"
         message="The merchant’s contract information has been saved to the AladdinMiles system. "
       />
