@@ -3,42 +3,88 @@ import { Button, Radio, RadioGroup } from '@headlessui/react';
 import { useFormik } from 'formik';
 import { MilesPercentage, milesPercentage } from '@/constants/merchantContract';
 import classNames from '@/utils/classNames';
-import { StartContractSchema } from '../../components/schema';
+import { StartContractSchema } from '../../../components/schema';
 import Input from '@/components/inputs/input';
-import { useRouter } from 'next/navigation';
+import {
+  useParams,
+  usePathname,
+  useRouter,
+  useSearchParams
+} from 'next/navigation';
 import { IoArrowForward } from 'react-icons/io5';
-import getSelectedMilesPercentage from '@/utils/getSelectedMilesPercentage';
+import useQuery from '@/hooks/useQuery';
+import e from '@/constants/endpoints';
+import useMutation from '@/hooks/useMutation';
+import { MerchantContractDetails } from '@/types';
+import { convertKeysToSnakeCase } from '@/utils/convertKeys';
+import { toast } from 'react-toastify';
+import { useEffect } from 'react';
+import { storeCheckSum } from '../../../components/checkSum';
+
+const initialValues = (data?: MerchantContractDetails) => ({
+  commission: typeof data?.commission === 'number' ? data.commission * 100 : 0,
+  selectedMilesPercentage:
+    typeof data?.commission === 'number'
+      ? milesPercentage.find((per) => per.value / 100 === data?.commission) ||
+        milesPercentage.find((per) => per.id === 'others')!
+      : milesPercentage[0]
+});
 
 const StartContractForm: React.FC = () => {
+  const { id } = useParams();
   const { push } = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const checkSum = searchParams.get('checksum');
+
+  const { isLoading, data } = useQuery<MerchantContractDetails>(
+    e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`)
+  );
+
+  const { action, state } = useMutation<MerchantContractDetails>({
+    endpoint: e.CONTRACT_UPLOADS('', `?checksum=${checkSum}&contract_id=${id}`),
+    method: 'post',
+    options: {
+      headers: { 'Content-Type': 'application/json' },
+      withCredentials: true
+    },
+    onSuccess: (success) => {
+      push(pathname.replace('start-contract', 'merchant-details'));
+    },
+    onError: (error) => {
+      toast(error?.message, { type: 'error' });
+    }
+  });
+
+  useEffect(() => {
+    if (checkSum) {
+      storeCheckSum(checkSum);
+    }
+  }, [checkSum]);
 
   const formik = useFormik<{
     commission: MilesPercentage['value'];
     selectedMilesPercentage: MilesPercentage;
   }>({
     enableReinitialize: true,
-    initialValues: {
-      commission: getSelectedMilesPercentage()?.value || 0,
-      selectedMilesPercentage:
-        getSelectedMilesPercentage() || milesPercentage[0]
-    },
+    initialValues: initialValues(data),
     validationSchema: StartContractSchema,
     onSubmit: (values) => {
-      let payload = values.selectedMilesPercentage;
+      let payload = {
+        commission: values.selectedMilesPercentage.value / 100
+      };
 
       if (values.selectedMilesPercentage.id === 'others') {
         payload = {
-          ...values.selectedMilesPercentage,
-          value: values.commission
+          commission: values.commission / 100
         };
       }
-
-      localStorage.setItem('selectedMilesPercentage', JSON.stringify(payload));
-      push('/merchant-contract/sales/merchant-details');
+      action(convertKeysToSnakeCase(payload));
     }
   });
 
-  const isDisabled = Object.keys(formik.errors).length !== 0;
+  const isDisabled =
+    isLoading || state.isLoading || Object.keys(formik.errors).length !== 0;
 
   return (
     <form
@@ -54,6 +100,7 @@ const StartContractForm: React.FC = () => {
             formik.setFieldValue('selectedMilesPercentage', value)
           }
           className="grid grid-cols-1 gap-y-4"
+          id="milesPercentages"
         >
           {milesPercentage.map((percentage) => {
             const isSelected =
@@ -61,6 +108,7 @@ const StartContractForm: React.FC = () => {
             return (
               <Radio
                 key={percentage.id}
+                id={percentage.id}
                 value={percentage}
                 className={classNames(
                   isSelected
@@ -83,7 +131,7 @@ const StartContractForm: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl">{percentage.label}</h3>
+                  <h3 className="text-xl text-black">{percentage.label}</h3>
                   <div className="gap-y-1">
                     {percentage.id === 'others' ? (
                       <>
@@ -108,7 +156,7 @@ const StartContractForm: React.FC = () => {
                         />
                       </>
                     ) : (
-                      <p className="text-base text-[#3D414D]">
+                      <p className="text-base text-gray-700">
                         {percentage.description}
                       </p>
                     )}

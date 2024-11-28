@@ -4,15 +4,21 @@ import { MerchantDetailsSchema } from './schema';
 import Input from '@/components/inputs/input';
 import Image from 'next/image';
 import prependCountryCode from '@/utils/prependCountryCode';
-import { useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import { Button } from '@headlessui/react';
-import { IoArrowBack, IoArrowForward } from 'react-icons/io5';
+import { IoArrowBack, IoArrowForward, IoCopy } from 'react-icons/io5';
 import SuccessState from '@/components/successState';
 import { useState } from 'react';
-import getSelectedMilesPercentage from '@/utils/getSelectedMilesPercentage';
+import useQuery from '@/hooks/useQuery';
+import { MerchantContractDetails } from '@/types';
+import e from '@/constants/endpoints';
+import { getCheckSum, removeCheckSum } from './checkSum';
+import useMutation from '@/hooks/useMutation';
+import { toast } from 'react-toastify';
+import { convertKeysToSnakeCase } from '@/utils/convertKeys';
+import copyToClipboard from '@/utils/copyToClipboard';
 
 type MerchantDetails = {
-  commission: number;
   crId: string;
   companyName: string;
   ownerName: string;
@@ -26,44 +32,84 @@ type MerchantDetails = {
   address: string;
 };
 
-const initialValues: MerchantDetails = {
-  commission: getSelectedMilesPercentage()?.value || 0,
-  crId: '',
-  companyName: '',
-  ownerName: '',
-  position: '',
-  hqPhone: prependCountryCode(''),
-  bankAccountName: '',
-  iban: '',
-  bankName: '',
-  emailAddress: '',
-  accountantPhone: prependCountryCode(''),
-  address: ''
-};
+const initialValues = (data?: MerchantContractDetails): MerchantDetails => ({
+  crId: data?.crId || '',
+  companyName: data?.companyName || '',
+  ownerName: data?.ownerName || '',
+  position: data?.position || '',
+  hqPhone: data?.hqPhone || '',
+  bankAccountName: data?.bankAccountName || '',
+  iban: data?.iban || '',
+  bankName: data?.bankName || '',
+  emailAddress: data?.emailAddress || '',
+  accountantPhone: data?.accountantPhone || '',
+  address: data?.address || ''
+});
+
+const Copied: React.FC = () => (
+  <div className="w-full flex items-center justify-center">
+    <div className="fixed top-10 z-50">
+      <div className="bg-azureBlue w-max text-white rounded py-2 px-4 flex gap-2 items-center justify-center">
+        <IoCopy className="w-4 h-4" />
+        <p>Link Copied</p>
+      </div>
+    </div>
+  </div>
+);
 
 const MerchantDetailsForm: React.FC = () => {
+  const { id } = useParams();
   const { back } = useRouter();
+  const pathname = usePathname();
+  const checkSum = getCheckSum();
   const [show, setShow] = useState<boolean>(false);
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const { isLoading, data } = useQuery<MerchantContractDetails>(
+    e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`)
+  );
+
+  const { action, state } = useMutation<MerchantContractDetails>({
+    endpoint: e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`),
+    method: 'put',
+    options: { headers: { 'Content-Type': 'application/json' } },
+    onSuccess: (success) => {
+      setShow(true);
+      copyToClipboard(window.location.href, () => setCopied(true));
+      setTimeout(() => setCopied(false), 10000);
+    },
+    onError: (error) => {
+      toast(error?.message, { type: 'error' });
+    }
+  });
 
   const formik = useFormik<MerchantDetails>({
     enableReinitialize: true,
-    initialValues,
+    initialValues: initialValues(data),
     validationSchema: MerchantDetailsSchema,
 
     onSubmit: (values) => {
-      console.log('values', values);
-      setShow(true);
+      action(convertKeysToSnakeCase(values));
     }
   });
 
   const handleClose = () => {
     setShow(false);
-    // TODO: uncomment this section
-    // formik.resetForm();
-    // window.localStorage.removeItem('commission');
+    removeCheckSum();
   };
 
-  const isDisabled = Object.keys(formik.errors).length !== 0;
+  const isDisabled =
+    isLoading || state.isLoading || Object.keys(formik.errors).length !== 0;
+
+  if (
+    pathname.includes('/sales/merchant-details') &&
+    data &&
+    typeof data?.commission !== 'number'
+  ) {
+    window.location.replace(
+      pathname.replace('merchant-details', 'start-contract')
+    );
+  }
 
   return (
     <>
@@ -309,6 +355,8 @@ const MerchantDetailsForm: React.FC = () => {
         title="Merchant Information Saved"
         message="The merchant’s contract information has been saved to the AladdinMiles system. "
       />
+
+      {copied ? <Copied /> : null}
     </>
   );
 };

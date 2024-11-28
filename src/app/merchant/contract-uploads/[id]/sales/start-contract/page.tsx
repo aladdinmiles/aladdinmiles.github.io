@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import StartContractForm from './form';
-import MerchantContainer from '../../components/container';
+import MerchantContainer from '../../../components/container';
 import { steps } from '@/constants/merchantContract';
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 const prependCountryCode = (value: string): string => {
-  if (!value.startsWith('+966')) {
+  if (!value.startsWith('+')) {
     return '+966' + value;
   }
   return value;

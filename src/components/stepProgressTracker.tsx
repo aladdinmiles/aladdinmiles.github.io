@@ -43,7 +43,7 @@ export const HorizontalStepProgressTracker: React.FC<Props> = ({
       </div>
 
       <div className="p-4 sm:p-6 w-full">
-        <h2 className="text-xl pb-3">{activeStepTitle}</h2>
+        <h2 className="text-xl pb-3 text-black">{activeStepTitle}</h2>
         {content}
       </div>
     </div>
@@ -81,7 +81,7 @@ export const VerticalStepProgressTracker: React.FC<Props> = ({
               )}
               {isCurrentStep && (
                 <div className="p-4 pr-0 sm:p-6 w-full">
-                  <h2 className="text-xl pb-3">{activeStepTitle}</h2>
+                  <h2 className="text-xl pb-3 text-black">{activeStepTitle}</h2>
                   {content}
                 </div>
               )}
@@ -105,8 +105,8 @@ const ProgressTitle: React.FC<{
         isCompleted
           ? 'bg-success-500 text-white'
           : isCurrentStep
-          ? 'border border-azureBlue'
-          : 'border border-gray-200',
+          ? 'border border-azureBlue text-black'
+          : 'border border-gray-200 text-gray-700',
         'w-min rounded-full p-2 sm:p-3 flex items-center gap-2'
       )}
     >
@@ -115,13 +115,13 @@ const ProgressTitle: React.FC<{
           isCompleted
             ? 'bg-white text-success-500'
             : isCurrentStep
-            ? 'border border-azureBlue'
-            : 'bg-gray-25',
+            ? 'border border-azureBlue text-black'
+            : 'bg-gray-25 text-gray-700',
           'w-6 h-6 flex items-center justify-center rounded-full'
         )}
       >
         {isCompleted ? (
-          <FiCheck className="w-4 h-4 text-success-500" />
+          <FiCheck className="w-4 h-4" />
         ) : (
           <p className="text-xs sm:text-sm">{step}</p>
         )}

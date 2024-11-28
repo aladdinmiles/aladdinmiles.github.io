@@ -20,10 +20,6 @@ export const StartContractSchema = Yup.object().shape({
 });
 
 export const MerchantDetailsSchema = Yup.object().shape({
-  commission: Yup.number()
-    .min(0, 'Minimum percentage is 0')
-    .max(100, 'Maximum percentage is 100')
-    .required('Enter a percentage'),
   crId: Yup.string().required('CR Number is required'),
   companyName: Yup.string().required('Company Name is required'),
   ownerName: Yup.string().required('Owner Name is required'),
