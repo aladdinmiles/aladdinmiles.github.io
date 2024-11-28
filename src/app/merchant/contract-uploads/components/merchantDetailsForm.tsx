@@ -75,7 +75,9 @@ const MerchantDetailsForm: React.FC = () => {
     options: { headers: { 'Content-Type': 'application/json' } },
     onSuccess: (success) => {
       setShow(true);
-      copyToClipboard(window.location.href, () => setCopied(true));
+      copyToClipboard(window.location.href.replace('/sales', ''), () =>
+        setCopied(true)
+      );
       setTimeout(() => setCopied(false), 10000);
     },
     onError: (error) => {
