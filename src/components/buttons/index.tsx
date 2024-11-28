@@ -19,9 +19,10 @@ const man = Manrope({
   subsets: ['latin', 'cyrillic']
 });
 
-type Props = LinkProps & {
-  children: ReactNode;
-};
+type Props = LinkProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    children: ReactNode;
+  };
 
 type NoLinkProps = React.ClassAttributes<HTMLButtonElement> &
   React.ButtonHTMLAttributes<HTMLButtonElement> & {
