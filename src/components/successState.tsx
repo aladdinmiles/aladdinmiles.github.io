@@ -14,7 +14,7 @@ type Props = {
   title: string;
   message: string;
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
 };
 
 const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
@@ -26,14 +26,16 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
       />
       <div className="fixed inset-x-0 top-24 flex w-screen items-center justify-center p-6 z-40">
         <DialogPanel className="max-w-lg space-y-6 rounded-2xl shadow-lg bg-white p-6 relative">
-          <Button
-            className="absolute right-4 top-4 p-1"
-            type="button"
-            onClick={onClose}
-          >
-            <IoClose className="w-6 h-6 stroke-1" />
-          </Button>
-          <div className="flex items-center justify-center w-full">
+          {typeof onClose === 'function' ? (
+            <Button
+              className="absolute right-4 top-4 p-1"
+              type="button"
+              onClick={onClose}
+            >
+              <IoClose className="w-6 h-6 stroke-1" />
+            </Button>
+          ) : null}
+          <div className="flex items-center justify-center w-full pt-4">
             <div className="p-4 w-min bg-success-50 rounded-full flex items-center justify-center">
               <FiCheck className="w-10 h-10 text-success-500" />
             </div>

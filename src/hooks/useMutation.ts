@@ -81,7 +81,6 @@ const sendPayload = async <T>({
     dispatch({ type: SUCCESS, success, data: success.data });
     onSuccess?.(success);
   } catch (error: any) {
-    console.error('error', error);
     dispatch({ type: ERROR, error });
     onError?.(error);
   }
