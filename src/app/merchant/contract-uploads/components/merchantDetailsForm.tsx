@@ -79,7 +79,7 @@ const MerchantDetailsForm: React.FC = () => {
       setShow(true);
       if (isSalesPerson) {
         copyToClipboard(
-          window.location.href.replace('/sales/merchant-details', '/details'),
+          window.location.href.replace('/sales', ''),
           () => setCopied(true)
         );
         setTimeout(() => setCopied(false), 60000);
