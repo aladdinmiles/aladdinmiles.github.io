@@ -43,7 +43,7 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
 
           <div>
             <div className="flex flex-col gap-1 sm:gap-2 pb-8 sm:pb-10">
-              <DialogTitle className="text-base sm:text-lg md:text-xl font-medium text-center">
+              <DialogTitle className="text-base sm:text-lg md:text-xl font-medium text-center text-black">
                 {title}
               </DialogTitle>
 
