@@ -56,7 +56,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ file }) => {
               type="button"
               onClick={closeModal}
             >
-              <IoClose className="w-6 h-6 stroke-1" />
+              <IoClose className="w-6 h-6 stroke-1 text-black" />
             </Button>
             <DialogTitle className="text-xl font-bold mb-4">
               Document Preview
