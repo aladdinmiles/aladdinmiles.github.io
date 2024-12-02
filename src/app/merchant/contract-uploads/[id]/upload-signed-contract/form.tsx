@@ -87,8 +87,14 @@ const UploadSignedContractForm: React.FC = () => {
   const handleUploadSignedContract = (
     files: UploadSignedContractDetails['files']
   ) => {
-    formik.setFieldValue('files', files);
-    setUndoDelete(true);
+    const fileToUpload = files[0].file;
+    const fileType = fileToUpload.type.split('/')[1];
+    if (fileType !== 'pdf') {
+      toast('File must be a pdf', { type: 'error' });
+    } else {
+      formik.setFieldValue('files', files);
+      setUndoDelete(true);
+    }
   };
 
   const handleUndoDelete = () => {
