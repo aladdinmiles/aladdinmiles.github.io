@@ -1,6 +1,8 @@
 import phone from 'phone';
 import * as Yup from 'yup';
 
+const fullNameRegex = /^[A-Za-z]+ [A-Za-z]+$/;
+
 export const StartContractSchema = Yup.object().shape({
   selectedMilesPercentage: Yup.object()
     .shape({
@@ -45,4 +47,48 @@ export const MerchantDetailsSchema = Yup.object().shape({
       return phone(value).isValid;
     }),
   address: Yup.string().required('Address is required')
+});
+
+export const SignContractSchema = Yup.object().shape({
+  signerFullName: Yup.string()
+    .required('Full name is required')
+    .matches(fullNameRegex, {
+      message: 'Please enter a valid first and last name'
+    }),
+  signerPosition: Yup.string().required('Position is required'),
+  signerEmail: Yup.string()
+    .email('Invalid email format')
+    .required('Email is required'),
+  contractSignedAt: Yup.date()
+    .required('Contract Signed At is required')
+    .typeError('Contract Signed At must be a valid date')
+});
+
+export const UploadSignedContractSchema = Yup.object().shape({
+  files: Yup.array()
+    .of(
+      Yup.object().shape({
+        file: Yup.mixed()
+          .test(
+            'is-file',
+            'File must be a File object',
+            (value) => value instanceof File
+          )
+          .test('is-pdf-file', 'File must be a pdf', (value) => {
+            return value instanceof File && value.type === 'application/pdf';
+          }),
+        url: Yup.string().nullable()
+      })
+    )
+    .test(
+      'only-one-file-required',
+      'Upload a signed contract',
+      function (value) {
+        return (
+          value?.filter((file) => file.file !== null && file.file !== undefined)
+            .length === 1
+        );
+      }
+    )
+    .required('File upload is required')
 });
