@@ -72,9 +72,5 @@ export default function useQuery<T>(endpoint: string): FetchState<T> {
     fetchDataCallback(endpoint);
   }, [endpoint, fetchDataCallback]);
 
-  useEffect(() => {
-    fetchDataCallback(endpoint);
-  }, [endpoint, fetchDataCallback]);
-
   return state;
 }

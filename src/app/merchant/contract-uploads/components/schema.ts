@@ -20,6 +20,8 @@ export const StartContractSchema = Yup.object().shape({
 });
 
 export const MerchantDetailsSchema = Yup.object().shape({
+  hqFlagUrl: Yup.string().required('HQ Flag URL is required'),
+  accountantFlagUrl: Yup.string().required('Accountant Flag URL is required'),
   crId: Yup.string().required('CR Number is required'),
   companyName: Yup.string().required('Company Name is required'),
   ownerName: Yup.string().required('Owner Name is required'),

@@ -3,7 +3,6 @@ import { useFormik } from 'formik';
 import { MerchantDetailsSchema } from './schema';
 import Input from '@/components/inputs/input';
 import Image from 'next/image';
-import prependCountryCode from '@/utils/prependCountryCode';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { Button } from '@headlessui/react';
 import { IoArrowBack, IoArrowForward, IoCopy } from 'react-icons/io5';
@@ -12,22 +11,26 @@ import { useState } from 'react';
 import useQuery from '@/hooks/useQuery';
 import { MerchantContractDetails } from '@/types';
 import e from '@/constants/endpoints';
-import { getCheckSum, removeCheckSum } from './checkSum';
+import { getCheckSum } from './checkSum';
 import useMutation from '@/hooks/useMutation';
 import { toast } from 'react-toastify';
 import { convertKeysToSnakeCase } from '@/utils/convertKeys';
 import copyToClipboard from '@/utils/copyToClipboard';
+import classNames from '@/utils/classNames';
+import { getFlagUrlFromPhone } from '@/utils/getFlagUrl';
 
 type MerchantDetails = {
   crId: string;
   companyName: string;
   ownerName: string;
   position: string;
+  hqFlagUrl: string;
   hqPhone: string;
   bankAccountName: string;
   iban: string;
   bankName: string;
   emailAddress: string;
+  accountantFlagUrl: string;
   accountantPhone: string;
   address: string;
 };
@@ -37,11 +40,13 @@ const initialValues = (data?: MerchantContractDetails): MerchantDetails => ({
   companyName: data?.companyName || '',
   ownerName: data?.ownerName || '',
   position: data?.position || '',
+  hqFlagUrl: getFlagUrlFromPhone(data?.hqPhone),
   hqPhone: data?.hqPhone || '',
   bankAccountName: data?.bankAccountName || '',
   iban: data?.iban || '',
   bankName: data?.bankName || '',
   emailAddress: data?.emailAddress || '',
+  accountantFlagUrl: getFlagUrlFromPhone(data?.accountantPhone),
   accountantPhone: data?.accountantPhone || '',
   address: data?.address || ''
 });
@@ -59,30 +64,32 @@ const Copied: React.FC = () => (
 
 const MerchantDetailsForm: React.FC = () => {
   const { id } = useParams();
-  const { back } = useRouter();
+  const { back, push } = useRouter();
   const pathname = usePathname();
   const checkSum = getCheckSum();
   const [show, setShow] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
 
   const isSalesPerson = pathname.includes('/sales/merchant-details');
+  const query = isSalesPerson ? `?checksum=${checkSum}` : '';
 
   const { isLoading, data } = useQuery<MerchantContractDetails>(
-    e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`)
+    e.CONTRACT_UPLOADS(id as string, query)
   );
 
   const { action, state } = useMutation<MerchantContractDetails>({
-    endpoint: e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`),
+    endpoint: e.CONTRACT_UPLOADS(id as string, query),
     method: 'put',
     options: { headers: { 'Content-Type': 'application/json' } },
     onSuccess: (success) => {
-      setShow(true);
       if (isSalesPerson) {
-        copyToClipboard(
-          window.location.href.replace('/sales', ''),
-          () => setCopied(true)
+        setShow(true);
+        copyToClipboard(window.location.href.replace('/sales', ''), () =>
+          setCopied(true)
         );
         setTimeout(() => setCopied(false), 60000);
+      } else {
+        push(pathname.replace('merchant-details', 'sign-contract'));
       }
     },
     onError: (error) => {
@@ -96,13 +103,23 @@ const MerchantDetailsForm: React.FC = () => {
     validationSchema: MerchantDetailsSchema,
 
     onSubmit: (values) => {
-      action(convertKeysToSnakeCase(values));
+      const { hqFlagUrl, accountantFlagUrl, ...restValues } = values;
+      action(convertKeysToSnakeCase(restValues));
     }
   });
 
+  const validatePhoneNumber = (value: string, fieldName: string) => {
+    const flagUrl = getFlagUrlFromPhone(value);
+
+    formik.setFieldValue(fieldName, value);
+    formik.setFieldValue(
+      fieldName === 'hqPhone' ? 'hqFlagUrl' : 'accountantFlagUrl',
+      flagUrl
+    );
+  };
+
   const handleClose = () => {
     setShow(false);
-    removeCheckSum();
   };
 
   const isDisabled =
@@ -192,14 +209,9 @@ const MerchantDetailsForm: React.FC = () => {
               type="text"
               required
               label="HQ Telephone Number"
-              placeholder="Enter merchant's hq phone number"
+              placeholder="Enter merchant's HQ phone number"
               value={formik.values.hqPhone}
-              onChange={(e) => {
-                formik.setFieldValue(
-                  'hqPhone',
-                  prependCountryCode(e.target.value)
-                );
-              }}
+              onChange={(e) => validatePhoneNumber(e.target.value, 'hqPhone')}
               onBlur={formik.handleBlur}
               isInvalid={
                 formik.touched.hqPhone && Boolean(formik.errors.hqPhone)
@@ -208,10 +220,11 @@ const MerchantDetailsForm: React.FC = () => {
               leftAffix={
                 <div className="h-full w-full flex items-center justify-center">
                   <Image
-                    src="/images/saudi-flag.svg"
-                    width={32}
+                    src={formik.values.hqFlagUrl}
+                    width={40}
                     height={24}
-                    alt="flag"
+                    alt="Country Flag"
+                    className="w-10 h-6 rounded"
                   />
                 </div>
               }
@@ -287,13 +300,10 @@ const MerchantDetailsForm: React.FC = () => {
               type="text"
               required
               label="Accounting Phone Number"
-              placeholder="Enter merchant's accounting phone number"
+              placeholder="Enter accountant's phone number"
               value={formik.values.accountantPhone}
               onChange={(e) =>
-                formik.setFieldValue(
-                  'accountantPhone',
-                  prependCountryCode(e.target.value)
-                )
+                validatePhoneNumber(e.target.value, 'accountantPhone')
               }
               onBlur={formik.handleBlur}
               isInvalid={
@@ -304,10 +314,11 @@ const MerchantDetailsForm: React.FC = () => {
               leftAffix={
                 <div className="h-full w-full flex items-center justify-center">
                   <Image
-                    src="/images/saudi-flag.svg"
+                    src={formik.values.accountantFlagUrl}
                     width={32}
                     height={24}
-                    alt="flag"
+                    alt="Country Flag"
+                    className="w-10 h-6 rounded"
                   />
                 </div>
               }
@@ -331,15 +342,22 @@ const MerchantDetailsForm: React.FC = () => {
               />
             </div>
           </div>
-          <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4 py-10">
-            <Button
-              className="w-full sm:w-auto bg-gray-25 hover:bg-gray-50 text-primary-500 px-4 sm:px-6 py-2 sm:py-4 rounded-md flex items-center justify-center gap-1 sm:gap-2"
-              type="button"
-              onClick={back}
-            >
-              <IoArrowBack className="w-4 sm:w-5 h-4 sm:h-5" />
-              Go Back
-            </Button>
+          <div
+            className={classNames(
+              isSalesPerson ? 'justify-between' : 'justify-end',
+              'w-full flex flex-col sm:flex-row items-center  gap-4 py-10'
+            )}
+          >
+            {isSalesPerson ? (
+              <Button
+                className="w-full sm:w-auto bg-gray-25 hover:bg-gray-50 text-primary-500 px-4 sm:px-6 py-2 sm:py-4 rounded-md flex items-center justify-center gap-1 sm:gap-2"
+                type="button"
+                onClick={back}
+              >
+                <IoArrowBack className="w-4 sm:w-5 h-4 sm:h-5" />
+                Go Back
+              </Button>
+            ) : null}
             <Button
               className="w-full sm:w-auto disabled:opacity-30 px-4 sm:px-6 py-2 sm:py-4 text-white bg-primary-500 hover:bg-primary-600 rounded-md flex items-center justify-center gap-1 sm:gap-2"
               disabled={isDisabled}
@@ -354,7 +372,7 @@ const MerchantDetailsForm: React.FC = () => {
 
       <SuccessState
         isOpen={show}
-        // onClose={handleClose}
+        onClose={handleClose}
         title="Merchant Information Saved"
         message="The merchant’s contract information has been saved to the AladdinMiles system. "
       />
