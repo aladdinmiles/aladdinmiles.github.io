@@ -89,8 +89,12 @@ const UploadSignedContractForm: React.FC = () => {
   ) => {
     const fileToUpload = files[0].file;
     const fileType = fileToUpload.type.split('/')[1];
+    const maxFileSize = 1024 * 1024 * 10;
+
     if (fileType !== 'pdf') {
       toast('File must be a pdf', { type: 'error' });
+    } else if (fileToUpload.size > maxFileSize) {
+      toast('File size must not be greater than 10MB', { type: 'error' });
     } else {
       formik.setFieldValue('files', files);
       setUndoDelete(true);
