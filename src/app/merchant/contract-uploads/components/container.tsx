@@ -28,7 +28,7 @@ const MerchantContainer: React.FC<Props> = ({
   if (
     typeof window !== 'undefined' &&
     !checkSum &&
-    pathname.includes('sales')
+    pathname.includes('sales/start-contact')
   ) {
     window.location.replace('/not-found');
   }
@@ -52,7 +52,7 @@ const MerchantContainer: React.FC<Props> = ({
       </div>
 
       <div className="w-full flex flex-col items-center pb-20">
-        <div className="px-6 sm:px-10 py-10 max-w-3xl w-full">
+        <div className="px-6 sm:px-10 py-10 max-w-4xl w-full">
           {/* Hero */}
           <div className="space-1 text-left sm:text-center">
             <h1 className="text-3xl text-left sm:text-center text-black">

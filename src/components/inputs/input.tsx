@@ -67,7 +67,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
                 ? '!border-error-600'
                 : isFocused
                 ? '!border-secondary-200'
-                : 'border-gray-50',
+                : 'border-gray-100',
               `bg-gray-25 rounded-md rounded-r-none border-r-0 flex items-center border select-none text-black sm:text-sm`
             )}
           >
@@ -92,7 +92,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
             className,
             !showBorder ? '!border-none' : '',
             isDisabled ? 'cursor-not-allowed' : '',
-            isInvalid ? '!border-error-600' : 'border-gray-50',
+            isInvalid ? '!border-error-600' : 'border-gray-100',
             leftAffix ? 'rounded-l-none' : '',
             rightAffix ? 'rounded-r-none' : '',
             `relative block w-full appearance-none rounded-md border px-3 py-2 text-black placeholder-gray-200 placeholder:font-light focus:outline-none focus:border-secondary-200 sm:text-sm`
@@ -108,7 +108,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
                 ? '!border-error-600'
                 : isFocused
                 ? '!border-secondary-200'
-                : 'border-gray-50',
+                : 'border-gray-100',
               `bg-gray-25 rounded-md rounded-l-none border-l-0 flex items-center border select-none text-black sm:text-sm`
             )}
           >

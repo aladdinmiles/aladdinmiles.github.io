@@ -63,18 +63,13 @@ export default function useQuery<T>(endpoint: string): FetchState<T> {
   const [state, dispatch] = useReducer(reducer<T>, initialState(true));
   const fetchInProgress = useRef(new Set<string>()); // Tracks in-progress fetches
 
-  const fetchDataCallback = useCallback(
-    (endpoint: string) => fetchData(endpoint, dispatch, fetchInProgress),
-    []
-  );
+  const fetchDataCallback = useCallback(async () => {
+    await fetchData(endpoint, dispatch, fetchInProgress);
+  }, [endpoint, dispatch, fetchInProgress]);
 
   useEffect(() => {
-    fetchDataCallback(endpoint);
-  }, [endpoint, fetchDataCallback]);
-
-  useEffect(() => {
-    fetchDataCallback(endpoint);
-  }, [endpoint, fetchDataCallback]);
+    fetchDataCallback();
+  }, [fetchDataCallback]);
 
   return state;
 }
