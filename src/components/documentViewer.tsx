@@ -49,7 +49,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ file }) => {
           className="fixed z-20 inset-0 bg-black/30 duration-300 ease-out data-[closed]:opacity-0 h-full"
         />
 
-        <div className="fixed inset-x-0 top-24 flex w-screen items-center justify-center p-6 z-40">
+        <div className="fixed inset-x-0 top-16 sm:top-24 flex w-screen items-center justify-center p-6 z-40">
           <DialogPanel className="w-full max-w-lg space-y-6 rounded-2xl shadow-lg bg-white p-6 relative">
             <Button
               className="absolute right-4 top-4 p-1"
@@ -58,39 +58,38 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ file }) => {
             >
               <IoClose className="w-6 h-6 stroke-1 text-black" />
             </Button>
-            <DialogTitle className="text-xl font-bold mb-4">
+            <DialogTitle className="text-xl font-bold mb-4 text-black">
               Document Preview
             </DialogTitle>
 
             {/* Document preview area */}
-            <div>
-              {type === 'application' && (
-                <iframe
-                  src={content}
-                  className="w-full h-full min-h-[60vh]"
-                  title="PDF Preview"
-                />
-              )}
 
-              {type === 'image' && (
-                <Image
-                  src={content}
-                  alt="Image Preview"
-                  width={400}
-                  height={500}
-                  className="w-full max-h-[500px]"
-                />
-              )}
-              {type === 'video' && (
-                <video
-                  src={content}
-                  title="Video Preview"
-                  muted
-                  className="w-full max-h-[500px]"
-                />
-              )}
-              {!type && <p>No document selected for preview.</p>}
-            </div>
+            {type === 'application' && (
+              <iframe
+                src={content}
+                className="w-full h-full min-h-[60vh]"
+                title="PDF Preview"
+              />
+            )}
+
+            {type === 'image' && (
+              <Image
+                src={content}
+                alt="Image Preview"
+                width={400}
+                height={500}
+                className="w-full max-h-[500px]"
+              />
+            )}
+            {type === 'video' && (
+              <video
+                src={content}
+                title="Video Preview"
+                muted
+                className="w-full max-h-[500px]"
+              />
+            )}
+            {!type && <p>No document selected for preview.</p>}
           </DialogPanel>
         </div>
       </Dialog>

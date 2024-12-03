@@ -77,7 +77,10 @@ const MerchantDetailsForm: React.FC = () => {
     e.CONTRACT_UPLOADS(id as string, query)
   );
 
-  const { action, state } = useMutation<MerchantContractDetails>({
+  const { action, state } = useMutation<
+    Partial<MerchantDetails>,
+    MerchantContractDetails
+  >({
     endpoint: e.CONTRACT_UPLOADS(id as string, query),
     method: 'put',
     options: { headers: { 'Content-Type': 'application/json' } },

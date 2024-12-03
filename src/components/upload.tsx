@@ -6,7 +6,7 @@ import { LuDownloadCloud, LuFile } from 'react-icons/lu';
 import { toast } from 'react-toastify';
 import { Button } from '@headlessui/react';
 import formatBytes from '@/utils/formatBytes';
-import DocumentViewer from './documentViewer';
+import Link from 'next/link';
 
 type UploadProps = {
   id: string;
@@ -72,7 +72,7 @@ export function DragNDrop({
           >
             <div className="text-center flex flex-col items-center justify-center">
               <div className="p-4 w-min bg-gray-50 rounded-full flex items-center justify-center">
-                <LuDownloadCloud className="w-5 h-5 text-graay-500" />
+                <LuDownloadCloud className="w-5 h-5 text-gray-700" />
               </div>
 
               <div className="mt-4 flex text-sm leading-6 text-gray-800">
@@ -153,7 +153,7 @@ const FilesPreview = ({
 
             <div className="w-[90%] pl-2 sm:pl-4 space-y-2">
               <div className="flex justify-between items-center">
-                <h2 className="text-sm sm:text-base line-clamp-2 max-w-[80%]">
+                <h2 className="text-sm sm:text-base line-clamp-2 max-w-[80%] text-black">
                   {file.file.name}
                 </h2>
 
@@ -171,7 +171,15 @@ const FilesPreview = ({
                 {formatBytes(file.file.size)}
               </p>
 
-              <DocumentViewer file={file.file} />
+              {file.url ? (
+                <Link
+                  href={file.url}
+                  className="text-sm sm:text-base text-azureBlue"
+                  // target="_blank"
+                >
+                  {`View ${file.url.includes('.pdf') ? 'Document' : 'File'}`}
+                </Link>
+              ) : null}
             </div>
           </div>
         );

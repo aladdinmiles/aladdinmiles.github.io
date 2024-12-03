@@ -59,9 +59,9 @@ export const SignContractSchema = Yup.object().shape({
   signerEmail: Yup.string()
     .email('Invalid email format')
     .required('Email is required'),
-  contractSignedAt: Yup.date()
-    .required('Contract Signed At is required')
-    .typeError('Contract Signed At must be a valid date')
+  date: Yup.date()
+    .required('Date is required')
+    .typeError('Date must be a valid date')
 });
 
 export const UploadSignedContractSchema = Yup.object().shape({

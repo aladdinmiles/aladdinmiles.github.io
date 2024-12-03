@@ -14,6 +14,7 @@ import useMutation from '@/hooks/useMutation';
 import e from '@/constants/endpoints';
 import useQuery from '@/hooks/useQuery';
 import { getFileInfoFromUrl } from '@/utils/downloadFile';
+import { convertKeysToSnakeCase } from '@/utils/convertKeys';
 
 type UploadSignedContractDetails = {
   files: { file: File; url: string | null }[];
@@ -33,10 +34,23 @@ const UploadSignedContractForm: React.FC = () => {
   );
 
   const { action: uploadSignedContract, state: uploadSignedContractState } =
-    useMutation<FormData>({
+    useMutation<FormData, MerchantContractDetails>({
       endpoint: e.UPLOAD_SIGNED_CONTRACT_PDF(id as string),
       method: 'put',
       options: { headers: { 'Content-Type': 'multipart/form-data' } },
+      onSuccess: async (success) => {
+        fetchFileInfo(success?.data?.contractMedia?.mediaUrl!);
+      },
+      onError: (error) => {
+        toast(error?.message, { type: 'error' });
+      }
+    });
+
+  const { action: updateSignContract, state: updateSignContractState } =
+    useMutation<{ contractSignedAt: string }, MerchantContractDetails>({
+      endpoint: e.CONTRACT_UPLOADS(id as string),
+      method: 'put',
+      options: { headers: { 'Content-Type': 'application/json' } },
       onSuccess: (success) => {
         setShow(true);
       },
@@ -48,33 +62,30 @@ const UploadSignedContractForm: React.FC = () => {
   const formik = useFormik<UploadSignedContractDetails>({
     initialValues,
     validationSchema: UploadSignedContractSchema,
-
     onSubmit: (values) => {
-      const fileToUpload = values.files[0].file;
-      const formData = new FormData();
-      formData.append('contract_doc', fileToUpload);
-
-      uploadSignedContract(formData);
+      updateSignContract(
+        convertKeysToSnakeCase({ contractSignedAt: new Date().toISOString() })
+      );
     }
   });
 
   useEffect(() => {
-    const fetchFileInfo = async () => {
-      if (data?.contractMedia) {
-        const file = await getFileInfoFromUrl(
-          data.contractMedia.mediaUrl!,
-          'application/pdf',
-          'Aladdin Miles Document.pdf'
-        );
-        formik.setFieldValue('files', [
-          { file, url: data.contractMedia.mediaUrl! }
-        ]);
-      }
-    };
+    if (data?.contractSignedAt && data?.contractMedia && !undoDelete) {
+      fetchFileInfo(data?.contractMedia?.mediaUrl!);
+    }
+  }, [data?.contractSignedAt, data?.contractMedia, undoDelete]);
 
-    if (!undoDelete) fetchFileInfo();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data?.contractMedia, undoDelete]);
+  const fetchFileInfo = async (url: string) => {
+    const file = await getFileInfoFromUrl(
+      url,
+      'application/pdf',
+      'Aladdin Miles Document.pdf'
+    );
+
+    if (file) {
+      formik.setFieldValue('files', [{ file, url }]);
+    }
+  };
 
   const handleDeleteSignedContract = (
     file: UploadSignedContractDetails['files'][number]
@@ -97,7 +108,11 @@ const UploadSignedContractForm: React.FC = () => {
       toast('File size must not be greater than 10MB', { type: 'error' });
     } else {
       formik.setFieldValue('files', files);
-      setUndoDelete(true);
+      const fileToUpload = files[0].file;
+      const formData = new FormData();
+      formData.append('contract_doc', fileToUpload);
+
+      uploadSignedContract(formData);
     }
   };
 
@@ -111,7 +126,9 @@ const UploadSignedContractForm: React.FC = () => {
 
   const isDisabled =
     isLoading ||
+    updateSignContractState.isLoading ||
     uploadSignedContractState.isLoading ||
+    !uploadSignedContractState.isSuccess ||
     Object.keys(formik.errors).length !== 0;
 
   return (
@@ -140,7 +157,9 @@ const UploadSignedContractForm: React.FC = () => {
             }
           />
 
-          {data?.contractMedia &&
+          {(data?.contractSignedAt ||
+            uploadSignedContractState.data?.contractSignedAt) &&
+          data?.contractMedia &&
           !uploadSignedContractState.isSuccess &&
           undoDelete ? (
             <div className="w-full flex items-center justify-end">

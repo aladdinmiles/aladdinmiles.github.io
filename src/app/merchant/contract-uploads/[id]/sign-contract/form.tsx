@@ -7,29 +7,26 @@ import { IoArrowBack, IoArrowForward } from 'react-icons/io5';
 import { SignContractSchema } from '../../components/schema';
 import { FiDownload } from 'react-icons/fi';
 import classNames from '@/utils/classNames';
-import { useState } from 'react';
+import { LegacyRef, useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import { MerchantContractDetails } from '@/types';
 import useMutation from '@/hooks/useMutation';
 import e from '@/constants/endpoints';
 import { convertKeysToSnakeCase } from '@/utils/convertKeys';
-import { downloadFileFromUrl } from '@/utils/downloadFile';
 import useQuery from '@/hooks/useQuery';
 
 type SignerDetails = {
   signerFullName: string;
   signerPosition: string;
   signerEmail: string;
-  contractSignedAt: string;
+  date: string;
 };
 
 const initialValues = (data?: MerchantContractDetails): SignerDetails => ({
   signerFullName: data?.signerFullName || '',
   signerPosition: data?.signerPosition || '',
   signerEmail: data?.signerEmail || '',
-  contractSignedAt: data?.contractSignedAt
-    ? new Date(data.contractSignedAt).toISOString().slice(0, 10)
-    : new Date().toISOString().slice(0, 10)
+  date: new Date().toISOString().slice(0, 10)
 });
 
 const Downloaded: React.FC = () => (
@@ -47,49 +44,56 @@ const SignContractForm: React.FC = () => {
   const { id } = useParams();
   const pathname = usePathname();
   const { back, push } = useRouter();
-  const [downloaded, setDownloaded] = useState<boolean>(false);
   const { isLoading, data } = useQuery<MerchantContractDetails>(
     e.CONTRACT_UPLOADS(id as string)
   );
+  const downloadRef = useRef<HTMLAnchorElement | null>(null);
+  const [urlToDownload, setUrlToDownload] = useState<string>('');
+
+  useEffect(() => {
+    if (urlToDownload !== '') {
+      downloadRef.current?.click();
+    }
+  }, [urlToDownload]);
 
   const downloadContractPdf = (url: string): void => {
-    downloadFileFromUrl({
-      data: url,
-      fileName: 'Aladdin Miles Document.pdf',
-      onSuccess: () => {
-        setDownloaded(true);
-        setTimeout(() => setDownloaded(false), 60000);
-      },
-      onError: (message) => {
-        toast(message, { type: 'error' });
-      }
-    });
+    setUrlToDownload(url);
+    setTimeout(() => setUrlToDownload(''), 60000);
   };
 
   const { action: generateContractPdf, state: generateContractPdfState } =
-    useMutation<string>({
+    useMutation<{}, string>({
       endpoint: e.GENERATE_CONTRACT_PDF(id as string),
       method: 'post',
       onSuccess: (success) => {
-        downloadContractPdf(success?.data!);
+        if (success?.data) {
+          downloadContractPdf(success.data);
+        }
+        if (
+          success?.message === 'Generating Contract. Try again in a few seconds'
+        ) {
+          toast(success?.message, { type: 'error' });
+        }
       },
       onError: (error) => {
         toast(error?.message, { type: 'error' });
       }
     });
 
-  const { action: signContract, state: signContractState } =
-    useMutation<MerchantContractDetails>({
-      endpoint: e.CONTRACT_UPLOADS(id as string),
-      method: 'put',
-      options: { headers: { 'Content-Type': 'application/json' } },
-      onSuccess: (success) => {
-        generateContractPdf();
-      },
-      onError: (error) => {
-        toast(error?.message, { type: 'error' });
-      }
-    });
+  const { action: signContract, state: signContractState } = useMutation<
+    Partial<SignerDetails>,
+    MerchantContractDetails
+  >({
+    endpoint: e.CONTRACT_UPLOADS(id as string),
+    method: 'put',
+    options: { headers: { 'Content-Type': 'application/json' } },
+    onSuccess: (success) => {
+      generateContractPdf({});
+    },
+    onError: (error) => {
+      toast(error?.message, { type: 'error' });
+    }
+  });
 
   const formik = useFormik<SignerDetails>({
     enableReinitialize: true,
@@ -97,11 +101,9 @@ const SignContractForm: React.FC = () => {
     validationSchema: SignContractSchema,
 
     onSubmit: (values) => {
-      const payload = {
-        ...values,
-        contractSignedAt: data?.contractSignedAt ?? new Date().toISOString()
-      };
-      signContract(convertKeysToSnakeCase(payload));
+      const { date, ...restValues } = values;
+
+      signContract(convertKeysToSnakeCase(restValues));
     }
   });
 
@@ -112,10 +114,7 @@ const SignContractForm: React.FC = () => {
   const isDisabled =
     isLoading ||
     Object.keys(formik.errors).length !== 0 ||
-    (!data?.contractSignedAt &&
-      !signContractState.isSuccess &&
-      !downloaded &&
-      !generateContractPdfState.isSuccess);
+    (!data?.contractMedia && !signContractState.data?.contractMedia);
 
   const disableDownload =
     Object.keys(formik.errors).length !== 0 &&
@@ -184,20 +183,17 @@ const SignContractForm: React.FC = () => {
           />
 
           <Input
-            id="contractSignedAt"
-            name="contractSignedAt"
+            id="date"
+            name="date"
             type="date"
             label="Date"
             placeholder="Enter today's date"
-            value={formik.values.contractSignedAt}
+            value={formik.values.date}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             isDisabled
-            isInvalid={
-              formik.touched.contractSignedAt &&
-              Boolean(formik.errors.contractSignedAt)
-            }
-            errorMsg={formik.errors.contractSignedAt}
+            isInvalid={formik.touched.date && Boolean(formik.errors.date)}
+            errorMsg={formik.errors.date}
           />
 
           <div className="space-y-1">
@@ -205,7 +201,6 @@ const SignContractForm: React.FC = () => {
               Contract PDF
               <sup className="text-primary-500 pl-1">*</sup>
             </label>
-
             <button
               id="downloadPDF"
               className={classNames(
@@ -224,10 +219,16 @@ const SignContractForm: React.FC = () => {
                 </p>
               </div>
             </button>
+            <a
+              className="hidden"
+              download="Aladdin Miles Document.pdf"
+              href={urlToDownload}
+              ref={downloadRef}
+            ></a>
             {disableDownload && (
               <p
                 className={classNames(
-                  isDisabled ? 'text-error-600' : 'text-gray-600',
+                  disableDownload ? 'text-error-600' : 'text-gray-600',
                   'text-sm pt-1.5'
                 )}
               >
@@ -257,7 +258,7 @@ const SignContractForm: React.FC = () => {
           </div>
         </div>
       </form>
-      {downloaded ? <Downloaded /> : null}
+      {urlToDownload !== '' ? <Downloaded /> : null}
     </>
   );
 };
