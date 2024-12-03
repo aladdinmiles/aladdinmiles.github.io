@@ -58,7 +58,7 @@ const SignContractForm: React.FC = () => {
 
   const downloadContractPdf = (url: string): void => {
     setUrlToDownload(url);
-    setTimeout(() => setUrlToDownload(''), 60000);
+    setTimeout(() => setUrlToDownload(''), 5000);
   };
 
   const { action: generateContractPdf, state: generateContractPdfState } =
