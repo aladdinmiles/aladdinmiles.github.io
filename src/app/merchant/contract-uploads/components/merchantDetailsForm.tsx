@@ -11,7 +11,7 @@ import { useState } from 'react';
 import useQuery from '@/hooks/useQuery';
 import { MerchantContractDetails } from '@/types';
 import e from '@/constants/endpoints';
-import { getCheckSum } from './checkSum';
+import { getCheckSum, removeCheckSum } from './checkSum';
 import useMutation from '@/hooks/useMutation';
 import { toast } from 'react-toastify';
 import { convertKeysToSnakeCase } from '@/utils/convertKeys';
@@ -71,7 +71,7 @@ const MerchantDetailsForm: React.FC = () => {
   const [copied, setCopied] = useState<boolean>(false);
 
   const isSalesPerson = pathname.includes('/sales/merchant-details');
-  const query = isSalesPerson ? `?checksum=${checkSum}` : '';
+  const query = isSalesPerson && checkSum ? `?checksum=${checkSum}` : '';
 
   const { isLoading, data } = useQuery<MerchantContractDetails>(
     e.CONTRACT_UPLOADS(id as string, query)
@@ -87,10 +87,10 @@ const MerchantDetailsForm: React.FC = () => {
     onSuccess: (success) => {
       if (isSalesPerson) {
         setShow(true);
-        copyToClipboard(window.location.href.replace('/sales', ''), () =>
-          setCopied(true)
+        copyToClipboard(
+          window.location.href.replace('/sales', ''),
+          (isCopied) => setCopied(isCopied)
         );
-        setTimeout(() => setCopied(false), 60000);
       } else {
         push(pathname.replace('merchant-details', 'sign-contract'));
       }
@@ -123,6 +123,7 @@ const MerchantDetailsForm: React.FC = () => {
 
   const handleClose = () => {
     setShow(false);
+    removeCheckSum();
   };
 
   const isDisabled =

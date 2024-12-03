@@ -28,7 +28,7 @@ const MerchantContainer: React.FC<Props> = ({
   if (
     typeof window !== 'undefined' &&
     !checkSum &&
-    pathname.includes('sales')
+    pathname.includes('sales/start-contact')
   ) {
     window.location.replace('/not-found');
   }

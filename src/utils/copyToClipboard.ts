@@ -8,10 +8,7 @@ export default function copyToClipboard(
   }
 
   // Check for Clipboard API availability
-  if (
-    navigator.clipboard &&
-    typeof navigator.clipboard.writeText === 'function'
-  ) {
+  if (navigator.clipboard) {
     navigator.clipboard
       .writeText(stringToCopy)
       .then(() => {
@@ -19,7 +16,7 @@ export default function copyToClipboard(
           onCopy(true);
           setTimeout(() => {
             onCopy(false);
-          }, 2000);
+          }, 30000);
         }
       })
       .catch((err) => {
@@ -46,7 +43,7 @@ function fallbackCopy(text: string, onCopy?: (success: boolean) => void) {
       onCopy(successful);
       setTimeout(() => {
         onCopy(false);
-      }, 2000);
+      }, 30000);
     }
     if (!successful) {
       console.warn('Copy command was not successful.');
