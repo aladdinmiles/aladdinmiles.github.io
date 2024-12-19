@@ -15,7 +15,7 @@ const colors = {
     900: '#7A271A'
   },
   primary: {
-    25: '#FFE4E6',
+    25: '#FEE6ED',
     50: '#FFB3BF',
     100: '#FF7A8F',
     200: '#FF4D6E',
@@ -29,7 +29,7 @@ const colors = {
   },
   secondary: {
     25: '#E6E9F2',
-    50: '#B3C2E0',
+    50: '#E6EEFE',
     100: '#7A9BCF',
     200: '#4B7BBF',
     300: '#2A5DAE',
@@ -42,8 +42,8 @@ const colors = {
   },
   gray: {
     25: '#F0F2F5',
-    50: '#E4E7EC',
-    100: '#c2c6cc',
+    50: '#F3F3F5',
+    100: '#E4E7EC',
     200: '#B2B7C2',
     300: '#acb0b9',
     400: '#999faa',
@@ -81,7 +81,8 @@ const colors = {
   },
   transparent: 'transparent',
   current: 'currentColor',
-  azureBlue: '#1F6CFF'
+  azureBlue: '#1F6CFF',
+  royalBlue: '#001A99'
 };
 module.exports = {
   content: [

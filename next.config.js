@@ -8,13 +8,33 @@ const nextConfig =
   process.env.BUILD_PROFILE == 'development' ||
   process.env.BUILD_PROFILE == 'test' ||
   process.env.BUILD_PROFILE == 'production'
-    ? { env }
+    ? {
+        env,
+        images: {
+          remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'flagcdn.com',
+              port: '',
+              pathname: '/**'
+            }
+          ]
+        }
+      }
     : {
         env,
         output: 'export',
         images: {
           loader: 'custom',
-          loaderFile: './src/components/loader.ts'
+          loaderFile: './src/components/loader.ts',
+          remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'flagcdn.com',
+              port: '',
+              pathname: '/**'
+            }
+          ]
         }
       };
 

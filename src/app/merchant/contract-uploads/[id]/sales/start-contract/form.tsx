@@ -41,7 +41,10 @@ const StartContractForm: React.FC = () => {
     e.CONTRACT_UPLOADS(id as string, `?checksum=${checkSum}`)
   );
 
-  const { action, state } = useMutation<MerchantContractDetails>({
+  const { action, state } = useMutation<
+    { commision: string },
+    MerchantContractDetails
+  >({
     endpoint: e.CONTRACT_UPLOADS('', `?checksum=${checkSum}&contract_id=${id}`),
     method: 'post',
     options: {
