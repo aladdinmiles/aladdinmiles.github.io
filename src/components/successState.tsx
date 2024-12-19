@@ -32,7 +32,7 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
               type="button"
               onClick={onClose}
             >
-              <IoClose className="w-6 h-6 stroke-1" />
+              <IoClose className="w-6 h-6 stroke-1 text-black" />
             </Button>
           ) : null}
           <div className="flex items-center justify-center w-full pt-4">

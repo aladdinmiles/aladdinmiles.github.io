@@ -38,6 +38,13 @@ export type MerchantContractDetails = {
   signerFullName: string;
   signerPosition: string;
   contractMediaId: string;
+  contractMedia: {
+    type: string;
+    mediaUrl: string;
+    entityType: string;
+    checksum: string;
+    id: string;
+  };
   contractSignedAt: string;
   createdBy: string;
   createdByRole: string;

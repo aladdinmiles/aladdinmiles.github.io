@@ -21,14 +21,14 @@ type UseMutationProps<T> = {
   onError?: (error: FetchState<T>['error']) => void;
 };
 
-type UseMutationResponse<T> = {
-  action: (payload?: Partial<T>) => void;
+type UseMutationResponse<Payload, T> = {
+  action: (payload: Payload) => void;
   state: FetchState<T>;
 };
 
-type SendPayloadProps<T> = {
+type SendPayloadProps<Payload, T> = {
   endpoint: string;
-  payload?: Partial<T>;
+  payload: Payload;
   method: 'post' | 'put' | 'patch' | 'delete';
   options?: AxiosRequestConfig;
   dispatch: React.Dispatch<Action<T>>;
@@ -36,15 +36,15 @@ type SendPayloadProps<T> = {
   onError?: (error: FetchState<T>['error']) => void;
 };
 
-const sendPayload = async <T>({
+const sendPayload = async <Payload, T>({
   endpoint,
-  payload = {},
+  payload,
   method,
   options = {},
   dispatch,
   onSuccess,
   onError
-}: SendPayloadProps<T>) => {
+}: SendPayloadProps<Payload, T>) => {
   const apiBaseUrl = process.env.API_URL;
 
   if (!apiBaseUrl) {
@@ -86,16 +86,16 @@ const sendPayload = async <T>({
   }
 };
 
-export default function useMutation<T>({
+export default function useMutation<Payload, T>({
   endpoint,
   method,
   options,
   onSuccess,
   onError
-}: UseMutationProps<T>): UseMutationResponse<T> {
+}: UseMutationProps<T>): UseMutationResponse<Payload, T> {
   const [state, dispatch] = useReducer(reducer<T>, initialState(false));
 
-  const action = (payload?: Partial<T>) => {
+  const action = (payload: Payload) => {
     sendPayload({
       endpoint,
       payload,
