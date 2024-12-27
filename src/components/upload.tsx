@@ -170,7 +170,9 @@ const FilesPreview = ({
                   onClick={() => {
                     onDelete(file);
                   }}
+                  disabled={isUploading}
                   type="button"
+                  className="disabled:opacity-30"
                 >
                   <HiOutlineTrash className="w-4 sm:w-5 h-4 sm:h-5 text-black" />
                 </Button>
