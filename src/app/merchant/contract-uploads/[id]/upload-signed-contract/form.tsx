@@ -43,6 +43,7 @@ const UploadSignedContractForm: React.FC = () => {
       },
       onError: (error) => {
         toast(error?.message, { type: 'error' });
+        formik.setFieldValue('files', []);
       }
     });
 
@@ -150,6 +151,8 @@ const UploadSignedContractForm: React.FC = () => {
             onChange={handleUploadSignedContract}
             onBlur={formik.handleBlur}
             isInvalid={formik.touched.files && Boolean(formik.errors.files)}
+            isDisabled={uploadSignedContractState.isLoading}
+            isUploading={uploadSignedContractState.isLoading}
             errorMsg={
               Array.isArray(formik.errors.files)
                 ? formik.errors.files.join(', ')
