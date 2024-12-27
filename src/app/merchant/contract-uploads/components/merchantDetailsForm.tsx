@@ -7,7 +7,7 @@ import { useParams, usePathname, useRouter } from 'next/navigation';
 import { Button } from '@headlessui/react';
 import { IoArrowBack, IoArrowForward, IoCopy } from 'react-icons/io5';
 import SuccessState from '@/components/successState';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useQuery from '@/hooks/useQuery';
 import { MerchantContractDetails } from '@/types';
 import e from '@/constants/endpoints';
@@ -69,9 +69,24 @@ const MerchantDetailsForm: React.FC = () => {
   const checkSum = getCheckSum();
   const [show, setShow] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
+  const [shareText, setShareText] = useState<string>('');
 
   const isSalesPerson = pathname.includes('/sales/merchant-details');
   const query = isSalesPerson && checkSum ? `?checksum=${checkSum}` : '';
+
+  useEffect(() => {
+    if (isSalesPerson) {
+      const shareUrl = window.location.href.replace('/sales', '');
+      setShareText(` Share this link with your merchant to complete their details and sign the contract: 
+                <a
+                  style="word-break: break-all; color: #FF7A8F; font-weight: 500; text-decoration: underline;"
+                  href="${shareUrl}"
+                  target="_blank"
+                >
+                  ${shareUrl}
+                </a>`);
+    }
+  }, [isSalesPerson]);
 
   const { isLoading, data } = useQuery<MerchantContractDetails>(
     e.CONTRACT_UPLOADS(id as string, query)
@@ -378,7 +393,7 @@ const MerchantDetailsForm: React.FC = () => {
         isOpen={show}
         onClose={handleClose}
         title="Merchant Information Saved"
-        message="The merchant’s contract information has been saved to the AladdinMiles system. "
+        message={`The merchant’s contract information has been saved to the AladdinMiles system. ${shareText}`}
       />
 
       {copied ? <Copied /> : null}

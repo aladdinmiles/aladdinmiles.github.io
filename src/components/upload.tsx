@@ -172,7 +172,7 @@ const FilesPreview = ({
                   }}
                   disabled={isUploading}
                   type="button"
-                  className="disabled:opacity-30"
+                  className="disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   <HiOutlineTrash className="w-4 sm:w-5 h-4 sm:h-5 text-black" />
                 </Button>

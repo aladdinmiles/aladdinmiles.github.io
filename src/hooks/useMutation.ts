@@ -22,7 +22,7 @@ type UseMutationProps<T> = {
 };
 
 type UseMutationResponse<Payload, T> = {
-  action: (payload: Payload) => void;
+  action: (payload: Payload) => Promise<void>;
   state: FetchState<T>;
 };
 
@@ -83,6 +83,7 @@ const sendPayload = async <Payload, T>({
   } catch (error: any) {
     dispatch({ type: ERROR, error });
     onError?.(error);
+    throw new Error(error);
   }
 };
 
@@ -95,8 +96,8 @@ export default function useMutation<Payload, T>({
 }: UseMutationProps<T>): UseMutationResponse<Payload, T> {
   const [state, dispatch] = useReducer(reducer<T>, initialState(false));
 
-  const action = (payload: Payload) => {
-    sendPayload({
+  const action = async (payload: Payload): Promise<void> => {
+    await sendPayload({
       endpoint,
       payload,
       method,
