@@ -20,6 +20,7 @@ type UploadProps = {
   onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
   isInvalid?: boolean;
   isDisabled?: boolean;
+  isUploading?: boolean;
   errorMsg?: string;
   tip?: string;
 };
@@ -33,6 +34,7 @@ export function DragNDrop({
   onChange,
   onBlur,
   isDisabled = false,
+  isUploading = false,
   required,
   isInvalid,
   errorMsg,
@@ -67,6 +69,7 @@ export function DragNDrop({
           <div
             className={classNames(
               isInvalid ? 'border-error-600' : 'border-gray-900/25',
+              isDisabled ? 'opacity-30' : '',
               'mt-2 flex justify-center rounded-lg border border-dashed px-6 py-10'
             )}
           >
@@ -123,7 +126,11 @@ export function DragNDrop({
             {label}
             {required && <sup className="text-primary-500 pl-1">*</sup>}
           </label>
-          <FilesPreview files={filesToPreview} onDelete={onDelete} />
+          <FilesPreview
+            isUploading={isUploading}
+            files={filesToPreview}
+            onDelete={onDelete}
+          />
         </div>
       ) : null}
     </>
@@ -132,9 +139,11 @@ export function DragNDrop({
 
 const FilesPreview = ({
   files = [],
+  isUploading = false,
   onDelete = () => {}
 }: {
   files: UploadProps['files'];
+  isUploading: UploadProps['isUploading'];
   onDelete: UploadProps['onDelete'];
 }) => {
   return (
@@ -171,7 +180,11 @@ const FilesPreview = ({
                 {formatBytes(file.file.size)}
               </p>
 
-              {file.url ? (
+              {isUploading ? (
+                <p className="text-sm sm:text-base text-azureBlue opacity-30">
+                  Uploading...
+                </p>
+              ) : file.url ? (
                 <Link
                   href={file.url}
                   className="text-sm sm:text-base text-azureBlue"
