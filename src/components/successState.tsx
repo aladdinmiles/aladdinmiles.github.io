@@ -47,9 +47,10 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
                 {title}
               </DialogTitle>
 
-              <Description className="text-xs sm:text-sm md:text-base text-gray-600 font-light text-center">
-                {message}
-              </Description>
+              <Description
+                className="text-xs sm:text-sm md:text-base text-gray-600 font-light text-center inline-block"
+                dangerouslySetInnerHTML={{ __html: message }}
+              />
             </div>
           </div>
         </DialogPanel>

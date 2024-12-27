@@ -14,6 +14,7 @@ import useMutation from '@/hooks/useMutation';
 import e from '@/constants/endpoints';
 import { convertKeysToSnakeCase } from '@/utils/convertKeys';
 import useQuery from '@/hooks/useQuery';
+import retry from '@/utils/retry';
 
 type SignerDetails = {
   signerFullName: string;
@@ -50,6 +51,8 @@ const SignContractForm: React.FC = () => {
   const downloadRef = useRef<HTMLAnchorElement | null>(null);
   const [urlToDownload, setUrlToDownload] = useState<string>('');
 
+  const retryDelay = 10000;
+
   useEffect(() => {
     if (urlToDownload !== '') {
       downloadRef.current?.click();
@@ -72,7 +75,12 @@ const SignContractForm: React.FC = () => {
         if (
           success?.message === 'Generating Contract. Try again in a few seconds'
         ) {
-          toast(success?.message, { type: 'error' });
+          toast('Generating Contract. Trying again in a few seconds', {
+            type: 'default',
+            autoClose: retryDelay,
+            pauseOnHover: false,
+            pauseOnFocusLoss: false
+          });
         }
       },
       onError: (error) => {
@@ -87,8 +95,14 @@ const SignContractForm: React.FC = () => {
     endpoint: e.CONTRACT_UPLOADS(id as string),
     method: 'put',
     options: { headers: { 'Content-Type': 'application/json' } },
-    onSuccess: (success) => {
-      generateContractPdf({});
+    onSuccess: async (success) => {
+      try {
+        await retry(() => generateContractPdf({}), 5, retryDelay);
+      } catch (error) {
+        toast('Failed to generate contract PDF after multiple attempts.', {
+          type: 'error'
+        });
+      }
     },
     onError: (error) => {
       toast(error?.message, { type: 'error' });
