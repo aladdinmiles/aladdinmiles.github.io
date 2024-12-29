@@ -134,7 +134,7 @@ const SignContractForm: React.FC = () => {
   const isDisabled =
     isLoading ||
     Object.keys(formik.errors).length !== 0 ||
-    (!data?.contractMedia && !signContractState.data?.contractMedia);
+    (!data?.contractMedia && !generateContractPdfState.data);
 
   const disableDownload =
     Object.keys(formik.errors).length !== 0 &&
