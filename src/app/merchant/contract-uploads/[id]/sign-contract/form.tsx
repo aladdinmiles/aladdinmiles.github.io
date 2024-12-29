@@ -82,7 +82,7 @@ const SignContractForm: React.FC = () => {
             pauseOnFocusLoss: false
           });
 
-          return Promise.reject(new Error(success.message));
+          throw new Error(success.message);
         }
       },
       onError: (error) => {
