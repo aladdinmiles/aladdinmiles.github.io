@@ -86,7 +86,11 @@ const SignContractForm: React.FC = () => {
         }
       },
       onError: (error) => {
-        toast(error?.message, { type: 'error' });
+        if (
+          error?.message !== 'Generating Contract. Try again in a few seconds'
+        ) {
+          toast(error?.message, { type: 'error' });
+        }
       }
     });
 
