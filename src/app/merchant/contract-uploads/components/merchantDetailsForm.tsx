@@ -5,7 +5,12 @@ import Input from '@/components/inputs/input';
 import Image from 'next/image';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { Button } from '@headlessui/react';
-import { IoArrowBack, IoArrowForward, IoCopy } from 'react-icons/io5';
+import {
+  IoArrowBack,
+  IoArrowForward,
+  IoCopy,
+  IoShareSocialOutline
+} from 'react-icons/io5';
 import SuccessState from '@/components/successState';
 import { useState, useEffect } from 'react';
 import useQuery from '@/hooks/useQuery';
@@ -18,6 +23,8 @@ import { convertKeysToSnakeCase } from '@/utils/convertKeys';
 import copyToClipboard from '@/utils/copyToClipboard';
 import classNames from '@/utils/classNames';
 import { getFlagUrlFromPhone } from '@/utils/getFlagUrl';
+import { RWebShare } from 'react-web-share';
+import { detectOS } from '@/utils/detectOS';
 
 type MerchantDetails = {
   crId: string;
@@ -51,12 +58,18 @@ const initialValues = (data?: MerchantContractDetails): MerchantDetails => ({
   address: data?.address || ''
 });
 
-const Copied: React.FC = () => (
+const LinkNotification: React.FC<{
+  action: 'Copied' | 'Shared';
+}> = ({ action }) => (
   <div className="w-full flex items-center justify-center">
     <div className="fixed top-10 z-50">
       <div className="bg-azureBlue w-max text-white rounded py-2 px-4 flex gap-2 items-center justify-center">
-        <IoCopy className="w-4 h-4" />
-        <p>Link Copied</p>
+        {action == 'Copied' ? (
+          <IoCopy className="w-4 h-4" />
+        ) : (
+          <IoShareSocialOutline className="w-4 h-4" />
+        )}
+        <p>Link {action}</p>
       </div>
     </div>
   </div>
@@ -67,24 +80,21 @@ const MerchantDetailsForm: React.FC = () => {
   const { back, push } = useRouter();
   const pathname = usePathname();
   const checkSum = getCheckSum();
-  const [show, setShow] = useState<boolean>(false);
-  const [copied, setCopied] = useState<boolean>(false);
-  const [shareText, setShareText] = useState<string>('');
+  const [show, setShow] = useState<boolean>(true);
+  const [notificationVisible, setNotificationVisible] = useState<{
+    action: 'Copied' | 'Shared';
+  } | null>(null);
+  const [urlToShare, setUrlToShare] = useState<string>('');
+  const os = detectOS();
+  const shouldShowShareButton =
+    os === 'iOS' || os === 'Android' || os === 'iPad';
 
   const isSalesPerson = pathname.includes('/sales/merchant-details');
   const query = isSalesPerson && checkSum ? `?checksum=${checkSum}` : '';
 
   useEffect(() => {
     if (isSalesPerson) {
-      const shareUrl = window.location.href.replace('/sales', '');
-      setShareText(` Share this link with your merchant to complete their details and sign the contract: 
-                <a
-                  style="word-break: break-all; color: #FF7A8F; font-weight: 500; text-decoration: underline;"
-                  href="${shareUrl}"
-                  target="_blank"
-                >
-                  ${shareUrl}
-                </a>`);
+      setUrlToShare(window.location.href.replace('/sales', ''));
     }
   }, [isSalesPerson]);
 
@@ -102,10 +112,7 @@ const MerchantDetailsForm: React.FC = () => {
     onSuccess: (success) => {
       if (isSalesPerson) {
         setShow(true);
-        copyToClipboard(
-          window.location.href.replace('/sales', ''),
-          (isCopied) => setCopied(isCopied)
-        );
+        handleCopy();
       } else {
         push(pathname.replace('merchant-details', 'sign-contract'));
       }
@@ -139,6 +146,24 @@ const MerchantDetailsForm: React.FC = () => {
   const handleClose = () => {
     setShow(false);
     removeCheckSum();
+  };
+
+  const handleShare = () => {
+    setNotificationVisible({ action: 'Shared' });
+    setTimeout(() => {
+      setNotificationVisible(null);
+    }, 5000);
+  };
+
+  const handleCopy = () => {
+    copyToClipboard(urlToShare, (isCopied) => {
+      if (isCopied) {
+        setNotificationVisible({ action: 'Copied' });
+        setTimeout(() => {
+          setNotificationVisible(null);
+        }, 5000);
+      }
+    });
   };
 
   const isDisabled =
@@ -393,10 +418,44 @@ const MerchantDetailsForm: React.FC = () => {
         isOpen={show}
         onClose={handleClose}
         title="Merchant Information Saved"
-        message={`The merchant’s contract information has been saved to the AladdinMiles system. ${shareText}`}
+        message="The merchant’s contract information has been saved to the AladdinMiles system. Click the button below to share the link with the merchant, allowing them to complete or edit their details and sign the contract."
+        extraComponent={
+          <>
+            {shouldShowShareButton ? (
+              <RWebShare
+                data={{
+                  text: 'Use this link to complete or edit your details and sign the contract: ',
+                  url: urlToShare,
+                  title: 'Edit Merchant Contract Details'
+                }}
+                onClick={handleShare}
+              >
+                <Button
+                  className="mt-4 px-4 sm:px-8 py-2 sm:py-3 text-white bg-primary-500 hover:bg-primary-600 rounded-md flex self-center"
+                  type="button"
+                >
+                  Share Link
+                </Button>
+              </RWebShare>
+            ) : (
+              <Button
+                className="mt-4 px-4 sm:px-8 py-2 sm:py-3 text-white bg-primary-500 hover:bg-primary-600 rounded-md flex self-center"
+                type="button"
+                onClick={handleCopy}
+              >
+                Copy Link
+              </Button>
+            )}
+            {notificationVisible ? (
+              <LinkNotification action={notificationVisible?.action} />
+            ) : null}
+          </>
+        }
       />
 
-      {copied ? <Copied /> : null}
+      {notificationVisible ? (
+        <LinkNotification action={notificationVisible?.action} />
+      ) : null}
     </>
   );
 };
