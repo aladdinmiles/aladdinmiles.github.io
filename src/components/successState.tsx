@@ -6,7 +6,7 @@ import {
   DialogBackdrop,
   Button
 } from '@headlessui/react';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { FiCheck } from 'react-icons/fi';
 
@@ -14,10 +14,17 @@ type Props = {
   title: string;
   message: string;
   isOpen: boolean;
+  extraComponent?: ReactElement;
   onClose?: () => void;
 };
 
-const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
+const SuccessState: React.FC<Props> = ({
+  title,
+  extraComponent = <></>,
+  message,
+  isOpen,
+  onClose
+}) => {
   return (
     <Dialog open={isOpen} onClose={() => {}} role="alertdialog">
       <DialogBackdrop
@@ -51,6 +58,7 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
                 className="text-xs sm:text-sm md:text-base text-gray-600 font-light text-center inline-block"
                 dangerouslySetInnerHTML={{ __html: message }}
               />
+              {extraComponent}
             </div>
           </div>
         </DialogPanel>

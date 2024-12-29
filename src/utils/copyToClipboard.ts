@@ -22,9 +22,6 @@ export default function copyToClipboard(
       .then(() => {
         if (onCopy) {
           onCopy(true);
-          setTimeout(() => {
-            onCopy(false);
-          }, 5000);
         }
       })
       .catch((err) => {
@@ -50,9 +47,6 @@ function fallbackCopy(text: string, onCopy?: (success: boolean) => void) {
     const successful = document.execCommand('copy');
     if (onCopy) {
       onCopy(successful);
-      setTimeout(() => {
-        onCopy(false);
-      }, 5000);
     }
     if (!successful) {
       console.warn('Copy command was not successful.');

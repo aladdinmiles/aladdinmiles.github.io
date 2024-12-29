@@ -4,7 +4,7 @@ import { steps } from '@/constants/merchantContract';
 import MerchantDetailsForm from '../../components/merchantDetailsForm';
 
 export const metadata: Metadata = {
-  title: 'Merchant Contract | Details',
+  title: 'Edit Merchant Contract | Details',
   description:
     'We are building a magical world. The best place to meet your travel and shopping needs all at once.',
   keywords:
