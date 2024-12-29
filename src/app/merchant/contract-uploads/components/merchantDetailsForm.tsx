@@ -80,7 +80,7 @@ const MerchantDetailsForm: React.FC = () => {
   const { back, push } = useRouter();
   const pathname = usePathname();
   const checkSum = getCheckSum();
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(false);
   const [notificationVisible, setNotificationVisible] = useState<{
     action: 'Copied' | 'Shared';
   } | null>(null);
