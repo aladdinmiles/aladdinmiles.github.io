@@ -6,7 +6,7 @@ import {
   DialogBackdrop,
   Button
 } from '@headlessui/react';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { FiCheck } from 'react-icons/fi';
 
@@ -14,10 +14,17 @@ type Props = {
   title: string;
   message: string;
   isOpen: boolean;
+  extraComponent?: ReactElement;
   onClose?: () => void;
 };
 
-const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
+const SuccessState: React.FC<Props> = ({
+  title,
+  extraComponent = <></>,
+  message,
+  isOpen,
+  onClose
+}) => {
   return (
     <Dialog open={isOpen} onClose={() => {}} role="alertdialog">
       <DialogBackdrop
@@ -32,7 +39,7 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
               type="button"
               onClick={onClose}
             >
-              <IoClose className="w-6 h-6 stroke-1" />
+              <IoClose className="w-6 h-6 stroke-1 text-black" />
             </Button>
           ) : null}
           <div className="flex items-center justify-center w-full pt-4">
@@ -43,13 +50,15 @@ const SuccessState: React.FC<Props> = ({ title, message, isOpen, onClose }) => {
 
           <div>
             <div className="flex flex-col gap-1 sm:gap-2 pb-8 sm:pb-10">
-              <DialogTitle className="text-base sm:text-lg md:text-xl font-medium text-center">
+              <DialogTitle className="text-base sm:text-lg md:text-xl font-medium text-center text-black">
                 {title}
               </DialogTitle>
 
-              <Description className="text-xs sm:text-sm md:text-base text-gray-600 font-light text-center">
-                {message}
-              </Description>
+              <Description
+                className="text-xs sm:text-sm md:text-base text-gray-600 font-light text-center inline-block"
+                dangerouslySetInnerHTML={{ __html: message }}
+              />
+              {extraComponent}
             </div>
           </div>
         </DialogPanel>

@@ -32,4 +32,24 @@ export type MerchantContractDetails = {
   emailAddress: string;
   accountantPhone: string;
   address: string;
+  bankCharges: number;
+  taxId: string;
+  signerEmail: string;
+  signerFullName: string;
+  signerPosition: string;
+  contractMediaId: string;
+  contractMedia: {
+    type: string;
+    mediaUrl: string;
+    entityType: string;
+    checksum: string;
+    id: string;
+  };
+  contractSignedAt: string;
+  createdBy: string;
+  createdByRole: string;
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  deletedAt: string;
 };
