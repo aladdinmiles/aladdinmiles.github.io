@@ -98,12 +98,12 @@ export default function Home() {
           <Trusted id="trusted">
             <ManText>Trusted by the best businesses</ManText>
             <Partners>
-              <Image
+              {/* <Image
                 src="/images/intermile.png"
                 width={128}
                 height={40}
                 alt="intermiles"
-              />
+              /> */}
               <Image
                 src="/images/ame.png"
                 width={128}
