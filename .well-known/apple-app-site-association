@@ -5,6 +5,10 @@
       {
         "appID": "5VZQU3YST8.com.aladdinmiles.customer",
         "paths": [ "/app/*"]
+      },
+     { 
+        "appID": "5VZQU3YST8.com.aladdinmiles.staging", 
+        "paths": ["/app/*"] 
       }
     ]
   }
