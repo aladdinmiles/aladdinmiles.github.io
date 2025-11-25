@@ -1,23 +1,32 @@
 'use client';
-import { usePathname } from 'next/navigation';
+
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 export const Redirect: React.FC = () => {
-  const path = usePathname();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  if (
-    typeof window != 'undefined' &&
-    path
-      .toLowerCase()
-      .split('/')
-      .some((p) => 'app' == p || 'auth' == p)
-  ) {
-    if (window.location.host == 'www.aladdinmiles.com') {
-      window.location.replace(`aladdinmiles:/${path}`);
-    } else if (window.location.host == 'staging.aladdinmiles.com') {
-      window.location.replace(`com.aladdinmiles.staging:/${path}`);
-    } else {
-      window.location.replace(`com.aladdinmiles.amatest:/${path}`);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !pathname) return;
+
+    const segments = pathname.toLowerCase().split('/');
+    const shouldHandle = segments.some((segment) => segment === 'app' || segment === 'auth');
+    if (!shouldHandle) return;
+
+    const host = window.location.host;
+    const query = searchParams?.toString() ? `?${searchParams.toString()}` : '';
+    const hash = window.location.hash ?? '';
+
+    let scheme = 'com.aladdinmiles.amatest:/';
+    if (host === 'www.aladdinmiles.com') {
+      scheme = 'aladdinmiles:/';
+    } else if (host === 'staging.aladdinmiles.com') {
+      scheme = 'com.aladdinmiles.staging:/';
     }
-  }
-  return <></>;
+
+    window.location.replace(`${scheme}${pathname}${query}${hash}`);
+  }, [pathname, searchParams]);
+
+  return null;
 };
