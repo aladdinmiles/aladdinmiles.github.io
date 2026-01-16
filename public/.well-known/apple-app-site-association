@@ -3,9 +3,39 @@
     "apps": [],
     "details": [
       {
-        "appID": "5VZQU3YST8.com.aladdinmiles.customer",
-        "paths": [ "/app/*", "/auth/*"]
+        "appIDs": [
+          "5VZQU3YST8.com.aladdinmiles.amatest",
+          "5VZQU3YST8.com.aladdinmiles.staging",
+          "5VZQU3YST8.com.aladdinmiles.customer"
+        ],
+        "components": [
+          {
+            "/": "/app/*",
+            "comment": "Matches any URL whose path starts with /app/"
+          }
+        ]
       }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "5VZQU3YST8.com.aladdinmiles.amatest",
+      "5VZQU3YST8.com.aladdinmiles.staging",
+      "5VZQU3YST8.com.aladdinmiles.customer"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "5VZQU3YST8.com.aladdinmiles.amatest",
+      "5VZQU3YST8.com.aladdinmiles.staging",
+      "5VZQU3YST8.com.aladdinmiles.customer"
+    ]
+  },
+  "appclips": {
+    "apps": [
+      "5VZQU3YST8.com.aladdinmiles.amatest",
+      "5VZQU3YST8.com.aladdinmiles.staging",
+      "5VZQU3YST8.com.aladdinmiles.customer"
     ]
   }
 }
