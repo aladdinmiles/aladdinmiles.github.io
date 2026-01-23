@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Algorithm, sign } from 'jws';
 import { promises as fs } from 'fs';
+import path from 'path';
 
 export async function GET() {
   try {
@@ -21,7 +22,7 @@ export async function GET() {
       ]
     };
     const file = await fs.readFile(
-      process.cwd() + '/src/app/apple-jwt/AuthKey_Y3G9J4PFC7.p8'
+      path.join(process.cwd(), 'src/app/apple-jwt/AuthKey_Y3G9J4PFC7.p8')
     );
 
     const jwt = sign({ header, payload, privateKey: file });
